@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Songdle
 
-## Getting Started
+Un proyecto web simple construido con Next.js y Tailwind CSS.
 
-First, run the development server:
+## 🚀 Características
 
+- ⚡ Next.js 15 con App Router
+- 🎨 Tailwind CSS para estilos
+- 📱 Diseño responsive
+- 🔧 TypeScript
+- ✨ ESLint configurado
+
+## 🛠️ Desarrollo Local
+
+1. Instalar dependencias:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Ejecutar servidor de desarrollo:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Abrir [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Deployment en Vercel
 
-## Learn More
+### Opción 1: Deploy automático desde GitHub
 
-To learn more about Next.js, take a look at the following resources:
+1. Sube tu código a GitHub
+2. Ve a [vercel.com](https://vercel.com)
+3. Conecta tu cuenta de GitHub
+4. Importa el repositorio
+5. Vercel detectará automáticamente que es un proyecto Next.js
+6. ¡Deploy automático!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Opción 2: Deploy desde terminal
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Instala Vercel CLI:
+```bash
+npm i -g vercel
+```
 
-## Deploy on Vercel
+2. En el directorio del proyecto:
+```bash
+vercel
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Sigue las instrucciones en pantalla
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 Estructura del Proyecto
+
+```
+src/
+├── app/
+│   ├── globals.css      # Estilos globales con Tailwind
+│   ├── layout.tsx       # Layout principal
+│   └── page.tsx         # Página principal
+```
+
+## 🎨 Personalización
+
+- Edita `src/app/page.tsx` para cambiar el contenido
+- Modifica `src/app/globals.css` para estilos globales
+- Usa clases de Tailwind para estilos rápidos
+
+## 📝 Próximos Pasos
+
+- [ ] Añadir más páginas
+- [ ] Implementar componentes reutilizables
+- [ ] Añadir funcionalidades específicas
+- [ ] Optimizar para SEO

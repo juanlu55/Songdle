@@ -11,7 +11,11 @@ export interface Song {
   voices: string;       // "Masculino", "Femenino", "Mixto"
 }
 
-// Base de datos ampliada de canciones
+// Importar datos del CSV procesado
+// Este archivo se generará a partir de musicoset_metadata/songdle_songs.csv
+// Solo se incluirán canciones con todos los campos completos (country, language, voices != null)
+
+// Por ahora, base de datos temporal hasta que se complete el CSV
 const songsData: Omit<Song, 'id' | 'audioUrl' | 'displayName'>[] = [
   // Rock Clásico
   { title: "Bohemian Rhapsody", artist: "Queen", genre: "Rock", decade: "1970s", country: "Reino Unido", language: "Inglés", voices: "Masculino" },
@@ -87,3 +91,17 @@ export const songs: Song[] = songsData.map((song, index) => ({
 // La canción del día (fija para todas las ejecuciones)
 // La canción correcta es "Hotel California - Eagles"
 export const todaySong: Song = songs[2];
+
+// Nota: Para cargar desde el CSV generado, necesitarás:
+// 1. Completar los campos country, language, voices en musicoset_metadata/songdle_songs.csv
+// 2. Crear un script que convierta el CSV a JSON
+// 3. Importar ese JSON aquí
+// Ejemplo de cómo hacerlo:
+// import songsFromCSV from './songdle_songs.json';
+// export const songs: Song[] = songsFromCSV.filter(song => 
+//   song.country && song.language && song.voices
+// ).map((song, index) => ({
+//   ...song,
+//   audioUrl: "/audio/sample.mp3",
+//   displayName: `${song.title} - ${song.artist}`
+// }));

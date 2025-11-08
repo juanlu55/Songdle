@@ -10,6 +10,9 @@ export interface Song {
   country: string;      // País de origen
   language: string;     // Idioma de la canción
   voices: string;       // "Masculino", "Femenino", "Mixto"
+  numberOneDate?: string; // Fecha en que fue número 1 (formato legible)
+  spotifyUrl?: string;    // URL de Spotify
+  bestPosition?: string;  // Mejor posición alcanzada
 }
 
 // Base de datos de canciones de Los 40 (1990-2025)
@@ -26,7 +29,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001414819.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000691321.jpg",
-    "displayName": "Another day in paradise - Phil Collins"
+    "displayName": "Another day in paradise - Phil Collins",
+    "numberOneDate": "20 de enero de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/caded0dd1037c167ae428022979e3e1003d0af39?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "de233f63b1e82c0e2720eae305a93ccb",
@@ -39,7 +45,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000703694.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001739208.jpg",
-    "displayName": "Blaze of glory - Jon Bon Jovi"
+    "displayName": "Blaze of glory - Jon Bon Jovi",
+    "numberOneDate": "10 de noviembre de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0bbc5c0fe7293f53a435fd232daf545bae84d8fe?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "170a62b94724a78a7f7e01fc0063ea5c",
@@ -52,7 +61,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000029196.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147730.jpg",
-    "displayName": "Rozando la eternidad - Duncan Dhu"
+    "displayName": "Rozando la eternidad - Duncan Dhu",
+    "numberOneDate": "31 de marzo de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d349c769bbc1d669df2c76ba8c901f2bf0c00769?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "5ddfeab18f46d35c342fd2ad6d1abbff",
@@ -65,7 +77,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000549216.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000549324.jpg",
-    "displayName": "Canta por mí - El Último de la Fila"
+    "displayName": "Canta por mí - El Último de la Fila",
+    "numberOneDate": "16 de junio de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "92d631b1ca57f187d9636db0ae305a53",
@@ -78,7 +93,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000442246.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001133406.jpg",
-    "displayName": "Nacido para volar - La Frontera"
+    "displayName": "Nacido para volar - La Frontera",
+    "numberOneDate": "17 de marzo de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0fa02d47d783c03094b3b75524ef5170",
@@ -91,7 +109,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000023846.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000492403.jpg",
-    "displayName": "I'm gonna miss you - Milli Vanilli"
+    "displayName": "I'm gonna miss you - Milli Vanilli",
+    "numberOneDate": "27 de enero de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "5182f8dd255c46ec6ccbbc68084aa5cb",
@@ -104,7 +125,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001292051.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147730.jpg",
-    "displayName": "Rosa gris - Duncan Dhu"
+    "displayName": "Rosa gris - Duncan Dhu",
+    "numberOneDate": "29 de septiembre de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "d09d23694a9926048c76d4920e9f106e",
@@ -117,7 +141,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001040631.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000691051.jpg",
-    "displayName": "I've been thinking about you - Londonbeat"
+    "displayName": "I've been thinking about you - Londonbeat",
+    "numberOneDate": "22 de diciembre de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "a5a828d02411e9c96be34366fa7205ae",
@@ -130,7 +157,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000490108.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000490328.jpg",
-    "displayName": "Voy a pasármelo bien - Hombres G"
+    "displayName": "Voy a pasármelo bien - Hombres G",
+    "numberOneDate": "6 de enero de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/04fba2eadd518052781dacb2a808e1aeb5ac4263?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "1630e8e9aad3867a21d3892fe701d890",
@@ -143,7 +173,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000442465.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000533105.jpg",
-    "displayName": "Sólo se vive una vez - Gabinete Caligari"
+    "displayName": "Sólo se vive una vez - Gabinete Caligari",
+    "numberOneDate": "13 de enero de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "342a0f56d49b945a5b93a8a2e5674ce3",
@@ -156,7 +189,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000607158.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000692613.jpg",
-    "displayName": "Nothing compares 2 U - Sinéad O'Connor"
+    "displayName": "Nothing compares 2 U - Sinéad O'Connor",
+    "numberOneDate": "28 de abril de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d50d7c8ec55e72b1fef322107cc76ac5ade9c1b6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "25d7961ceebf2413b0befc1faeddb9b8",
@@ -169,7 +205,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000029289.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000692138.jpg",
-    "displayName": "Sacrifice - Elton John"
+    "displayName": "Sacrifice - Elton John",
+    "numberOneDate": "6 de octubre de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/78a65b01e8e577c3dc776c7a354b82962a62e851?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "6fa17f3bd88797ee76acb884e4ab9e9a",
@@ -182,7 +221,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000023869.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000691770.jpg",
-    "displayName": "I'm your baby tonight - Whitney Houston"
+    "displayName": "I'm your baby tonight - Whitney Houston",
+    "numberOneDate": "29 de diciembre de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "548b7edb7af507da471ad3a39c000640",
@@ -195,7 +237,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000495163.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000495178.jpg",
-    "displayName": "Ya no me engañas - Los Ronaldos"
+    "displayName": "Ya no me engañas - Los Ronaldos",
+    "numberOneDate": "11 de agosto de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "3c0f643c6d8a6037256b91ac79c70de3",
@@ -208,7 +253,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000491988.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000492037.jpg",
-    "displayName": "Fueron los celos - La Unión"
+    "displayName": "Fueron los celos - La Unión",
+    "numberOneDate": "15 de diciembre de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "d383017d3394ec5dcd465b233b66dc46",
@@ -221,7 +269,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000506277.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001722996.jpg",
-    "displayName": "Beach Boys megamix - The Beach Boys"
+    "displayName": "Beach Boys megamix - The Beach Boys",
+    "numberOneDate": "4 de agosto de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "b3ad11071dbec0d2386fe0e78c5872b4",
@@ -234,7 +285,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000034359.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001095115.jpg",
-    "displayName": "Veneno en la piel - Radio Futura"
+    "displayName": "Veneno en la piel - Radio Futura",
+    "numberOneDate": "26 de mayo de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9126f80e1d312284d70d9613ebf32a9fa3af1dfa?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "c724cba331afe0f8af61d629fd83d27e",
@@ -247,7 +301,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000027273.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001095940.jpg",
-    "displayName": "No me importa nada - Luz Casal"
+    "displayName": "No me importa nada - Luz Casal",
+    "numberOneDate": "24 de marzo de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/409026af47f1bbb35dfb0195facaf846edc5987f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "dd5780b732e7261d4c948b98f9bd2852",
@@ -260,7 +317,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000506068.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001150584.jpg",
-    "displayName": "Es por tu amor - Modestia Aparte"
+    "displayName": "Es por tu amor - Modestia Aparte",
+    "numberOneDate": "1 de septiembre de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "985af5ac9aa2732330887ad5c499c937",
@@ -273,7 +333,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490001326452.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/490001327339.jpg",
-    "displayName": "Get up (Before the night is over) - Technotronic"
+    "displayName": "Get up (Before the night is over) - Technotronic",
+    "numberOneDate": "14 de abril de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "85dfd520d4c4817be865926ce0dae73e",
@@ -286,7 +349,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000526613.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000526624.jpg",
-    "displayName": "Landslide of love - Transvision Vamp"
+    "displayName": "Landslide of love - Transvision Vamp",
+    "numberOneDate": "24 de febrero de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "bb07c65e249cd70f22ffef3310cab96c",
@@ -299,7 +365,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001868752.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001868754.jpg",
-    "displayName": "No problem - Los Inhumanos"
+    "displayName": "No problem - Los Inhumanos",
+    "numberOneDate": "23 de junio de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "873f7988f1e610a2fb15004513edf0d4",
@@ -312,7 +381,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000506417.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001085133.jpg",
-    "displayName": "Ooops Up - Snap!"
+    "displayName": "Ooops Up - Snap!",
+    "numberOneDate": "13 de octubre de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "badc9f8f52499b233fab29df6ed8e53c",
@@ -325,7 +397,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000689912.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001567818.jpg",
-    "displayName": "Words - The Christians"
+    "displayName": "Words - The Christians",
+    "numberOneDate": "3 de marzo de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "2eb827a3b8ba94a0cd5c79b27f0e0afa",
@@ -338,7 +413,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001108031.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001112654.jpg",
-    "displayName": "Soldados del amor - Olé Olé"
+    "displayName": "Soldados del amor - Olé Olé",
+    "numberOneDate": "14 de julio de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "7f6c788f3ebf4293c56bcc5190a50452",
@@ -351,7 +429,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000030719.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147728.jpg",
-    "displayName": "Suicide blonde - INXS"
+    "displayName": "Suicide blonde - INXS",
+    "numberOneDate": "17 de noviembre de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/fea9da7fb995ec916c65b201ddaf3acab4fc8019?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "e00c68af1cd5b718c3b18b0a5c3798ab",
@@ -364,7 +445,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000007988.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000463532.jpg",
-    "displayName": "It must have been love - Roxette"
+    "displayName": "It must have been love - Roxette",
+    "numberOneDate": "24 de noviembre de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "abd83b78518f03f1c5529c411e95b566",
@@ -377,7 +461,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000025724.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000886629.jpg",
-    "displayName": "Los tejados - Cómplices"
+    "displayName": "Los tejados - Cómplices",
+    "numberOneDate": "3 de noviembre de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "69f638724608f34b0fe1bcf34bf56718",
@@ -390,7 +477,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000504394.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001161447.jpg",
-    "displayName": "Canciones lejanas - Eros Ramazzotti"
+    "displayName": "Canciones lejanas - Eros Ramazzotti",
+    "numberOneDate": "27 de octubre de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "72325d17d4821f90555e91387b7a78dd",
@@ -403,7 +493,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000538365.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000691758.jpg",
-    "displayName": "Right here waiting - Richard Marx"
+    "displayName": "Right here waiting - Richard Marx",
+    "numberOneDate": "3 de febrero de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d602e63c3178ffc692b47efd3bd8b0347b9f9ba4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "23cc0081a5c90aca669d5a9379731fd0",
@@ -416,7 +509,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000689709.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000691127.jpg",
-    "displayName": "All around the world - Lisa Stansfield"
+    "displayName": "All around the world - Lisa Stansfield",
+    "numberOneDate": "10 de febrero de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ad08e0b7c9278ab012bbf2bb5bf81e361eaa5215?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "4fb4d15fbfe5a50fb2d0d95185bb4e71",
@@ -429,7 +525,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000583548.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000583693.jpg",
-    "displayName": "Enjoy the silence - Depeche Mode"
+    "displayName": "Enjoy the silence - Depeche Mode",
+    "numberOneDate": "5 de mayo de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/30406b305192c5824dd50b80266b5e25fb145d5b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "9f9ceb231560cc03cbfca9e202b486ee",
@@ -442,7 +541,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000528573.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001754919.jpg",
-    "displayName": "Can't  shake the feeling - Big Fun"
+    "displayName": "Can't  shake the feeling - Big Fun",
+    "numberOneDate": "7 de abril de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "2ee5be065ce0689cf2d3a1400d8f30b2",
@@ -455,7 +557,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001874283.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000691127.jpg",
-    "displayName": "Live together - Lisa Stansfield"
+    "displayName": "Live together - Lisa Stansfield",
+    "numberOneDate": "12 de mayo de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "9f719eddccbcd10f5feed5f6574f1ab3",
@@ -468,7 +573,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000013556.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001161447.jpg",
-    "displayName": "Si bastasen un par de canciones - Eros Ramazzotti"
+    "displayName": "Si bastasen un par de canciones - Eros Ramazzotti",
+    "numberOneDate": "30 de junio de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/55705c397b1ff295eb742830242a0201c2904827?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "f8d5da5905cf4d7de28e5628c05c0300",
@@ -481,7 +589,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000496803.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002087005.jpg",
-    "displayName": "U can't touch this - MC Hammer"
+    "displayName": "U can't touch this - MC Hammer",
+    "numberOneDate": "22 de septiembre de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/7abefa3ca8c174f4d20b563c0ff8461711349539?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "c6b19772afcfdfe5dffc36f8ce0c53d8",
@@ -494,7 +605,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000447531.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001156511.jpg",
-    "displayName": "Espaldas mojadas - Tam Tam Go!"
+    "displayName": "Espaldas mojadas - Tam Tam Go!",
+    "numberOneDate": "1 de diciembre de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6ea70e1fcfec0a7420dbb2a8d6112beeeddd2de0?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "a1a4805f6ef70f10e4694cd259a18053",
@@ -507,7 +621,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001858771.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001150584.jpg",
-    "displayName": "Cosas de la edad - Modestia Aparte"
+    "displayName": "Cosas de la edad - Modestia Aparte",
+    "numberOneDate": "19 de mayo de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c57cac993d18f6453063f814c5818d032a595d2f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "8f76ad6065f905188213c863bf4d5916",
@@ -520,7 +637,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000031369.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001085133.jpg",
-    "displayName": "The power - Snap!"
+    "displayName": "The power - Snap!",
+    "numberOneDate": "7 de julio de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9d6f796baa404280392389b873f089bbb1b8e4d2?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "df71ce36fa860df2cd45572fe5fa3a7c",
@@ -533,7 +653,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000511885.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000511890.jpg",
-    "displayName": "Vogue - Madonna"
+    "displayName": "Vogue - Madonna",
+    "numberOneDate": "2 de junio de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "dfd1050a9f7fd096ef68539e6a4e39ef",
@@ -546,7 +669,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026562.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001728931.jpg",
-    "displayName": "Mía - Los Rebeldes"
+    "displayName": "Mía - Los Rebeldes",
+    "numberOneDate": "9 de junio de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "ea5aea92a1f23e85280a30b46a0e358e",
@@ -559,7 +685,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000509771.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001095115.jpg",
-    "displayName": "Corazón de tiza - Radio Futura"
+    "displayName": "Corazón de tiza - Radio Futura",
+    "numberOneDate": "18 de agosto de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/584f4df9d4b752a8878b743cba604c45b3e49b2d?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "4e831faac49e121d3f422ed2867c86fc",
@@ -572,7 +701,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000023743.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000691247.jpg",
-    "displayName": "I feel the earth move - Martika"
+    "displayName": "I feel the earth move - Martika",
+    "numberOneDate": "10 de marzo de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/082912dcb7662684fd6219a2578c7989070bbab7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "a99c39b9fead47cf4de8c0fd8952b6e0",
@@ -585,7 +717,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000030583.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001138475.jpg",
-    "displayName": "Step by step - New Kids on the Block"
+    "displayName": "Step by step - New Kids on the Block",
+    "numberOneDate": "25 de agosto de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0b23851ebbbd4b356a96b9c100f08d3896503027?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "58ce51ed6eb81af327930794e54abc87",
@@ -598,7 +733,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000033386.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002940788.jpg",
-    "displayName": "You got it (the right stuff) - New Kids on the Block"
+    "displayName": "You got it (the right stuff) - New Kids on the Block",
+    "numberOneDate": "21 de abril de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "6245a9ebd540a6e105d624a3fa4b41d9",
@@ -611,7 +749,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000467406.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000467662.jpg",
-    "displayName": "Great balls of fire - Jerry Lee Lewis"
+    "displayName": "Great balls of fire - Jerry Lee Lewis",
+    "numberOneDate": "17 de febrero de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "9cb7147f4284c79312ed8e7673c4b688",
@@ -624,7 +765,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001126014.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001157206.jpg",
-    "displayName": "La abuela - Wilfred y La Ganga"
+    "displayName": "La abuela - Wilfred y La Ganga",
+    "numberOneDate": "21 de julio de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "baed86bccb858615deabab0a99b4a64d",
@@ -637,7 +781,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000023683.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001112528.jpg",
-    "displayName": "I can't stand it - Twenty 4 Seven"
+    "displayName": "I can't stand it - Twenty 4 Seven",
+    "numberOneDate": "15 de septiembre de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0c8a35abd09d14a2fa7cc63b7b523950d5b0c229?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "b34a2812fa9a53c2c43fcf94cb0d5277",
@@ -650,7 +797,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000491649.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000491747.jpg",
-    "displayName": "Los chicos no lloran - Miguel Bosé"
+    "displayName": "Los chicos no lloran - Miguel Bosé",
+    "numberOneDate": "8 de septiembre de 1990",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2bac8fa06e1203579ca552a6b2e60cef49d21e42?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "8c10fcfc3f501783f4a374c370520fed",
@@ -663,7 +813,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000502567.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001150582.jpg",
-    "displayName": "Acércate y bésame - La Trampa"
+    "displayName": "Acércate y bésame - La Trampa",
+    "numberOneDate": "8 de diciembre de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "2a43f70d0f6014e2900e13fdc66f2899",
@@ -676,7 +829,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001863962.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001155124.jpg",
-    "displayName": "Praying for time - George Michael"
+    "displayName": "Praying for time - George Michael",
+    "numberOneDate": "20 de octubre de 1990",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "ab683f61ac0104c09ccb2f7b6a05730f",
@@ -689,7 +845,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001300520.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001300522.jpg",
-    "displayName": "The one and only - Chesney Hawkes"
+    "displayName": "The one and only - Chesney Hawkes",
+    "numberOneDate": "17 de agosto de 1991",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a46fc1406962f2a9bc30d0d921e1004a4cbc1ff6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "a0069b3fe074c1a56cb6a4382e124dd8",
@@ -702,7 +861,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001184675.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001181826.jpg",
-    "displayName": "Ice ice baby - Vanilla Ice"
+    "displayName": "Ice ice baby - Vanilla Ice",
+    "numberOneDate": "23 de febrero de 1991",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6f765404de0f3c9f208bc2ceff7dba8bb3142573?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "3dff71bfc97e81e775c9a7e4d124bdf5",
@@ -715,7 +877,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000025985.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001130628.jpg",
-    "displayName": "Maldito duende - Héroes del Silencio"
+    "displayName": "Maldito duende - Héroes del Silencio",
+    "numberOneDate": "20 de abril de 1991",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ffa750674f734acbc81d294be362f98680d79351?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "8b76130cf79207298278aac901a84842",
@@ -728,7 +893,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000438109.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000916461.jpg",
-    "displayName": "¡Cómo te mueves! - Modestia Aparte"
+    "displayName": "¡Cómo te mueves! - Modestia Aparte",
+    "numberOneDate": "1 de junio de 1991",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c7eb2cf160a7a5405a27ae735ca61ac9178536eb?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "5d7e4f4179962a984464181e4cc3f3e8",
@@ -741,7 +909,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001868751.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001150582.jpg",
-    "displayName": "Volver a casa - La Trampa"
+    "displayName": "Volver a casa - La Trampa",
+    "numberOneDate": "9 de marzo de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "a7fc34eeb9f6aa5f24a324634233a2fc",
@@ -754,7 +925,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000676174.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001167593.jpg",
-    "displayName": "El amoto - No Me Pises Que Llevo Chanclas"
+    "displayName": "El amoto - No Me Pises Que Llevo Chanclas",
+    "numberOneDate": "24 de agosto de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "7c02496db9b9496d0fa9ad8e06a52e05",
@@ -767,7 +941,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001809425.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001156511.jpg",
-    "displayName": "Este payo (Versión castellano) - Tam Tam Go!"
+    "displayName": "Este payo (Versión castellano) - Tam Tam Go!",
+    "numberOneDate": "2 de marzo de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "ffa61ef14b5cd8438876c5d296d42ed1",
@@ -780,7 +957,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000496424.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001864136.jpg",
-    "displayName": "Cuidado con Paloma - Emilio Aragón"
+    "displayName": "Cuidado con Paloma - Emilio Aragón",
+    "numberOneDate": "4 de mayo de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "f46079e5a7c0eb97b6592b2b4490b7e3",
@@ -793,7 +973,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000021722.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000892654.jpg",
-    "displayName": "El peón del rey de negras - Mecano"
+    "displayName": "El peón del rey de negras - Mecano",
+    "numberOneDate": "12 de octubre de 1991",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/bb7d2a9cd2a4286ed9fc242ecec7cca36868c770?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "5a1e046a4ef86b4ca834007875541079",
@@ -806,7 +989,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001864189.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001095843.jpg",
-    "displayName": "Galilea - Sergio Dalma"
+    "displayName": "Galilea - Sergio Dalma",
+    "numberOneDate": "5 de octubre de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "20e2a0f988f0d344387e4863a1328829",
@@ -819,7 +1005,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000496339.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000496341.jpg",
-    "displayName": "Hombres - Loquillo y Los Trogloditas"
+    "displayName": "Hombres - Loquillo y Los Trogloditas",
+    "numberOneDate": "14 de septiembre de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "889a3bc2592b587c0669654aaf1d6281",
@@ -832,7 +1021,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000645594.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001130628.jpg",
-    "displayName": "Entre dos tierras - Héroes del Silencio"
+    "displayName": "Entre dos tierras - Héroes del Silencio",
+    "numberOneDate": "19 de enero de 1991",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/262618f75f1dcf9a19dc362a946b7022be444444?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "82135e0266134e58f2d96d317741b782",
@@ -845,7 +1037,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000498610.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002087005.jpg",
-    "displayName": "Have you seen her - MC Hammer"
+    "displayName": "Have you seen her - MC Hammer",
+    "numberOneDate": "12 de enero de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "d7c514a82fb672d96c45ae15de6df9f9",
@@ -858,7 +1053,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000504669.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001863977.jpg",
-    "displayName": "Are you dreaming? - Twenty 4 Seven"
+    "displayName": "Are you dreaming? - Twenty 4 Seven",
+    "numberOneDate": "26 de enero de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "73416793192b512c3c9668f5a50ba31e",
@@ -871,7 +1069,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001286717.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000869298.jpg",
-    "displayName": "Chiquilla - Seguridad Social"
+    "displayName": "Chiquilla - Seguridad Social",
+    "numberOneDate": "13 de julio de 1991",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/89bd34d32cf921d544d433e8ec46adad4694b6c8?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "55d96c7ad9918e052e96c1de9de7c252",
@@ -884,7 +1085,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000996327.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001532220.jpg",
-    "displayName": "Gypsy woman (She's homeless) - Crystal Waters"
+    "displayName": "Gypsy woman (She's homeless) - Crystal Waters",
+    "numberOneDate": "31 de agosto de 1991",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6f2394397973d57d36243925ccbaae9c5a43ede4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "ac9c24fbfbc54c840854f5495034d6eb",
@@ -897,7 +1101,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000021476.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000892654.jpg",
-    "displayName": "El 7 de septiembre - Mecano"
+    "displayName": "El 7 de septiembre - Mecano",
+    "numberOneDate": "27 de julio de 1991",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f97ecc7a7bc6072cc270ece8c74557f115ce9c0e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "ed30f14e821e5c9376db36e5da18ebc7",
@@ -910,7 +1117,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000027927.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001864138.jpg",
-    "displayName": "Palabras de fuego - La Frontera"
+    "displayName": "Palabras de fuego - La Frontera",
+    "numberOneDate": "3 de agosto de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "209b1545d89076c08c2acdb4e54a427c",
@@ -923,7 +1133,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000526250.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000526294.jpg",
-    "displayName": "Mundo de cristal - Duncan Dhu"
+    "displayName": "Mundo de cristal - Duncan Dhu",
+    "numberOneDate": "7 de septiembre de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "e6caf9ea4ef051d170bbc09b1055a7de",
@@ -936,7 +1149,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000490147.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000490332.jpg",
-    "displayName": "Rita - Hombres G"
+    "displayName": "Rita - Hombres G",
+    "numberOneDate": "9 de febrero de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0b790c8021ef9fe12350782df30ae380",
@@ -949,7 +1165,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000496823.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000496843.jpg",
-    "displayName": "La deuda de la mentira - Danza Invisible"
+    "displayName": "La deuda de la mentira - Danza Invisible",
+    "numberOneDate": "21 de diciembre de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "6b0fd54b8051227dcdc8e03a4e575f94",
@@ -962,7 +1181,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001545421.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000691744.jpg",
-    "displayName": "Innuendo - Queen"
+    "displayName": "Innuendo - Queen",
+    "numberOneDate": "16 de marzo de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "68fc264531eff4ec65fd7fa0bf64f7a1",
@@ -975,7 +1197,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000522224.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000691770.jpg",
-    "displayName": "All the man that I need - Whitney Houston"
+    "displayName": "All the man that I need - Whitney Houston",
+    "numberOneDate": "6 de abril de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "92b972c9240770efa1541deb0295073c",
@@ -988,7 +1213,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000022696.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001155124.jpg",
-    "displayName": "Freedom! '90 - George Michael"
+    "displayName": "Freedom! '90 - George Michael",
+    "numberOneDate": "2 de febrero de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "67d8f6499b455ee49e6e551af655b839",
@@ -1001,7 +1229,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000498663.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002087005.jpg",
-    "displayName": "Pray - MC Hammer"
+    "displayName": "Pray - MC Hammer",
+    "numberOneDate": "27 de abril de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "c62d7d1e5ec844b63487b8c0b6e539eb",
@@ -1014,7 +1245,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000649973.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000649978.jpg",
-    "displayName": "Gente impresentable - Celtas Cortos"
+    "displayName": "Gente impresentable - Celtas Cortos",
+    "numberOneDate": "11 de mayo de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "33b21f7d37c24bfdf2d8e123f696107a",
@@ -1027,7 +1261,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490001185823.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001085566.jpg",
-    "displayName": "Joyride - Roxette"
+    "displayName": "Joyride - Roxette",
+    "numberOneDate": "25 de mayo de 1991",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/11dc8e505df766cdd33a8aa09d6dc08709d28bf2?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "15f9d11fdfbf51a2551f811329366bf0",
@@ -1040,7 +1277,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000018867.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001095843.jpg",
-    "displayName": "Bailar pegados - Sergio Dalma"
+    "displayName": "Bailar pegados - Sergio Dalma",
+    "numberOneDate": "15 de junio de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "b68849471ec6301e2809cd5a59f6b19b",
@@ -1053,7 +1293,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000503669.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002656506.jpg",
-    "displayName": "Calling Elvis - Dire Straits"
+    "displayName": "Calling Elvis - Dire Straits",
+    "numberOneDate": "26 de octubre de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "6f416b51c40e6142d3a1a2252db30387",
@@ -1066,7 +1309,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000689893.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000691077.jpg",
-    "displayName": "(Everything I do) I do it for you - Bryan Adams"
+    "displayName": "(Everything I do) I do it for you - Bryan Adams",
+    "numberOneDate": "19 de octubre de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "f81c11ff3a00d172a563bbf329f97db0",
@@ -1079,7 +1325,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000563929.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000563944.jpg",
-    "displayName": "Let there be love - Simple Minds"
+    "displayName": "Let there be love - Simple Minds",
+    "numberOneDate": "6 de julio de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "64c673865e6af9eac9cadec4d6d1ca27",
@@ -1092,7 +1341,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000020944.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001130628.jpg",
-    "displayName": "Despertar - Héroes del Silencio"
+    "displayName": "Despertar - Héroes del Silencio",
+    "numberOneDate": "10 de agosto de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "1abffdfb6b21c169bb2275e22d213994",
@@ -1105,7 +1357,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000491991.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000492037.jpg",
-    "displayName": "Dámelo ya - La Unión"
+    "displayName": "Dámelo ya - La Unión",
+    "numberOneDate": "29 de junio de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "7f49bc46fbe3b8ba44afd45565bbfe7b",
@@ -1118,7 +1373,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000029298.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001118607.jpg",
-    "displayName": "Sadeness - Enigma"
+    "displayName": "Sadeness - Enigma",
+    "numberOneDate": "16 de febrero de 1991",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c1e0bce5d200be252744c0d32e3ca39d2ec12995?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "eae760cb89dd063566980de79bb7221c",
@@ -1131,7 +1389,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001103340.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001107687.jpg",
-    "displayName": "Coming out of the dark - Gloria Estefan"
+    "displayName": "Coming out of the dark - Gloria Estefan",
+    "numberOneDate": "13 de abril de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "267bcd321dad8c85682928c7c3365b1d",
@@ -1144,7 +1405,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000534606.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000534633.jpg",
-    "displayName": "Loco vox - Loco Mía"
+    "displayName": "Loco vox - Loco Mía",
+    "numberOneDate": "20 de julio de 1991",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/71641b19150b28938aea15dcac636c67541694bc?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "2fcfd7728f1da903acb7861baaf15875",
@@ -1157,7 +1421,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000545720.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001864210.jpg",
-    "displayName": "Cuando duermes - Cómplices"
+    "displayName": "Cuando duermes - Cómplices",
+    "numberOneDate": "28 de diciembre de 1991",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d87a3aa29ed2c2cf0c3739d99b617471e3e52e7f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "8840fe6fe9e0b540ddff760d8bb9e499",
@@ -1170,7 +1437,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000585020.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000692358.jpg",
-    "displayName": "All together now - The Farm"
+    "displayName": "All together now - The Farm",
+    "numberOneDate": "8 de junio de 1991",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/077dea37ce3a7203f513246c434465ed641ea12b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "704b57dcd64b989f7be42b155e36798e",
@@ -1183,7 +1453,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000908348.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000692592.jpg",
-    "displayName": "Something got me started - Simply Red"
+    "displayName": "Something got me started - Simply Red",
+    "numberOneDate": "14 de diciembre de 1991",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/078fc98bb501e2cdb6f0ce379e64d6484c35dfbf?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "20f1fe0a584c038279f96b7a4a773ff6",
@@ -1196,7 +1469,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000021159.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001083922.jpg",
-    "displayName": "Don't cry - Guns N' Roses"
+    "displayName": "Don't cry - Guns N' Roses",
+    "numberOneDate": "16 de noviembre de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "9f9d038c978fe9ceacf784618dac5360",
@@ -1209,7 +1485,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000496425.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001864209.jpg",
-    "displayName": "Nos queda la noche - El Golpe"
+    "displayName": "Nos queda la noche - El Golpe",
+    "numberOneDate": "9 de noviembre de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "71c6572592c7d8712ff99ced9d944dc6",
@@ -1222,7 +1501,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000013513.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000691753.jpg",
-    "displayName": "Shiny happy people - R.E.M.;Kate Pierson"
+    "displayName": "Shiny happy people - R.E.M.;Kate Pierson",
+    "numberOneDate": "21 de septiembre de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "6d6400223464ed26f20e221188f160e8",
@@ -1235,7 +1517,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000526249.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000526294.jpg",
-    "displayName": "La casa azul - Duncan Dhu"
+    "displayName": "La casa azul - Duncan Dhu",
+    "numberOneDate": "23 de noviembre de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "24c2dd8e3ccd88e7eb5ca25dbeb9e7f7",
@@ -1248,7 +1533,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000818075.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000532053.jpg",
-    "displayName": "Gonna make you sweat (Everybody dance now) - C+C Music Factory;Freedom Williams;Martha Wash"
+    "displayName": "Gonna make you sweat (Everybody dance now) - C+C Music Factory;Freedom Williams;Martha Wash",
+    "numberOneDate": "30 de marzo de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "f2c580b547bc6b93c8d6c8f921c60bd5",
@@ -1261,7 +1549,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000545179.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000545200.jpg",
-    "displayName": "Llueve en mi corazón - Tennessee"
+    "displayName": "Llueve en mi corazón - Tennessee",
+    "numberOneDate": "22 de junio de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "91f8be52622b9a941cf11bfd3d21b7cd",
@@ -1274,7 +1565,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000491989.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000492037.jpg",
-    "displayName": "Ella es un volcán - La Unión"
+    "displayName": "Ella es un volcán - La Unión",
+    "numberOneDate": "23 de marzo de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "698f8f04e8c682f8445f8de0efedf4c4",
@@ -1287,7 +1581,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000495562.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001864137.jpg",
-    "displayName": "The Grease megamix - John Travolta;Olivia Newton-John"
+    "displayName": "The Grease megamix - John Travolta;Olivia Newton-John",
+    "numberOneDate": "18 de mayo de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "2a1f1ea3002b024540e390099e4f0b2b",
@@ -1300,7 +1597,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000494872.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000494874.jpg",
-    "displayName": "You gotta love someone - Elton John"
+    "displayName": "You gotta love someone - Elton John",
+    "numberOneDate": "5 de enero de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "a7bdc9b782d09543efea7024b70e8012",
@@ -1313,7 +1613,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000028233.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000464510.jpg",
-    "displayName": "Pisando fuerte - Alejandro Sanz"
+    "displayName": "Pisando fuerte - Alejandro Sanz",
+    "numberOneDate": "2 de noviembre de 1991",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1c8b755df8aa67ec74e39b9d5b2ae12c009866f4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "6ab2910f01ce38ef9c7c990a3bd02a3d",
@@ -1326,7 +1629,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000033365.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001118622.jpg",
-    "displayName": "You could be mine - Guns N' Roses"
+    "displayName": "You could be mine - Guns N' Roses",
+    "numberOneDate": "28 de septiembre de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "13e200cfb40f84f48190f857c5dae56a",
@@ -1339,7 +1645,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000523597.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000523612.jpg",
-    "displayName": "Y no amanece - Los Secretos"
+    "displayName": "Y no amanece - Los Secretos",
+    "numberOneDate": "7 de diciembre de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "295d1b18376f1faf74772b201674f6eb",
@@ -1352,7 +1661,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000602250.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000892654.jpg",
-    "displayName": "Naturaleza muerta - Mecano"
+    "displayName": "Naturaleza muerta - Mecano",
+    "numberOneDate": "30 de noviembre de 1991",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "4816093ec6b67af7b8726f8c0300418e",
@@ -1365,7 +1677,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000535046.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000535082.jpg",
-    "displayName": "Cuéntame un cuento - Celtas Cortos"
+    "displayName": "Cuéntame un cuento - Celtas Cortos",
+    "numberOneDate": "18 de julio de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6ad335669c771c1c4a910bc99a8436f533a311a8?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "0e8f4c69244846a1e37daa4192a1aee7",
@@ -1378,7 +1693,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000464501.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000464510.jpg",
-    "displayName": "Se le apagó la luz - Alejandro Sanz"
+    "displayName": "Se le apagó la luz - Alejandro Sanz",
+    "numberOneDate": "22 de febrero de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/119e71a9c7e24ee6230b03158ef10aa734837ad3?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "4c341817367cfaf1dab6f8ac64b1437d",
@@ -1391,7 +1709,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000533335.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000493630.jpg",
-    "displayName": "Black or white - Michael Jackson"
+    "displayName": "Black or white - Michael Jackson",
+    "numberOneDate": "4 de enero de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/7685001a08ad8903a2c14f1fbb0834c6904a65a3?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "751b5719639d1596f7dc4521f65416eb",
@@ -1404,7 +1725,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002010021.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000692204.jpg",
-    "displayName": "No son of mine - Genesis"
+    "displayName": "No son of mine - Genesis",
+    "numberOneDate": "8 de febrero de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f120290210e70d9922c228c81a792673d9bec98f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "861d123d891243ee2ad96ffd2fdf865f",
@@ -1417,7 +1741,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000533317.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000533329.jpg",
-    "displayName": "The one - Elton John"
+    "displayName": "The one - Elton John",
+    "numberOneDate": "29 de agosto de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "f12112f7e6b4832324bf5e452fe0c09c",
@@ -1430,7 +1757,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000533529.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000533740.jpg",
-    "displayName": "Dame tu amistad - Tennessee"
+    "displayName": "Dame tu amistad - Tennessee",
+    "numberOneDate": "8 de agosto de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "bf2e5e12a2f5399f8c7d9275178770f4",
@@ -1443,7 +1773,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000023564.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000691796.jpg",
-    "displayName": "How do you do! - Roxette"
+    "displayName": "How do you do! - Roxette",
+    "numberOneDate": "7 de noviembre de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0897b27a5c24e0d5099131fef7c99218a92984ca?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "d9de903dfa9d10cb783595d998a8b26f",
@@ -1456,7 +1789,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000515104.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000515112.jpg",
-    "displayName": "Es por ti - Luz Casal"
+    "displayName": "Es por ti - Luz Casal",
+    "numberOneDate": "12 de septiembre de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "46a146949a085b75379c13248d7807af",
@@ -1469,7 +1805,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000584217.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000584263.jpg",
-    "displayName": "Drive - R.E.M."
+    "displayName": "Drive - R.E.M.",
+    "numberOneDate": "19 de diciembre de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "6e2290f7d299f6bd45f1c2328c59ac5e",
@@ -1482,7 +1821,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000464524.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000892654.jpg",
-    "displayName": "El fallo positivo - Mecano"
+    "displayName": "El fallo positivo - Mecano",
+    "numberOneDate": "10 de octubre de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "5faa6c1b4b1a9ecf412883bff50f6be0",
@@ -1495,7 +1837,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000497099.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001778716.jpg",
-    "displayName": "Humpin' around - Bobby Brown"
+    "displayName": "Humpin' around - Bobby Brown",
+    "numberOneDate": "14 de noviembre de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "660a539b37ad52d50c38bc260e338ffa",
@@ -1508,7 +1853,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000545727.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001864210.jpg",
-    "displayName": "Verdad que sería estupendo - Cómplices"
+    "displayName": "Verdad que sería estupendo - Cómplices",
+    "numberOneDate": "14 de marzo de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0926df7f2234c2fc16d44ea2d1377553",
@@ -1521,7 +1869,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001198123.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001198176.jpg",
-    "displayName": "Martika's kitchen - Martika"
+    "displayName": "Martika's kitchen - Martika",
+    "numberOneDate": "29 de febrero de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "744f9bf601d18383cb412f1e87b7e263",
@@ -1534,7 +1885,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000028975.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000493630.jpg",
-    "displayName": "Remember the time - Michael Jackson"
+    "displayName": "Remember the time - Michael Jackson",
+    "numberOneDate": "2 de mayo de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/900f644f1c0fac46930083cb771013ef9cf50144?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "6741dded9817c1434974446cb08d1bf6",
@@ -1547,7 +1901,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000781.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001917375.jpg",
-    "displayName": "Historias de amor - OBK"
+    "displayName": "Historias de amor - OBK",
+    "numberOneDate": "19 de septiembre de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a6bf55da2f7eb332f9e4f07cb1d8b0d9b6b12cac?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "5b41defa1e7d31b6ae5e2b876efaa9b6",
@@ -1560,7 +1917,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000515109.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000515112.jpg",
-    "displayName": "Piensa en mí - Luz Casal"
+    "displayName": "Piensa en mí - Luz Casal",
+    "numberOneDate": "16 de mayo de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9b00c5d964517aa9c3a81154a49d7acb47755c5f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "8140b7ed4d7290041ed35ed68dfdc116",
@@ -1573,7 +1933,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000032253.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000892654.jpg",
-    "displayName": "Una rosa es una rosa - Mecano"
+    "displayName": "Una rosa es una rosa - Mecano",
+    "numberOneDate": "22 de agosto de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/37a6995c2b2799657611e932037ded7a36cac0a2?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "985320da14dd2453c4f81c5b43a12128",
@@ -1586,7 +1949,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000018696.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001096019.jpg",
-    "displayName": "Ave Lucía - Sergio Dalma"
+    "displayName": "Ave Lucía - Sergio Dalma",
+    "numberOneDate": "27 de junio de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "ad20b354a8412a304e7019eabcfd8374",
@@ -1599,7 +1965,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001275283.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001199474.jpg",
-    "displayName": "Medley: Amor fugaz / El San Francisco / Blues - La Unión"
+    "displayName": "Medley: Amor fugaz / El San Francisco / Blues - La Unión",
+    "numberOneDate": "13 de junio de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "aabf26e469c0f137e8edd7ee4447b185",
@@ -1612,7 +1981,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001864222.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001150580.jpg",
-    "displayName": "Al lado de ti - La Trampa"
+    "displayName": "Al lado de ti - La Trampa",
+    "numberOneDate": "25 de julio de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "536a183dacee70fc154fc3dae2a8dc3c",
@@ -1625,7 +1997,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026100.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000916527.jpg",
-    "displayName": "María - Modestia Aparte"
+    "displayName": "María - Modestia Aparte",
+    "numberOneDate": "20 de junio de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0cdc398d5e7c267ec6c6adaea7839428",
@@ -1638,7 +2013,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000520647.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000520659.jpg",
-    "displayName": "Better days - Bruce Springsteen"
+    "displayName": "Better days - Bruce Springsteen",
+    "numberOneDate": "11 de julio de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "683e9e04e21cb751f2d93f861c4d2d36",
@@ -1651,7 +2029,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000511146.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000511191.jpg",
-    "displayName": "Erotica - Madonna"
+    "displayName": "Erotica - Madonna",
+    "numberOneDate": "5 de diciembre de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/3bfde5f7def32e87e59f4d02f806fba86fd1861e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "105a9a9d3207911e02616467fd939e53",
@@ -1664,7 +2045,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000529746.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000529776.jpg",
-    "displayName": "A un minuto de ti - Mikel Erentxun"
+    "displayName": "A un minuto de ti - Mikel Erentxun",
+    "numberOneDate": "26 de diciembre de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d767a15a8bda5c18e0fc7ef6566cd20d9670c840?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "c0d47f7b5dbcba7bbb868879f95511a3",
@@ -1677,7 +2061,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000479074.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000692592.jpg",
-    "displayName": "Stars - Simply Red"
+    "displayName": "Stars - Simply Red",
+    "numberOneDate": "21 de marzo de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/3b889a8a0224fdd82021e7226e51fdcaa572413e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "cdfe9defb6f9fbaded5b8fbc48b20ecb",
@@ -1690,7 +2077,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000471304.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001161444.jpg",
-    "displayName": "La vida todavía - Eros Ramazzotti"
+    "displayName": "La vida todavía - Eros Ramazzotti",
+    "numberOneDate": "25 de enero de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "e0acc2f2166b3285559ca70f6d4aace1",
@@ -1703,7 +2093,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000535044.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000535082.jpg",
-    "displayName": "20 de abril - Celtas Cortos"
+    "displayName": "20 de abril - Celtas Cortos",
+    "numberOneDate": "18 de abril de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a3cb425f885d89ecaf58596528958f6736d989ac?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "cb390c681242d548c90860c420ff5edf",
@@ -1716,7 +2109,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000467166.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000546898.jpg",
-    "displayName": "Otro día más sin verte - Jon Secada"
+    "displayName": "Otro día más sin verte - Jon Secada",
+    "numberOneDate": "17 de octubre de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "742f8a7a71e4033891b4d1c67e9a2f81",
@@ -1729,7 +2125,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000496401.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000493630.jpg",
-    "displayName": "In the closet - Michael Jackson"
+    "displayName": "In the closet - Michael Jackson",
+    "numberOneDate": "15 de agosto de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "37ab93792e43e59355cd30dfef752c79",
@@ -1742,7 +2141,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000535040.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000535082.jpg",
-    "displayName": "¡¡Ya está bien!! - Celtas Cortos"
+    "displayName": "¡¡Ya está bien!! - Celtas Cortos",
+    "numberOneDate": "24 de octubre de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "5466fa1db7cd1f57a9c9403637b5347f",
@@ -1755,7 +2157,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001317217.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001317214.jpg",
-    "displayName": "El canto de la sirena - Los Limones"
+    "displayName": "El canto de la sirena - Los Limones",
+    "numberOneDate": "25 de abril de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "789b39371fcd6c9a9d70589e7ede7789",
@@ -1768,7 +2173,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000497033.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000497034.jpg",
-    "displayName": "Licencia para bailar - La Década Prodigiosa"
+    "displayName": "Licencia para bailar - La Década Prodigiosa",
+    "numberOneDate": "11 de enero de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "32546175fa115b0e6309b96b46753aa3",
@@ -1781,7 +2189,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000030128.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000584195.jpg",
-    "displayName": "Smells like teen spirit - Nirvana"
+    "displayName": "Smells like teen spirit - Nirvana",
+    "numberOneDate": "4 de abril de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9781673a70278effbced98841341a2321e846a62?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "b3bdb68dbc788a000e29ffa8e4fa3918",
@@ -1794,7 +2205,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000572932.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000692662.jpg",
-    "displayName": "One - U2"
+    "displayName": "One - U2",
+    "numberOneDate": "23 de mayo de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d6b42d76f8ba71d7d572a5ed0003ba7500057d14?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "d32c93b285cdb37f8c048f2ff827332e",
@@ -1807,7 +2221,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000472593.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000464510.jpg",
-    "displayName": "Lo que fui es lo que soy - Alejandro Sanz"
+    "displayName": "Lo que fui es lo que soy - Alejandro Sanz",
+    "numberOneDate": "30 de mayo de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "22573966029b7cf87c3f38c9e930c692",
@@ -1820,7 +2237,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000530142.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000530150.jpg",
-    "displayName": "Juegos de amor - Cabaret Pop"
+    "displayName": "Juegos de amor - Cabaret Pop",
+    "numberOneDate": "21 de noviembre de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "21986f13cd275f8b585985109d22792a",
@@ -1833,7 +2253,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000515100.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000515112.jpg",
-    "displayName": "Un pedazo de cielo - Luz Casal"
+    "displayName": "Un pedazo de cielo - Luz Casal",
+    "numberOneDate": "15 de febrero de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "81b1fe14871c6aaa314c7d282c4bdf39",
@@ -1846,7 +2269,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000532545.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001096019.jpg",
-    "displayName": "La vida empieza hoy - Sergio Dalma"
+    "displayName": "La vida empieza hoy - Sergio Dalma",
+    "numberOneDate": "3 de octubre de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0f3772ec8edc0c783ae55949b1210afc",
@@ -1859,7 +2285,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000496400.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000493630.jpg",
-    "displayName": "Jam - Michael Jackson;Heavy D"
+    "displayName": "Jam - Michael Jackson;Heavy D",
+    "numberOneDate": "26 de septiembre de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "77bb8096a66d6430d1572a92fefcd926",
@@ -1872,7 +2301,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000019207.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001095998.jpg",
-    "displayName": "Bonito es - Los Sencillos;Santiago Auserón"
+    "displayName": "Bonito es - Los Sencillos;Santiago Auserón",
+    "numberOneDate": "9 de mayo de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "09989b60adaaecba5577e7a9ad46e0a4",
@@ -1885,7 +2317,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000535038.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000535082.jpg",
-    "displayName": "El ritmo del mar - Celtas Cortos"
+    "displayName": "El ritmo del mar - Celtas Cortos",
+    "numberOneDate": "18 de enero de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/67fb6bbd2ab6e4982440db4c9133ca3985c7ab50?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "876bc414289b93301f7635a02251ea8e",
@@ -1898,7 +2333,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001794560.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000546876.jpg",
-    "displayName": "Llovió - Presuntos Implicados"
+    "displayName": "Llovió - Presuntos Implicados",
+    "numberOneDate": "11 de abril de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2f999947fc637b7ff4cc832fa11ba20f14132ad7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "c2d8513d45828d171bba7710eabb90b1",
@@ -1911,7 +2349,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001078861.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001079034.jpg",
-    "displayName": "Can't stop this thing we started - Bryan Adams"
+    "displayName": "Can't stop this thing we started - Bryan Adams",
+    "numberOneDate": "1 de febrero de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "db4016db17f0c9cff21e0ad57009f516",
@@ -1924,7 +2365,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000020603.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000892654.jpg",
-    "displayName": "Dalai Lama - Mecano"
+    "displayName": "Dalai Lama - Mecano",
+    "numberOneDate": "7 de marzo de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/7964db107606c64e2baecaaacf4122cdbfff0481?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "0c0bf0a3a09991803db44f5a94c8f4b2",
@@ -1937,7 +2381,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000526526.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000526676.jpg",
-    "displayName": "Good night girl - Wet Wet Wet"
+    "displayName": "Good night girl - Wet Wet Wet",
+    "numberOneDate": "28 de marzo de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "a055be9c4be85325f5d748b38267f811",
@@ -1950,7 +2397,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000529694.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000530778.jpg",
-    "displayName": "Achy breaky heart - Billy Ray Cyrus"
+    "displayName": "Achy breaky heart - Billy Ray Cyrus",
+    "numberOneDate": "28 de noviembre de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/7150d08dc188d15e7dd1fc149181e0e84606e767?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "f93d89ade526399b47f234b8c629f5e9",
@@ -1963,7 +2413,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000530552.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000530568.jpg",
-    "displayName": "Weather with you - Crowded House"
+    "displayName": "Weather with you - Crowded House",
+    "numberOneDate": "5 de septiembre de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/e78849f2f2a98490bfa7d6b54404db6d04a00fd0?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "820b0fc44dbbd934e1bca96f57bdd3cf",
@@ -1976,7 +2429,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000023623.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000520136.jpg",
-    "displayName": "Human touch - Bruce Springsteen"
+    "displayName": "Human touch - Bruce Springsteen",
+    "numberOneDate": "6 de junio de 1992",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/3cf41cb826264b3e2cdf4a2ebacff28be2c7f107?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "f01ea291d459e52b051261a47a5fbf86",
@@ -1989,7 +2445,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000529759.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000530775.jpg",
-    "displayName": "Let's get rocked - Def Leppard"
+    "displayName": "Let's get rocked - Def Leppard",
+    "numberOneDate": "4 de julio de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "6eb9a9d6c1928e7a94cc5317d491c5dd",
@@ -2002,7 +2461,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000497284.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000497285.jpg",
-    "displayName": "Mía - Platón"
+    "displayName": "Mía - Platón",
+    "numberOneDate": "12 de diciembre de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "6c2efa704c03301a1c49480331e15b3d",
@@ -2015,7 +2477,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000497353.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000497355.jpg",
-    "displayName": "Por verte feliz - Terapia Nacional"
+    "displayName": "Por verte feliz - Terapia Nacional",
+    "numberOneDate": "1 de agosto de 1992",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "da5e16320e3e391c06ce703df7ebd807",
@@ -2028,7 +2493,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000029946.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000887116.jpg",
-    "displayName": "Si tú me miras - Alejandro Sanz"
+    "displayName": "Si tú me miras - Alejandro Sanz",
+    "numberOneDate": "12 de junio de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/15422241858c9601f2ab80ed520512c23741f8fd?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "2673edffb7ebf7ff971eab0b02c3f42a",
@@ -2041,7 +2509,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001409656.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001155686.jpg",
-    "displayName": "Your latest trick - Dire Straits"
+    "displayName": "Your latest trick - Dire Straits",
+    "numberOneDate": "3 de julio de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ffe30469d16f5ac004f6f29910c07159c8b6e2e7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "d97d71248f8ce404424b9f572532d687",
@@ -2054,7 +2525,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000023978.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000691768.jpg",
-    "displayName": "I will always love you - Whitney Houston"
+    "displayName": "I will always love you - Whitney Houston",
+    "numberOneDate": "23 de enero de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "2f90b3415523d67d02fba86179b3a427",
@@ -2067,7 +2541,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000578279.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000578294.jpg",
-    "displayName": "El sitio de mi recreo - Antonio Vega"
+    "displayName": "El sitio de mi recreo - Antonio Vega",
+    "numberOneDate": "13 de marzo de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "2e74a5442d945baf0d8d03026b9ef9a1",
@@ -2080,7 +2557,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000032820.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000547301.jpg",
-    "displayName": "What's up - 4 Non Blondes"
+    "displayName": "What's up - 4 Non Blondes",
+    "numberOneDate": "16 de octubre de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d30a604135cdebfd3c58f31942f388f01cfb129c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "72d0c0dceb8f07d4e775ccb252cc04cf",
@@ -2093,7 +2573,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000519777.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000519817.jpg",
-    "displayName": "Fields of gold - Sting"
+    "displayName": "Fields of gold - Sting",
+    "numberOneDate": "31 de julio de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6ebd97e91a74c5fdc98fc8ce6263205cd8c7d842?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "19766bf49163b8b9d45d3691a5809c51",
@@ -2106,7 +2589,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000587965.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001181999.jpg",
-    "displayName": "Go west - Pet Shop Boys"
+    "displayName": "Go west - Pet Shop Boys",
+    "numberOneDate": "4 de diciembre de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2835d3477a0f07eb6ba1e964530636f08865a6d7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "9695496f203387aaa595375f75cb2b8e",
@@ -2119,7 +2605,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000546553.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000498195.jpg",
-    "displayName": "Ella - Viceversa"
+    "displayName": "Ella - Viceversa",
+    "numberOneDate": "25 de septiembre de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "c5aa7f85ad719b61cf2cbd9e6c805ce6",
@@ -2132,7 +2621,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000533334.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000493630.jpg",
-    "displayName": "Heal the world - Michael Jackson"
+    "displayName": "Heal the world - Michael Jackson",
+    "numberOneDate": "2 de enero de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/12261e2c16b7eb17508fb25a411691380893151d?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "d325c7c256da24b1f588f88f73658385",
@@ -2145,7 +2637,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000529767.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000529840.jpg",
-    "displayName": "No ordinary love - Sade"
+    "displayName": "No ordinary love - Sade",
+    "numberOneDate": "9 de enero de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/acde2fa0566ab7da3fb485ae8a2166f83b043624?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "066b10b606c70c0945400679a92fb2cc",
@@ -2158,7 +2653,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000529766.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000530775.jpg",
-    "displayName": "Have you ever needed someone so bad - Def Leppard"
+    "displayName": "Have you ever needed someone so bad - Def Leppard",
+    "numberOneDate": "6 de marzo de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "1acbadba34e821575b951cd030b7ea14",
@@ -2171,7 +2669,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000497808.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000497826.jpg",
-    "displayName": "Sólo por un día (Wouldn't it be good) - Valera"
+    "displayName": "Sólo por un día (Wouldn't it be good) - Valera",
+    "numberOneDate": "27 de febrero de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "86528ef4810331739904f84ae6c38930",
@@ -2184,7 +2685,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000027406.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001150580.jpg",
-    "displayName": "No te rindas - La Trampa"
+    "displayName": "No te rindas - La Trampa",
+    "numberOneDate": "20 de febrero de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "94856e4f2d92e6417b4147dc98f0cc48",
@@ -2197,7 +2701,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000448141.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000521602.jpg",
-    "displayName": "Piel sobre piel - Tam Tam Go!"
+    "displayName": "Piel sobre piel - Tam Tam Go!",
+    "numberOneDate": "6 de febrero de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "928cbbd1df06b0a4766a0e90dca01f06",
@@ -2210,7 +2717,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000018985.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000690908.jpg",
-    "displayName": "Bed of roses - Bon Jovi"
+    "displayName": "Bed of roses - Bon Jovi",
+    "numberOneDate": "1 de mayo de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ec78c01947a22d28e23d52a04815db03addd7164?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "5473fcff534876c28446dab5368d3e7a",
@@ -2223,7 +2733,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000456015.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001077981.jpg",
-    "displayName": "Quiero tener tu presencia - Seguridad Social"
+    "displayName": "Quiero tener tu presencia - Seguridad Social",
+    "numberOneDate": "18 de septiembre de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/36253d886fc8cce0880315787c5e1dc84833fe1b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "69be601d60c4bde796ebb03750c01837",
@@ -2236,7 +2749,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000529748.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000529776.jpg",
-    "displayName": "Esta luz nunca se apagará - Mikel Erentxun"
+    "displayName": "Esta luz nunca se apagará - Mikel Erentxun",
+    "numberOneDate": "24 de abril de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/77d0260221cc44e745bd68df9fbee0955ce6fb70?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "dae859bda4b33d893ff8e03ff781900e",
@@ -2249,7 +2765,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001141224.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001767300.jpg",
-    "displayName": "Informer - Snow"
+    "displayName": "Informer - Snow",
+    "numberOneDate": "17 de julio de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/fbc7d916733cd5002982d85af7abcaab72cff4d3?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "0151440a20775a8a4af38f5f01fea910",
@@ -2262,7 +2781,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000519.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000066533.jpg",
-    "displayName": "Mi tierra - Gloria Estefan"
+    "displayName": "Mi tierra - Gloria Estefan",
+    "numberOneDate": "14 de agosto de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/e8e0a40a8e9cae113c8b7fa9f095d76ec07e5c2d?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "e2121671fae120df6fe5b41214c6815f",
@@ -2275,7 +2797,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000549199.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000549299.jpg",
-    "displayName": "El que canta su mal espanta - El Último de la Fila"
+    "displayName": "El que canta su mal espanta - El Último de la Fila",
+    "numberOneDate": "10 de abril de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "6cf799870940f8a1ce6cf0b7fa681f36",
@@ -2288,7 +2813,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000892055.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147732.jpg",
-    "displayName": "Numb - U2"
+    "displayName": "Numb - U2",
+    "numberOneDate": "11 de septiembre de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "3c1789de175377969a169bf78988d410",
@@ -2301,7 +2829,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000496767.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000496797.jpg",
-    "displayName": "Amiga mala suerte - Los Secretos"
+    "displayName": "Amiga mala suerte - Los Secretos",
+    "numberOneDate": "7 de agosto de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "79d55fa9619d2f07b56204cad4d523e8",
@@ -2314,7 +2845,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000020758.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001096000.jpg",
-    "displayName": "De ley - Rosario"
+    "displayName": "De ley - Rosario",
+    "numberOneDate": "22 de mayo de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "67828bf72c6b3945133549817ad717e0",
@@ -2327,7 +2861,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000690226.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000524024.jpg",
-    "displayName": "The river of dreams - Billy Joel"
+    "displayName": "The river of dreams - Billy Joel",
+    "numberOneDate": "6 de noviembre de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ddc79ec18d01d3e1bf318b60fffc1dd735702490?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "4dcf4c68065b3f3489e49c16b0a8de4c",
@@ -2340,7 +2877,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001946177.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001075245.jpg",
-    "displayName": "Cryin' - Aerosmith"
+    "displayName": "Cryin' - Aerosmith",
+    "numberOneDate": "18 de diciembre de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "70b61d39de9855bddfc0d995903155df",
@@ -2353,7 +2893,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000858843.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000692665.jpg",
-    "displayName": "Higher ground - UB40"
+    "displayName": "Higher ground - UB40",
+    "numberOneDate": "20 de noviembre de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "d18a8a826f7f2aa41716289548e48068",
@@ -2366,7 +2909,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000548078.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000548126.jpg",
-    "displayName": "Tocar madera - Manolo Tena"
+    "displayName": "Tocar madera - Manolo Tena",
+    "numberOneDate": "13 de noviembre de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "10831a4cbcff6c58c5558acb8e0494c6",
@@ -2379,7 +2925,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000473638.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000546583.jpg",
-    "displayName": "El orden del mundo - Danza Invisible"
+    "displayName": "El orden del mundo - Danza Invisible",
+    "numberOneDate": "27 de noviembre de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "cc81b97f966b53ddcc2543fa8c648edf",
@@ -2392,7 +2941,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000530145.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000530150.jpg",
-    "displayName": "Rastros de tí - Cabaret Pop"
+    "displayName": "Rastros de tí - Cabaret Pop",
+    "numberOneDate": "20 de marzo de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "7a19e6b0edbbfd74f5441925228f3cc8",
@@ -2405,7 +2957,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490001211179.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/490001212052.jpg",
-    "displayName": "Baby don't cry - INXS"
+    "displayName": "Baby don't cry - INXS",
+    "numberOneDate": "30 de enero de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "ca4189a3c9413316e71183ca8ed99ca1",
@@ -2418,7 +2973,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000544018.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001648684.jpg",
-    "displayName": "Salomé - U2"
+    "displayName": "Salomé - U2",
+    "numberOneDate": "15 de mayo de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "a719b12cb3be62db09b58594c75dd5f8",
@@ -2431,7 +2989,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000498249.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000498266.jpg",
-    "displayName": "Cantaloop (Flip fantasia) - US3"
+    "displayName": "Cantaloop (Flip fantasia) - US3",
+    "numberOneDate": "9 de octubre de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2eda45d4e7ae49a9ba36378649a01cf913754cb1?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "7a29a97b55171f69cfaa45dcebd4aa88",
@@ -2444,7 +3005,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000445141.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001083893.jpg",
-    "displayName": "Sin documentos - Los Rodríguez"
+    "displayName": "Sin documentos - Los Rodríguez",
+    "numberOneDate": "28 de agosto de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/bef5263169b8800e0f4945eb14ff15e5d60edec7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "7576dea3e2635cae98d56019de30dae2",
@@ -2457,7 +3021,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001946173.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001075245.jpg",
-    "displayName": "Livin' on the edge - Aerosmith"
+    "displayName": "Livin' on the edge - Aerosmith",
+    "numberOneDate": "26 de junio de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "40cb2984e83bac477f2461a698f6fabf",
@@ -2470,7 +3037,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000549204.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000549299.jpg",
-    "displayName": "Como un burro amarrado en la puerta del baile - El Último de la Fila"
+    "displayName": "Como un burro amarrado en la puerta del baile - El Último de la Fila",
+    "numberOneDate": "2 de octubre de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "87dbaff05f86be15dae8f2328ac672e8",
@@ -2483,7 +3053,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001035168.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001035170.jpg",
-    "displayName": "Nuestros nombres - Héroes del Silencio"
+    "displayName": "Nuestros nombres - Héroes del Silencio",
+    "numberOneDate": "19 de junio de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "7a96a8ae35e7cb95c9c813b76d7dfa92",
@@ -2496,7 +3069,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000637825.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000690908.jpg",
-    "displayName": "Keep the faith - Bon Jovi"
+    "displayName": "Keep the faith - Bon Jovi",
+    "numberOneDate": "16 de enero de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a9a56f43b81b4410e1a4f60908a0bb4238cb8770?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "3169fb9c506fdc8fc8969018492145f6",
@@ -2509,7 +3085,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000018113.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002776556.jpg",
-    "displayName": "All that she wants - Ace of Base"
+    "displayName": "All that she wants - Ace of Base",
+    "numberOneDate": "10 de julio de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ac41624323eaeb9f3f7b2c5ec585790cb1f9c8a8?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "cc91f9d5a84692b86fc56978e5c4aab8",
@@ -2522,7 +3101,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000024028.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000519817.jpg",
-    "displayName": "If I ever lose my faith in you - Sting"
+    "displayName": "If I ever lose my faith in you - Sting",
+    "numberOneDate": "17 de abril de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "fbe8356be0e669ddac184d62cf4b82e0",
@@ -2535,7 +3117,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520001089995.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520001351223.jpg",
-    "displayName": "Cosas de la vida - Eros Ramazzotti"
+    "displayName": "Cosas de la vida - Eros Ramazzotti",
+    "numberOneDate": "8 de mayo de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/7c44397f8ecb94161b0453e3347d9ac227eb9da7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "f1c0e957fb8b01acb7b5da7b371f9410",
@@ -2548,7 +3133,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000475597.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002677927.jpg",
-    "displayName": "Ordinary world - Duran Duran"
+    "displayName": "Ordinary world - Duran Duran",
+    "numberOneDate": "5 de junio de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "8e97d37ea63a977d0999280471779a75",
@@ -2561,7 +3149,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000497739.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000497883.jpg",
-    "displayName": "La herida - Héroes del Silencio"
+    "displayName": "La herida - Héroes del Silencio",
+    "numberOneDate": "30 de octubre de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "1c5fcef68e659cc789c2252eee8fc408",
@@ -2574,7 +3165,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490001352749.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/490001373126.jpg",
-    "displayName": "Both sides of the story - Phil Collins"
+    "displayName": "Both sides of the story - Phil Collins",
+    "numberOneDate": "11 de diciembre de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "d14f868146c2076f997308d76be51b61",
@@ -2587,7 +3181,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000996324.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147736.jpg",
-    "displayName": "El hombre de negro - Loquillo y Los Trogloditas"
+    "displayName": "El hombre de negro - Loquillo y Los Trogloditas",
+    "numberOneDate": "4 de septiembre de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "b4f7d250e551f7c53cc5ce6952d770e0",
@@ -2600,7 +3197,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000521639.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000521700.jpg",
-    "displayName": "I feel you - Depeche Mode"
+    "displayName": "I feel you - Depeche Mode",
+    "numberOneDate": "3 de abril de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/bcc651c6a35e9227acca9c6048e36fa179edb2ea?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "f246263c5970de5a390e9356210dd9de",
@@ -2613,7 +3213,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000456016.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000528995.jpg",
-    "displayName": "Hope of deliverance - Paul McCartney"
+    "displayName": "Hope of deliverance - Paul McCartney",
+    "numberOneDate": "27 de marzo de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d24fd670c415d8ba308e06a285725553b7fb9974?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "bd57c3ad9fa6b17b4193fc25900ee077",
@@ -2626,7 +3229,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000490765.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000490838.jpg",
-    "displayName": "Si tú no vuelves - Miguel Bosé"
+    "displayName": "Si tú no vuelves - Miguel Bosé",
+    "numberOneDate": "29 de mayo de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2e69c6d68a1ee323794195e8edc8b8a8c937aaa4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "6a4c268071c2cda87a6cf410a2f69bbd",
@@ -2639,7 +3245,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000019567.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000692665.jpg",
-    "displayName": "I can't help (falling in love with you) - UB40"
+    "displayName": "I can't help (falling in love with you) - UB40",
+    "numberOneDate": "21 de agosto de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/3b27c1406f3a59b5a9470bfa534765fbc7101745?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "019ff0f205f3727282fcb4771b6b3f62",
@@ -2652,7 +3261,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520001089997.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520001351223.jpg",
-    "displayName": "Otra como tu - Eros Ramazzotti"
+    "displayName": "Otra como tu - Eros Ramazzotti",
+    "numberOneDate": "23 de octubre de 1993",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/e714abe0c446f51218e404b708ad1034e2e69eee?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "b9037cd11f9c346d7caf43c9c695b2dc",
@@ -2665,7 +3277,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000533177.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000533343.jpg",
-    "displayName": "Dicen... - OBK"
+    "displayName": "Dicen... - OBK",
+    "numberOneDate": "24 de julio de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "003b89f0ddb1df593c94317025d294cd",
@@ -2678,7 +3293,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002221689.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001191525.jpg",
-    "displayName": "Boom! Shake the room - DJ Jazzy Jeff &amp;Fresh Prince"
+    "displayName": "Boom! Shake the room - DJ Jazzy Jeff &amp;Fresh Prince",
+    "numberOneDate": "25 de diciembre de 1993",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "335188500dc06deb7dcc064bee62016b",
@@ -2691,7 +3309,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000525856.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000525868.jpg",
-    "displayName": "Me haces tanto bien - Amistades Peligrosas"
+    "displayName": "Me haces tanto bien - Amistades Peligrosas",
+    "numberOneDate": "8 de enero de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ea5fbeba84ea8ff383d28524fb6f69536443ae55?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "ecdd6faed4797c7efc8130ca21b9798a",
@@ -2704,7 +3325,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000677679.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000677677.jpg",
-    "displayName": "Please forgive me - Bryan Adams"
+    "displayName": "Please forgive me - Bryan Adams",
+    "numberOneDate": "15 de enero de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "87e9bc15f7997a6cc171b4284fa09bd9",
@@ -2717,7 +3341,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000543699.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000543965.jpg",
-    "displayName": "Si es tan solo amor - Revólver"
+    "displayName": "Si es tan solo amor - Revólver",
+    "numberOneDate": "19 de marzo de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f4f7b64a06a470ccd1a19ed9506a953dd5a2abd0?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "bd5fe96409423ee28a03c9f5ea5b180f",
@@ -2730,7 +3357,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000490763.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000490838.jpg",
-    "displayName": "Te comería el corazón - Miguel Bosé"
+    "displayName": "Te comería el corazón - Miguel Bosé",
+    "numberOneDate": "26 de marzo de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "86a53651f6c988e7001342593c3226c7",
@@ -2743,7 +3373,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000528964.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000529000.jpg",
-    "displayName": "Ain't it fun - Guns N' Roses"
+    "displayName": "Ain't it fun - Guns N' Roses",
+    "numberOneDate": "5 de febrero de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "17ae888bc92560cb8009590fb4f697f2",
@@ -2756,7 +3389,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000625007.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000639453.jpg",
-    "displayName": "Streets of Philadelphia - Bruce Springsteen"
+    "displayName": "Streets of Philadelphia - Bruce Springsteen",
+    "numberOneDate": "9 de abril de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2657c3f1d65efc5887928aecd3023da2fcb926ee?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "14370abe83564bc4a3d0936b7211681f",
@@ -2769,7 +3405,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000547359.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000548323.jpg",
-    "displayName": "Señor Matanza - Mano Negra"
+    "displayName": "Señor Matanza - Mano Negra",
+    "numberOneDate": "13 de agosto de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d86b5713bb411e1c80eba02aec93d5154a65da61?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "d35fb42436fbcbf0cabdaa7a6bc74c75",
@@ -2782,7 +3421,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000531772.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000531802.jpg",
-    "displayName": "Vivir sin aire - Maná"
+    "displayName": "Vivir sin aire - Maná",
+    "numberOneDate": "6 de agosto de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/3f750f8e82c7f0551ce91df572ac48a2c1f72a1a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "b1a6ecf7f844b28d1e1322939c5b6a17",
@@ -2795,7 +3437,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000500430.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000500426.jpg",
-    "displayName": "Take it back - Pink Floyd"
+    "displayName": "Take it back - Pink Floyd",
+    "numberOneDate": "28 de mayo de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/dfee5270cb80674b3a31658f9995a102faf5187d?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "2488eecf637767ee345c5228d8e31d99",
@@ -2808,7 +3453,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000637827.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000637877.jpg",
-    "displayName": "Always - Bon Jovi"
+    "displayName": "Always - Bon Jovi",
+    "numberOneDate": "26 de noviembre de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "e79fb07c22561cf77dbf06b1a34bc776",
@@ -2821,7 +3469,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000498872.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000498949.jpg",
-    "displayName": "Circle of life - Lebo M;Carmen Twillie;Elton John;Rice, Tim"
+    "displayName": "Circle of life - Lebo M;Carmen Twillie;Elton John;Rice, Tim",
+    "numberOneDate": "19 de noviembre de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "7fca744c224ae613f96bf9a0b8f4a5a4",
@@ -2834,7 +3485,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000498838.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001878626.jpg",
-    "displayName": "Somos el futuro - Siete-7 Black"
+    "displayName": "Somos el futuro - Siete-7 Black",
+    "numberOneDate": "20 de agosto de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "05c02e4105d985ba189f01b35b398058",
@@ -2847,7 +3501,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000479056.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001375408.jpg",
-    "displayName": "Letitgo - Prince"
+    "displayName": "Letitgo - Prince",
+    "numberOneDate": "15 de octubre de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "8476d673f64b5a5e455877cb5f087534",
@@ -2860,7 +3517,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000498192.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000498195.jpg",
-    "displayName": "Un amigo de verdad - Viceversa"
+    "displayName": "Un amigo de verdad - Viceversa",
+    "numberOneDate": "1 de enero de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "a72885ab50aa824a676accb67e92f357",
@@ -2873,7 +3533,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000549161.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000549534.jpg",
-    "displayName": "Tranquilo majete - Celtas Cortos"
+    "displayName": "Tranquilo majete - Celtas Cortos",
+    "numberOneDate": "22 de enero de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "398ab8cd268f8f9ee4738e05ee4643ec",
@@ -2886,7 +3549,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490001208850.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/490001210113.jpg",
-    "displayName": "The gift - INXS"
+    "displayName": "The gift - INXS",
+    "numberOneDate": "29 de enero de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "1109fee10ff56f68ec1ebb15717bbbbd",
@@ -2899,7 +3565,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000499200.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001816082.jpg",
-    "displayName": "Dirty dawg - New Kids on the Block"
+    "displayName": "Dirty dawg - New Kids on the Block",
+    "numberOneDate": "12 de marzo de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "e0224f89359e8a9deb3a67e16179c4a8",
@@ -2912,7 +3581,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000021849.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000489571.jpg",
-    "displayName": "Elixir de juventud - Antonio Vega"
+    "displayName": "Elixir de juventud - Antonio Vega",
+    "numberOneDate": "25 de junio de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9865522ffba432153717df23bb8239ad137948ef?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "e2c03009a29e8288a8dd649e96b3a955",
@@ -2925,7 +3597,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001099047.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001099466.jpg",
-    "displayName": "Sleeping in my car - Roxette"
+    "displayName": "Sleeping in my car - Roxette",
+    "numberOneDate": "11 de junio de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/932cefd44615f91c2c762d89c80b3d2ce6824a2c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "687229538e096dd00a591ccc23dd2621",
@@ -2938,7 +3613,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001512519.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000691245.jpg",
-    "displayName": "Without you - Mariah Carey"
+    "displayName": "Without you - Mariah Carey",
+    "numberOneDate": "18 de junio de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/44a2b4866d8409efb403abfeaf2f59811aafaa32?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "1f1dcda84fcbf8d37b0f68dff3e78c36",
@@ -2951,7 +3629,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000499452.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000499455.jpg",
-    "displayName": "La casa de los sueños - La Unión"
+    "displayName": "La casa de los sueños - La Unión",
+    "numberOneDate": "7 de mayo de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "333db00282d6b3942e78650cb9b3bd4c",
@@ -2964,7 +3645,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000528077.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002776549.jpg",
-    "displayName": "Don't turn around - Ace of Base"
+    "displayName": "Don't turn around - Ace of Base",
+    "numberOneDate": "10 de septiembre de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "7867c68bf54123c581e87f543abcdaf2",
@@ -2977,7 +3661,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001864532.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/490002822476.jpg",
-    "displayName": "Love is strong - The Rolling Stones"
+    "displayName": "Love is strong - The Rolling Stones",
+    "numberOneDate": "24 de septiembre de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "83549b72280d764e9e1e2f07df9d3cac",
@@ -2990,7 +3677,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000499509.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000549534.jpg",
-    "displayName": "Madera de colleja - Celtas Cortos"
+    "displayName": "Madera de colleja - Celtas Cortos",
+    "numberOneDate": "30 de abril de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "523f894491ecb4c2982c64eb1cd09176",
@@ -3003,7 +3693,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000498995.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001138488.jpg",
-    "displayName": "You've got to live a little - Texas"
+    "displayName": "You've got to live a little - Texas",
+    "numberOneDate": "4 de junio de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "eaa9f5769e9d9f2243dac63d438bd206",
@@ -3016,7 +3709,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000475967.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000667146.jpg",
-    "displayName": "Dentro de ti - Revólver;Sole Giménez"
+    "displayName": "Dentro de ti - Revólver;Sole Giménez",
+    "numberOneDate": "2 de julio de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "2166b15e20ab3b1f8f335ee31437eb1c",
@@ -3029,7 +3725,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000689408.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000690868.jpg",
-    "displayName": "Summer in the city - Joe Cocker"
+    "displayName": "Summer in the city - Joe Cocker",
+    "numberOneDate": "3 de diciembre de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/bc0eb6b2f1794c9dbb2754e85d05b693b2da0f63?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "65ed67ab1f7cbcd9c2a2b0255e17375c",
@@ -3042,7 +3741,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000018235.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001075245.jpg",
-    "displayName": "Amazing - Aerosmith"
+    "displayName": "Amazing - Aerosmith",
+    "numberOneDate": "2 de abril de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0e3785c3ad9e9eb9f112fe23c45109ea",
@@ -3055,7 +3757,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001946179.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001075245.jpg",
-    "displayName": "Crazy - Aerosmith"
+    "displayName": "Crazy - Aerosmith",
+    "numberOneDate": "3 de septiembre de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "a0970df2138d624ed8284b4ab2a6b4f0",
@@ -3068,7 +3773,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000020860.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002221051.jpg",
-    "displayName": "Demasiado corazón - Willy DeVille"
+    "displayName": "Demasiado corazón - Willy DeVille",
+    "numberOneDate": "5 de marzo de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "acb82a05a12d8e779794a23343610732",
@@ -3081,7 +3789,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000546628.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000546797.jpg",
-    "displayName": "Las palabras de amor - Presuntos Implicados"
+    "displayName": "Las palabras de amor - Presuntos Implicados",
+    "numberOneDate": "17 de septiembre de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "92d7971484f062930f7e59fafc461f42",
@@ -3094,7 +3805,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000517522.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000517899.jpg",
-    "displayName": "I swear - All-4-One"
+    "displayName": "I swear - All-4-One",
+    "numberOneDate": "1 de octubre de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/4bbcac2464fbcb629b62186a9884e9caa402735f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "c2ea9f8bded2f12e0607487b3fe17b68",
@@ -3107,7 +3821,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000548010.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000548060.jpg",
-    "displayName": "Se fue - Laura Pausini"
+    "displayName": "Se fue - Laura Pausini",
+    "numberOneDate": "5 de noviembre de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/396e0afdd8c7628a21af4eba2c80281b3b0a95c4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "a8a7d902465e4477ab04db872d67c7cc",
@@ -3120,7 +3837,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000495112.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001134664.jpg",
-    "displayName": "What's the frequency, Kenneth? - R.E.M."
+    "displayName": "What's the frequency, Kenneth? - R.E.M.",
+    "numberOneDate": "10 de diciembre de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "62b4454aa4e1cd6f55daa969099aa463",
@@ -3133,7 +3853,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001864902.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001139632.jpg",
-    "displayName": "When we dance - Sting"
+    "displayName": "When we dance - Sting",
+    "numberOneDate": "17 de diciembre de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "be9564480fc9a7e7fabc70a3ea366969",
@@ -3146,7 +3869,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000025757.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000691757.jpg",
-    "displayName": "Love is all around - Wet Wet Wet"
+    "displayName": "Love is all around - Wet Wet Wet",
+    "numberOneDate": "8 de octubre de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "b9dfa638b2d13c4e8d1db5e28996258a",
@@ -3159,7 +3885,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001099044.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001099466.jpg",
-    "displayName": "Crash! boom! bang! - Roxette"
+    "displayName": "Crash! boom! bang! - Roxette",
+    "numberOneDate": "22 de octubre de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "c4338d22ffd03d8c6f708ce1ddb02e47",
@@ -3172,7 +3901,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002877528.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002877539.jpg",
-    "displayName": "Breathe again - Toni Braxton"
+    "displayName": "Breathe again - Toni Braxton",
+    "numberOneDate": "23 de abril de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/838e5c6fae3c4d85d23c49254087474fc73c4789?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "4d0b1486c06f7cbfb47a1d9eb51eb3cd",
@@ -3185,7 +3917,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000499978.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000499979.jpg",
-    "displayName": "Echar a volar - David Santisteban"
+    "displayName": "Echar a volar - David Santisteban",
+    "numberOneDate": "12 de febrero de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0d0230e40f88a85a9036eda2dc0fa9e5",
@@ -3198,7 +3933,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000018770.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002692893.jpg",
-    "displayName": "Baby, I love your way - Big Mountain"
+    "displayName": "Baby, I love your way - Big Mountain",
+    "numberOneDate": "9 de julio de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/266b9f27f639406a826bb50615d08d3ccc8ad636?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "9532ba8fd731338e69fa1b2c66265e91",
@@ -3211,7 +3949,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000545672.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000545972.jpg",
-    "displayName": "The most beautiful girl in the world - Prince"
+    "displayName": "The most beautiful girl in the world - Prince",
+    "numberOneDate": "21 de mayo de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c4b46d465d8d990e587643e3a4b6a0ae604a4109?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "2cd5cb6667fec148ce6cdbe93249ab89",
@@ -3224,7 +3965,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000547979.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000548060.jpg",
-    "displayName": "Amores extraños - Laura Pausini"
+    "displayName": "Amores extraños - Laura Pausini",
+    "numberOneDate": "24 de diciembre de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f5faba018fd058628c133e9f9d9bd75151fe776d?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "801e4de2382b54f78091e93269b7fa52",
@@ -3237,7 +3981,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000547982.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000548060.jpg",
-    "displayName": "La soledad - Laura Pausini"
+    "displayName": "La soledad - Laura Pausini",
+    "numberOneDate": "23 de julio de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/caf2e5ed48a85698b9c20102de20b3681c6b405a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "b1a0989b047f2356458f17592b26f36a",
@@ -3250,7 +3997,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000617857.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000618181.jpg",
-    "displayName": "7 seconds - Youssou N'Dour;Neneh Cherry"
+    "displayName": "7 seconds - Youssou N'Dour;Neneh Cherry",
+    "numberOneDate": "12 de noviembre de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "8dd8958386f4ce503bc52effbba3eb16",
@@ -3263,7 +4013,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000499256.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000499272.jpg",
-    "displayName": "Capricornio - Duncan Dhu"
+    "displayName": "Capricornio - Duncan Dhu",
+    "numberOneDate": "27 de agosto de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "5a7b65c7217409827a0a543980ce1db5",
@@ -3276,7 +4029,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026832.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000529009.jpg",
-    "displayName": "Mr. Jones - Counting Crows"
+    "displayName": "Mr. Jones - Counting Crows",
+    "numberOneDate": "14 de mayo de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/bf0cb45eaad64d959938fb69381fe480174bff5a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "026b3f564ff871b55c00b89214c592f8",
@@ -3289,7 +4045,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000544764.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000545078.jpg",
-    "displayName": "Sólo para ti - Sergio Dalma"
+    "displayName": "Sólo para ti - Sergio Dalma",
+    "numberOneDate": "19 de febrero de 1994",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6c2769c100ab43e8c6609abf9a559aecd029932b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "81694efb2c0b6005b4894843b68d1f21",
@@ -3302,7 +4061,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000525860.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000525868.jpg",
-    "displayName": "Casi nunca bailais - Amistades Peligrosas"
+    "displayName": "Casi nunca bailais - Amistades Peligrosas",
+    "numberOneDate": "16 de abril de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "1618c8da50c90e20abb1bfc4485c8dd6",
@@ -3315,7 +4077,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000032802.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000500426.jpg",
-    "displayName": "What do you want from me - Pink Floyd"
+    "displayName": "What do you want from me - Pink Floyd",
+    "numberOneDate": "16 de julio de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "7fc6cf676364aa0cd1426744acf527a3",
@@ -3328,7 +4093,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000499013.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001138488.jpg",
-    "displayName": "You owe it all to me - Texas"
+    "displayName": "You owe it all to me - Texas",
+    "numberOneDate": "26 de febrero de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "17bf90c19ab035231d4a3adce727c552",
@@ -3341,7 +4109,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000541583.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000541663.jpg",
-    "displayName": "Word up - Gun"
+    "displayName": "Word up - Gun",
+    "numberOneDate": "29 de octubre de 1994",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "32dd62386170913df39d40d15372c3da",
@@ -3354,7 +4125,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000033532.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000586673.jpg",
-    "displayName": "Zombie - The Cranberries"
+    "displayName": "Zombie - The Cranberries",
+    "numberOneDate": "11 de febrero de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "bb4348fd171241eee0d175fa5f785d6d",
@@ -3367,7 +4141,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000445147.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000548315.jpg",
-    "displayName": "Milonga del marinero y el capitán - Los Rodríguez"
+    "displayName": "Milonga del marinero y el capitán - Los Rodríguez",
+    "numberOneDate": "15 de julio de 1995",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/b8a3e049653ef94c068be2fbe092b4b572e86fd4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "c7f942ef1dea7f0f0effebda4b1f6257",
@@ -3380,7 +4157,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001605528.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000069504.jpg",
-    "displayName": "Entre mis recuerdos - Luz Casal"
+    "displayName": "Entre mis recuerdos - Luz Casal",
+    "numberOneDate": "5 de agosto de 1995",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1f1d753c95e777ca96f26bbd1fc88739673de7f2?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "be1326263b7d5824ddeacb24a99b8db0",
@@ -3393,7 +4173,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000027307.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001163363.jpg",
-    "displayName": "No more I love you's - Annie Lennox"
+    "displayName": "No more I love you's - Annie Lennox",
+    "numberOneDate": "8 de abril de 1995",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/95f2c523e75fa311d3f1bccc1c4d1933e6b02244?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "2a18a3de476a8a61d0d37b3c63790476",
@@ -3406,7 +4189,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000689755.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001163770.jpg",
-    "displayName": "Back for good - Take That"
+    "displayName": "Back for good - Take That",
+    "numberOneDate": "27 de mayo de 1995",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/8f9085faa29895e3eb68da902f2ba0d6ad180ddc?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "1c9f050cd549c6936fc68af925c07e81",
@@ -3419,7 +4205,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000437950.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001095845.jpg",
-    "displayName": "No despertaré - Sergio Dalma"
+    "displayName": "No despertaré - Sergio Dalma",
+    "numberOneDate": "25 de noviembre de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "13cbe77cfb97982c2968840d3fc516b1",
@@ -3432,7 +4221,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000499198.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147746.jpg",
-    "displayName": "A conspiracy - The Black Crowes"
+    "displayName": "A conspiracy - The Black Crowes",
+    "numberOneDate": "4 de marzo de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "5c7eca0568459e8d545b90eaf1ac1140",
@@ -3445,7 +4237,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000495119.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001134664.jpg",
-    "displayName": "Bang and blame - R.E.M."
+    "displayName": "Bang and blame - R.E.M.",
+    "numberOneDate": "25 de febrero de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "bfdb768fe9bd1b13948d9c844bfabf11",
@@ -3458,7 +4253,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000485549.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000485762.jpg",
-    "displayName": "Sin llaves - El Último de la Fila"
+    "displayName": "Sin llaves - El Último de la Fila",
+    "numberOneDate": "16 de septiembre de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "73dbaa31a98c5be54a8a0c515cbfcc65",
@@ -3471,7 +4269,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000547956.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000548131.jpg",
-    "displayName": "En la selva - Juan Perro"
+    "displayName": "En la selva - Juan Perro",
+    "numberOneDate": "26 de agosto de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "94f19ed9200df72a802e489816a34ed5",
@@ -3484,7 +4285,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026693.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001118468.jpg",
-    "displayName": "Mishale - Andru Donalds"
+    "displayName": "Mishale - Andru Donalds",
+    "numberOneDate": "22 de julio de 1995",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/e5351f9eecb93bcb8d44d5fe5f9253d58e3ca4dc?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "3980edb21c3435c3b37d43132cbce5cf",
@@ -3497,7 +4301,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000543288.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000543312.jpg",
-    "displayName": "Take a bow - Madonna"
+    "displayName": "Take a bow - Madonna",
+    "numberOneDate": "28 de enero de 1995",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/832a36125d1184f3f207f0a77032faac3b1442cb?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "11544deb765676c2cd064292ecbf7452",
@@ -3510,7 +4317,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000559433.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000559473.jpg",
-    "displayName": "The man who sold the world - Nirvana"
+    "displayName": "The man who sold the world - Nirvana",
+    "numberOneDate": "29 de abril de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "2a06caafd67eba39e9fa1fceb4f8875b",
@@ -3523,7 +4333,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000575691.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000576610.jpg",
-    "displayName": "No va más - Revólver"
+    "displayName": "No va más - Revólver",
+    "numberOneDate": "22 de abril de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "2d465fe86b47e5d974f98f40ea42f1d9",
@@ -3536,7 +4349,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000500429.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000486122.jpg",
-    "displayName": "Scream - Janet Jackson;Michael Jackson"
+    "displayName": "Scream - Janet Jackson;Michael Jackson",
+    "numberOneDate": "24 de junio de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "10664c58f4d7e51d861e205dda407001",
@@ -3549,7 +4365,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000019629.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000692563.jpg",
-    "displayName": "Can't cry anymore - Sheryl Crow"
+    "displayName": "Can't cry anymore - Sheryl Crow",
+    "numberOneDate": "12 de agosto de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "5503e8b276b4ea55fa0af82af861577a",
@@ -3562,7 +4381,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000485481.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000485493.jpg",
-    "displayName": "Mi razón de ser - OBK"
+    "displayName": "Mi razón de ser - OBK",
+    "numberOneDate": "19 de agosto de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "dcf7fb8186ef377b84f31d43bb2a1f4e",
@@ -3575,7 +4397,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000500150.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001233367.jpg",
-    "displayName": "Blind man - Aerosmith"
+    "displayName": "Blind man - Aerosmith",
+    "numberOneDate": "4 de febrero de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "23722cc39d26afab54aa572d05ecc6d1",
@@ -3588,7 +4413,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000498279.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000498286.jpg",
-    "displayName": "Fairground - Simply Red"
+    "displayName": "Fairground - Simply Red",
+    "numberOneDate": "18 de noviembre de 1995",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/5e0d1d2a5dd7726aa8ea44bd444aff738bb0b78a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "ad4edfb53cfb487816f10b3bd647fefd",
@@ -3601,7 +4429,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001035403.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000700756.jpg",
-    "displayName": "Iberia sumergida - Héroes del Silencio"
+    "displayName": "Iberia sumergida - Héroes del Silencio",
+    "numberOneDate": "4 de noviembre de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0fdd4c375ab929dad1069cbf997a308a",
@@ -3614,7 +4445,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000498393.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000485762.jpg",
-    "displayName": "Pedir tu mano - El Último de la Fila"
+    "displayName": "Pedir tu mano - El Último de la Fila",
+    "numberOneDate": "16 de diciembre de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "7f3be84bb33a785f38e7ec4584ee042a",
@@ -3627,7 +4461,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000547849.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000547855.jpg",
-    "displayName": "Siete vidas - Antonio Flores"
+    "displayName": "Siete vidas - Antonio Flores",
+    "numberOneDate": "18 de febrero de 1995",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/e4c333d1920fe6cf769e6be1e236cf93f563ceb4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "9bff801a4831f746d21b1df3e2e5f068",
@@ -3640,7 +4477,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000500758.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000500779.jpg",
-    "displayName": "Believe - Elton John"
+    "displayName": "Believe - Elton John",
+    "numberOneDate": "25 de marzo de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "dab6fda00510b07770eff7a54763cec1",
@@ -3653,7 +4493,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001064085.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000521130.jpg",
-    "displayName": "Murder incorporated - Bruce Springsteen"
+    "displayName": "Murder incorporated - Bruce Springsteen",
+    "numberOneDate": "1 de abril de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "8b4978f799619b942d4e4a8891b447f3",
@@ -3666,7 +4509,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000526816.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000486122.jpg",
-    "displayName": "You are not alone - Michael Jackson"
+    "displayName": "You are not alone - Michael Jackson",
+    "numberOneDate": "21 de octubre de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "242c52cec1d3988499f4c23ce3273ea6",
@@ -3679,7 +4525,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000029203.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147637.jpg",
-    "displayName": "Ruido - Joaquín Sabina"
+    "displayName": "Ruido - Joaquín Sabina",
+    "numberOneDate": "6 de mayo de 1995",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/49722cd33ea545a151107cfa1793b6ad9c882226?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "46d7e9e50baa1050f91a091bec8466f9",
@@ -3692,7 +4541,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000023239.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001994496.jpg",
-    "displayName": "Have you ever really loved a woman? - Bryan Adams;Paco de Lucía"
+    "displayName": "Have you ever really loved a woman? - Bryan Adams;Paco de Lucía",
+    "numberOneDate": "1 de julio de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "06e72e77be224a011a85de32575a9bac",
@@ -3705,7 +4557,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000637826.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000637877.jpg",
-    "displayName": "Someday I'll be saturday night - Bon Jovi"
+    "displayName": "Someday I'll be saturday night - Bon Jovi",
+    "numberOneDate": "15 de abril de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "e403c8cb197e28bc9eed17bb294b5ecd",
@@ -3718,7 +4573,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000485931.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001865358.jpg",
-    "displayName": "Heaven for everyone - Queen"
+    "displayName": "Heaven for everyone - Queen",
+    "numberOneDate": "30 de diciembre de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "9b8ad68c7baaac75edeb5b350a245776",
@@ -3731,7 +4589,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000547953.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000548131.jpg",
-    "displayName": "A un perro flaco - Juan Perro"
+    "displayName": "A un perro flaco - Juan Perro",
+    "numberOneDate": "20 de mayo de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "980034b9213ff202d4ee84665184266d",
@@ -3744,7 +4605,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000023358.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000690761.jpg",
-    "displayName": "Here comes the hotstepper - Ini Kamoze"
+    "displayName": "Here comes the hotstepper - Ini Kamoze",
+    "numberOneDate": "18 de marzo de 1995",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f319b2eb443e43c8b52785d96f79a047ef7315d7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "3865e1248e50a63c4cf449bab2df6b2f",
@@ -3757,7 +4621,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002297418.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000559473.jpg",
-    "displayName": "About a girl - Nirvana"
+    "displayName": "About a girl - Nirvana",
+    "numberOneDate": "7 de enero de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "881a220767d3cdf36fdc82f570be08ad",
@@ -3770,7 +4637,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000020043.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001095841.jpg",
-    "displayName": "Comerranas - Seguridad Social"
+    "displayName": "Comerranas - Seguridad Social",
+    "numberOneDate": "11 de marzo de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "247cae5b8e0dbbedbb5b4d60ac379233",
@@ -3783,7 +4653,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000030098.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001271217.jpg",
-    "displayName": "Scatman (Ski-ba-bop-ba-dop-bop) (Basic radio) - Scatman John"
+    "displayName": "Scatman (Ski-ba-bop-ba-dop-bop) (Basic radio) - Scatman John",
+    "numberOneDate": "17 de junio de 1995",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1b237c9ac1e70b2cad37e5e274c36c0ba5f3075e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "c9ffbe1ccb6bd67185721012fa1be637",
@@ -3796,7 +4669,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000560434.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000487048.jpg",
-    "displayName": "Problema - Ketama"
+    "displayName": "Problema - Ketama",
+    "numberOneDate": "2 de diciembre de 1995",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/682c4f2e31939fb6e7207a9a07577f3529171646?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "08a6ad3658e3f6919efec4157d8bfb00",
@@ -3809,7 +4685,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000029435.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001865317.jpg",
-    "displayName": "Scatman's world - Scatman John"
+    "displayName": "Scatman's world - Scatman John",
+    "numberOneDate": "9 de septiembre de 1995",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/646c9cde1b89aeeb49d18fef26f57bd510dc9c42?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "8b3165d624ed202a2bf92ec495e1ea33",
@@ -3822,7 +4701,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000485811.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001159529.jpg",
-    "displayName": "Something for the pain - Bon Jovi"
+    "displayName": "Something for the pain - Bon Jovi",
+    "numberOneDate": "11 de noviembre de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "76f03fd606170c1e430973c9b944ee12",
@@ -3835,7 +4717,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000485468.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001159529.jpg",
-    "displayName": "This ain't a love song - Bon Jovi"
+    "displayName": "This ain't a love song - Bon Jovi",
+    "numberOneDate": "8 de julio de 1995",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ba1ffc3736cb2fffe8a29e3692b93355dfc447e5?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "359da8a16a47c359787e22b781bb4954",
@@ -3848,7 +4733,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000540898.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000545260.jpg",
-    "displayName": "La fuerza del corazón - Alejandro Sanz"
+    "displayName": "La fuerza del corazón - Alejandro Sanz",
+    "numberOneDate": "3 de junio de 1995",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/768507238433d6698f51cf84b795484ea198d7d3?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "1f9db623c7334cf574f09c156292f1f2",
@@ -3861,7 +4749,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000540900.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000545260.jpg",
-    "displayName": "Mi soledad y yo - Alejandro Sanz"
+    "displayName": "Mi soledad y yo - Alejandro Sanz",
+    "numberOneDate": "2 de septiembre de 1995",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d2ef0fdfc08e5339a162105a42195a163d04cf70?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "23fde22fa50a39f905847899b0b41c41",
@@ -3874,7 +4765,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000023488.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001155727.jpg",
-    "displayName": "Hold me, thrill me, kiss me - Gloria Estefan"
+    "displayName": "Hold me, thrill me, kiss me - Gloria Estefan",
+    "numberOneDate": "21 de enero de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "7ce8b461a671b5a1ca8d60cc86a10aad",
@@ -3887,7 +4781,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000022271.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001155727.jpg",
-    "displayName": "Everlasting love - Gloria Estefan"
+    "displayName": "Everlasting love - Gloria Estefan",
+    "numberOneDate": "10 de junio de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "4fd48226418a313a4ab775e8ea62b634",
@@ -3900,7 +4797,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001064084.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000521130.jpg",
-    "displayName": "Secret garden - Bruce Springsteen"
+    "displayName": "Secret garden - Bruce Springsteen",
+    "numberOneDate": "13 de mayo de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "2e55d9cc17f7e10e383c323fdc66429d",
@@ -3913,7 +4813,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026176.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000555764.jpg",
-    "displayName": "Más allá - Gloria Estefan"
+    "displayName": "Más allá - Gloria Estefan",
+    "numberOneDate": "23 de diciembre de 1995",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1f574cb1e143090fac17f93c1a5ee6ce2f57e823?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "d1ac75c3dab06a7d285095006447ed7f",
@@ -3926,7 +4829,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000029851.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000586254.jpg",
-    "displayName": "Shy guy - Diana King"
+    "displayName": "Shy guy - Diana King",
+    "numberOneDate": "23 de septiembre de 1995",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/52fccac8216bc909d0f7ad43ea467855fc56f13b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "30cf53f6fab3062d31f46bb4bb25c141",
@@ -3939,7 +4845,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000555847.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000555947.jpg",
-    "displayName": "Rock and roll is dead - Lenny Kravitz"
+    "displayName": "Rock and roll is dead - Lenny Kravitz",
+    "numberOneDate": "14 de octubre de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "d490bac8d0346e46c99f10ea1bb75ab7",
@@ -3952,7 +4861,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000019053.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000069504.jpg",
-    "displayName": "Besaré el suelo - Luz Casal"
+    "displayName": "Besaré el suelo - Luz Casal",
+    "numberOneDate": "28 de octubre de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "110b7ced351c906a089b2628cb142919",
@@ -3965,7 +4877,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000018576.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000548315.jpg",
-    "displayName": "Aquí no podemos hacerlo - Los Rodríguez"
+    "displayName": "Aquí no podemos hacerlo - Los Rodríguez",
+    "numberOneDate": "7 de octubre de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "2454b72e94dbc9b738c28dfc890fb44f",
@@ -3978,7 +4893,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000485825.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000485849.jpg",
-    "displayName": "Las mentiras del viento - Manolo Tena"
+    "displayName": "Las mentiras del viento - Manolo Tena",
+    "numberOneDate": "9 de diciembre de 1995",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "bc9768be31642477c56712ee1e0737bb",
@@ -3991,7 +4909,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026295.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000515688.jpg",
-    "displayName": "Me quedaré solo - Amistades Peligrosas"
+    "displayName": "Me quedaré solo - Amistades Peligrosas",
+    "numberOneDate": "27 de abril de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f0c178d354da7947dedf33d615e1a30417edcf81?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "83b7f355cbe8ddad1b38e09089922977",
@@ -4004,7 +4925,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000525810.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000526988.jpg",
-    "displayName": "Negrita - La Unión"
+    "displayName": "Negrita - La Unión",
+    "numberOneDate": "4 de mayo de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/cd898da2e69c1f04a1676e7b2a475e6e9f330d31?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "27381c296a7885909e3c6be2ea1c7342",
@@ -4017,7 +4941,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000025304.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000498846.jpg",
-    "displayName": "Lemon tree - Fools Garden"
+    "displayName": "Lemon tree - Fools Garden",
+    "numberOneDate": "20 de julio de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/645cd4b425f1d48d37656cac99d640254a8f64a9?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "4e64f67b197c13e7e8f167d0ecdc6b1c",
@@ -4030,7 +4957,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000494420.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001120034.jpg",
-    "displayName": "Jesus to a child - George Michael"
+    "displayName": "Jesus to a child - George Michael",
+    "numberOneDate": "6 de enero de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/64eeb2ce8fe9278151e8014e41ae995b718db5b4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "31858e43362eb53ea6ed58a0e2555304",
@@ -4043,7 +4973,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000486088.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000486122.jpg",
-    "displayName": "Earth song - Michael Jackson"
+    "displayName": "Earth song - Michael Jackson",
+    "numberOneDate": "27 de enero de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "10ae0a6be68dc7003b7128b0c3cfe967",
@@ -4056,7 +4989,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000031491.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001159529.jpg",
-    "displayName": "These days - Bon Jovi"
+    "displayName": "These days - Bon Jovi",
+    "numberOneDate": "15 de junio de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "99699ae2a365e11aa5ab34e4ed618ea2",
@@ -4069,7 +5005,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000511670.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000511717.jpg",
-    "displayName": "Reach - Gloria Estefan"
+    "displayName": "Reach - Gloria Estefan",
+    "numberOneDate": "22 de junio de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "5c7a0c3374cf2772c238c7aea58013bb",
@@ -4082,7 +5021,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000445150.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000445516.jpg",
-    "displayName": "Mucho mejor (Versión '96) - Los Rodríguez"
+    "displayName": "Mucho mejor (Versión '96) - Los Rodríguez",
+    "numberOneDate": "27 de julio de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0aa24e167676eb823f2ab03af87d1832",
@@ -4095,7 +5037,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000487092.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000487048.jpg",
-    "displayName": "Flor de lis - Ketama"
+    "displayName": "Flor de lis - Ketama",
+    "numberOneDate": "30 de marzo de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "9ce4a79156c12124d1b1f8e37f0e70d1",
@@ -4108,7 +5053,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000499828.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147739.jpg",
-    "displayName": "Dance into the light - Phil Collins"
+    "displayName": "Dance into the light - Phil Collins",
+    "numberOneDate": "9 de noviembre de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "3da0823c45d08c4fbcae6741c232040e",
@@ -4121,7 +5069,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000587863.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000541205.jpg",
-    "displayName": "Woman - Neneh Cherry"
+    "displayName": "Woman - Neneh Cherry",
+    "numberOneDate": "2 de noviembre de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "f47d8914ef8faa325109219f68c4ca62",
@@ -4134,7 +5085,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001061340.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000512628.jpg",
-    "displayName": "Sunset boulevard - Javier Álvarez"
+    "displayName": "Sunset boulevard - Javier Álvarez",
+    "numberOneDate": "14 de diciembre de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "d8ee991e46684feb58b0e14dbd6b5959",
@@ -4147,7 +5101,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001035407.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000700756.jpg",
-    "displayName": "La chispa adecuada (Bendecida 3) - Héroes del Silencio"
+    "displayName": "La chispa adecuada (Bendecida 3) - Héroes del Silencio",
+    "numberOneDate": "13 de enero de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/861a6e41341d7f5ca22c352cd5194e352d31884b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "98ce178713c91ffef1d83f131544b287",
@@ -4160,7 +5117,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000587848.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000519771.jpg",
-    "displayName": "Wonderwall - Oasis"
+    "displayName": "Wonderwall - Oasis",
+    "numberOneDate": "24 de febrero de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/658627c1c2fb5f9a89ce556ead028b7cebd297c6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "377136d56c326a7b303e75a181cc6ec0",
@@ -4173,7 +5133,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000498235.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001094505.jpg",
-    "displayName": "La cosa más bella - Eros Ramazzotti"
+    "displayName": "La cosa más bella - Eros Ramazzotti",
+    "numberOneDate": "8 de junio de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/fec2775691a9bede76288c6c01b88d68672514a5?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "3339b050d6c34bd2bb58ff71215d7e69",
@@ -4186,7 +5149,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000541176.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000542001.jpg",
-    "displayName": "Until it sleeps - Metallica"
+    "displayName": "Until it sleeps - Metallica",
+    "numberOneDate": "10 de agosto de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a38d4da84bef769131aa7637fcca3c79e1fd807e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "098a278ff8339e4aaf1529093af35759",
@@ -4199,7 +5165,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000486976.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000886609.jpg",
-    "displayName": "Verás (You'll see) - Madonna"
+    "displayName": "Verás (You'll see) - Madonna",
+    "numberOneDate": "17 de febrero de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "49c01cbc3473831d0efcd0212a6efa68",
@@ -4212,7 +5181,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000487142.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000962482.jpg",
-    "displayName": "Darling pretty - Mark Knopfler"
+    "displayName": "Darling pretty - Mark Knopfler",
+    "numberOneDate": "18 de mayo de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "9ce27531b39e17099517887a017f2323",
@@ -4225,7 +5197,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000593014.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000593035.jpg",
-    "displayName": "Killing me softly - Fugees"
+    "displayName": "Killing me softly - Fugees",
+    "numberOneDate": "21 de septiembre de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c8fef7f0c42941f08e11854ef261df937a37e177?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "d793a19cbab8760b33a4f645c3253ab5",
@@ -4238,7 +5213,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000525990.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000526000.jpg",
-    "displayName": "Inolvidable - Laura Pausini"
+    "displayName": "Inolvidable - Laura Pausini",
+    "numberOneDate": "23 de noviembre de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "b0fc376839d52f587ed346448a6ad7da",
@@ -4251,7 +5229,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000494403.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001120034.jpg",
-    "displayName": "Spinning the wheel - George Michael"
+    "displayName": "Spinning the wheel - George Michael",
+    "numberOneDate": "19 de octubre de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "81e604aa5232dfd5df9509c7249ba6a5",
@@ -4264,7 +5245,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000458575.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000547936.jpg",
-    "displayName": "El tacto de su piel - Lydia"
+    "displayName": "El tacto de su piel - Lydia",
+    "numberOneDate": "26 de octubre de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "cf8ced5676a26c34fbeba6675a045220",
@@ -4277,7 +5261,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000458573.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000550441.jpg",
-    "displayName": "Suelta las riendas de mi corazón - Mikel Erentxun"
+    "displayName": "Suelta las riendas de mi corazón - Mikel Erentxun",
+    "numberOneDate": "9 de marzo de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "ca76defb90fa6a1d9455fe93bd80724d",
@@ -4290,7 +5277,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000022353.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001391408.jpg",
-    "displayName": "Exhale (shoop shoop) - Whitney Houston"
+    "displayName": "Exhale (shoop shoop) - Whitney Houston",
+    "numberOneDate": "3 de febrero de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "64fe6b47db9ba6d319801754f6b49ef0",
@@ -4303,7 +5293,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000025550.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000069504.jpg",
-    "displayName": "Lo eres todo - Luz Casal"
+    "displayName": "Lo eres todo - Luz Casal",
+    "numberOneDate": "20 de enero de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "deba088202f2c1633e72219a7f0fd281",
@@ -4316,7 +5309,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000530279.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000894377.jpg",
-    "displayName": "Lo echamos a suertes - Ella Baila Sola"
+    "displayName": "Lo echamos a suertes - Ella Baila Sola",
+    "numberOneDate": "28 de septiembre de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/042a425068ae97f13ece84755ea40cd39f6c7480?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "2f6abfb328f8179062594198553111de",
@@ -4329,7 +5325,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000487523.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001094505.jpg",
-    "displayName": "Estrella gemela - Eros Ramazzotti"
+    "displayName": "Estrella gemela - Eros Ramazzotti",
+    "numberOneDate": "14 de septiembre de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0fe13076e5ccd0d8917278021b09655cf8f468aa?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "0ec1c02260b0f5f1293dc129a8bc1897",
@@ -4342,7 +5341,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026700.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001118611.jpg",
-    "displayName": "Missing - Everything But The Girl"
+    "displayName": "Missing - Everything But The Girl",
+    "numberOneDate": "16 de marzo de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d8de5a70eb8174176c5ad59ea31f40e91d9e9738?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "73d2b3baf6681bf80d1009fe61662bf3",
@@ -4355,7 +5357,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000029442.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000814158.jpg",
-    "displayName": "Se a vida é (That's the way life is) - Pet Shop Boys"
+    "displayName": "Se a vida é (That's the way life is) - Pet Shop Boys",
+    "numberOneDate": "16 de noviembre de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0a41f9372bb59e00d44e2c3b13bf3ebd5468b19e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "f56e8739c23fd29f70172ccabd87763c",
@@ -4368,7 +5373,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000022452.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001120034.jpg",
-    "displayName": "Fastlove - George Michael"
+    "displayName": "Fastlove - George Michael",
+    "numberOneDate": "25 de mayo de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6cd1d2fcae7a5f915c6bc501db2aca4792ce57fd?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "60d8dbf20c95f41de0c63f9018e746cf",
@@ -4381,7 +5389,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000031367.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001994496.jpg",
-    "displayName": "The only thing that looks good on me is you - Bryan Adams"
+    "displayName": "The only thing that looks good on me is you - Bryan Adams",
+    "numberOneDate": "3 de agosto de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "bf7467a47141fdac8f064558dd2cd907",
@@ -4394,7 +5405,10 @@ export const songs: Song[] = [
     "voices": "Instrumental",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000769757.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001077802.jpg",
-    "displayName": "Children - Robert Miles"
+    "displayName": "Children - Robert Miles",
+    "numberOneDate": "20 de abril de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/333384572ac0fe283168624056d3e273dabc1b07?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "58052b3c58d55156cb9dcd77b7e4459f",
@@ -4407,7 +5421,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001293562.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000508117.jpg",
-    "displayName": "El talismán - Rosana"
+    "displayName": "El talismán - Rosana",
+    "numberOneDate": "31 de agosto de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/44ea963802ea05d7ee9110c2ad240caa0633efee?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "4e6c1b877a901bdff3e9d74814694036",
@@ -4420,7 +5437,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000541325.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000542011.jpg",
-    "displayName": "No nos podrán parar - Celtas Cortos"
+    "displayName": "No nos podrán parar - Celtas Cortos",
+    "numberOneDate": "29 de junio de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "d6873d658014467a44d2aa7fa8fa39b9",
@@ -4433,7 +5453,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001754146.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001755569.jpg",
-    "displayName": "Spaceman - Babylon Zoo"
+    "displayName": "Spaceman - Babylon Zoo",
+    "numberOneDate": "6 de abril de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d02f0087372a77cfe021cab87e189f8a8da318d6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "45ee666740e2b920d05f062c7e2f9445",
@@ -4446,7 +5469,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000540902.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000545260.jpg",
-    "displayName": "Quiero morir en tu veneno - Alejandro Sanz"
+    "displayName": "Quiero morir en tu veneno - Alejandro Sanz",
+    "numberOneDate": "2 de marzo de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0f221e7ded87d554859cdf904e2463d29dd499b5?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "fb5ec7b9365bf907f041bbd886a0b6e2",
@@ -4459,7 +5485,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000515429.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000515507.jpg",
-    "displayName": "Nirvana - El Bosco"
+    "displayName": "Nirvana - El Bosco",
+    "numberOneDate": "10 de febrero de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "6f3d47b6c5eb50ec83dcdea0bb275090",
@@ -4472,7 +5501,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000594102.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002086933.jpg",
-    "displayName": "Ironic - Alanis Morissette"
+    "displayName": "Ironic - Alanis Morissette",
+    "numberOneDate": "7 de septiembre de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/457d1a134a7a8174f5fa52f2d2b82c6927acb7aa?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "780a2fe2b556bf1571386b1e350ae295",
@@ -4485,7 +5517,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026097.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000525896.jpg",
-    "displayName": "María - Ricky Martin"
+    "displayName": "María - Ricky Martin",
+    "numberOneDate": "13 de julio de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/e0ba3d6b42a047689897df5ba3521b42a3f420e8?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "4a70e081dc074ce49832ee4aa9d34d46",
@@ -4498,7 +5533,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000548263.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000548302.jpg",
-    "displayName": "Dame - Luis Miguel"
+    "displayName": "Dame - Luis Miguel",
+    "numberOneDate": "5 de octubre de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/831928f9a00a1e887f4b201f9d43d379d3627590?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "6b9662278e177c13f1f374a71cd4f97c",
@@ -4511,7 +5549,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000493220.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000493231.jpg",
-    "displayName": "¡Qué bonito! - Rosario"
+    "displayName": "¡Qué bonito! - Rosario",
+    "numberOneDate": "21 de diciembre de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ccb04d23465f00bf707944d853d930c737661fcf?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "b3c0b1998245df53ab831095efc12fd8",
@@ -4524,7 +5565,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000487524.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000487675.jpg",
-    "displayName": "Vivimos siempre juntos - Nacho Cano;Mercedes Ferrer"
+    "displayName": "Vivimos siempre juntos - Nacho Cano;Mercedes Ferrer",
+    "numberOneDate": "7 de diciembre de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "908a6169547dcb7f2324756294f52ba7",
@@ -4537,7 +5581,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000555951.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000555970.jpg",
-    "displayName": "Let your soul be your pilot - Sting"
+    "displayName": "Let your soul be your pilot - Sting",
+    "numberOneDate": "11 de mayo de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "4fd47e99420388ed46e326cfb4e54556",
@@ -4550,7 +5597,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001283811.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000525548.jpg",
-    "displayName": "¡A sudar! - Danza Invisible"
+    "displayName": "¡A sudar! - Danza Invisible",
+    "numberOneDate": "24 de agosto de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "95b7f8c9810d96b6060c91921cc47c25",
@@ -4563,7 +5613,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000487544.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001127524.jpg",
-    "displayName": "Duro de pelar - Rebeca"
+    "displayName": "Duro de pelar - Rebeca",
+    "numberOneDate": "12 de octubre de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "61505d126cedc7bcfd3bfc3746bba08a",
@@ -4576,7 +5629,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000031453.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000888820.jpg",
-    "displayName": "The universal - Blur"
+    "displayName": "The universal - Blur",
+    "numberOneDate": "23 de marzo de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/01ef264678fdfe76578392fb7ed2437d2a785538?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "a24ddc0adc6e331867422e06f17d3824",
@@ -4589,7 +5645,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000487143.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001160523.jpg",
-    "displayName": "Salvation - The Cranberries"
+    "displayName": "Salvation - The Cranberries",
+    "numberOneDate": "6 de julio de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "9f121467031f36ffa5ee43b70560badf",
@@ -4602,7 +5661,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001550471.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000690882.jpg",
-    "displayName": "How deep is your love - Bee Gees"
+    "displayName": "How deep is your love - Bee Gees",
+    "numberOneDate": "13 de abril de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "8065f95b8882ee9d9febb34aa11eb53f",
@@ -4615,7 +5677,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000505813.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000506071.jpg",
-    "displayName": "Contigo - Joaquín Sabina"
+    "displayName": "Contigo - Joaquín Sabina",
+    "numberOneDate": "17 de agosto de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c26dd4edbe36e587682b92d4be3b6e7494aa8497?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "758269c77c3004857f24812a636c8705",
@@ -4628,7 +5693,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000032712.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002765820.jpg",
-    "displayName": "Wannabe - Spice Girls"
+    "displayName": "Wannabe - Spice Girls",
+    "numberOneDate": "30 de noviembre de 1996",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/66c4fdfab9106456adb12b0ce40c005cc70c92a6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "dbcb78de0a4cb8645cdbce6ed98c23d9",
@@ -4641,7 +5709,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000514138.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000519389.jpg",
-    "displayName": "Child - Mark Owen"
+    "displayName": "Child - Mark Owen",
+    "numberOneDate": "28 de diciembre de 1996",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "1357426f7314af09720aaea77a306bdf",
@@ -4654,7 +5725,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000505820.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000506071.jpg",
-    "displayName": "Y sin embargo - Joaquín Sabina"
+    "displayName": "Y sin embargo - Joaquín Sabina",
+    "numberOneDate": "1 de febrero de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d6af29d861a6dc51c8d402758ef0de99c688947a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "bfa14b94d394f158f5884e83e3f5490b",
@@ -4667,7 +5741,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000498236.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001094505.jpg",
-    "displayName": "La aurora - Eros Ramazzotti"
+    "displayName": "La aurora - Eros Ramazzotti",
+    "numberOneDate": "4 de enero de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2b31a9b698bfb10b40f54438e2ed24be2d9b4155?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "2251166e84082d82f529340da0e254be",
@@ -4680,7 +5757,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001085181.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001127947.jpg",
-    "displayName": "Barrel of a gun - Depeche Mode"
+    "displayName": "Barrel of a gun - Depeche Mode",
+    "numberOneDate": "12 de abril de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/28d0390ff9e7d919d43af5135c89df2b899383ac?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "fe8d85c791bc3521812eb53a57bb74d1",
@@ -4693,7 +5773,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001046723.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000892577.jpg",
-    "displayName": "Moja mi corazón - Marta Sánchez"
+    "displayName": "Moja mi corazón - Marta Sánchez",
+    "numberOneDate": "14 de junio de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "583ff53daf124f630febdfc30b0c5662",
@@ -4706,7 +5789,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000487609.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001866048.jpg",
-    "displayName": "Sweet kisses - Squeezer"
+    "displayName": "Sweet kisses - Squeezer",
+    "numberOneDate": "31 de mayo de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "f03947c79e4d56702277bc5424b25771",
@@ -4719,7 +5805,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000017707.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000493231.jpg",
-    "displayName": "A tu lado - Rosario"
+    "displayName": "A tu lado - Rosario",
+    "numberOneDate": "19 de abril de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "8b80c479b4dfd6c4139ca8e6ce01269f",
@@ -4732,7 +5821,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000516211.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000516234.jpg",
-    "displayName": "Anybody seen my baby? - The Rolling Stones"
+    "displayName": "Anybody seen my baby? - The Rolling Stones",
+    "numberOneDate": "13 de diciembre de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/7767c8e97c3339fe864092f402fdcc3a5c248669?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "8d96ea9b0adef1bf251473453c35f440",
@@ -4745,7 +5837,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000515383.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000520733.jpg",
-    "displayName": "Cantos de sirena - Inma Serrano"
+    "displayName": "Cantos de sirena - Inma Serrano",
+    "numberOneDate": "20 de septiembre de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/74281010fa56063aa69ac475110841480fa17459?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "6a4bb35b0bbf81e82e5ee1d07c622f54",
@@ -4758,7 +5853,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000606880.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000606877.jpg",
-    "displayName": "Mmmbop - Hanson"
+    "displayName": "Mmmbop - Hanson",
+    "numberOneDate": "9 de agosto de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "81103de91d5a93cbb2013935da4e881b",
@@ -4771,7 +5869,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000648.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000511011.jpg",
-    "displayName": "Estatua de sal - Ketama"
+    "displayName": "Estatua de sal - Ketama",
+    "numberOneDate": "29 de noviembre de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "b9162959e4854ee953d2ed97e0d57d15",
@@ -4784,7 +5885,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000513556.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000513692.jpg",
-    "displayName": "Your woman - White Town"
+    "displayName": "Your woman - White Town",
+    "numberOneDate": "17 de mayo de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/26752041f3fe48cbdc4e93a7b3643320b02f373d?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "86a0b36dab4f300a19ea77fc57e15c54",
@@ -4797,7 +5901,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000029422.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000643209.jpg",
-    "displayName": "Say what you want - Texas"
+    "displayName": "Say what you want - Texas",
+    "numberOneDate": "10 de mayo de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/5de8609b8491dc3805cedded975db09f00be2d30?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "b8ecb8dcb8b2c5cb5d46c704c0e4227d",
@@ -4810,7 +5917,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001379428.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001785457.jpg",
-    "displayName": "Blood on the dance floor - Michael Jackson"
+    "displayName": "Blood on the dance floor - Michael Jackson",
+    "numberOneDate": "19 de julio de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "18aea6a01f9235cc274a8e84512c61f2",
@@ -4823,7 +5933,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000445135.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000445516.jpg",
-    "displayName": "Mi enfermedad (Versión '96) - Los Rodríguez"
+    "displayName": "Mi enfermedad (Versión '96) - Los Rodríguez",
+    "numberOneDate": "11 de enero de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "a9c099c4e4b10e55eeae289a9a2f57cc",
@@ -4836,7 +5949,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000021249.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000885585.jpg",
-    "displayName": "Don't cry for me Argentina - Madonna"
+    "displayName": "Don't cry for me Argentina - Madonna",
+    "numberOneDate": "5 de abril de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "cc967e35b22061d2fee19f14adfa67ff",
@@ -4849,7 +5965,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000487689.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001076164.jpg",
-    "displayName": "Serenade - Dover"
+    "displayName": "Serenade - Dover",
+    "numberOneDate": "18 de octubre de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c17436f91fa0987f8209b229f593d88dace40bcc?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "9aa9233b53822bf52bb9e5c697bece64",
@@ -4862,7 +5981,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000033131.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000400180.jpg",
-    "displayName": "Y, ¿si fuera ella? - Alejandro Sanz"
+    "displayName": "Y, ¿si fuera ella? - Alejandro Sanz",
+    "numberOneDate": "11 de octubre de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/8e31152a558b8f471dee924358aaa1cfe7dd3f9a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "dcf814a8f8a45871ac227bf33ca112be",
@@ -4875,7 +5997,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000501472.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000501616.jpg",
-    "displayName": "Todas las flores - Presuntos Implicados"
+    "displayName": "Todas las flores - Presuntos Implicados",
+    "numberOneDate": "27 de diciembre de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/cf074fead38bcdc4e02100a9be3c0e6b322ec4ba?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "62b552a44516952d1dfe6422500bdfba",
@@ -4888,7 +6013,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001024110.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000630795.jpg",
-    "displayName": "Laura no está - Nek"
+    "displayName": "Laura no está - Nek",
+    "numberOneDate": "13 de septiembre de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "3ecefff677085b91c838edaf01fe7f07",
@@ -4901,7 +6029,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000023522.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002685920.jpg",
-    "displayName": "Honey - Mariah Carey"
+    "displayName": "Honey - Mariah Carey",
+    "numberOneDate": "15 de noviembre de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "428552b129c6e407507ed1a305ea096a",
@@ -4914,7 +6045,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000019109.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000632512.jpg",
-    "displayName": "Bitter sweet symphony - The Verve"
+    "displayName": "Bitter sweet symphony - The Verve",
+    "numberOneDate": "20 de diciembre de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/55943876e189fd62179474de05ca8572014ce649?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "dc6963b05eaab6dc7a2ce590d7eaa957",
@@ -4927,7 +6061,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000022293.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001083986.jpg",
-    "displayName": "Everybody (Backstreet's back) - Backstreet Boys"
+    "displayName": "Everybody (Backstreet's back) - Backstreet Boys",
+    "numberOneDate": "4 de octubre de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/281c11bdcd3dd2d39eab55bd136d734ee2d3f3b3?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "2f71bb5e7dd3f10ec4595fc2512bb2b8",
@@ -4940,7 +6077,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000030405.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000888808.jpg",
-    "displayName": "Song 2 - Blur"
+    "displayName": "Song 2 - Blur",
+    "numberOneDate": "5 de julio de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/183c0855e94b58dcb267e2b0721d4a3c99260acf?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "7dd9b5fecea539035f353c687b3f6bca",
@@ -4953,7 +6093,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000678415.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000738020.jpg",
-    "displayName": "I'll be missing you - P. Diddy;112;Faith Evans"
+    "displayName": "I'll be missing you - P. Diddy;112;Faith Evans",
+    "numberOneDate": "27 de septiembre de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "10ee86ac8b6e13b17a383e4184f12799",
@@ -4966,7 +6109,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000586185.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001095828.jpg",
-    "displayName": "Salta!!! - Seguridad Social"
+    "displayName": "Salta!!! - Seguridad Social",
+    "numberOneDate": "8 de febrero de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d66f9a385c6703a31a1c37a0ba37d534883a29eb?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "e2868db68caf265e9d12c372662f3cc4",
@@ -4979,7 +6125,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001868632.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001149987.jpg",
-    "displayName": "Staring at the sun - U2"
+    "displayName": "Staring at the sun - U2",
+    "numberOneDate": "30 de agosto de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0640a926622af5ee4701f80fb54e45b0",
@@ -4992,7 +6141,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000487667.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000487675.jpg",
-    "displayName": "La suerte que viene y va - Nacho Cano;Esmeralda Grao"
+    "displayName": "La suerte que viene y va - Nacho Cano;Esmeralda Grao",
+    "numberOneDate": "28 de junio de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "66e0d64487c953aec234b0809cdadf14",
@@ -5005,7 +6157,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001338783.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001096028.jpg",
-    "displayName": "Step by step - Whitney Houston"
+    "displayName": "Step by step - Whitney Houston",
+    "numberOneDate": "22 de febrero de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "488b9ad7eb5021f28a43045f7e4e6bf7",
@@ -5018,7 +6173,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000487622.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001099464.jpg",
-    "displayName": "Si si... o si no - David Summers"
+    "displayName": "Si si... o si no - David Summers",
+    "numberOneDate": "7 de junio de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "541073a725a9c8b229c8495e6810aa63",
@@ -5031,7 +6189,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000495710.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001120036.jpg",
-    "displayName": "Cosmic girl - Jamiroquai"
+    "displayName": "Cosmic girl - Jamiroquai",
+    "numberOneDate": "1 de marzo de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/dc36878e42f17448af149d519fa8d7120d001a47?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "5a315629a04f6fe16e43250aea7fe757",
@@ -5044,7 +6205,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000018373.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000894377.jpg",
-    "displayName": "Amores de barra - Ella Baila Sola"
+    "displayName": "Amores de barra - Ella Baila Sola",
+    "numberOneDate": "24 de mayo de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/668f29aab7de28c9f5088afa7e22a307050a5e7e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "d7cde8db97b214c1e613743a2fe0943d",
@@ -5057,7 +6221,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000527025.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000527233.jpg",
-    "displayName": "Loco - Andrés Calamaro"
+    "displayName": "Loco - Andrés Calamaro",
+    "numberOneDate": "22 de noviembre de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/83ab52ac47d87f45eeb0cccaa2bcbd4a32276a91?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "b20cbdeeecb3cc719ffcab698f4b49e3",
@@ -5070,7 +6237,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000022724.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000549630.jpg",
-    "displayName": "Frío sin tí - Navajita Plateá"
+    "displayName": "Frío sin tí - Navajita Plateá",
+    "numberOneDate": "2 de agosto de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9ef81bbe6e2ba9d45e5926cf4187e9829017326b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "b94379d10217a46cfec788e0ab802500",
@@ -5083,7 +6253,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490004980248.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000584318.jpg",
-    "displayName": "Don't speak - No Doubt"
+    "displayName": "Don't speak - No Doubt",
+    "numberOneDate": "15 de febrero de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "5b53d9fc729561069a0efb3b93509164",
@@ -5096,7 +6269,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001868628.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001149987.jpg",
-    "displayName": "Discotheque - U2"
+    "displayName": "Discotheque - U2",
+    "numberOneDate": "26 de abril de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "a8e0ba362c6361e42f3bad44e5ea6ffc",
@@ -5109,7 +6285,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000490926.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000490968.jpg",
-    "displayName": "Este mundo va - Miguel Bosé"
+    "displayName": "Este mundo va - Miguel Bosé",
+    "numberOneDate": "18 de enero de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "561e138b851db8e8ec294c3d76a150d8",
@@ -5122,7 +6301,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000487685.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001510472.jpg",
-    "displayName": "Haz turismo - Celtas Cortos"
+    "displayName": "Haz turismo - Celtas Cortos",
+    "numberOneDate": "16 de agosto de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "d3308b373de9cbe6198cb09b080ea877",
@@ -5135,7 +6317,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001022010.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001022105.jpg",
-    "displayName": "Salomé - Bunbury"
+    "displayName": "Salomé - Bunbury",
+    "numberOneDate": "8 de noviembre de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "690b98785a837b611bab6df9b051cc5d",
@@ -5148,7 +6333,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000530282.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000894377.jpg",
-    "displayName": "Cuando los sapos bailen flamenco - Ella Baila Sola"
+    "displayName": "Cuando los sapos bailen flamenco - Ella Baila Sola",
+    "numberOneDate": "25 de enero de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f3744f20ffaef7ff37a11dc888150a54f43afa10?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "a3651d29c6ea74ea794ff7f761fe2606",
@@ -5161,7 +6349,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000029428.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002765820.jpg",
-    "displayName": "Say you'll be there - Spice Girls"
+    "displayName": "Say you'll be there - Spice Girls",
+    "numberOneDate": "22 de marzo de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/fc95dc3d1faacf1e7d27c6c337352f317bc1f9b4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "6f1504a29c695860ce51dff9e39ccdf5",
@@ -5174,7 +6365,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000018991.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000888808.jpg",
-    "displayName": "Beetlebum - Blur"
+    "displayName": "Beetlebum - Blur",
+    "numberOneDate": "8 de marzo de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/28ba45b522401cb7363bbf0467cc8ea551dca8b5?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "bb89cc4f23d399e49ae1ed7a7a54760a",
@@ -5187,7 +6381,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000525849.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000526000.jpg",
-    "displayName": "Las cosas que vives - Laura Pausini"
+    "displayName": "Las cosas que vives - Laura Pausini",
+    "numberOneDate": "15 de marzo de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "67ce034e8fe99707af5c25293edd0bfc",
@@ -5200,7 +6397,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001866050.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001866051.jpg",
-    "displayName": "Grande - Paolo Vallesi;Alejandro Sanz"
+    "displayName": "Grande - Paolo Vallesi;Alejandro Sanz",
+    "numberOneDate": "21 de junio de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "237db84b5ea8542c5604c8fa0c357041",
@@ -5213,7 +6413,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000017565.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001094379.jpg",
-    "displayName": "A contratiempo - Ana Torroja"
+    "displayName": "A contratiempo - Ana Torroja",
+    "numberOneDate": "23 de agosto de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/182a21200148954bc5f06a3d32d18c1a8dc769e7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "f208b72cd6175401aa53a40ea9a029c0",
@@ -5226,7 +6429,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000694323.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000516017.jpg",
-    "displayName": "Bitch - Meredith Brooks"
+    "displayName": "Bitch - Meredith Brooks",
+    "numberOneDate": "25 de octubre de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d883648104d821886587d30dc4dc53dcfea6a91c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "c9364520997769555a91252b2dd868c5",
@@ -5239,7 +6445,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000582246.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000582278.jpg",
-    "displayName": "Garota nacional - Skank"
+    "displayName": "Garota nacional - Skank",
+    "numberOneDate": "26 de julio de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/270334ea610ff5d6546f44ff1d6faf29124dfe0c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "9b4fb0cc2b9ab8ace5c3afef3a916001",
@@ -5252,7 +6461,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000601201.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000506784.jpg",
-    "displayName": "La flaca - Jarabe de Palo"
+    "displayName": "La flaca - Jarabe de Palo",
+    "numberOneDate": "6 de septiembre de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/de8001a943205b7ac3ebc910633a5e67421e2c41?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "75055acb3368863661f02c06b884420e",
@@ -5265,7 +6477,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000512962.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000513050.jpg",
-    "displayName": "The real thing - Lisa Stansfield"
+    "displayName": "The real thing - Lisa Stansfield",
+    "numberOneDate": "12 de julio de 1997",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ac2d7903ec48c27837c34cd6fdb77f39182302c9?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "0092cc7e8ec5f19fb4697332db4d946b",
@@ -5278,7 +6493,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000700143.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001157916.jpg",
-    "displayName": "Candle in the wind - Elton John"
+    "displayName": "Candle in the wind - Elton John",
+    "numberOneDate": "1 de noviembre de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "dc52399e01dd2344163e093847cac404",
@@ -5291,7 +6509,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001083496.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001083507.jpg",
-    "displayName": "Barbie girl - Aqua"
+    "displayName": "Barbie girl - Aqua",
+    "numberOneDate": "6 de diciembre de 1997",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "5ce588fdb9af027f965a7bacff0dc96b",
@@ -5304,7 +6525,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000022335.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001736245.jpg",
-    "displayName": "Everything's gonna be alright - Sweetbox"
+    "displayName": "Everything's gonna be alright - Sweetbox",
+    "numberOneDate": "21 de marzo de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6f269b38bbdd593759bf2f7eb7c54ffcf263f015?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "f0ddb4a501738f16be385f9bd17c9666",
@@ -5317,7 +6541,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001045885.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000584930.jpg",
-    "displayName": "Come into my life - Gala"
+    "displayName": "Come into my life - Gala",
+    "numberOneDate": "7 de marzo de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/42259873159b0ef8b53dbe7380227f338d3e2900?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "7347192d09acabc7d77ad7d1d8fb82aa",
@@ -5330,7 +6557,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000439854.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000522578.jpg",
-    "displayName": "Save tonight - Eagle-Eye Cherry"
+    "displayName": "Save tonight - Eagle-Eye Cherry",
+    "numberOneDate": "11 de julio de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9659b96f80262985ff8663c46697b4c3d646daba?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "1dcf476e4b9db4e197f9457ade9a253a",
@@ -5343,7 +6573,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000514922.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000514969.jpg",
-    "displayName": "Frozen - Madonna"
+    "displayName": "Frozen - Madonna",
+    "numberOneDate": "25 de abril de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c698b62932988c57baf03ead79aa49eabc669ea0?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "472d53747d50cec5da0a16d2b1694b02",
@@ -5356,7 +6589,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000022875.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000814132.jpg",
-    "displayName": "Gimme love - Alexia"
+    "displayName": "Gimme love - Alexia",
+    "numberOneDate": "4 de julio de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "7672be2316cdb33e08e3df937633bcc6",
@@ -5369,7 +6605,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000587905.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000630687.jpg",
-    "displayName": "Why can't we be friends? - Smash Mouth"
+    "displayName": "Why can't we be friends? - Smash Mouth",
+    "numberOneDate": "5 de septiembre de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/250c3e42ffd4136238e56df5e128abb7bbc62e77?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "bdf68587f2983984743d882696b11ab6",
@@ -5382,7 +6621,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001358395.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000631742.jpg",
-    "displayName": "Believe - Cher"
+    "displayName": "Believe - Cher",
+    "numberOneDate": "26 de diciembre de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/579967c91dc409b693b9819c12bbba83e4d0f9a4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "8bc6fd38a89a2ff53cc13d8bede63399",
@@ -5395,7 +6637,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000027712.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000630724.jpg",
-    "displayName": "On a day like today - Bryan Adams"
+    "displayName": "On a day like today - Bryan Adams",
+    "numberOneDate": "28 de noviembre de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "7d139602a9701d5b63fa7f7ea5e1cab1",
@@ -5408,7 +6653,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000027844.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000495960.jpg",
-    "displayName": "Outside - George Michael"
+    "displayName": "Outside - George Michael",
+    "numberOneDate": "19 de diciembre de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "f89571582aeca491ad7aa1cd86c40241",
@@ -5421,7 +6669,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000645171.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001877580.jpg",
-    "displayName": "Horny '98 - Mousse T.;Hot 'n' Juicy;Inaya Day"
+    "displayName": "Horny '98 - Mousse T.;Hot 'n' Juicy;Inaya Day",
+    "numberOneDate": "12 de septiembre de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "24d7a5e58dfee92ea8a3549cbfd8c6ee",
@@ -5434,7 +6685,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001512539.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000555896.jpg",
-    "displayName": "High - Lighthouse Family"
+    "displayName": "High - Lighthouse Family",
+    "numberOneDate": "30 de mayo de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/043fa9fa6c629011e18cfea0bea7d02f53eb8c5c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "a10897328147851a0002fec4b78caca2",
@@ -5447,7 +6701,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000694970.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000630773.jpg",
-    "displayName": "Never ever - All Saints"
+    "displayName": "Never ever - All Saints",
+    "numberOneDate": "23 de mayo de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/546423b560e1750fe9d806a78cfed7babbd58db6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "83ddd7d0361525764026b3f48ce7fc81",
@@ -5460,7 +6717,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000516336.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000581000.jpg",
-    "displayName": "La copa de la vida - Ricky Martin"
+    "displayName": "La copa de la vida - Ricky Martin",
+    "numberOneDate": "9 de mayo de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/5bc87e415b5560acce4ddf15d8d7641db26ba779?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "59cdefe922e868788cfed0e1264b6480",
@@ -5473,7 +6733,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000555838.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000555896.jpg",
-    "displayName": "Raincloud - Lighthouse Family"
+    "displayName": "Raincloud - Lighthouse Family",
+    "numberOneDate": "31 de enero de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "bd96262d319aa82700dd3b3c9b9199a8",
@@ -5486,7 +6749,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000527232.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000527249.jpg",
-    "displayName": "Soñaré - La Oreja de Van Gogh"
+    "displayName": "Soñaré - La Oreja de Van Gogh",
+    "numberOneDate": "7 de noviembre de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/640f8503bbd76eb1838a7b0c3b324be17b306832?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "6d35e67777d5ec4bf6dacd69ace9c3d5",
@@ -5499,7 +6765,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000527736.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000496430.jpg",
-    "displayName": "Pájaros de barro - Manolo García"
+    "displayName": "Pájaros de barro - Manolo García",
+    "numberOneDate": "20 de junio de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/b7b3ab8c0e20c980bb6e74b30239fee666fc31a4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "40925e92d89bf8c480278ab86a76337c",
@@ -5512,7 +6781,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000017791.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001095828.jpg",
-    "displayName": "Acuarela - Seguridad Social"
+    "displayName": "Acuarela - Seguridad Social",
+    "numberOneDate": "28 de febrero de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ff6419ee415bfd887e5ddfd22cd2a6995d9f9281?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "5830980a2311cdfecc50b0e2346b23d0",
@@ -5525,7 +6797,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000525374.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001095103.jpg",
-    "displayName": "Desátame - Mónica Naranjo"
+    "displayName": "Desátame - Mónica Naranjo",
+    "numberOneDate": "14 de febrero de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2707fb707c4aabba63ca5dbd36dedcc8798533cf?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "bdbd56324840cf65bbe3bee42f404846",
@@ -5538,7 +6813,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001254405.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000892193.jpg",
-    "displayName": "El club de los humildes - Mecano"
+    "displayName": "El club de los humildes - Mecano",
+    "numberOneDate": "16 de mayo de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/8532cec8add5281e9dc3183b583c3f6fcbe13d42?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "cbd04db8f9b0179a2d1d28635cbf5223",
@@ -5551,7 +6829,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000527026.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000527233.jpg",
-    "displayName": "Flaca - Andrés Calamaro"
+    "displayName": "Flaca - Andrés Calamaro",
+    "numberOneDate": "28 de marzo de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1d8b25d233f792654ab1e5592926c7451d94bbb1?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "46b0ff4e5281bb9e10cca65b36756ca7",
@@ -5564,7 +6845,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000018439.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001181845.jpg",
-    "displayName": "Angel of mine - Eternal"
+    "displayName": "Angel of mine - Eternal",
+    "numberOneDate": "21 de febrero de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/04f478347f758c22d72a64ec8656796bd91df9de?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "053dead4b3017c9af35cf83b1cee39e4",
@@ -5577,7 +6861,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000400178.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000400180.jpg",
-    "displayName": "Corazón partío - Alejandro Sanz"
+    "displayName": "Corazón partío - Alejandro Sanz",
+    "numberOneDate": "10 de enero de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/cee7191f8b94d18b77bf6a6382d34f5418844095?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "7554a5b2e28b3c0c1342fd8a471e47eb",
@@ -5590,7 +6877,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001083498.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001083507.jpg",
-    "displayName": "Doctor Jones - Aqua"
+    "displayName": "Doctor Jones - Aqua",
+    "numberOneDate": "13 de junio de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "532cd57395fc9d6fdf324e4a9ece4b41",
@@ -5603,7 +6893,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000512291.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000512334.jpg",
-    "displayName": "Heaven's what I feel (Corazón prohibido) - Gloria Estefan"
+    "displayName": "Heaven's what I feel (Corazón prohibido) - Gloria Estefan",
+    "numberOneDate": "27 de junio de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "19c8278a27c2e3e64ac02ba38e9a2bbe",
@@ -5616,7 +6909,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000525228.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000525250.jpg",
-    "displayName": "Nada que perder - Amistades Peligrosas"
+    "displayName": "Nada que perder - Amistades Peligrosas",
+    "numberOneDate": "7 de febrero de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "23702dbf0ac1a0c753642731b17345fe",
@@ -5629,7 +6925,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000538406.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000538427.jpg",
-    "displayName": "Life - Des'ree"
+    "displayName": "Life - Des'ree",
+    "numberOneDate": "19 de septiembre de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "829b5190ca1cd8c5364716da6cc44978",
@@ -5642,7 +6941,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000512293.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000512334.jpg",
-    "displayName": "Oye - Gloria Estefan;Pablo Flores"
+    "displayName": "Oye - Gloria Estefan;Pablo Flores",
+    "numberOneDate": "3 de octubre de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "8a60a76124d053f6559938bf24313ed7",
@@ -5655,7 +6957,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000022866.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001078621.jpg",
-    "displayName": "Gettin' jiggy wit it - Will Smith"
+    "displayName": "Gettin' jiggy wit it - Will Smith",
+    "numberOneDate": "6 de junio de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/46576be464f8b45bf713700b0fc72de76ee74f9c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "dc0d4488ea8bab1be52ce62b4da5d184",
@@ -5668,7 +6973,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001099523.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001083986.jpg",
-    "displayName": "As long as you love me - Backstreet Boys"
+    "displayName": "As long as you love me - Backstreet Boys",
+    "numberOneDate": "24 de enero de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d0854e502fe21a85521742c7437425a9753a243c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "c7cc479d795485fe02f6360d06d5aaee",
@@ -5681,7 +6989,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000539645.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000539663.jpg",
-    "displayName": "Quién se acuerda de ti - Mikel Erentxun"
+    "displayName": "Quién se acuerda de ti - Mikel Erentxun",
+    "numberOneDate": "2 de mayo de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f31f79e20f0e4846d633770c66886a4533527ec2?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "39bbf959a97870b0b82e21412ef47fd3",
@@ -5694,7 +7005,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000016495.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000585258.jpg",
-    "displayName": "What can I do? - The Corrs"
+    "displayName": "What can I do? - The Corrs",
+    "numberOneDate": "25 de julio de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "b94e31f5dfb3d618452921b7ef7e87e2",
@@ -5707,7 +7021,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026952.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000623258.jpg",
-    "displayName": "My heart will go on - Céline Dion"
+    "displayName": "My heart will go on - Céline Dion",
+    "numberOneDate": "4 de abril de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/185e072691436989d4f1b7d0e4cb73d70032512a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "35a7c51a470405e587c8c662ad6d035d",
@@ -5720,7 +7037,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000550529.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000550549.jpg",
-    "displayName": "Gimme tha power - Molotov"
+    "displayName": "Gimme tha power - Molotov",
+    "numberOneDate": "1 de agosto de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "26f0acc0403d089ec53a0d22b06d5a26",
@@ -5733,7 +7053,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000502166.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000502178.jpg",
-    "displayName": "Together again - Janet Jackson"
+    "displayName": "Together again - Janet Jackson",
+    "numberOneDate": "14 de marzo de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "40270918634a95b90ad92068cef681b5",
@@ -5746,7 +7069,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490001173261.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/490001174550.jpg",
-    "displayName": "De qué me sirve llorar - OBK"
+    "displayName": "De qué me sirve llorar - OBK",
+    "numberOneDate": "18 de abril de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "3c9a631af928cc8ab1465a6309aa1b92",
@@ -5759,7 +7085,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002619886.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001159481.jpg",
-    "displayName": "Thank u - Alanis Morissette"
+    "displayName": "Thank u - Alanis Morissette",
+    "numberOneDate": "5 de diciembre de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0a37823003809393e93bae2bd460630ba00c1525?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "8f379eacea38153eec2db95ab81acabd",
@@ -5772,7 +7101,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000538250.0mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000538262.jpg",
-    "displayName": "I think I'm paranoid - Garbage"
+    "displayName": "I think I'm paranoid - Garbage",
+    "numberOneDate": "17 de octubre de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/aa882c22a7b5374b300b79286e5d4f705e9b7120?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "9e524a08b20417567cc73035264d9541",
@@ -5785,7 +7117,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000527735.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000496430.jpg",
-    "displayName": "Carbón y ramas secas - Manolo García"
+    "displayName": "Carbón y ramas secas - Manolo García",
+    "numberOneDate": "26 de septiembre de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/714b821c959547dc39354634b772b16e8e23216b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "d3d768e5f24d29ad450391fb956f39a6",
@@ -5798,7 +7133,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000020433.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000632651.jpg",
-    "displayName": "Crush - Jennifer Paige"
+    "displayName": "Crush - Jennifer Paige",
+    "numberOneDate": "14 de noviembre de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/548254129992adf6ab6a8c2ed09bd9e8ac326c4f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "51dd7a00805802a9af678b2230197ee9",
@@ -5811,7 +7149,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000474024.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147741.jpg",
-    "displayName": "Contigo - Rosana"
+    "displayName": "Contigo - Rosana",
+    "numberOneDate": "12 de diciembre de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ffe993eb3b2eb2a24e7e3214b549eb798a87aea0?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "cc5607ff860c7406e01bbbc81970fe06",
@@ -5824,7 +7165,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000029921.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001866121.jpg",
-    "displayName": "Si sé que te tengo a ti - Nek"
+    "displayName": "Si sé que te tengo a ti - Nek",
+    "numberOneDate": "31 de octubre de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "75293a4260620455c38c8e582eb20a8c",
@@ -5837,7 +7181,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000487704.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000814241.jpg",
-    "displayName": "Happy world - Blue 4 U"
+    "displayName": "Happy world - Blue 4 U",
+    "numberOneDate": "29 de agosto de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "f7293bde52e8dfeb4ab910f6438a5de4",
@@ -5850,7 +7197,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000031764.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000630849.jpg",
-    "displayName": "Torn - Natalie Imbruglia"
+    "displayName": "Torn - Natalie Imbruglia",
+    "numberOneDate": "11 de abril de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6226210d4427f1f4dff7555abbd9801aae3af1f0?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "e183c7402fd1e45e30d9488934915085",
@@ -5863,7 +7213,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000556161.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000585258.jpg",
-    "displayName": "Only when I sleep - The Corrs"
+    "displayName": "Only when I sleep - The Corrs",
+    "numberOneDate": "17 de enero de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "f3848c6ac5a9e5d6cb108b2417ba2701",
@@ -5876,7 +7229,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000031796.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147724.jpg",
-    "displayName": "Train - Undrop"
+    "displayName": "Train - Undrop",
+    "numberOneDate": "15 de agosto de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d20e17321fe436e4d07353b321acadd9ac463079?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "eeb26bf14a21ef13f5ba1af3168200e7",
@@ -5889,7 +7245,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000516333.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000581000.jpg",
-    "displayName": "La bomba - Ricky Martin"
+    "displayName": "La bomba - Ricky Martin",
+    "numberOneDate": "22 de agosto de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/3dbe32d5c131abf8703d853163df546a7831c90b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "a6babd8adc5d2915e1340edcaabb69fd",
@@ -5902,7 +7261,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000527205.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000528192.jpg",
-    "displayName": "Depende - Jarabe de Palo"
+    "displayName": "Depende - Jarabe de Palo",
+    "numberOneDate": "10 de octubre de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f8578d8f42c0d3d35f59f286baf8ad33ee5968cf?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "c716db580ec45d720f6c927260c3c8b6",
@@ -5915,7 +7277,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000586678.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000527217.jpg",
-    "displayName": "Y quisiera - Ella Baila Sola"
+    "displayName": "Y quisiera - Ella Baila Sola",
+    "numberOneDate": "24 de octubre de 1998",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9a8a84092efab9a7c16860f83500fbb66b713f7f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "1cd5b1a626b259f150009ab614ef714d",
@@ -5928,7 +7293,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000487707.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000516234.jpg",
-    "displayName": "Out of control - The Rolling Stones"
+    "displayName": "Out of control - The Rolling Stones",
+    "numberOneDate": "18 de julio de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "56702d0447481d0281066b21c2985fa4",
@@ -5941,7 +7309,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000487884.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000487885.jpg",
-    "displayName": "Quiero vender mi pasado - La Rabia del Milenio"
+    "displayName": "Quiero vender mi pasado - La Rabia del Milenio",
+    "numberOneDate": "21 de noviembre de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "6ad26314ea3bb76b20da658e6b4e85fe",
@@ -5954,7 +7325,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000538930.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000538974.jpg",
-    "displayName": "Ponle sabor - DJ Kun"
+    "displayName": "Ponle sabor - DJ Kun",
+    "numberOneDate": "8 de agosto de 1998",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "1500dc446514d32766a65e1be6e6f9b2",
@@ -5967,7 +7341,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000527060.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000527083.jpg",
-    "displayName": "Ciega, sordomuda - Shakira"
+    "displayName": "Ciega, sordomuda - Shakira",
+    "numberOneDate": "16 de enero de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/b8db4382cee56b58651d6454217a577246aab382?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "7668dc7fb7739ec388e31b3704906d5c",
@@ -5980,7 +7357,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000024052.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002776646.jpg",
-    "displayName": "If you could read my mind - Stars on 54"
+    "displayName": "If you could read my mind - Stars on 54",
+    "numberOneDate": "20 de febrero de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "7e59fe97531bab26b041a49b6eed0028",
@@ -5993,7 +7373,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000019087.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000692142.jpg",
-    "displayName": "Big big world - Emilia"
+    "displayName": "Big big world - Emilia",
+    "numberOneDate": "20 de marzo de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1cb1bdfe1914fad1c24fe23368862e127b10e230?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "a197d5dad7188a8632feb0b3e2e1b5d2",
@@ -6006,7 +7389,10 @@ export const songs: Song[] = [
     "voices": "Instrumental",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001065165.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000526872.jpg",
-    "displayName": "Busindre reel - Hevia"
+    "displayName": "Busindre reel - Hevia",
+    "numberOneDate": "17 de abril de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "185c0f6cc4237456f9e2d2d425683e2d",
@@ -6019,7 +7405,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001239172..mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001239201.jpg",
-    "displayName": "Mambo nº 5 (A little bit of...) - Lou Bega"
+    "displayName": "Mambo nº 5 (A little bit of...) - Lou Bega",
+    "numberOneDate": "28 de agosto de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9d4b70e65834b7f7f78e42d1cfc070c827ab0951?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "7007881f816242bbb19f754db053d025",
@@ -6032,7 +7421,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000022815.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000633081.jpg",
-    "displayName": "Genie in a bottle - Christina Aguilera"
+    "displayName": "Genie in a bottle - Christina Aguilera",
+    "numberOneDate": "4 de diciembre de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/31c45c1e2951c7713b67a91299d3da369f502c75?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "7e2e222fbb587e79630e0cc8f63bc091",
@@ -6045,7 +7437,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000487901.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000691062.jpg",
-    "displayName": "Sometimes - Britney Spears"
+    "displayName": "Sometimes - Britney Spears",
+    "numberOneDate": "9 de octubre de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/66534231ccdd99619485b6ea4fa90987322dd812?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "0cd20a419968c9eb47dc96a108bb5de4",
@@ -6058,7 +7453,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000764953.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147694.jpg",
-    "displayName": "Wish I could fly - Roxette"
+    "displayName": "Wish I could fly - Roxette",
+    "numberOneDate": "1 de mayo de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "d78bf40de286d767317d70900df90850",
@@ -6071,7 +7469,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000528534.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000528546.jpg",
-    "displayName": "Miénteme - Ketama"
+    "displayName": "Miénteme - Ketama",
+    "numberOneDate": "6 de noviembre de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "f56e86eaea9190dc0d98e0007fbf77b4",
@@ -6084,7 +7485,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001056834.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001849920.jpg",
-    "displayName": "Salomé - Chayanne"
+    "displayName": "Salomé - Chayanne",
+    "numberOneDate": "5 de junio de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0272c6991517ac47546840d4ed45b16f",
@@ -6097,7 +7501,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000527220.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000527249.jpg",
-    "displayName": "Cuéntame al oído - La Oreja de Van Gogh"
+    "displayName": "Cuéntame al oído - La Oreja de Van Gogh",
+    "numberOneDate": "6 de febrero de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c0d5a33f33eaa305822e73ffe65bc15a1c01637f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "dbc7627c69b88ebc50292d929ccf0dbd",
@@ -6110,7 +7517,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000018779.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000691062.jpg",
-    "displayName": "... baby one more time - Britney Spears"
+    "displayName": "... baby one more time - Britney Spears",
+    "numberOneDate": "12 de junio de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/da2134a161f1cb34d17c2d6d7e77cc93d1c1e6f7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "3d2a62076664ba4e9aa70aa35b238b01",
@@ -6123,7 +7533,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000020945.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000527217.jpg",
-    "displayName": "Despídete - Ella Baila Sola"
+    "displayName": "Despídete - Ella Baila Sola",
+    "numberOneDate": "23 de enero de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/7932cc4ddee374b4f2ba8314aed0eab509eb87e6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "1b37efdb8336a97d04a4dc04ea32d814",
@@ -6136,7 +7549,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000664004.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001874800.jpg",
-    "displayName": "Sad eyes - Bruce Springsteen"
+    "displayName": "Sad eyes - Bruce Springsteen",
+    "numberOneDate": "30 de enero de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ab31a607c7ae10346803cb6c3220e900ecdf51bb?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "7959ddcbde9c00f70159e69c301ae12a",
@@ -6149,7 +7565,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000493762.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000692664.jpg",
-    "displayName": "Sweetest thing - U2"
+    "displayName": "Sweetest thing - U2",
+    "numberOneDate": "2 de enero de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "69f65f9e0b9dde265cc250e666f27baa",
@@ -6162,7 +7581,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000678528.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001419944.jpg",
-    "displayName": "So young - The Corrs;K-Klass"
+    "displayName": "So young - The Corrs;K-Klass",
+    "numberOneDate": "10 de abril de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "e0d7276705dbe91523a18e62f4e44d1f",
@@ -6175,7 +7597,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000538414.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000538427.jpg",
-    "displayName": "You gotta be (1999 mix) - Des'ree"
+    "displayName": "You gotta be (1999 mix) - Des'ree",
+    "numberOneDate": "27 de febrero de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "78eed362cfa0e9c1b1c841a518b8a5e4",
@@ -6188,7 +7613,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001272018.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000486915.jpg",
-    "displayName": "O tú ó ninguna - Luis Miguel"
+    "displayName": "O tú ó ninguna - Luis Miguel",
+    "numberOneDate": "27 de noviembre de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/331c9aa89180ea619a95c1697d3167c1db8828ab?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "4c1771ec2b8a1ff78c463ea4ebea1eba",
@@ -6201,7 +7629,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026434.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000511032.jpg",
-    "displayName": "Mi confianza - Luz Casal"
+    "displayName": "Mi confianza - Luz Casal",
+    "numberOneDate": "13 de noviembre de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2ddda06af6f16a18b7d42c2b2fea7e747b938ada?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "525b34fc90695e92f0ddd95137412c8f",
@@ -6214,7 +7645,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026043.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001972181.jpg",
-    "displayName": "Manía - Babel Fish"
+    "displayName": "Manía - Babel Fish",
+    "numberOneDate": "25 de septiembre de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6c3ea146b595594f68240c04d11be65bdbf3ddd9?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "ebb318d3196824372cdfba7cb61f3c08",
@@ -6227,7 +7661,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000526740.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000526928.jpg",
-    "displayName": "Gente distinta - Celtas Cortos"
+    "displayName": "Gente distinta - Celtas Cortos",
+    "numberOneDate": "25 de diciembre de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "7430f20147d147f89513e5fc0c1bf24c",
@@ -6240,7 +7677,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000488402.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000488413.jpg",
-    "displayName": "La última carta - Los Cucas"
+    "displayName": "La última carta - Los Cucas",
+    "numberOneDate": "26 de junio de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "d8d60b60f851f943259ab9d713735239",
@@ -6253,7 +7693,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000025483.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001866710.jpg",
-    "displayName": "Livin' in jam - Blue 4 U"
+    "displayName": "Livin' in jam - Blue 4 U",
+    "numberOneDate": "21 de agosto de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "522c0d220f612ae088917a6a83e3bc8f",
@@ -6266,7 +7709,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000023308.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001155243.jpg",
-    "displayName": "Heartbreaker - Mariah Carey;Jay Z"
+    "displayName": "Heartbreaker - Mariah Carey;Jay Z",
+    "numberOneDate": "11 de diciembre de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "85da8d5104f21df7af72007ff083c94e",
@@ -6279,7 +7725,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000030644.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000631742.jpg",
-    "displayName": "Strong enough - Cher"
+    "displayName": "Strong enough - Cher",
+    "numberOneDate": "8 de mayo de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/31f7b7878cbcad46832c8154056e23d1526463d0?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "029d93f08c71762d200317af95816bf7",
@@ -6292,7 +7741,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000589498.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000528192.jpg",
-    "displayName": "Agua - Jarabe de Palo"
+    "displayName": "Agua - Jarabe de Palo",
+    "numberOneDate": "13 de febrero de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/153177fda3f50cb88c0177d101c0c8acaeb5b61f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "18c94fa65a0393a66a9fad71871cc7b7",
@@ -6305,7 +7757,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000550567.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000550607.jpg",
-    "displayName": "Livin' la vida loca - Ricky Martin"
+    "displayName": "Livin' la vida loca - Ricky Martin",
+    "numberOneDate": "3 de julio de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/5fdf7aacfed97c3f3d476f58dac07b8214421acc?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "61e93133bb68b948a7d357c910202810",
@@ -6318,7 +7773,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000031055.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000529095.jpg",
-    "displayName": "Te quiero igual - Andrés Calamaro"
+    "displayName": "Te quiero igual - Andrés Calamaro",
+    "numberOneDate": "17 de julio de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/5a35c0f661da5debcf27eec8084a10f20237d340?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "9109a12230c8db92679635fb2d9b38b1",
@@ -6331,7 +7789,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000029513.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001751591.jpg",
-    "displayName": "Searchin' my soul - Vonda Shepard"
+    "displayName": "Searchin' my soul - Vonda Shepard",
+    "numberOneDate": "19 de junio de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "c814286b419e9f639b212bb8e9e32e58",
@@ -6344,7 +7805,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000515038.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000517715.jpg",
-    "displayName": "When you believe - Whitney Houston;Mariah Carey"
+    "displayName": "When you believe - Whitney Houston;Mariah Carey",
+    "numberOneDate": "9 de enero de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "cc5f15fc047ab3ec2c0680aef7c89613",
@@ -6357,7 +7821,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000527206.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000528192.jpg",
-    "displayName": "Pura sangre - Jarabe de Palo"
+    "displayName": "Pura sangre - Jarabe de Palo",
+    "numberOneDate": "29 de mayo de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "477362f8a945092a29c56ba0d9a5319f",
@@ -6370,7 +7837,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000024870.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000537488.jpg",
-    "displayName": "La Lola - Café Quijano"
+    "displayName": "La Lola - Café Quijano",
+    "numberOneDate": "4 de septiembre de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/3314924ca5e4b32b0561d811264fabab97542fd5?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "e568abfb77ad83a17f241f788916771f",
@@ -6383,7 +7853,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000032987.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002289935.jpg",
-    "displayName": "Wild wild west - Will Smith;Dru Hill;Kool Moe Dee"
+    "displayName": "Wild wild west - Will Smith;Dru Hill;Kool Moe Dee",
+    "numberOneDate": "11 de septiembre de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "a1bc33f36a055f64528fd1de6ed9e5db",
@@ -6396,7 +7869,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000522435.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000522452.jpg",
-    "displayName": "If you had my love - Jennifer López"
+    "displayName": "If you had my love - Jennifer López",
+    "numberOneDate": "2 de octubre de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "6a97c7615501c9f38e02f0c3ed85db36",
@@ -6409,7 +7885,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000578577.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000578726.jpg",
-    "displayName": "La buena onda - Moneda Dura"
+    "displayName": "La buena onda - Moneda Dura",
+    "numberOneDate": "30 de octubre de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "1ffc02aa4abd78d5596af849956c5445",
@@ -6422,7 +7901,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000019880.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001076175.jpg",
-    "displayName": "Cherry Lee - Dover"
+    "displayName": "Cherry Lee - Dover",
+    "numberOneDate": "20 de noviembre de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "7f95b3bce981ab95869a6646d1b6724f",
@@ -6435,7 +7917,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000487887.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001866697.jpg",
-    "displayName": "Wait here - Deviot"
+    "displayName": "Wait here - Deviot",
+    "numberOneDate": "7 de agosto de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "b55e572391cb25b40c91e58783847c49",
@@ -6448,7 +7933,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000019584.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000539304.jpg",
-    "displayName": "Can't  take my eyes off you - Lauryn Hill"
+    "displayName": "Can't  take my eyes off you - Lauryn Hill",
+    "numberOneDate": "13 de marzo de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "72b4cc2ddd24d886591abbf48434565b",
@@ -6461,7 +7949,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000023180.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002670839.jpg",
-    "displayName": "Happy birthday - Sunflowers"
+    "displayName": "Happy birthday - Sunflowers",
+    "numberOneDate": "3 de abril de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "6533390185bf720c6c7c3044a7eb3c0a",
@@ -6474,7 +7965,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000589578.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001156508.jpg",
-    "displayName": "Atrapados en la red - Tam Tam Go!"
+    "displayName": "Atrapados en la red - Tam Tam Go!",
+    "numberOneDate": "23 de octubre de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c2bfb9217121f1b942e1e02eb1c816695428120b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "206057095f6885f2fc92b230e99d3686",
@@ -6487,7 +7981,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000031132.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000888809.jpg",
-    "displayName": "Tender - Blur"
+    "displayName": "Tender - Blur",
+    "numberOneDate": "15 de mayo de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/86f00165c56a20a7c5839a91728a969d0fdbdb18?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "e6623212cdf0b88af977a439f6cf8c27",
@@ -6500,7 +7997,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000538594.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000538638.jpg",
-    "displayName": "Canned heat - Jamiroquai"
+    "displayName": "Canned heat - Jamiroquai",
+    "numberOneDate": "31 de julio de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/4f58fdce684783a273f2afa4b1381beb5a31bc40?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "923195544fa663cadbd1723751066b99",
@@ -6513,7 +8013,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000694332.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001866789.jpg",
-    "displayName": "Promises - The Cranberries"
+    "displayName": "Promises - The Cranberries",
+    "numberOneDate": "22 de mayo de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "acc13415dfb7142185e3e8b04310b29a",
@@ -6526,7 +8029,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000579444.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000579741.jpg",
-    "displayName": "Rhythm divine - Enrique Iglesias"
+    "displayName": "Rhythm divine - Enrique Iglesias",
+    "numberOneDate": "18 de diciembre de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "121fa00861a5c4e51306b0989713e85d",
@@ -6539,7 +8045,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000032891.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000630724.jpg",
-    "displayName": "When you're gone - Bryan Adams;Melanie C"
+    "displayName": "When you're gone - Bryan Adams;Melanie C",
+    "numberOneDate": "6 de marzo de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "6b7b203a23ab89f54fcf9680338d10d2",
@@ -6552,7 +8061,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000585832.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000517715.jpg",
-    "displayName": "It's not right but it's okay - Whitney Houston"
+    "displayName": "It's not right but it's okay - Whitney Houston",
+    "numberOneDate": "27 de marzo de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "4fb67397f0e3f44504aedbfaa5d03e00",
@@ -6565,7 +8077,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000523414.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000524390.jpg",
-    "displayName": "19 días y 500 noches - Joaquín Sabina"
+    "displayName": "19 días y 500 noches - Joaquín Sabina",
+    "numberOneDate": "16 de octubre de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ddda1e552af5f228eb6bb3a015bfb60a1db11422?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "a8ba96947fb0e1211741fcb193f9098d",
@@ -6578,7 +8093,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000019154.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001076206.jpg",
-    "displayName": "Blue (Da ba dee) - Eiffel 65"
+    "displayName": "Blue (Da ba dee) - Eiffel 65",
+    "numberOneDate": "14 de agosto de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6ee8cf3fc9a09831eb8538a7d696c89b3efb51d4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "e4652a9cc031d17d08de51d57270f6da",
@@ -6591,7 +8109,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000579453.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000579741.jpg",
-    "displayName": "Bailamos - Enrique Iglesias"
+    "displayName": "Bailamos - Enrique Iglesias",
+    "numberOneDate": "24 de julio de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f70f0a6319e0924afa7e1b81e2fd695bc667b925?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "68232d166f144616fa5c8b6a72f4ef54",
@@ -6604,7 +8125,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000520142.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000520234.jpg",
-    "displayName": "I want it that way - Backstreet Boys"
+    "displayName": "I want it that way - Backstreet Boys",
+    "numberOneDate": "10 de julio de 1999",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/b8c2410a5acb68b462be6ac85f1312430e2b149c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "9d813e95b64230e293d69c687b8ded60",
@@ -6617,7 +8141,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000694757.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000676847.jpg",
-    "displayName": "Maria - Blondie"
+    "displayName": "Maria - Blondie",
+    "numberOneDate": "24 de abril de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "a2388c1455822c0e885741056ba1c7bc",
@@ -6630,7 +8157,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000579659.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000579988.jpg",
-    "displayName": "Santo, santo - Só Pra Contrariar;Gloria Estefan"
+    "displayName": "Santo, santo - Só Pra Contrariar;Gloria Estefan",
+    "numberOneDate": "18 de septiembre de 1999",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "2cbc346ea11c80991fe07109d0ba4bd9",
@@ -6643,7 +8173,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000780.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000889096.jpg",
-    "displayName": "Tú sigue así - OBK"
+    "displayName": "Tú sigue así - OBK",
+    "numberOneDate": "27 de mayo de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/add6457108ca3260a4b53c0875ef057e0f538db7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "44fa3f57ad00dbf4f3df1ac49c968362",
@@ -6656,7 +8189,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000027262.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000528876.jpg",
-    "displayName": "No me dejes de querer - Gloria Estefan"
+    "displayName": "No me dejes de querer - Gloria Estefan",
+    "numberOneDate": "22 de julio de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "ff8dfa641fe8e7a8c8779f57ab3e8e4e",
@@ -6669,7 +8205,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000537740.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000537755.jpg",
-    "displayName": "Despierta - Miranda Warning"
+    "displayName": "Despierta - Miranda Warning",
+    "numberOneDate": "22 de abril de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "3f53eadc99aa6c90eed6b6012f61b7f1",
@@ -6682,7 +8221,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000593228.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000537657.jpg",
-    "displayName": "Beautiful day - U2"
+    "displayName": "Beautiful day - U2",
+    "numberOneDate": "25 de noviembre de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/22d647ebe1debadafdc9fea3bda07d3bd3d4673b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "3093f2c14fe1974e994616b0031ddbaf",
@@ -6695,7 +8237,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000020064.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000539443.jpg",
-    "displayName": "Como Camarón - Estopa"
+    "displayName": "Como Camarón - Estopa",
+    "numberOneDate": "18 de noviembre de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2a4d3d7cdabf861688c6e0cf0cdce1322225b327?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "e94197c7d8c22bc84d9e5462cde5ee1e",
@@ -6708,7 +8253,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000019457.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000630148.jpg",
-    "displayName": "California - Mikel Erentxun"
+    "displayName": "California - Mikel Erentxun",
+    "numberOneDate": "19 de agosto de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "2664d483dd5b6ddea0aceaee5fb76144",
@@ -6721,7 +8269,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000728400.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002086988.jpg",
-    "displayName": "Radio - The Corrs"
+    "displayName": "Radio - The Corrs",
+    "numberOneDate": "22 de enero de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "88030c7a50211a8da9cd16b252ee9f09",
@@ -6734,7 +8285,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000029726.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002766562.jpg",
-    "displayName": "Sex bomb (Peppermint Disco radio mix) - Tom Jones;Mousse T.;Royal Garden"
+    "displayName": "Sex bomb (Peppermint Disco radio mix) - Tom Jones;Mousse T.;Royal Garden",
+    "numberOneDate": "26 de febrero de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "c0dc58ca8471a9b1a65cc2a6210f5fed",
@@ -6747,7 +8301,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000461980.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000537795.jpg",
-    "displayName": "Sobreviviré - Mónica Naranjo"
+    "displayName": "Sobreviviré - Mónica Naranjo",
+    "numberOneDate": "6 de mayo de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/81ab7a5828deccf4481fb50a6f9108e65d75a382?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "e1707e140a258ed87e75ef85bb6106f3",
@@ -6760,7 +8317,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000019291.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000632514.jpg",
-    "displayName": "Breathless - The Corrs"
+    "displayName": "Breathless - The Corrs",
+    "numberOneDate": "16 de septiembre de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/238cabbbeaa52aa08c45c2ce887879fb95b4d9f3?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "954211b663040ceb0e08b9a71213cf5d",
@@ -6773,7 +8333,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000525064.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000525681.jpg",
-    "displayName": "Cuando nadie me ve - Alejandro Sanz"
+    "displayName": "Cuando nadie me ve - Alejandro Sanz",
+    "numberOneDate": "23 de septiembre de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f021a74b3b38395a7435611c41916402b28c2fb3?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "cb323520b31c622c33af200107fb0e0f",
@@ -6786,7 +8349,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000538073.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001099578.jpg",
-    "displayName": "Bye bye bye - N SYNC"
+    "displayName": "Bye bye bye - N SYNC",
+    "numberOneDate": "3 de junio de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/72b91cb27fac7beb50a2deffdd8b821fba5ba950?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "344c29e2dee30e18b8e151590013b8bb",
@@ -6799,7 +8365,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000023985.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000634413.jpg",
-    "displayName": "I will love again - Lara Fabian"
+    "displayName": "I will love again - Lara Fabian",
+    "numberOneDate": "24 de junio de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/de651c843218bbb7b6e1f6646b04294cae09801c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "395553ce701dadf9c81524a041caa8a4",
@@ -6812,7 +8381,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000526881.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000526998.jpg",
-    "displayName": "Entre el mar y una estrella - Thalía"
+    "displayName": "Entre el mar y una estrella - Thalía",
+    "numberOneDate": "17 de junio de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "3b87de4161ab99177d85981d78a3d7c7",
@@ -6825,7 +8397,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000523673.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000523728.jpg",
-    "displayName": "Fuego en el fuego - Eros Ramazzotti"
+    "displayName": "Fuego en el fuego - Eros Ramazzotti",
+    "numberOneDate": "16 de diciembre de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "6f2c8ead4319b5148ab18264bb0591f7",
@@ -6838,7 +8413,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000025329.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000522452.jpg",
-    "displayName": "Let's get loud - Jennifer López"
+    "displayName": "Let's get loud - Jennifer López",
+    "numberOneDate": "10 de junio de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "832d543386828f6478a09e3e7b30e26d",
@@ -6851,7 +8429,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000024660.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001866843.jpg",
-    "displayName": "La bomba - King Africa"
+    "displayName": "La bomba - King Africa",
+    "numberOneDate": "5 de agosto de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "8dec8870a237785bf91f579a4a554140",
@@ -6864,7 +8445,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000033375.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000691062.jpg",
-    "displayName": "(You drive me) Crazy - Britney Spears"
+    "displayName": "(You drive me) Crazy - Britney Spears",
+    "numberOneDate": "15 de enero de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2a8aad406e16c4d52a9850de54a02efe5f1ee2ff?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "cc793139908683b161c621380cfbcae7",
@@ -6877,7 +8461,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000539404.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000540792.jpg",
-    "displayName": "Corazón espinado - Santana;Maná"
+    "displayName": "Corazón espinado - Santana;Maná",
+    "numberOneDate": "4 de marzo de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "2e9e4a18f8321417bf9350efd1a0c995",
@@ -6890,7 +8477,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000510465.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000511032.jpg",
-    "displayName": "Sentir - Luz Casal"
+    "displayName": "Sentir - Luz Casal",
+    "numberOneDate": "12 de febrero de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "3b8da962ddb9088ea74b2bf07125eeb2",
@@ -6903,7 +8493,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000029090.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000574116.jpg",
-    "displayName": "Rock DJ - Robbie Williams"
+    "displayName": "Rock DJ - Robbie Williams",
+    "numberOneDate": "21 de octubre de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/5a888a6e6a1467bccfdd57d28d220953671dcff7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "faf34dd425b5f3857ae7350c618b5fb2",
@@ -6916,7 +8509,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000032794.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000633081.jpg",
-    "displayName": "What a girl wants - Christina Aguilera"
+    "displayName": "What a girl wants - Christina Aguilera",
+    "numberOneDate": "8 de abril de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/43ace19343c5c73a4ebe1360f38377f996e35ab5?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "9c01c0654ad45ba1eb0791bc3ccc0e2b",
@@ -6929,7 +8525,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000032380.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001084596.jpg",
-    "displayName": "Ven conmigo (Solamente tú) - Christina Aguilera"
+    "displayName": "Ven conmigo (Solamente tú) - Christina Aguilera",
+    "numberOneDate": "2 de diciembre de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/cddcd985689fb693fa3a2c8197ec447690497130?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "9fb1690d4e98ff7318364db8bb8df739",
@@ -6942,7 +8541,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000525066.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000525681.jpg",
-    "displayName": "Quisiera ser - Alejandro Sanz"
+    "displayName": "Quisiera ser - Alejandro Sanz",
+    "numberOneDate": "23 de diciembre de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/295af3a66e45566f7efc68dea2111c53227f8545?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "6f4153561f8dfafc017b68b82742544f",
@@ -6955,7 +8557,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026899.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000583839.jpg",
-    "displayName": "Music - Madonna"
+    "displayName": "Music - Madonna",
+    "numberOneDate": "7 de octubre de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0405c9c1f25ee9a7815432862ac4d5958c2ecdbd?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "e3fe0eb74693c17ab18745e42e29f533",
@@ -6968,7 +8573,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000024705.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147605.jpg",
-    "displayName": "Charla del pescado - Juan Perro"
+    "displayName": "Charla del pescado - Juan Perro",
+    "numberOneDate": "29 de abril de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "2aef39852599fcdf35d0500ed16de389",
@@ -6981,7 +8589,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001279676.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001279674.jpg",
-    "displayName": "San Pedro - Revólver"
+    "displayName": "San Pedro - Revólver",
+    "numberOneDate": "4 de noviembre de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "cbffd27229e06221edef8539672f0f92",
@@ -6994,7 +8605,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026812.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001082070.jpg",
-    "displayName": "Move your body - Eiffel 65"
+    "displayName": "Move your body - Eiffel 65",
+    "numberOneDate": "29 de enero de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1b272ed80533c765a00bdb0986cbad4ac03ab529?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "14c4c19aa276fe38d379684f689d2b94",
@@ -7007,7 +8621,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000586746.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000631260.jpg",
-    "displayName": "That's the way it is - Céline Dion"
+    "displayName": "That's the way it is - Céline Dion",
+    "numberOneDate": "8 de enero de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/8cc62e3220da0184d49b84fbfbe822ad0bec3555?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "6dd829f31a06371816eaa4ac29e9c0bd",
@@ -7020,7 +8637,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000538176.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000538235.jpg",
-    "displayName": "Llamando a la Tierra - M-Clan"
+    "displayName": "Llamando a la Tierra - M-Clan",
+    "numberOneDate": "11 de marzo de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/8276a4b130aa850b1c0e1a296aa945e63604fab4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "a72b0bcaade85b69bdcdeb32c32370cc",
@@ -7033,7 +8653,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000564444.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000564477.jpg",
-    "displayName": "The best of me - Bryan Adams"
+    "displayName": "The best of me - Bryan Adams",
+    "numberOneDate": "5 de febrero de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0745c499e378400e5b2ed1bbf2a907c7",
@@ -7046,7 +8669,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000782.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000889096.jpg",
-    "displayName": "El cielo no entiende - OBK"
+    "displayName": "El cielo no entiende - OBK",
+    "numberOneDate": "9 de septiembre de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/793ae42c97639ef364f75def2c6c4eb0856b34ca?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "f607e5643f7f894075b08d4fd58c1ccd",
@@ -7059,7 +8685,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000728272.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520002044759.jpg",
-    "displayName": "Se me olvidó otra vez - Maná"
+    "displayName": "Se me olvidó otra vez - Maná",
+    "numberOneDate": "20 de mayo de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0d4e3a9bec4ba35f7aa22599f3f40759956d4dad?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "ee40b1ad7390c1ebd31a35a70bda1c14",
@@ -7072,7 +8701,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000880346.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000585915.jpg",
-    "displayName": "Rayando el sol - Maná"
+    "displayName": "Rayando el sol - Maná",
+    "numberOneDate": "26 de agosto de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/48eab66d4321de45905c1a5bc23b7a7799da7e3f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "7a192be7955dfc049f27a1dc1b1c861d",
@@ -7085,7 +8717,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000455120.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147667.jpg",
-    "displayName": "Entre tú y mil mares - Laura Pausini"
+    "displayName": "Entre tú y mil mares - Laura Pausini",
+    "numberOneDate": "11 de noviembre de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/b7904c13be51923f88786eed67fd549eb2d1aed8?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "5adfed6156aa0ac635b123f8a4f67efc",
@@ -7098,7 +8733,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000603676.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001234887.jpg",
-    "displayName": "Sueño su boca - Raúl"
+    "displayName": "Sueño su boca - Raúl",
+    "numberOneDate": "15 de julio de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/433aa43935b69104c267afbf0ea0755d407beab5?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "5b7be20e6b11d091fe378d2bdbf258e3",
@@ -7111,7 +8749,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001404812.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001404813.jpg",
-    "displayName": "Life is a rollercoaster - Ronan Keating"
+    "displayName": "Life is a rollercoaster - Ronan Keating",
+    "numberOneDate": "28 de octubre de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "c976a9f97f51d7b7010ec820cf2d377a",
@@ -7124,7 +8765,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000599532.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000632997.jpg",
-    "displayName": "El pozo de Arán - Carlos Núñez;Anabela"
+    "displayName": "El pozo de Arán - Carlos Núñez;Anabela",
+    "numberOneDate": "30 de septiembre de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "b41a464b89e2ac382de4a0e4316534ab",
@@ -7137,7 +8781,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001083465.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001083505.jpg",
-    "displayName": "Cartoon heroes - Aqua"
+    "displayName": "Cartoon heroes - Aqua",
+    "numberOneDate": "25 de marzo de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "8fc6aa73dd77f1d294233828f127e0e4",
@@ -7150,7 +8797,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000528822.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000528844.jpg",
-    "displayName": "París - La Oreja de Van Gogh"
+    "displayName": "París - La Oreja de Van Gogh",
+    "numberOneDate": "30 de diciembre de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/99560d45d2eb6a97300ae1002d0bfbdc978dce76?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "4517e0d0a9b7d86d70c8467558301271",
@@ -7163,7 +8813,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000028805.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000585902.jpg",
-    "displayName": "Quiero un camino - Melon Diesel"
+    "displayName": "Quiero un camino - Melon Diesel",
+    "numberOneDate": "1 de abril de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1993257fe2dd127160183f88c36c4b453baa3a2a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "e3e8da52c18510026929fc72593d8afb",
@@ -7176,7 +8829,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000032648.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000522452.jpg",
-    "displayName": "Waiting for tonight - Jennifer López"
+    "displayName": "Waiting for tonight - Jennifer López",
+    "numberOneDate": "1 de enero de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "2cd468e616a24f5c6f2158a28ea0a4c0",
@@ -7189,7 +8845,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000522335.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001156508.jpg",
-    "displayName": "Pasarán - Tam Tam Go!"
+    "displayName": "Pasarán - Tam Tam Go!",
+    "numberOneDate": "19 de febrero de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "34bc87a983306f7a421e90e6449b248a",
@@ -7202,7 +8861,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002693703.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000631252.jpg",
-    "displayName": "The bad touch - Bloodhound Gang"
+    "displayName": "The bad touch - Bloodhound Gang",
+    "numberOneDate": "15 de abril de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/88aa2db0b07587be3d3b36573f261a1efabf2ee5?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "2f52fc43bfb34582cab8953c99d177eb",
@@ -7215,7 +8877,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001086646.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001084592.jpg",
-    "displayName": "Shape of my heart - Backstreet Boys"
+    "displayName": "Shape of my heart - Backstreet Boys",
+    "numberOneDate": "9 de diciembre de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/511a3075ab4e6adcc1f85b938afa9a06a24ea7cf?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "86d3b1080f7aa7ef5f090c0d32a05c55",
@@ -7228,7 +8893,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000024288.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000634500.jpg",
-    "displayName": "It's my life - Bon Jovi"
+    "displayName": "It's my life - Bon Jovi",
+    "numberOneDate": "8 de julio de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/de91f7b98d766cc2ba3d1d431bd302b1ccca922c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "bb719f7c3a037151fc0ee9d276882c5d",
@@ -7241,7 +8909,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000528820.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000528844.jpg",
-    "displayName": "Cuídate - La Oreja de Van Gogh"
+    "displayName": "Cuídate - La Oreja de Van Gogh",
+    "numberOneDate": "14 de octubre de 2000",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/5efcc23bc42bf01fae48155ea6fd17cf53c40ead?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "5b560de262261471fed0de7f8f33a7a3",
@@ -7254,7 +8925,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000551234.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000551251.jpg",
-    "displayName": "Ya no quiero tu querer - José El Francés;Niña Pastori;Vicente Amigo"
+    "displayName": "Ya no quiero tu querer - José El Francés;Niña Pastori;Vicente Amigo",
+    "numberOneDate": "2 de septiembre de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a3d02faf9e7160711f432580d1ad3cb5",
@@ -7267,7 +8941,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026145.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000540792.jpg",
-    "displayName": "María María - Santana;The Product G&amp;B"
+    "displayName": "María María - Santana;The Product G&amp;B",
+    "numberOneDate": "29 de julio de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "1bd9cfd88340ca3f00dc608b5f37630e",
@@ -7280,7 +8957,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000027607.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147615.jpg",
-    "displayName": "If only - Hanson"
+    "displayName": "If only - Hanson",
+    "numberOneDate": "1 de julio de 2000",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "390edcd8c9dbc96067201e2a737be7c4",
@@ -7293,7 +8973,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000694756.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000539443.jpg",
-    "displayName": "Cacho a cacho - Estopa"
+    "displayName": "Cacho a cacho - Estopa",
+    "numberOneDate": "3 de marzo de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/94912375e234f09eba5b5a6c8a4d0be0d53f1175?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "3426460832f2ea7924665fa054d93bb0",
@@ -7306,7 +8989,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000678315.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000631754.jpg",
-    "displayName": "Maggie despierta - M-Clan"
+    "displayName": "Maggie despierta - M-Clan",
+    "numberOneDate": "14 de julio de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/8e746528059af6f654081fc03909f46f12008e5d?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "67b6f2e92010582d1988cbd0fc084671",
@@ -7319,7 +9005,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000530132.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000574032.jpg",
-    "displayName": "Dos días en la vida - Jarabe de Palo"
+    "displayName": "Dos días en la vida - Jarabe de Palo",
+    "numberOneDate": "16 de junio de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "7d586363f728a3b800b1fed4578c6216",
@@ -7332,7 +9021,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001866857.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001866858.jpg",
-    "displayName": "The centre of the heart - Roxette"
+    "displayName": "The centre of the heart - Roxette",
+    "numberOneDate": "26 de mayo de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "884fa795995c333cef1432a6ce5b5133",
@@ -7345,7 +9037,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000536584.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000536617.jpg",
-    "displayName": "No rompas mi corazón - Coyote Dax"
+    "displayName": "No rompas mi corazón - Coyote Dax",
+    "numberOneDate": "9 de junio de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "e6e85b150a5345dadc2d4119e97ebfe4",
@@ -7358,7 +9053,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000027748.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000634500.jpg",
-    "displayName": "One wild night - Bon Jovi"
+    "displayName": "One wild night - Bon Jovi",
+    "numberOneDate": "23 de junio de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "328b549899e4299b645ae7215a1c0932",
@@ -7371,7 +9069,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026264.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001618205.jpg",
-    "displayName": "Me gustas tú - Manu Chao"
+    "displayName": "Me gustas tú - Manu Chao",
+    "numberOneDate": "4 de agosto de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f164fb40557bba00aa72f012daeb01b18dfa00ad?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "8ba7061cc093f975cf8bc5be3efe0402",
@@ -7384,7 +9085,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000024126.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000639781.jpg",
-    "displayName": "Imitation of life - R.E.M."
+    "displayName": "Imitation of life - R.E.M.",
+    "numberOneDate": "21 de julio de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/4f89229937ea2b94e3dcaf769047b4292c7a20e8?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "bdef905e43913e1bd879b1b67e503b6f",
@@ -7397,7 +9101,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000017498.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000911212.jpg",
-    "displayName": "19/2000 - Gorillaz"
+    "displayName": "19/2000 - Gorillaz",
+    "numberOneDate": "13 de octubre de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/7cabceed47ab219fcb82ae558535e5d9825072f3?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "0830627ed679f220f4e81c43299c105f",
@@ -7410,7 +9117,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000030219.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000528844.jpg",
-    "displayName": "Soledad - La Oreja de Van Gogh"
+    "displayName": "Soledad - La Oreja de Van Gogh",
+    "numberOneDate": "6 de octubre de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6734bf942a6693afaffdeab4a3682bc8a5d20479?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "c3f7d149a41e2b869edf777003309bcf",
@@ -7423,7 +9133,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000587979.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000452797.jpg",
-    "displayName": "Cómo quieres que te quiera - Rosario"
+    "displayName": "Cómo quieres que te quiera - Rosario",
+    "numberOneDate": "3 de noviembre de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/e84db52a6ad0bff82963884348e586c9820232dc?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "7412842fd4b137536d59afa88cb313c1",
@@ -7436,7 +9149,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000025172.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000635010.jpg",
-    "displayName": "Lady Marmalade - Christina Aguilera;Lil' Kim;Mya;P!nk"
+    "displayName": "Lady Marmalade - Christina Aguilera;Lil' Kim;Mya;P!nk",
+    "numberOneDate": "15 de septiembre de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "452abb6dc0ae458b1175cfa42e6a2915",
@@ -7449,7 +9165,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000018724.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147618.jpg",
-    "displayName": "¡Ay! corazón - Las Hijas del Sol"
+    "displayName": "¡Ay! corazón - Las Hijas del Sol",
+    "numberOneDate": "22 de septiembre de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "54f34d43998f3f562520f8bd1ed5e199",
@@ -7462,7 +9181,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000528330.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000528389.jpg",
-    "displayName": "Prohibida - Raúl"
+    "displayName": "Prohibida - Raúl",
+    "numberOneDate": "11 de agosto de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "70dbcbf16e7e84d608b250609e633efa",
@@ -7475,7 +9197,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000588955.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000588997.jpg",
-    "displayName": "Gente - Presuntos Implicados"
+    "displayName": "Gente - Presuntos Implicados",
+    "numberOneDate": "1 de diciembre de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "254c86067cab1535fac520799b60600c",
@@ -7488,7 +9213,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000536755.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000536907.jpg",
-    "displayName": "Dile que la quiero - David Civera"
+    "displayName": "Dile que la quiero - David Civera",
+    "numberOneDate": "28 de julio de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/b79f80c2681c27276083e4788fa6d381b044f793?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "2c1800222dd70eb3faa81330b6746ab4",
@@ -7501,7 +9229,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000032686.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000630741.jpg",
-    "displayName": "Walking away - Craig David"
+    "displayName": "Walking away - Craig David",
+    "numberOneDate": "24 de marzo de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/8e230af83aa207559e11c9ecb546b8ec9c7a37e1?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "5ec5ed450c18b5ec32970cf06f10c222",
@@ -7514,7 +9245,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000274.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000574032.jpg",
-    "displayName": "De vuelta y vuelta - Jarabe de Palo"
+    "displayName": "De vuelta y vuelta - Jarabe de Palo",
+    "numberOneDate": "17 de marzo de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/53b571c7a7eb15b45407cbe63a6ac81515a31156?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "13fc043c62570a40fdeb7545287c5414",
@@ -7527,7 +9261,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001024124.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001094247.jpg",
-    "displayName": "Y yo sigo aqui - Paulina Rubio"
+    "displayName": "Y yo sigo aqui - Paulina Rubio",
+    "numberOneDate": "14 de abril de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/4f8b6124b4c9ee383ee945f8fda35edf6c2ae2af?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "d944a44979a3babf17276c0312a9d31b",
@@ -7540,7 +9277,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000514149.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000514209.jpg",
-    "displayName": "Little L - Jamiroquai"
+    "displayName": "Little L - Jamiroquai",
+    "numberOneDate": "29 de septiembre de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ebca9b39349cd2955cfada4475600f56c0c4b8ce?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "3b4aea04d90eb81e1d575e4bf5ced679",
@@ -7553,7 +9293,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000025014.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000528844.jpg",
-    "displayName": "La playa - La Oreja de Van Gogh"
+    "displayName": "La playa - La Oreja de Van Gogh",
+    "numberOneDate": "21 de abril de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c2fa0280c64d36cf4e426bd636a7c426ee31f7d3?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "a55c50814bbe83d8f919a97efff47659",
@@ -7566,7 +9309,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002085154.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000666063.jpg",
-    "displayName": "Analyse - The Cranberries"
+    "displayName": "Analyse - The Cranberries",
+    "numberOneDate": "17 de noviembre de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "98065e2d251d885f42008559daf5b4db",
@@ -7579,7 +9325,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000527762.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000527797.jpg",
-    "displayName": "¿Cómo repartimos los amigos? - Ella Baila Sola"
+    "displayName": "¿Cómo repartimos los amigos? - Ella Baila Sola",
+    "numberOneDate": "3 de febrero de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "ce3601a891a2a3ec4ff1c3751d3ceedd",
@@ -7592,7 +9341,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000585616.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000534109.jpg",
-    "displayName": "Partiendo la pana - Estopa"
+    "displayName": "Partiendo la pana - Estopa",
+    "numberOneDate": "15 de diciembre de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/e13807297086f9eea4f217185a9f784bcf3ef0ff?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "56b7c743f55cc6ee5284549b4a931b16",
@@ -7605,7 +9357,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000515736.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000632569.jpg",
-    "displayName": "Can't get you out of my head - Kylie Minogue"
+    "displayName": "Can't get you out of my head - Kylie Minogue",
+    "numberOneDate": "24 de noviembre de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "77d61360b232cfa7e75eaae6497a7f5a",
@@ -7618,7 +9373,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001051414.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001051382.jpg",
-    "displayName": "Original prankster - The Offspring;Redman"
+    "displayName": "Original prankster - The Offspring;Redman",
+    "numberOneDate": "27 de enero de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "96521798d689ec7d5d769c8431644fa4",
@@ -7631,7 +9389,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000583784.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000583839.jpg",
-    "displayName": "Don't tell me - Madonna"
+    "displayName": "Don't tell me - Madonna",
+    "numberOneDate": "13 de enero de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "12f2b7afac377a19b69cd6d969b637e8",
@@ -7644,7 +9405,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001117247.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001157986.jpg",
-    "displayName": "You rock my world - Michael Jackson"
+    "displayName": "You rock my world - Michael Jackson",
+    "numberOneDate": "8 de diciembre de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/852e5ece9e2927bb141c02bce7b628694df7d482?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "05f8026e8e91625205dd2d7a26286737",
@@ -7657,7 +9421,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000821146.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000631274.jpg",
-    "displayName": "Here with me - Dido"
+    "displayName": "Here with me - Dido",
+    "numberOneDate": "7 de abril de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/31a5fceeeba105017e71db4e8cf3ac53dfcc878c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "a12a92b4cddb67e4f885ecae100043fb",
@@ -7670,7 +9437,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000490020.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000527923.jpg",
-    "displayName": "Estaciones - Antonio Vega"
+    "displayName": "Estaciones - Antonio Vega",
+    "numberOneDate": "5 de mayo de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/927d3ed1c1b819c9e1218ce4975af0ff63a49be6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "3712ea8327d9b5c879aa4c60bfb8b3b0",
@@ -7683,7 +9453,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026992.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000594564.jpg",
-    "displayName": "Nada de ná - Café Quijano"
+    "displayName": "Nada de ná - Café Quijano",
+    "numberOneDate": "25 de agosto de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6eb36e8540e23da12e7638802f0189dac7d64804?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "76ac5ccd77328e64e3f520c688b7fefc",
@@ -7696,7 +9469,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000586754.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000631277.jpg",
-    "displayName": "Suerte (Whenever, wherever) - Shakira"
+    "displayName": "Suerte (Whenever, wherever) - Shakira",
+    "numberOneDate": "22 de diciembre de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "6cf24e46ce698816df33c42c2df902c8",
@@ -7709,7 +9485,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000020825.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000616326.jpg",
-    "displayName": "Déjame - Los Secretos;Carlos Goñi;Cristina Lliso;David Summers;Javier Álvarez;Javier Urquijo;Jesús Cifuentes"
+    "displayName": "Déjame - Los Secretos;Carlos Goñi;Cristina Lliso;David Summers;Javier Álvarez;Javier Urquijo;Jesús Cifuentes",
+    "numberOneDate": "10 de marzo de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "6a8449ac489ac767a6552f9f862b8f32",
@@ -7722,7 +9501,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001024131.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001094247.jpg",
-    "displayName": "Vive el verano - Paulina Rubio"
+    "displayName": "Vive el verano - Paulina Rubio",
+    "numberOneDate": "1 de septiembre de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "8c40adfc8c29e6cf2fc09180f866853e",
@@ -7735,7 +9517,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000585145.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000585146.jpg",
-    "displayName": "Nunca el tiempo es perdido - Manolo García"
+    "displayName": "Nunca el tiempo es perdido - Manolo García",
+    "numberOneDate": "7 de julio de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/fbdfd2f30a4b5bdc45a57ab3948aed56911b134f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "8708b6b7351bb1656bea09ea4c9d642d",
@@ -7748,7 +9533,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001045937.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000632100.jpg",
-    "displayName": "Angel - Shaggy"
+    "displayName": "Angel - Shaggy",
+    "numberOneDate": "8 de septiembre de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/5c9f065d77f56e07e2fad6daaa93daa0800c9fcd?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "114c2c5eb392c592651760de091e2b1a",
@@ -7761,7 +9549,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000678053.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000631754.jpg",
-    "displayName": "Carolina - M-Clan"
+    "displayName": "Carolina - M-Clan",
+    "numberOneDate": "31 de marzo de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d25b8115b4cc24fed1f95e78a75ac206b4528624?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "7ec3af95371746905b5d5f0056c5479c",
@@ -7774,7 +9565,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000024553.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000680354.jpg",
-    "displayName": "King George - Dover"
+    "displayName": "King George - Dover",
+    "numberOneDate": "10 de noviembre de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "a29dd713a7e4af6f00fcf5a4e4066d64",
@@ -7787,7 +9581,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000487935.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001277396.jpg",
-    "displayName": "El salmón - Andrés Calamaro"
+    "displayName": "El salmón - Andrés Calamaro",
+    "numberOneDate": "20 de enero de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/29b08947d90df07e994505ca3bc82f5398464deb?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "16925dc081507b816f40dbf398889d87",
@@ -7800,7 +9597,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000467758.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000898074.jpg",
-    "displayName": "Eres un canalla - El Canto del Loco"
+    "displayName": "Eres un canalla - El Canto del Loco",
+    "numberOneDate": "19 de mayo de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "fb022ea86b572a0b16157d0644b8e445",
@@ -7813,7 +9613,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000584300.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000520309.jpg",
-    "displayName": "Amor se paga con amor - Jennifer López"
+    "displayName": "Amor se paga con amor - Jennifer López",
+    "numberOneDate": "10 de febrero de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "987b93aa0dfe648a9bdb7cfe63861d15",
@@ -7826,7 +9629,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000029779.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000900347.jpg",
-    "displayName": "She bangs (Spanish version) - Ricky Martin"
+    "displayName": "She bangs (Spanish version) - Ricky Martin",
+    "numberOneDate": "6 de enero de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/892e4f2a2d1ad010a38e1c7b424b6bf41a8c44ce?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "32446c79e7754f01e04791c052322fdc",
@@ -7839,7 +9645,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000030511.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001135575.jpg",
-    "displayName": "Stan - Eminem;Dido"
+    "displayName": "Stan - Eminem;Dido",
+    "numberOneDate": "17 de febrero de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "05fe444624f358f129a157d2e5e7fee8",
@@ -7852,7 +9661,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000033257.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001150536.jpg",
-    "displayName": "Yo quiero bailar - Sonia y Selena"
+    "displayName": "Yo quiero bailar - Sonia y Selena",
+    "numberOneDate": "30 de junio de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1e8806d404a8c801e6c56e697e4a116033c7ec7c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "fec2d1ad7e31c17b14340622ca232134",
@@ -7865,7 +9677,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000488004.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000895772.jpg",
-    "displayName": "Toda - Malú"
+    "displayName": "Toda - Malú",
+    "numberOneDate": "27 de octubre de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/96a219589dae3d425539079643ceeba09fe3e2fe?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "bd0a4463e71272c739d0e7d25a33217f",
@@ -7878,7 +9693,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000021496.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000525681.jpg",
-    "displayName": "El alma al aire - Alejandro Sanz"
+    "displayName": "El alma al aire - Alejandro Sanz",
+    "numberOneDate": "12 de mayo de 2001",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a7c0be3b5071e6487bbc2110f5b76469db99e9c1?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "099a21df9446d5f1be5310d5d5c4b1d2",
@@ -7891,7 +9709,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000028490.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147616.jpg",
-    "displayName": "Pretending - Him"
+    "displayName": "Pretending - Him",
+    "numberOneDate": "20 de octubre de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "b7d31cb2137ab779b1e7765d4b99870c",
@@ -7904,7 +9725,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001116611.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001116646.jpg",
-    "displayName": "Out of reach - Gabrielle"
+    "displayName": "Out of reach - Gabrielle",
+    "numberOneDate": "18 de agosto de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "c38433e2e097d29d528b3dc3b7fffdcc",
@@ -7917,7 +9741,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000490847.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000490851.jpg",
-    "displayName": "Morenamía - Miguel Bosé"
+    "displayName": "Morenamía - Miguel Bosé",
+    "numberOneDate": "29 de diciembre de 2001",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "de5c917a9ac9cf5a9f77ccef7406caaf",
@@ -7930,7 +9757,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000018834.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000631713.jpg",
-    "displayName": "Baila (Sexy thing) - Zucchero"
+    "displayName": "Baila (Sexy thing) - Zucchero",
+    "numberOneDate": "30 de marzo de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c23fd9654461ad44e09b9e45789af9a912d166e7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "0c465789380ebcca23cedaeb0f3923cd",
@@ -7943,7 +9773,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001272093.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000887114.jpg",
-    "displayName": "Y sólo se me ocurre amarte - Alejandro Sanz"
+    "displayName": "Y sólo se me ocurre amarte - Alejandro Sanz",
+    "numberOneDate": "5 de enero de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/4fda355f2a525ea7f731a07844d34a75f141ea88?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "00d51bfe755c35c7936ab060461f19e8",
@@ -7956,7 +9789,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000488197.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000666346.jpg",
-    "displayName": "A new day has come - Céline Dion"
+    "displayName": "A new day has come - Céline Dion",
+    "numberOneDate": "11 de mayo de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/520e8eedda563a328ca49a5bf9483ee152961d24?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "d9b1a9795695e28ade296d0b948ea584",
@@ -7969,7 +9805,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000030992.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000631277.jpg",
-    "displayName": "Te dejo Madrid - Shakira"
+    "displayName": "Te dejo Madrid - Shakira",
+    "numberOneDate": "16 de febrero de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "04e623ccaac1ccceaf01f232015081b8",
@@ -7982,7 +9821,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000695227.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000635356.jpg",
-    "displayName": "Perdona - Tiziano Ferro"
+    "displayName": "Perdona - Tiziano Ferro",
+    "numberOneDate": "7 de septiembre de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "fb5680661e035b9b8ec36c7a8cce79c5",
@@ -7995,7 +9837,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000030002.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000674533.jpg",
-    "displayName": "Sigo intentando - Marta Sánchez"
+    "displayName": "Sigo intentando - Marta Sánchez",
+    "numberOneDate": "6 de julio de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "675f075353c4ac6bc778bfad413108fe",
@@ -8008,7 +9853,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000534937.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000534979.jpg",
-    "displayName": "Cuando tú vas - Chenoa"
+    "displayName": "Cuando tú vas - Chenoa",
+    "numberOneDate": "21 de septiembre de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "1838d1705006b4b593592128f200fdd6",
@@ -8021,7 +9869,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000771106.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000521785.jpg",
-    "displayName": "A little less conversation - Elvis Presley;Junkie XL"
+    "displayName": "A little less conversation - Elvis Presley;Junkie XL",
+    "numberOneDate": "3 de agosto de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "82695f6de07acd56d7c2a8e37c188896",
@@ -8034,7 +9885,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000022263.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000482562.jpg",
-    "displayName": "Europe's living a celebration - Rosa López"
+    "displayName": "Europe's living a celebration - Rosa López",
+    "numberOneDate": "18 de mayo de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "bf8415657a211ef8d3d1c6bd7c181f79",
@@ -8047,7 +9901,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000586297.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000586301.jpg",
-    "displayName": "Sin ti no soy nada - Amaral"
+    "displayName": "Sin ti no soy nada - Amaral",
+    "numberOneDate": "16 de marzo de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/dab3d88f9e43426ccd3146cbfcfea12fd444c6d6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "def9cffedd5fb321d6e0bfb2ec145979",
@@ -8060,7 +9917,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000627163.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000586301.jpg",
-    "displayName": "Te necesito - Amaral"
+    "displayName": "Te necesito - Amaral",
+    "numberOneDate": "15 de junio de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f8c069386323246aae4eec3e09a4de9e95e535a3?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "05ee90497d2e86d252798908774540c7",
@@ -8073,7 +9933,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000678144.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000585187.jpg",
-    "displayName": "One day in your life (European version) - Anastacia"
+    "displayName": "One day in your life (European version) - Anastacia",
+    "numberOneDate": "1 de junio de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/12b7357572dd92a92fa3e0c633a9281e40414e4c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "2c3ddf41c14a9fcfdebfaf089a605f64",
@@ -8086,7 +9949,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000604293.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000604347.jpg",
-    "displayName": "A gritos de esperanza - Álex Ubago"
+    "displayName": "A gritos de esperanza - Álex Ubago",
+    "numberOneDate": "9 de marzo de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/11f7ee6ffd93bb2de056035a6affa56039257b79?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "b8c591f840172c9783bd9aca6f3ba934",
@@ -8099,7 +9965,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000488042.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001867374.jpg",
-    "displayName": "Ellas - Alejandro Parreño"
+    "displayName": "Ellas - Alejandro Parreño",
+    "numberOneDate": "22 de junio de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "b64d523e301825260e19e86e53183c73",
@@ -8112,7 +9981,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000031002.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000674444.jpg",
-    "displayName": "Te esperaré - Antonio Orozco"
+    "displayName": "Te esperaré - Antonio Orozco",
+    "numberOneDate": "20 de abril de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "fe69290c71c9c81feea194ae1bc092c5",
@@ -8125,7 +9997,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026489.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001797505.jpg",
-    "displayName": "Mi música es tu voz - Academia Operación Triunfo I"
+    "displayName": "Mi música es tu voz - Academia Operación Triunfo I",
+    "numberOneDate": "19 de enero de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "84189a80b728283d0de58694e81f89a1",
@@ -8138,7 +10013,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000067857.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001082216.jpg",
-    "displayName": "Dígale - David Bisbal"
+    "displayName": "Dígale - David Bisbal",
+    "numberOneDate": "14 de diciembre de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/4d6152de4a0101492e6df902e7067ac119ad33a3?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "ca1678949dadc4a9798c1eb765728751",
@@ -8151,7 +10029,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000678612.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000631149.jpg",
-    "displayName": "Es por ti - Juanes"
+    "displayName": "Es por ti - Juanes",
+    "numberOneDate": "30 de noviembre de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6727610923db7baac5f893c0b3c26f841f2f83ca?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "35ccbe72d3fb986ebfbb927ed4c4eb72",
@@ -8164,7 +10045,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000584273.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002764954.jpg",
-    "displayName": "All the things she said - t.A.T.u."
+    "displayName": "All the things she said - t.A.T.u.",
+    "numberOneDate": "16 de noviembre de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/fa83f2059d78d5f4dcf17499277e3304415bbab7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "8cb004fd1af6ed282c2180674b6d528d",
@@ -8177,7 +10061,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001024752.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001027014.jpg",
-    "displayName": "69 Punto G - Joaquín Sabina"
+    "displayName": "69 Punto G - Joaquín Sabina",
+    "numberOneDate": "28 de diciembre de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "c4895ac3fdaac735e19224b37a651a94",
@@ -8190,7 +10077,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000534428.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000534564.jpg",
-    "displayName": "Cruel to be kind - Naím Thomas"
+    "displayName": "Cruel to be kind - Naím Thomas",
+    "numberOneDate": "24 de agosto de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0666c57f52b1e8db9b2d3ad5a1476ccd",
@@ -8203,7 +10093,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000021494.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001121149.jpg",
-    "displayName": "El aire que me das - Bustamante"
+    "displayName": "El aire que me das - Bustamante",
+    "numberOneDate": "10 de agosto de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "6882c244ca8bd738cf5f371c09831f77",
@@ -8216,7 +10109,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000466617.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000634994.jpg",
-    "displayName": "La lista de la compra - La Cabra Mecánica;María Jiménez"
+    "displayName": "La lista de la compra - La Cabra Mecánica;María Jiménez",
+    "numberOneDate": "23 de febrero de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0d881d77e06aa8b6ff731181e258cd03",
@@ -8229,7 +10125,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003022426.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000666347.jpg",
-    "displayName": "Overprotected - Britney Spears"
+    "displayName": "Overprotected - Britney Spears",
+    "numberOneDate": "2 de marzo de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "4f6b4aae67dca7b0b1300a046358d32d",
@@ -8242,7 +10141,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000584164.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000631149.jpg",
-    "displayName": "A Dios le pido - Juanes"
+    "displayName": "A Dios le pido - Juanes",
+    "numberOneDate": "13 de julio de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/439c8b6d82db0ea185026aea4dd32f5e8fd29046?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "5a24b62aa13ca916901025ebbd611a81",
@@ -8255,7 +10157,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026730.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000666216.jpg",
-    "displayName": "Moi... Lolita - Alizée"
+    "displayName": "Moi... Lolita - Alizée",
+    "numberOneDate": "13 de abril de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2939a5175426dcfe7aaacdb609c3c70a6cc0d238?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "07767dc6b8792c883dd5f4760fcc77ee",
@@ -8268,7 +10173,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000604295.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000604347.jpg",
-    "displayName": "No te rindas - Álex Ubago"
+    "displayName": "No te rindas - Álex Ubago",
+    "numberOneDate": "7 de diciembre de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/3f297611dd8a193cf555e834d6b1f34ec5bf3bf2?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "c87d5708a24be6a0fd0024862c13e627",
@@ -8281,7 +10189,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000536126.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000536149.jpg",
-    "displayName": "Chica de ayer - Enrique Iglesias"
+    "displayName": "Chica de ayer - Enrique Iglesias",
+    "numberOneDate": "26 de octubre de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/bae4c0d4a98daf90e6def1e0ebe8bb1dddb7129a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "39a7c41d1295914619f238ab66698678",
@@ -8294,7 +10205,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000021311.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001121149.jpg",
-    "displayName": "Dos hombres y un destino - Àlex;Bustamante"
+    "displayName": "Dos hombres y un destino - Àlex;Bustamante",
+    "numberOneDate": "21 de diciembre de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "43b17ddb1894b82fac96f3f8034dc090",
@@ -8307,7 +10221,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000018697.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001082216.jpg",
-    "displayName": "Ave María - David Bisbal"
+    "displayName": "Ave María - David Bisbal",
+    "numberOneDate": "29 de junio de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "a852a256c717d14c206e9b36f5801908",
@@ -8320,7 +10237,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000028631.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001150534.jpg",
-    "displayName": "Que la detengan - David Civera"
+    "displayName": "Que la detengan - David Civera",
+    "numberOneDate": "20 de julio de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "82047418f7691df5caf2e569bca2442b",
@@ -8333,7 +10253,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000019890.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002674811.jpg",
-    "displayName": "Chihuahua - DJ Bobo"
+    "displayName": "Chihuahua - DJ Bobo",
+    "numberOneDate": "28 de septiembre de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "2ce42f769bf8656580c97776a97b2815",
@@ -8346,7 +10269,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001200936.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000631257.jpg",
-    "displayName": "Fallin' - Alicia Keys"
+    "displayName": "Fallin' - Alicia Keys",
+    "numberOneDate": "2 de febrero de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/b3dea0edd6e1e3a122f11903463de8d2d9ff3044?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "ec69dc62babd7ea1ebc67b7a31c8284a",
@@ -8359,7 +10285,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000019389.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000632522.jpg",
-    "displayName": "By the way - Red Hot Chili Peppers"
+    "displayName": "By the way - Red Hot Chili Peppers",
+    "numberOneDate": "17 de agosto de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1b6ca5843bd21973cbb2c2410616dd10564e91da?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "2e63e862246bb3d150dd9e5962c75974",
@@ -8372,7 +10301,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000031405.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000642379.jpg",
-    "displayName": "The rising - Bruce Springsteen"
+    "displayName": "The rising - Bruce Springsteen",
+    "numberOneDate": "12 de octubre de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/4a69d71d9fe3f7eed0cdcaafb59a980bf87f257c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "36b602e4143776cb0df368036811cf88",
@@ -8385,7 +10317,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000589710.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000589729.jpg",
-    "displayName": "Hoy - Rosana"
+    "displayName": "Hoy - Rosana",
+    "numberOneDate": "26 de enero de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/7f090b82456a405436d32ad1ed6783dc0bdc5d63?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "b953f04112ecd87bc1fe32c185c6f406",
@@ -8398,7 +10333,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000693839.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000631132.jpg",
-    "displayName": "Ángel de amor - Maná"
+    "displayName": "Ángel de amor - Maná",
+    "numberOneDate": "14 de septiembre de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/5b97e8756167cde9e707fc9a575167cc9624af28?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "4ebf1d812a50dc9180cc78fbc442d199",
@@ -8411,7 +10349,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000586358.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000534806.jpg",
-    "displayName": "Son sueños - El Canto del Loco"
+    "displayName": "Son sueños - El Canto del Loco",
+    "numberOneDate": "6 de abril de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ecd5fa29e831be6e42bff9c09ff518f651d2ea4b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "c50c855ce667baeacc067e5ee68fcc17",
@@ -8424,7 +10365,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001039431.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000067461.jpg",
-    "displayName": "Torero - Chayanne"
+    "displayName": "Torero - Chayanne",
+    "numberOneDate": "4 de mayo de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/129e05b04a0bb4a56d16f152a521bd3cf10f4fe2?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "3cb24d97e382236ad6e695b246ab1f0e",
@@ -8437,7 +10381,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001295544.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000899322.jpg",
-    "displayName": "Antihéroe - M-Clan"
+    "displayName": "Antihéroe - M-Clan",
+    "numberOneDate": "2 de noviembre de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "20e68a7b0a83bb801642e1cff5db2960",
@@ -8450,7 +10397,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000534929.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000534979.jpg",
-    "displayName": "Atrévete - Chenoa"
+    "displayName": "Atrévete - Chenoa",
+    "numberOneDate": "8 de junio de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "8f94dcb4088acac33b16a07f3583cf09",
@@ -8463,7 +10413,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000527899.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000527904.jpg",
-    "displayName": "Baila Casanova - Paulina Rubio"
+    "displayName": "Baila Casanova - Paulina Rubio",
+    "numberOneDate": "9 de noviembre de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/928892acb9616a818d5366f5319c1298fc6c6eb9?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "ddfde6b31284704f83d91dfde4918778",
@@ -8476,7 +10429,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000020157.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000632640.jpg",
-    "displayName": "Complicated - Avril Lavigne"
+    "displayName": "Complicated - Avril Lavigne",
+    "numberOneDate": "23 de noviembre de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/497f3eed8dedf972b878e04e4e3f6b18556226c3?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "40a31f157dbf122b10943fed7f4c1822",
@@ -8489,7 +10445,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001150825.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001150537.jpg",
-    "displayName": "No sé qué me das - Fangoria"
+    "displayName": "No sé qué me das - Fangoria",
+    "numberOneDate": "9 de febrero de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "bf9fcca68e171214bc19ef7fd990a47d",
@@ -8502,7 +10461,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000018629.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000485523.jpg",
-    "displayName": "Aserejé - Las Ketchup"
+    "displayName": "Aserejé - Las Ketchup",
+    "numberOneDate": "27 de julio de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/81ed7eaa5875fc2f2201d5afedc1e193effa4953?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "ee5e2fd1ea1442a84fbfef8ee7c452ae",
@@ -8515,7 +10477,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000586734.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000586301.jpg",
-    "displayName": "Toda la noche en la calle - Amaral"
+    "displayName": "Toda la noche en la calle - Amaral",
+    "numberOneDate": "19 de octubre de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/77f2cbf69365d979c3b133eb02d22e771d4910dc?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "600fa4ad2128e56c8750acde13d5c76c",
@@ -8528,7 +10493,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000534033.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000534109.jpg",
-    "displayName": "Vino tinto - Estopa"
+    "displayName": "Vino tinto - Estopa",
+    "numberOneDate": "23 de marzo de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f8e6db3210727505602c604494a020640bac88f6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "a9792f27acee88efcbccbbe2bfbaada9",
@@ -8541,7 +10509,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000025162.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147658.jpg",
-    "displayName": "Lady Blue - Bunbury"
+    "displayName": "Lady Blue - Bunbury",
+    "numberOneDate": "27 de abril de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ea8a0ee08a418f7dd54bf93abf5dc6047a5298a3?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "f837e16e3eb24ea4b821022cfa8df5a0",
@@ -8554,7 +10525,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000025528.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001082216.jpg",
-    "displayName": "Lloraré las penas - David Bisbal"
+    "displayName": "Lloraré las penas - David Bisbal",
+    "numberOneDate": "31 de agosto de 2002",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/7b2b4bd51259f68c980ec9f07120722656c1b3ef?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "9b633cb021519c63e7c4e551159aa670",
@@ -8567,7 +10541,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000604297.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000604347.jpg",
-    "displayName": "Sin miedo a nada - Álex Ubago;Amaia Montero"
+    "displayName": "Sin miedo a nada - Álex Ubago;Amaia Montero",
+    "numberOneDate": "25 de mayo de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "f2ce878a41d17416ec487e912af216ae",
@@ -8580,7 +10557,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000030476.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000674533.jpg",
-    "displayName": "Soy yo - Marta Sánchez"
+    "displayName": "Soy yo - Marta Sánchez",
+    "numberOneDate": "5 de octubre de 2002",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "163ad56a466eeb097045042fad2b2969",
@@ -8593,7 +10573,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000533498.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000533696.jpg",
-    "displayName": "Feel - Robbie Williams"
+    "displayName": "Feel - Robbie Williams",
+    "numberOneDate": "8 de febrero de 2003",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6021a472fb66bf7718f5f24bddaf672abfba1c27?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "489284e5149bca8f0f8c06f2209b43ea",
@@ -8606,7 +10589,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000241.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000573027.jpg",
-    "displayName": "Electrical storm - U2;William Orbit"
+    "displayName": "Electrical storm - U2;William Orbit",
+    "numberOneDate": "4 de enero de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "d1b0eba9052c59b97122d8c28fa0f20b",
@@ -8619,7 +10605,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000029177.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000585882.jpg",
-    "displayName": "Rosas - La Oreja de Van Gogh"
+    "displayName": "Rosas - La Oreja de Van Gogh",
+    "numberOneDate": "22 de noviembre de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0f5d65a5b638e6142ed017b376b89399",
@@ -8632,7 +10621,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001302060.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000633820.jpg",
-    "displayName": "I'm gonna getcha good! - Shania Twain"
+    "displayName": "I'm gonna getcha good! - Shania Twain",
+    "numberOneDate": "18 de enero de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "7962a385a9b558b900f642dc1ab64a46",
@@ -8645,7 +10637,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000021949.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001133384.jpg",
-    "displayName": "En tu cruz me clavaste - Chenoa"
+    "displayName": "En tu cruz me clavaste - Chenoa",
+    "numberOneDate": "29 de noviembre de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "cea3cf32353c7b1f0bd1fb439986166b",
@@ -8658,7 +10653,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000534337.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000535524.jpg",
-    "displayName": "Parando el tiempo - Beth"
+    "displayName": "Parando el tiempo - Beth",
+    "numberOneDate": "9 de agosto de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "6aa131aec23587ecf78a02c3eb014881",
@@ -8671,7 +10669,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026790.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001150532.jpg",
-    "displayName": "Morenita - UPA Dance"
+    "displayName": "Morenita - UPA Dance",
+    "numberOneDate": "25 de enero de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "4e53e4692b2ba19f7da165de945ddf3f",
@@ -8684,7 +10685,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001405618.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000632748.jpg",
-    "displayName": "Dilemma - Nelly;Kelly Rowland"
+    "displayName": "Dilemma - Nelly;Kelly Rowland",
+    "numberOneDate": "8 de marzo de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0e6303a392fbaa9b89bb682dfe1c20e3",
@@ -8697,7 +10701,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000018253.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000619790.jpg",
-    "displayName": "American life - Madonna"
+    "displayName": "American life - Madonna",
+    "numberOneDate": "24 de mayo de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "403f2f26a7baf9f85a13bdaa9933251d",
@@ -8710,7 +10717,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000025731.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001381065.jpg",
-    "displayName": "Lose yourself - Eminem"
+    "displayName": "Lose yourself - Eminem",
+    "numberOneDate": "1 de marzo de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "5a4bbfe58c6b6c446321d876f85c626c",
@@ -8723,7 +10733,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000585871.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000574770.jpg",
-    "displayName": "La madre de José - El Canto del Loco"
+    "displayName": "La madre de José - El Canto del Loco",
+    "numberOneDate": "5 de julio de 2003",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/5cf97d000d7b9a5a003450aa62316506d95fedb1?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "6a3336132dbedf6144fb674cda1b3c2f",
@@ -8736,7 +10749,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001135978.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000633159.jpg",
-    "displayName": "Tanto la quería - Andy &amp;Lucas"
+    "displayName": "Tanto la quería - Andy &amp;Lucas",
+    "numberOneDate": "8 de noviembre de 2003",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6417924e531e9177b9fed791931b735dd69899e1?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "2da34bef061d38f65e72144fcf2253f2",
@@ -8749,7 +10765,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000022985.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000609382.jpg",
-    "displayName": "Going under - Evanescence"
+    "displayName": "Going under - Evanescence",
+    "numberOneDate": "11 de octubre de 2003",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/63d5931108c9a0403ae5f51edd210667463be6c7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "719611037acc1bd8efb16e5466dba01a",
@@ -8762,7 +10781,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000021835.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000674444.jpg",
-    "displayName": "El viaje - Antonio Orozco"
+    "displayName": "El viaje - Antonio Orozco",
+    "numberOneDate": "27 de septiembre de 2003",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a34d4286152d0525832336e22c4c84e2f9427b21?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "5610d82a3286086b302b81407e4408a9",
@@ -8775,7 +10797,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000017474.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000066902.jpg",
-    "displayName": "1 más 1 son 7 - Fran Perea"
+    "displayName": "1 más 1 son 7 - Fran Perea",
+    "numberOneDate": "30 de agosto de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "8bad33bf849f607dc82d1516547778d4",
@@ -8788,7 +10813,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000032220.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001095963.jpg",
-    "displayName": "Una emoción para siempre - Eros Ramazzotti"
+    "displayName": "Una emoción para siempre - Eros Ramazzotti",
+    "numberOneDate": "12 de julio de 2003",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/86bc94af7eea1133e39a9a880616dc35e85f8b8c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "0547e0b073632357638c9b9465d723dc",
@@ -8801,7 +10829,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000024758.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000568940.jpg",
-    "displayName": "La esencia de tu voz - Rosa López"
+    "displayName": "La esencia de tu voz - Rosa López",
+    "numberOneDate": "13 de diciembre de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "f44fd2f5acd1baed8570b6106bf72f39",
@@ -8814,7 +10845,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000024795.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001798038.jpg",
-    "displayName": "La fuerza de la vida (La razón para luchar) - Academia Operación Triunfo II"
+    "displayName": "La fuerza de la vida (La razón para luchar) - Academia Operación Triunfo II",
+    "numberOneDate": "11 de enero de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "115074914996b6d4cfb2a1c69ef50960",
@@ -8827,7 +10861,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000584134.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000585882.jpg",
-    "displayName": "20 de enero - La Oreja de Van Gogh"
+    "displayName": "20 de enero - La Oreja de Van Gogh",
+    "numberOneDate": "23 de agosto de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "cc4d54a90db988a0e4e983e708a7314d",
@@ -8840,7 +10877,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000616716.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000616754.jpg",
-    "displayName": "Bonito - Jarabe de Palo"
+    "displayName": "Bonito - Jarabe de Palo",
+    "numberOneDate": "7 de junio de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "dd201ac96a31b6305df9bf5b0a9475af",
@@ -8853,7 +10893,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003085638.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003085636.jpg",
-    "displayName": "Devuélveme a mi chica - Seguridad Social"
+    "displayName": "Devuélveme a mi chica - Seguridad Social",
+    "numberOneDate": "29 de marzo de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "04359eb11c17c4133f86cdf4745a77a5",
@@ -8866,7 +10909,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000400057.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147669.jpg",
-    "displayName": "Down - Junior Miguez"
+    "displayName": "Down - Junior Miguez",
+    "numberOneDate": "13 de septiembre de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "31af18105fa71eab99ce20899da36fe6",
@@ -8879,7 +10925,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000024370.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000900343.jpg",
-    "displayName": "Jaleo - Ricky Martin"
+    "displayName": "Jaleo - Ricky Martin",
+    "numberOneDate": "14 de junio de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "4be7414e43dbf5bb148eb72f6e37bccc",
@@ -8892,7 +10941,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000021032.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000535524.jpg",
-    "displayName": "Díme - Beth"
+    "displayName": "Díme - Beth",
+    "numberOneDate": "19 de abril de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "d4300e000e0a441981d71f4d924f05d5",
@@ -8905,7 +10957,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000616715.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000616754.jpg",
-    "displayName": "Yin yang - Jarabe de Palo"
+    "displayName": "Yin yang - Jarabe de Palo",
+    "numberOneDate": "4 de octubre de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0e6557ab4c50adf38e1c424fd817e7d0",
@@ -8918,7 +10973,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003037897.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001803330.jpg",
-    "displayName": "¡Grita! - Vega"
+    "displayName": "¡Grita! - Vega",
+    "numberOneDate": "25 de octubre de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "561e7e89e5618a91adc1fb3dd5fc3f67",
@@ -8931,7 +10989,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000025838.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000889086.jpg",
-    "displayName": "Lucifer - OBK"
+    "displayName": "Lucifer - OBK",
+    "numberOneDate": "17 de mayo de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "8aaa4d0ed018db2eeb3d43ed147b8e7b",
@@ -8944,7 +11005,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000018676.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000586182.jpg",
-    "displayName": "Aunque no te pueda ver - Álex Ubago"
+    "displayName": "Aunque no te pueda ver - Álex Ubago",
+    "numberOneDate": "27 de diciembre de 2003",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c4612965ba82bad0734741b276893f064417b1af?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "45987da1889118b397ade779c66eb547",
@@ -8957,7 +11021,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000031038.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000487518.jpg",
-    "displayName": "Te necesito - Luis Miguel"
+    "displayName": "Te necesito - Luis Miguel",
+    "numberOneDate": "1 de noviembre de 2003",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1e482347e09cc3a27c6d72c88a36fce4d3c3401a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "deb3984cc6ca43c110f11ec18b6fef9d",
@@ -8970,7 +11037,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000019310.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000609382.jpg",
-    "displayName": "Bring me to life - Evanescence"
+    "displayName": "Bring me to life - Evanescence",
+    "numberOneDate": "26 de abril de 2003",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/de59728745eeac289a66dcdea0f78127bb102ef9?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "fcc19a5cf853088168a5f1f6c1f5c4ec",
@@ -8983,7 +11053,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000534507.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000534521.jpg",
-    "displayName": "Color esperanza - Diego Torres"
+    "displayName": "Color esperanza - Diego Torres",
+    "numberOneDate": "22 de febrero de 2003",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0fef1398cb91be3b185facc8c38ad0ecc3ea61d4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "faa8e11cb5312443814dace61f1b9d38",
@@ -8996,7 +11069,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000515066.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000515083.jpg",
-    "displayName": "Jenny from the block - Jennifer López;Jadakiss"
+    "displayName": "Jenny from the block - Jennifer López;Jadakiss",
+    "numberOneDate": "15 de febrero de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "03937e80d8da99fbc322c7e4f71bb640",
@@ -9009,7 +11085,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000269.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000533666.jpg",
-    "displayName": "The game of love - Santana;Michelle Branch"
+    "displayName": "The game of love - Santana;Michelle Branch",
+    "numberOneDate": "1 de febrero de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0ae274b04b645808b65a6f9657a1cf1a",
@@ -9022,7 +11101,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000447975.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000528450.jpg",
-    "displayName": "Cada vez que estoy sin ti - David DeMaría;Esmeralda Grao"
+    "displayName": "Cada vez que estoy sin ti - David DeMaría;Esmeralda Grao",
+    "numberOneDate": "10 de mayo de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "93ec040ac71d19fe0fea62ebb3be54e2",
@@ -9035,7 +11117,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000528419.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000528443.jpg",
-    "displayName": "Déjame olvidarte - Sergio Dalma"
+    "displayName": "Déjame olvidarte - Sergio Dalma",
+    "numberOneDate": "5 de abril de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "0a38855ade7212d5abb8f36a3bf5033f",
@@ -9048,7 +11133,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000028617.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147640.jpg",
-    "displayName": "Que corra el aire - Manuel Carrasco"
+    "displayName": "Que corra el aire - Manuel Carrasco",
+    "numberOneDate": "28 de junio de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "9c78e710b090ce868ff194efd5ba4371",
@@ -9061,7 +11149,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000067851.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000633159.jpg",
-    "displayName": "Son de amores - Andy &amp;Lucas"
+    "displayName": "Son de amores - Andy &amp;Lucas",
+    "numberOneDate": "26 de julio de 2003",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/272497c0d84506e8b3267d84f9a81f49d463e5d1?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "e5034a0559112524ea78d63c9b7ec159",
@@ -9074,7 +11165,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000019391.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000863518.jpg",
-    "displayName": "Bye bye - David Civera"
+    "displayName": "Bye bye - David Civera",
+    "numberOneDate": "19 de julio de 2003",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1cb05f93ed12ec4472d8327d779a0234031747da?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "6d2b28e282eaae88d6ecb5704caf7df9",
@@ -9087,7 +11181,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001032064.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000400175.jpg",
-    "displayName": "No es lo mismo - Alejandro Sanz"
+    "displayName": "No es lo mismo - Alejandro Sanz",
+    "numberOneDate": "6 de septiembre de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "b926c0d0150a1d9fa9c13538fb836bae",
@@ -9100,7 +11197,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026435.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000066902.jpg",
-    "displayName": "Mi corazón - Fran Perea"
+    "displayName": "Mi corazón - Fran Perea",
+    "numberOneDate": "20 de diciembre de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "db904950c6bf546c73586fd1985f35c0",
@@ -9113,7 +11213,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000018815.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000634481.jpg",
-    "displayName": "Bad day - R.E.M."
+    "displayName": "Bad day - R.E.M.",
+    "numberOneDate": "6 de diciembre de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "d3b8adabbe483d13fb936bcb20aca5da",
@@ -9126,7 +11229,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000029181.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000863518.jpg",
-    "displayName": "Rosas y espinas - David Civera;David Bisbal"
+    "displayName": "Rosas y espinas - David Civera;David Bisbal",
+    "numberOneDate": "18 de octubre de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "b5952df84c06fa0b12c72d646b3e76d1",
@@ -9139,7 +11245,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570003545423.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000632640.jpg",
-    "displayName": "Sk8er boi - Avril Lavigne"
+    "displayName": "Sk8er boi - Avril Lavigne",
+    "numberOneDate": "15 de marzo de 2003",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c0984bf089f7e7534d6c838fd4204cc40ed87368?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "10ee41def6095dde9ab86bce3276186d",
@@ -9152,7 +11261,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000027279.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000466599.jpg",
-    "displayName": "No me llames iluso - La Cabra Mecánica"
+    "displayName": "No me llames iluso - La Cabra Mecánica",
+    "numberOneDate": "22 de marzo de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "c41db3bcf720a0d11e20c18acfd2dd8a",
@@ -9165,7 +11277,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000596943.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000630690.jpg",
-    "displayName": "White flag - Dido"
+    "displayName": "White flag - Dido",
+    "numberOneDate": "15 de noviembre de 2003",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/078d3e8584d6a4575e4a59c23a2a02fe495d1dff?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "67a2d224ca3887105221b87da1774914",
@@ -9178,7 +11293,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000028568.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000585882.jpg",
-    "displayName": "Puedes contar conmigo - La Oreja de Van Gogh"
+    "displayName": "Puedes contar conmigo - La Oreja de Van Gogh",
+    "numberOneDate": "31 de mayo de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "e1c3845698776d1763512d0d9288aeef",
@@ -9191,7 +11309,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000444365.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000632649.jpg",
-    "displayName": "Crazy in love - Beyoncé;Jay Z"
+    "displayName": "Crazy in love - Beyoncé;Jay Z",
+    "numberOneDate": "16 de agosto de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "9ce07a999d396c365db1734fa5053bd7",
@@ -9204,7 +11325,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000067849.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000674444.jpg",
-    "displayName": "Devuélveme la vida - Antonio Orozco"
+    "displayName": "Devuélveme la vida - Antonio Orozco",
+    "numberOneDate": "3 de mayo de 2003",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a6932f4942c808f3b152d98f7842c52f5b4b121e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "0"
   },
   {
     "id": "584434738eb329c1d9207cb0808f5bd5",
@@ -9217,7 +11341,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000027393.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001278941.jpg",
-    "displayName": "No te escaparás - Hombres G"
+    "displayName": "No te escaparás - Hombres G",
+    "numberOneDate": "21 de junio de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "5b07a5734e55dacf0f9319f4c9f2eb2f",
@@ -9230,7 +11357,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000029343.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001150532.jpg",
-    "displayName": "Sámbame 2003 - UPA Dance"
+    "displayName": "Sámbame 2003 - UPA Dance",
+    "numberOneDate": "12 de abril de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "3c3428f9bb425d539b84fb8642b3424a",
@@ -9243,7 +11373,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001521296.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000535807.jpg",
-    "displayName": "Ojú - Las Niñas"
+    "displayName": "Ojú - Las Niñas",
+    "numberOneDate": "2 de agosto de 2003",
+    "spotifyUrl": "",
+    "bestPosition": "0"
   },
   {
     "id": "8b7a66bf77358e236be7de8aee18df3e",
@@ -9256,7 +11389,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026219.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000630843.jpg",
-    "displayName": "Me against the music - Britney Spears;Madonna"
+    "displayName": "Me against the music - Britney Spears;Madonna",
+    "numberOneDate": "10 de enero de 2004",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "d0293d8466c06974f74abe5249feabf5",
@@ -9269,7 +11405,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000020977.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001121727.jpg",
-    "displayName": "Devuélveme el aire - Bustamante"
+    "displayName": "Devuélveme el aire - Bustamante",
+    "numberOneDate": "17 de enero de 2004",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "04d84ea8eeefa9b2b099009bc640c534",
@@ -9282,7 +11421,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000033099.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000633159.jpg",
-    "displayName": "Y en tu ventana - Andy &amp;Lucas"
+    "displayName": "Y en tu ventana - Andy &amp;Lucas",
+    "numberOneDate": "31 de enero de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/727d5b4d0d45d4b90f3941cebafb41ed62e5833c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "d475608aee938fb4947dcb9f650cea32",
@@ -9295,7 +11437,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001405759.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000586252.jpg",
-    "displayName": "Shut up - The Black Eyed Peas"
+    "displayName": "Shut up - The Black Eyed Peas",
+    "numberOneDate": "21 de febrero de 2004",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "18eb35aaae1330bb4914f357c9ecceaf",
@@ -9308,7 +11453,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000574706.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000574770.jpg",
-    "displayName": "Ya nada volverá a ser como antes - El Canto del Loco"
+    "displayName": "Ya nada volverá a ser como antes - El Canto del Loco",
+    "numberOneDate": "28 de febrero de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0fa28e57883b02b1a460f63791387a5c193675e7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "7f74e4c77f31f35675cd8b0aad034f40",
@@ -9321,7 +11469,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000026326.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000632649.jpg",
-    "displayName": "Me, myself and I - Beyoncé"
+    "displayName": "Me, myself and I - Beyoncé",
+    "numberOneDate": "3 de abril de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c2fd6a04b5ef5e9ca5573c88679183aaaf9b356f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "dd7462cb2bb699930952296548c7dcac",
@@ -9334,7 +11485,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001874946.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001878544.jpg",
-    "displayName": "Obsesión (Reggaeton version) - Aventura;Judy Santos;HSP"
+    "displayName": "Obsesión (Reggaeton version) - Aventura;Judy Santos;HSP",
+    "numberOneDate": "10 de julio de 2004",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "ff2217619a9e9e53c38821aedf6645cb",
@@ -9347,7 +11501,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000746.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000066490.jpg",
-    "displayName": "Hablando en plata - Melendi"
+    "displayName": "Hablando en plata - Melendi",
+    "numberOneDate": "24 de julio de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/4c377d905051963f703105073593d267b88362e7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "0b8ad3f4ff8505249861082e53b7db73",
@@ -9360,7 +11517,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000858.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002629143.jpg",
-    "displayName": "Mariacaipirinha - Carlinhos Brown;DJ Dero"
+    "displayName": "Mariacaipirinha - Carlinhos Brown;DJ Dero",
+    "numberOneDate": "14 de agosto de 2004",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "f62f599e053c1c0ee373428064b6bb4f",
@@ -9373,7 +11533,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000716.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000066450.jpg",
-    "displayName": "Dale don dale - Don Omar;Cheka"
+    "displayName": "Dale don dale - Don Omar;Cheka",
+    "numberOneDate": "28 de agosto de 2004",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "d13bfce6133373bdd1b3bb7918e23df0",
@@ -9386,7 +11549,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000069266.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000585149.jpg",
-    "displayName": "Para que no se duerman mis sentidos - Manolo García"
+    "displayName": "Para que no se duerman mis sentidos - Manolo García",
+    "numberOneDate": "9 de octubre de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9ca557404aa7ec6823354dc023ab54c18e5a74b9?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "934b37b51a02f783ba0c4ff7f79dccb6",
@@ -9399,7 +11565,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000019351.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001175732.jpg",
-    "displayName": "Bulería - David Bisbal"
+    "displayName": "Bulería - David Bisbal",
+    "numberOneDate": "7 de febrero de 2004",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "88ddc2836c14c8ce3d36f12815b3ac4a",
@@ -9412,7 +11581,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000034428.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000586265.jpg",
-    "displayName": "Olvídate de mí - Iguana Tango"
+    "displayName": "Olvídate de mí - Iguana Tango",
+    "numberOneDate": "6 de marzo de 2004",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "7ce8e4654cf3d50c7d5dd031be827a19",
@@ -9425,7 +11597,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000247.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000630837.jpg",
-    "displayName": "Fuente de energía - Estopa"
+    "displayName": "Fuente de energía - Estopa",
+    "numberOneDate": "10 de abril de 2004",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "94e56f339ad2c5bbffc3e1bbbcce6ff7",
@@ -9438,7 +11613,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000206.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147627.jpg",
-    "displayName": "Te quise tanto - Paulina Rubio"
+    "displayName": "Te quise tanto - Paulina Rubio",
+    "numberOneDate": "24 de abril de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c25f72ba81fe8a7f595196ef24fbe952fbcbf85e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "bb3046be154a1d6c91b5bee8610048b4",
@@ -9451,7 +11629,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001953445.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000586286.jpg",
-    "displayName": "Left outside alone - Anastacia"
+    "displayName": "Left outside alone - Anastacia",
+    "numberOneDate": "15 de mayo de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f604f5d13acddf17709155743e28b2dd3ef7e881?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "3e8f9e275cfc453e24da7bab56718f20",
@@ -9464,7 +11645,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000181.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001028520.jpg",
-    "displayName": "Retorciendo palabras - Fangoria"
+    "displayName": "Retorciendo palabras - Fangoria",
+    "numberOneDate": "22 de mayo de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/3311b22944f43bacb7c51d569e8a62f64f6e732d?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "5c0bbca8cbe81895b31c6582e44dcc5b",
@@ -9477,7 +11661,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000033811.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000569725.jpg",
-    "displayName": "Malo - Bebe"
+    "displayName": "Malo - Bebe",
+    "numberOneDate": "19 de junio de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/402715734e8409ab6906cb97e84557f3f2469973?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "72f0c2cb270593ad9bdd074d7144522b",
@@ -9490,7 +11677,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000030736.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000631608.jpg",
-    "displayName": "Summer sunshine - The Corrs"
+    "displayName": "Summer sunshine - The Corrs",
+    "numberOneDate": "31 de julio de 2004",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "77c93dca2618d6e8f8ca9d90f3e31040",
@@ -9503,7 +11693,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000745.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000066490.jpg",
-    "displayName": "Con la luna llena - Melendi"
+    "displayName": "Con la luna llena - Melendi",
+    "numberOneDate": "2 de octubre de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/fee99152c3f3b02a9447705254cc53772e2a5125?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "aff84d1b0bc2652aa01a7fc5e4403cae",
@@ -9516,7 +11709,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000585806.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000506791.jpg",
-    "displayName": "Precisamente ahora - David DeMaría"
+    "displayName": "Precisamente ahora - David DeMaría",
+    "numberOneDate": "6 de noviembre de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9a80cb8a0aa7a344522892f9197c7f58991f5629?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "da5f053caf9ea8c0c827447307bc8198",
@@ -9529,7 +11725,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000712.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000630757.jpg",
-    "displayName": "Vertigo - U2"
+    "displayName": "Vertigo - U2",
+    "numberOneDate": "27 de noviembre de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/766f6114ef002f88914f7d6b646f46d035a2f733?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "949f48cefdb1955eec693bf93fdc4c3c",
@@ -9542,7 +11741,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000017758.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000488011.jpg",
-    "displayName": "Abre tu mente - Merche"
+    "displayName": "Abre tu mente - Merche",
+    "numberOneDate": "27 de marzo de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/519af99960adc62247cd278c78fa443279357617?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "661ba692e29373db4afbf83f234a606c",
@@ -9555,7 +11757,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000160.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001914026.jpg",
-    "displayName": "Dragostea din tei - O-Zone"
+    "displayName": "Dragostea din tei - O-Zone",
+    "numberOneDate": "1 de mayo de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c58f4af9a16ca2af76c95109ba04fa12df459b14?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "62a049c35e93d06b49715a132065ef18",
@@ -9568,7 +11773,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000443050.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000632991.jpg",
-    "displayName": "Duele el amor - Aleks Syntek;Ana Torroja"
+    "displayName": "Duele el amor - Aleks Syntek;Ana Torroja",
+    "numberOneDate": "26 de junio de 2004",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "c146b46fb1378cb2ae86e751d999e0a7",
@@ -9581,7 +11789,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000290.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000585888.jpg",
-    "displayName": "Quiero ser - Antonio Orozco"
+    "displayName": "Quiero ser - Antonio Orozco",
+    "numberOneDate": "3 de julio de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d73bc49c542813edd75595d2067cc3e437e0088e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "820623f7850f9036d6d9c4144f07e255",
@@ -9594,7 +11805,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000066358.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000630884.jpg",
-    "displayName": "Everybody's changing - Keane"
+    "displayName": "Everybody's changing - Keane",
+    "numberOneDate": "13 de noviembre de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/96f01d97e1dae10e2baf3e4ed02210d18bc07107?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "ac2f10b9c8d61d98657690c83b55278d",
@@ -9607,7 +11821,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000432209.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001878543.jpg",
-    "displayName": "¿Por qué no ser amigos? - Hombres G;Dani Martín"
+    "displayName": "¿Por qué no ser amigos? - Hombres G;Dani Martín",
+    "numberOneDate": "4 de diciembre de 2004",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "222590fa8bd748a158cda6d5d6b822a5",
@@ -9620,7 +11837,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000024733.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001139622.jpg",
-    "displayName": "La costa del silencio - Mago de Oz"
+    "displayName": "La costa del silencio - Mago de Oz",
+    "numberOneDate": "24 de enero de 2004",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "18ccc0ba6fbdae460634feeb71690450",
@@ -9633,7 +11853,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000030966.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001084621.jpg",
-    "displayName": "Tardes negras - Tiziano Ferro"
+    "displayName": "Tardes negras - Tiziano Ferro",
+    "numberOneDate": "20 de marzo de 2004",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "bc82d7cd8cc2e593c0dc2643bcefb382",
@@ -9646,7 +11869,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000454901.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000633489.jpg",
-    "displayName": "Hey ya! - Outkast"
+    "displayName": "Hey ya! - Outkast",
+    "numberOneDate": "17 de abril de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/5d3194868fad490abeed9804ac9c708bd3109da8?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "a38c3e72746cb1bf7e39477f08f717fb",
@@ -9659,7 +11885,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000574707.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000574770.jpg",
-    "displayName": "Insoportable - El Canto del Loco"
+    "displayName": "Insoportable - El Canto del Loco",
+    "numberOneDate": "29 de mayo de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9b57f98aa4f66a31ebafb407854a0129c720cb4c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "416a3cbc81883322624d76393ec81a8e",
@@ -9672,7 +11901,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000182.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001175732.jpg",
-    "displayName": "Oye el boom - David Bisbal"
+    "displayName": "Oye el boom - David Bisbal",
+    "numberOneDate": "12 de junio de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ec72e70a875283b8b32c2f66e99a2a9a75ba8bd2?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "fcaa8ee4aef5f2138d99792ee8ee35a2",
@@ -9685,7 +11917,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000033656.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001028520.jpg",
-    "displayName": "Miro la vida pasar - Fangoria"
+    "displayName": "Miro la vida pasar - Fangoria",
+    "numberOneDate": "11 de septiembre de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/612dfdf460d9be99105f34740eb885c3ebc1fce5?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "d93c2efee8c8993c36a13e98bb037c70",
@@ -9698,7 +11933,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000034055.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001175732.jpg",
-    "displayName": "Camina y ven - David Bisbal"
+    "displayName": "Camina y ven - David Bisbal",
+    "numberOneDate": "18 de septiembre de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/52b162267099cce8bbe3d5ae85875d38ef8fc283?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "e49b77f26e03560218a3723ad1ab5779",
@@ -9711,7 +11949,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000067972.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000585567.jpg",
-    "displayName": "Nada valgo sin tu amor - Juanes"
+    "displayName": "Nada valgo sin tu amor - Juanes",
+    "numberOneDate": "20 de noviembre de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/574f0e23edcf0299e56681173de8395c93d8dac2?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "de1b7bb57c4d8861044a3ce99d41d4af",
@@ -9724,7 +11965,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000400158.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001147665.jpg",
-    "displayName": "Escucha atento - Laura Pausini"
+    "displayName": "Escucha atento - Laura Pausini",
+    "numberOneDate": "18 de diciembre de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9d77d1a0145956d1b4f08cf4aa3454624d57557f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "fadbedfa9f9b844735141f214821a6d8",
@@ -9737,7 +11981,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000031153.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000587866.jpg",
-    "displayName": "Tequila - Café Quijano"
+    "displayName": "Tequila - Café Quijano",
+    "numberOneDate": "3 de enero de 2004",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "911e95504fb8a8885bca0f48d0bff496",
@@ -9750,7 +11997,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000249.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000634483.jpg",
-    "displayName": "In the shadows - The Rasmus"
+    "displayName": "In the shadows - The Rasmus",
+    "numberOneDate": "13 de marzo de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ad6104cc39fa4b4142d29063b909037680844c6a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "528298aa79e502c2f0ac6ac9b6db93c6",
@@ -9763,7 +12013,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000018.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000586182.jpg",
-    "displayName": "Cuanto antes - Álex Ubago"
+    "displayName": "Cuanto antes - Álex Ubago",
+    "numberOneDate": "7 de agosto de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/3188ba4227c775af866f647504397525df7b0874?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "c37373fe7ea56a088f336922bab9f1e1",
@@ -9776,7 +12029,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000443040.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000630837.jpg",
-    "displayName": "Pastillas de freno - Estopa"
+    "displayName": "Pastillas de freno - Estopa",
+    "numberOneDate": "21 de agosto de 2004",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "c127f500b46357a1132990e76112a5e2",
@@ -9789,7 +12045,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000034398.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000586286.jpg",
-    "displayName": "Sick and tired - Anastacia"
+    "displayName": "Sick and tired - Anastacia",
+    "numberOneDate": "4 de septiembre de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/7734bdec110d05d1c34724f159e69743bff9c83c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "3c6b8692a879dbdeeb98a2ea45f6e922",
@@ -9802,7 +12061,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000586721.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000630762.jpg",
-    "displayName": "Valió la pena - Marc Anthony"
+    "displayName": "Valió la pena - Marc Anthony",
+    "numberOneDate": "25 de septiembre de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/91836bd3bef926b61ffae320b368a45df6916b8b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "65c0681bd27f78b390e2cafd06668917",
@@ -9815,7 +12077,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000066641.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000569725.jpg",
-    "displayName": "Ella - Bebe"
+    "displayName": "Ella - Bebe",
+    "numberOneDate": "23 de octubre de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/67e5236fa48011c44aebac004cd92d809b57e53a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "8e9814c5fb496d5bc8522b353871f098",
@@ -9828,7 +12093,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000440441.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000887112.jpg",
-    "displayName": "Tú no tienes alma - Alejandro Sanz"
+    "displayName": "Tú no tienes alma - Alejandro Sanz",
+    "numberOneDate": "11 de diciembre de 2004",
+    "spotifyUrl": "",
+    "bestPosition": "2"
   },
   {
     "id": "00058547df3fd9b6eecf514e179c31d3",
@@ -9841,7 +12109,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000431390.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001878325.jpg",
-    "displayName": "Sopa fría - M-Clan"
+    "displayName": "Sopa fría - M-Clan",
+    "numberOneDate": "25 de diciembre de 2004",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/e00b0b435805870b23d018b82d67fa283d2e29f4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "2"
   },
   {
     "id": "3ac8307e440e429636e384d7bb4e4480",
@@ -9854,7 +12125,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000442337.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000631747.jpg",
-    "displayName": "Stand my ground - Within Temptation"
+    "displayName": "Stand my ground - Within Temptation",
+    "numberOneDate": "7 de mayo de 2005",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "dfe117dba81614ae569bda9df5f06845",
@@ -9867,7 +12141,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000584939.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000586883.jpg",
-    "displayName": "Días de verano - Amaral"
+    "displayName": "Días de verano - Amaral",
+    "numberOneDate": "20 de agosto de 2005",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f8b53d98963fff0e1dcadfb0f3bd93ed661e4987?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "d1654b9bbf94f698ee94841857a6a678",
@@ -9880,7 +12157,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000584963.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000632771.jpg",
-    "displayName": "Don't phunk with my heart - The Black Eyed Peas"
+    "displayName": "Don't phunk with my heart - The Black Eyed Peas",
+    "numberOneDate": "27 de agosto de 2005",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "88ff2bb417fc6094e72b9e6a2cb95f51",
@@ -9893,7 +12173,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000489241.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000616006.jpg",
-    "displayName": "No me crees - Efecto Mariposa;Javier Ojeda"
+    "displayName": "No me crees - Efecto Mariposa;Javier Ojeda",
+    "numberOneDate": "29 de octubre de 2005",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "b4299512aa96ee67e7384149a5222589",
@@ -9906,7 +12189,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001404369.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000602639.jpg",
-    "displayName": "Hung up - Madonna"
+    "displayName": "Hung up - Madonna",
+    "numberOneDate": "17 de diciembre de 2005",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/bf54eab00d276b376af52d0de2b3df1b8a21c1eb?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "bd6893751a2509d6fa590bf49589988b",
@@ -9919,7 +12205,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000432201.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000586225.jpg",
-    "displayName": "She will be loved - Maroon 5"
+    "displayName": "She will be loved - Maroon 5",
+    "numberOneDate": "26 de febrero de 2005",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a2d747c97ba5cd6af6ddb2e4c8cdf9e8ec5e5628?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "9242bc36d92ca68d842fabc6558a73d4",
@@ -9932,7 +12221,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000586321.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000635057.jpg",
-    "displayName": "Let me show you (The way) - Natasha Thomas"
+    "displayName": "Let me show you (The way) - Natasha Thomas",
+    "numberOneDate": "5 de marzo de 2005",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "c0638133bdf21a543697859e54c7f454",
@@ -9945,7 +12237,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000468483.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000586883.jpg",
-    "displayName": "El universo sobre mí - Amaral"
+    "displayName": "El universo sobre mí - Amaral",
+    "numberOneDate": "9 de abril de 2005",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/71cd5480e9689034cb553f6db182a2a722943c1c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "c7b38de91d20154d0b521e7d6ce37ec7",
@@ -9958,7 +12253,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000481011.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000585567.jpg",
-    "displayName": "La camisa negra - Juanes"
+    "displayName": "La camisa negra - Juanes",
+    "numberOneDate": "21 de mayo de 2005",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/5a60d81d8c7af63cedba17d11f8ab7ba160adcd1?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "fbd4de6fe83c6e92905c347698622622",
@@ -9971,7 +12269,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000510422.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000593523.jpg",
-    "displayName": "Caminando por la vida - Melendi"
+    "displayName": "Caminando por la vida - Melendi",
+    "numberOneDate": "4 de junio de 2005",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0a7c5118e8f979dde1847701aad680cdda199dd6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "f8f13df32e833aadfed52cbfa66931e7",
@@ -9984,7 +12285,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000677938.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000589607.jpg",
-    "displayName": "Nada fue un error - Coti;Julieta Venegas;Paulina Rubio"
+    "displayName": "Nada fue un error - Coti;Julieta Venegas;Paulina Rubio",
+    "numberOneDate": "23 de julio de 2005",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "f12382fee7af0c1017d2a0ffcb55a8da",
@@ -9997,7 +12301,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000678200.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001937571.jpg",
-    "displayName": "Have a nice day - Bon Jovi"
+    "displayName": "Have a nice day - Bon Jovi",
+    "numberOneDate": "8 de octubre de 2005",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "b736098a0b201314c6169135bcb170ba",
@@ -10010,7 +12317,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000434668.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000585888.jpg",
-    "displayName": "Es mi soledad - Antonio Orozco"
+    "displayName": "Es mi soledad - Antonio Orozco",
+    "numberOneDate": "29 de enero de 2005",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/eb57c14057c3ea9a985d4d4a015a2862634d65b2?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "5093a55f061526d8d2d8589f3e2a622c",
@@ -10023,7 +12333,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000586694.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000585567.jpg",
-    "displayName": "Volverte a ver - Juanes"
+    "displayName": "Volverte a ver - Juanes",
+    "numberOneDate": "19 de marzo de 2005",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/68eaa5333aa123f3ec80bc8b114db20ff5c3e887?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "b7f31dc826c6abab13b1234666c96161",
@@ -10036,7 +12349,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000586320.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000611444.jpg",
-    "displayName": "La tortura - Shakira;Alejandro Sanz"
+    "displayName": "La tortura - Shakira;Alejandro Sanz",
+    "numberOneDate": "2 de julio de 2005",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a54775a1814ca99c38e7a69bfc4dfb9e",
@@ -10049,7 +12365,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000693485.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000593523.jpg",
-    "displayName": "Con sólo una sonrisa - Melendi"
+    "displayName": "Con sólo una sonrisa - Melendi",
+    "numberOneDate": "10 de septiembre de 2005",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/eba3444d82d921763b48981ad31bdbdf752ae306?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "9acf5240ed7a602648cd69cdb8bd223d",
@@ -10062,7 +12381,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000532381.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000588099.jpg",
-    "displayName": "You're beautiful - James Blunt"
+    "displayName": "You're beautiful - James Blunt",
+    "numberOneDate": "19 de noviembre de 2005",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "fdddb3368b44f3ed209b213673526e14",
@@ -10075,7 +12397,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000494632.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000598074.jpg",
-    "displayName": "Zapatillas - El Canto del Loco"
+    "displayName": "Zapatillas - El Canto del Loco",
+    "numberOneDate": "16 de julio de 2005",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f622d42e97d821e1d96b7c4e21ab30a54c16ee92?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "99d0fa4d8c952034835a53c9d220674b",
@@ -10088,7 +12413,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000486150.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000585710.jpg",
-    "displayName": "Pokito a poko - Chambao"
+    "displayName": "Pokito a poko - Chambao",
+    "numberOneDate": "15 de octubre de 2005",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/68160239f0cab6dc0e20ff693eef46778dd17ff4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "646e3c881f30312b3344df92bbca48ef",
@@ -10101,7 +12429,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000462717.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000613938.jpg",
-    "displayName": "Welcome to my life - Simple Plan"
+    "displayName": "Welcome to my life - Simple Plan",
+    "numberOneDate": "5 de noviembre de 2005",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/3c5d0c1e8f9385ebdedecb37eda8b389ba00695c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "08258a6fd481af2200acff56c05bd778",
@@ -10114,7 +12445,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000677937.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000589607.jpg",
-    "displayName": "Antes que ver el sol - Coti"
+    "displayName": "Antes que ver el sol - Coti",
+    "numberOneDate": "24 de diciembre de 2005",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/10d8ce99f603eaf829bebad9b05bec73de1eb640?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "bb986539854bc3c87f45e2cc754fab8a",
@@ -10127,7 +12461,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000440436.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000632520.jpg",
-    "displayName": "Missing - Evanescence"
+    "displayName": "Missing - Evanescence",
+    "numberOneDate": "12 de marzo de 2005",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "46c53b48293db53388b27998c9e614c9",
@@ -10140,7 +12477,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000447884.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000585155.jpg",
-    "displayName": "Nunca volverá - El Sueño de Morfeo"
+    "displayName": "Nunca volverá - El Sueño de Morfeo",
+    "numberOneDate": "26 de marzo de 2005",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/87d241f4ab10a43ff1487bf2c9f1ab8b66076f0f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "63594664b7ee133ca721b87fbf2a9ead",
@@ -10153,7 +12493,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000551170.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000611444.jpg",
-    "displayName": "No - Shakira;Gustavo Cerati"
+    "displayName": "No - Shakira;Gustavo Cerati",
+    "numberOneDate": "26 de noviembre de 2005",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "71ba1ef82b6c1c4ce21902f54d3678e7",
@@ -10166,7 +12509,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000443963.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000585149.jpg",
-    "displayName": "Una tarde de sol - Manolo García"
+    "displayName": "Una tarde de sol - Manolo García",
+    "numberOneDate": "26 de febrero de 2005",
+    "spotifyUrl": "",
+    "bestPosition": "2"
   },
   {
     "id": "6c9474ef463a34153352f60f5a9bd447",
@@ -10179,7 +12525,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000566362.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000598074.jpg",
-    "displayName": "Volverá - El Canto del Loco"
+    "displayName": "Volverá - El Canto del Loco",
+    "numberOneDate": "17 de diciembre de 2005",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/4a20489b2e4974237a7e59a7872e352a68030de1?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "2"
   },
   {
     "id": "16319c374995d951c8e8c5d83b748f1d",
@@ -10192,7 +12541,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000000740.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000066490.jpg",
-    "displayName": "Sé lo que hicisteis - Melendi"
+    "displayName": "Sé lo que hicisteis - Melendi",
+    "numberOneDate": "22 de enero de 2005",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/8282eca11526f7a96c79009879641e716a4b4276?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "2"
   },
   {
     "id": "d8e55c7f1f7b52b9972f0048680e7062",
@@ -10205,7 +12557,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000641054.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000611463.jpg",
-    "displayName": "Hips don't lie - Shakira;Wyclef Jean"
+    "displayName": "Hips don't lie - Shakira;Wyclef Jean",
+    "numberOneDate": "13 de mayo de 2006",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "8816504fbca327dcbcc2be6176e98dea",
@@ -10218,7 +12573,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000635857.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000656155.jpg",
-    "displayName": "Muñeca de trapo - La Oreja de Van Gogh"
+    "displayName": "Muñeca de trapo - La Oreja de Van Gogh",
+    "numberOneDate": "20 de mayo de 2006",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/dade19a9faf45056ff9a4284af2548260baa63ca?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "f38781709cbad4f12eb1f19469444bef",
@@ -10231,7 +12589,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000597771.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000598074.jpg",
-    "displayName": "Besos - El Canto del Loco"
+    "displayName": "Besos - El Canto del Loco",
+    "numberOneDate": "2 de septiembre de 2006",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/26e932af41b0563851d2daa7db6f75414f5d0659?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "742f24012fe8fc9becb9cd0275358fcc",
@@ -10244,7 +12605,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000621905.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001076161.jpg",
-    "displayName": "Déjame verte - Diego Martín;Raquel del Rosarío"
+    "displayName": "Déjame verte - Diego Martín;Raquel del Rosarío",
+    "numberOneDate": "8 de abril de 2006",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "383620e9924822d6438e9d33edc58f78",
@@ -10257,7 +12621,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000621883.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001077754.jpg",
-    "displayName": "One - Mary J. Blige;U2"
+    "displayName": "One - Mary J. Blige;U2",
+    "numberOneDate": "3 de junio de 2006",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "5dff3ba5a9117d7766da66f280e6857d",
@@ -10270,7 +12637,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000648989.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001077072.jpg",
-    "displayName": "Me voy - Julieta Venegas"
+    "displayName": "Me voy - Julieta Venegas",
+    "numberOneDate": "15 de julio de 2006",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/abdbc265515633f834f30a637c992f13bfdf84a4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "b5abc0b87a52c99fa17090cf117e1162",
@@ -10283,7 +12653,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000584519.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000586883.jpg",
-    "displayName": "Resurrección - Amaral"
+    "displayName": "Resurrección - Amaral",
+    "numberOneDate": "12 de agosto de 2006",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9d1c00d134c16ecfd3c222438756de1221f7a40b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "175343886d0801b637565216736221ab",
@@ -10296,7 +12669,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001212867.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000727628.jpg",
-    "displayName": "Labios compartidos - Maná"
+    "displayName": "Labios compartidos - Maná",
+    "numberOneDate": "4 de noviembre de 2006",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/be633223d54287ead1ddc31ceb79e9cd81e700de?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "6db6fa7a758d55c4b96a0e6990cabd3f",
@@ -10309,7 +12685,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000681680.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000689696.jpg",
-    "displayName": "Por la boca vive el pez - Fito &amp;Fitipaldis"
+    "displayName": "Por la boca vive el pez - Fito &amp;Fitipaldis",
+    "numberOneDate": "25 de noviembre de 2006",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/bf0cd320a031098d3b12c809e02a75a7aee16f5b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "ea287169b23ebfcad9758fa170a6e141",
@@ -10322,7 +12701,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001160555.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001076171.jpg",
-    "displayName": "Let me out - Dover"
+    "displayName": "Let me out - Dover",
+    "numberOneDate": "9 de diciembre de 2006",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "9421bd320b61726337899ab44a6f2558",
@@ -10335,7 +12717,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000593764.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001668511.jpg",
-    "displayName": "Rutinas - Chenoa"
+    "displayName": "Rutinas - Chenoa",
+    "numberOneDate": "25 de febrero de 2006",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a8d80f43e0a0c33ef02a0aeaafe6bc5b6278dafa?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "ad1bc770a8908c54bd6aa4bc0d3333e6",
@@ -10348,7 +12733,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000654633.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000630767.jpg",
-    "displayName": "Malabares - Estopa"
+    "displayName": "Malabares - Estopa",
+    "numberOneDate": "9 de septiembre de 2006",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "61bc1888b5b9efe010980c11c31ffb78",
@@ -10361,7 +12749,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000656142.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000656155.jpg",
-    "displayName": "Dulce locura - La Oreja de Van Gogh"
+    "displayName": "Dulce locura - La Oreja de Van Gogh",
+    "numberOneDate": "14 de octubre de 2006",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1a8639ae8bd341af8f6957e0053add35dd73bdf2?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "6080a75b00883e7649d71b5761921ff6",
@@ -10374,7 +12765,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000675489.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001667090.jpg",
-    "displayName": "En qué estrella estará - Nena Daconte"
+    "displayName": "En qué estrella estará - Nena Daconte",
+    "numberOneDate": "28 de octubre de 2006",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/040623fcb93d87537acd081fd5f0a999abbebba7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "04d20423dc13282cefac8f71db28bc5c",
@@ -10387,7 +12781,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000584513.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000586883.jpg",
-    "displayName": "Marta, Sebas, Guille y los demás - Amaral"
+    "displayName": "Marta, Sebas, Guille y los demás - Amaral",
+    "numberOneDate": "4 de febrero de 2006",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/af261eecaaa0350d843290ffc836a1a77605c0ac?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "4a072d92d17c6ecda6822586bc1c23b4",
@@ -10400,7 +12797,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000521685.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000630854.jpg",
-    "displayName": "Todo - Pereza"
+    "displayName": "Todo - Pereza",
+    "numberOneDate": "22 de julio de 2006",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/8d76b34138980a4aa07cdde225d5db09b2de92a5?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "043e31e454451bb56f6690b631c92a5e",
@@ -10413,7 +12813,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000677899.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001077983.jpg",
-    "displayName": "Satellites - September"
+    "displayName": "Satellites - September",
+    "numberOneDate": "19 de agosto de 2006",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f8e7daf6ece9d8892593e66f9eea962145f71c43?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "d067288afd42bb318ab7b1e1fd5b1782",
@@ -10426,7 +12829,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000619937.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000630732.jpg",
-    "displayName": "Nothing else matters - Lucie Silvas"
+    "displayName": "Nothing else matters - Lucie Silvas",
+    "numberOneDate": "16 de septiembre de 2006",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/def328fb2c74e28ec3d56b0c99e1d3481b1c1b33?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "907bda86a2c7ce260fc38eabd484156d",
@@ -10439,7 +12845,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000673687.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000673693.jpg",
-    "displayName": "Te busqué - Nelly Furtado;Juanes"
+    "displayName": "Te busqué - Nelly Furtado;Juanes",
+    "numberOneDate": "2 de diciembre de 2006",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "2e0206864c5035ec10d203152a156214",
@@ -10452,7 +12861,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000611187.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000611444.jpg",
-    "displayName": "La pared - Shakira"
+    "displayName": "La pared - Shakira",
+    "numberOneDate": "30 de diciembre de 2006",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/91217265ccb8fc80f78acb100864b7c4e4a1b0c8?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "de44f412f499775f32a53bb1638c862c",
@@ -10465,7 +12877,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000602613.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000602639.jpg",
-    "displayName": "Sorry - Madonna"
+    "displayName": "Sorry - Madonna",
+    "numberOneDate": "1 de abril de 2006",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "dc985c9810a5e95a2078609022901c0c",
@@ -10478,7 +12893,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000669089.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000669090.jpg",
-    "displayName": "Te entiendo - Pignoise"
+    "displayName": "Te entiendo - Pignoise",
+    "numberOneDate": "10 de febrero de 2007",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a57bc0312b2aa719412198dca1ab72e5",
@@ -10491,7 +12909,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000699498.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001078030.jpg",
-    "displayName": "Patience - Take That"
+    "displayName": "Patience - Take That",
+    "numberOneDate": "10 de marzo de 2007",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d82cd7e17effd8007c43633aa3fd3c9463bbe9f2?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "e19aa47aed1a91b6d311faef0b6e0c2e",
@@ -10504,7 +12925,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000734040.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001076171.jpg",
-    "displayName": "Do ya - Dover"
+    "displayName": "Do ya - Dover",
+    "numberOneDate": "21 de abril de 2007",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "5cff4f3abbbe83b69ef928ed2906496a",
@@ -10517,7 +12941,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000727626.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000727628.jpg",
-    "displayName": "Manda una señal - Maná"
+    "displayName": "Manda una señal - Maná",
+    "numberOneDate": "12 de mayo de 2007",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/fda1b93155eac9736748c47aff7bec4c2e547ae0?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "e8f717f91cf332cc54d39fd8315916c9",
@@ -10530,7 +12957,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000718650.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000683219.jpg",
-    "displayName": "Me muero - La Quinta Estación"
+    "displayName": "Me muero - La Quinta Estación",
+    "numberOneDate": "26 de mayo de 2007",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/4f61ac7bcf9e0a36825f5f02104af8f757036445?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "021bd41614514cc32397e562a1882f6a",
@@ -10543,7 +12973,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000611191.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000611444.jpg",
-    "displayName": "Las de la intuición - Shakira"
+    "displayName": "Las de la intuición - Shakira",
+    "numberOneDate": "2 de junio de 2007",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/448f63abaeada42c6ff4a52cd646fe2a09367161?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "14ecd60bf04ee74a3ca05daf8ad9d599",
@@ -10556,7 +12989,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000746654.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000806106.jpg",
-    "displayName": "How to save a life - The Fray"
+    "displayName": "How to save a life - The Fray",
+    "numberOneDate": "30 de junio de 2007",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c808e35b385571cbda7ccf893c9c568b83a0390d?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "34d073fa46767e3965d12e0283eaf488",
@@ -10569,7 +13005,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000780680.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000673693.jpg",
-    "displayName": "All good things (Come to an end) - Nelly Furtado"
+    "displayName": "All good things (Come to an end) - Nelly Furtado",
+    "numberOneDate": "18 de agosto de 2007",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "4009e754156240754bb7c07c70640524",
@@ -10582,7 +13021,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000727621.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000748197.jpg",
-    "displayName": "When the stars go blue (Disclab remix) - The Corrs;Bono"
+    "displayName": "When the stars go blue (Disclab remix) - The Corrs;Bono",
+    "numberOneDate": "15 de septiembre de 2007",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "69dcff352e5ea3c3c97e8682e20a8f14",
@@ -10595,7 +13037,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000794110.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001079925.jpg",
-    "displayName": "Umbrella (No rap version) - Rihanna"
+    "displayName": "Umbrella (No rap version) - Rihanna",
+    "numberOneDate": "22 de septiembre de 2007",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "0aa92917ccf494e1428a9dd38fffdc59",
@@ -10608,7 +13053,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000765023.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000726126.jpg",
-    "displayName": "Nada que perder - Conchita"
+    "displayName": "Nada que perder - Conchita",
+    "numberOneDate": "3 de noviembre de 2007",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "4ca78d64f8ec5ce8defeccca4ff6f346",
@@ -10621,7 +13069,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520000844938.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001077069.jpg",
-    "displayName": "Me enamora - Juanes"
+    "displayName": "Me enamora - Juanes",
+    "numberOneDate": "17 de noviembre de 2007",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/32dd1b276ddc229c52d2688bb98f7917103a2b83?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "bda751e9ec5b3db75564af694488611c",
@@ -10634,7 +13085,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000696953.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000696966.jpg",
-    "displayName": "Silencio - David Bisbal"
+    "displayName": "Silencio - David Bisbal",
+    "numberOneDate": "27 de enero de 2007",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/cce64fb27eddb386cd7e3ae77476d64721591a49?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "22a08137f391372613cabe37457325bb",
@@ -10647,7 +13101,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001286057.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002163781.jpg",
-    "displayName": "Lucky - Lucky Twice"
+    "displayName": "Lucky - Lucky Twice",
+    "numberOneDate": "3 de febrero de 2007",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "68e8e768ff3b87da360aa8e26f96aa07",
@@ -10660,7 +13117,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000718239.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001161420.jpg",
-    "displayName": "En mi lado del sofá - La Oreja de Van Gogh"
+    "displayName": "En mi lado del sofá - La Oreja de Van Gogh",
+    "numberOneDate": "14 de abril de 2007",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d21ac7cc2767c5bc5cc710cd9028b542db7f2c16?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "d508e3ef18a63469ecfaa1c53f2b67bc",
@@ -10673,7 +13133,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000736017.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000769996.jpg",
-    "displayName": "Grace Kelly - Mika"
+    "displayName": "Grace Kelly - Mika",
+    "numberOneDate": "4 de agosto de 2007",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d49826e25922b21ada263bf53f29b1cddc0ddb61?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "bc8b43ca372aa979699bb7accd377fea",
@@ -10686,7 +13149,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000708977.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000746735.jpg",
-    "displayName": "Te lo agradezco, pero no - Alejandro Sanz;Shakira"
+    "displayName": "Te lo agradezco, pero no - Alejandro Sanz;Shakira",
+    "numberOneDate": "24 de febrero de 2007",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "2772bfe86e51fa7aae43cdcaa0f25d7e",
@@ -10699,7 +13165,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000473572.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000631241.jpg",
-    "displayName": "Unwritten - Natasha Bedingfield"
+    "displayName": "Unwritten - Natasha Bedingfield",
+    "numberOneDate": "23 de junio de 2007",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "b76375133b10e7db3d6fb872fc6af2e9",
@@ -10712,7 +13181,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000773216.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000773392.jpg",
-    "displayName": "Monsoon - Tokio Hotel"
+    "displayName": "Monsoon - Tokio Hotel",
+    "numberOneDate": "20 de octubre de 2007",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "153bce9785c1b517b111ab6dce54b21e",
@@ -10725,7 +13197,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000713283.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001078013.jpg",
-    "displayName": "Chasing cars - Snow Patrol"
+    "displayName": "Chasing cars - Snow Patrol",
+    "numberOneDate": "28 de julio de 2007",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "b6c07d790ffa4c6afda17dc3dfea620c",
@@ -10738,7 +13213,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001153241.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000745341.jpg",
-    "displayName": "Calle la Pantomima - Melendi"
+    "displayName": "Calle la Pantomima - Melendi",
+    "numberOneDate": "1 de septiembre de 2007",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6576c95e10e188ebbc5181f575ef20a9efdfb83b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "0afa4e6502f91793ecab54ece3c5a550",
@@ -10751,7 +13229,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000799869.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000897412.jpg",
-    "displayName": "Todo irá bien - Chenoa"
+    "displayName": "Todo irá bien - Chenoa",
+    "numberOneDate": "8 de diciembre de 2007",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "f6ddfa3b47dbdd63def79c1dc094fdad",
@@ -10764,7 +13245,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000787174.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000727628.jpg",
-    "displayName": "Ojala pudiera borrarte - Maná"
+    "displayName": "Ojala pudiera borrarte - Maná",
+    "numberOneDate": "15 de diciembre de 2007",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/59c8dd415eb989bc618c6cfc38e6bfa05c45bd56?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "0a936c1c76f56d83d1a0f272549cd2d9",
@@ -10777,7 +13261,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000787229.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000683219.jpg",
-    "displayName": "Sueños rotos - La Quinta Estación"
+    "displayName": "Sueños rotos - La Quinta Estación",
+    "numberOneDate": "26 de enero de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/743c2fa7d8b85b8556bc27ed2b760c13cfc14ceb?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "b2f311bed79dddee4e8acba503444313",
@@ -10790,7 +13277,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000807893.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001077771.jpg",
-    "displayName": "Estrella polar - Pereza;Juan Aguirre"
+    "displayName": "Estrella polar - Pereza;Juan Aguirre",
+    "numberOneDate": "9 de febrero de 2008",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "d82e7e8f3c773806eedb8a81517a00a4",
@@ -10803,7 +13293,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000749741.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000673693.jpg",
-    "displayName": "Say it right - Nelly Furtado"
+    "displayName": "Say it right - Nelly Furtado",
+    "numberOneDate": "15 de marzo de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d053b392d53d21c98d81b8d40f0a3664f82be362?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "6c049a54f5f5c37c83b3ed5350eb706f",
@@ -10816,7 +13309,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000847939.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000895704.jpg",
-    "displayName": "¡Eres tonto! - El Canto del Loco"
+    "displayName": "¡Eres tonto! - El Canto del Loco",
+    "numberOneDate": "26 de abril de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a1492d92ece6859e351acafe74f3ab8946af4758?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "b5fdd95e97c89eccc8e50ed281b5f2e4",
@@ -10829,7 +13325,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000830457.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000932495.jpg",
-    "displayName": "Cuando amanece - Estopa"
+    "displayName": "Cuando amanece - Estopa",
+    "numberOneDate": "3 de mayo de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/07d6dda69a8ebfa6292bd0d1056312f7ab5b496b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "f79399860c7e2fa9d47f9a6bd6036856",
@@ -10842,7 +13341,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000866338.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000922948.jpg",
-    "displayName": "Kamikaze - Amaral"
+    "displayName": "Kamikaze - Amaral",
+    "numberOneDate": "7 de junio de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d9495b6c337a08f17dd8e14fa182cd834e4e31c6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "419f16e5d7c6c3b8ca153a132111450b",
@@ -10855,7 +13357,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000855675.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001890254.jpg",
-    "displayName": "Mercy - Duffy"
+    "displayName": "Mercy - Duffy",
+    "numberOneDate": "19 de julio de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/bd50a1c2466faacdd71a10337098e98da9ed58f7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "4c14d965ecad133367bd3970f2a35c0e",
@@ -10868,7 +13373,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000878705.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001015047.jpg",
-    "displayName": "Ella elle l'a - Kate Ryan"
+    "displayName": "Ella elle l'a - Kate Ryan",
+    "numberOneDate": "2 de agosto de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/173cfbea0753074b1aff413c580834386011ea09?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "5e4448d08232098be608c1e45cc0f22f",
@@ -10881,7 +13389,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000902964.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001079788.jpg",
-    "displayName": "El último vals - La Oreja de Van Gogh"
+    "displayName": "El último vals - La Oreja de Van Gogh",
+    "numberOneDate": "11 de octubre de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/736c97c78063f41d52cf580e2939a7ddd531739c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "085ec5faa0975d698c47354c83166169",
@@ -10894,7 +13405,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000880552.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000899389.jpg",
-    "displayName": "Pretendo hablarte - Beatriz Luengo"
+    "displayName": "Pretendo hablarte - Beatriz Luengo",
+    "numberOneDate": "4 de octubre de 2008",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1d52b443b31ed920b6890f6e45448ae3",
@@ -10907,7 +13421,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000921285.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001010978.jpg",
-    "displayName": "Tenía tanto que darte - Nena Daconte"
+    "displayName": "Tenía tanto que darte - Nena Daconte",
+    "numberOneDate": "8 de noviembre de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/82d3847d78518afd7b20d2eec58045649bfbca95?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "0e844eea9c464794297cfc741d42ef6d",
@@ -10920,7 +13437,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000897138.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000897154.jpg",
-    "displayName": "Viva la vida - Coldplay"
+    "displayName": "Viva la vida - Coldplay",
+    "numberOneDate": "20 de diciembre de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/bb0a310830636ebf8e5f6a1fa03d129a9724f7ec?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "c728f17a4d39bcb93c6beb099f113061",
@@ -10933,7 +13453,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000821703.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001077785.jpg",
-    "displayName": "Don't stop the music - Rihanna"
+    "displayName": "Don't stop the music - Rihanna",
+    "numberOneDate": "16 de febrero de 2008",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "852673585bbd925db3b15b862e7af6df",
@@ -10946,7 +13469,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000838293.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001077769.jpg",
-    "displayName": "Apologize - OneRepublic"
+    "displayName": "Apologize - OneRepublic",
+    "numberOneDate": "17 de mayo de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/57fc66eb630c0b39fffdc0322e0f5a8ce2d7e89d?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "9957d8ffb1e1951e5dbe40afb4a41921",
@@ -10959,7 +13485,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000826742.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001077069.jpg",
-    "displayName": "Gotas de agua dulce - Juanes"
+    "displayName": "Gotas de agua dulce - Juanes",
+    "numberOneDate": "21 de junio de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/99d51bc8594292e96f9f83c31150f3db4bbc92ed?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "ac1df78e7be077a0e862e9b0c4bd1b7a",
@@ -10972,7 +13501,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000895691.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000895704.jpg",
-    "displayName": "Peter Pan - El Canto del Loco"
+    "displayName": "Peter Pan - El Canto del Loco",
+    "numberOneDate": "22 de noviembre de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/187b0bee080478e98b78feea98d85adb4a313fc8?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "7c9146a776a174577812bffe0e440456",
@@ -10985,7 +13517,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000952090.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001079769.jpg",
-    "displayName": "Quiero ser - Amaia Montero"
+    "displayName": "Quiero ser - Amaia Montero",
+    "numberOneDate": "27 de diciembre de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/13d10d122a7f05a1f7bdae3f9c863357fb020967?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "4d4699871c7d97322259697a5acfdacb",
@@ -10998,7 +13533,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000809934.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000810419.jpg",
-    "displayName": "Papeles mojados - Chambao"
+    "displayName": "Papeles mojados - Chambao",
+    "numberOneDate": "2 de febrero de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/bacea96d0f674bd88da9719cd916423df2cf6dc0?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "455e7123c825d1c66945e75f70e81d8c",
@@ -11011,7 +13549,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000815457.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001077758.jpg",
-    "displayName": "Cuando me vaya - Melocos;Natalia Jiménez"
+    "displayName": "Cuando me vaya - Melocos;Natalia Jiménez",
+    "numberOneDate": "1 de marzo de 2008",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "bdcd3ccd466d439e6270ba58e55c8322",
@@ -11024,7 +13565,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000823539.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000895313.jpg",
-    "displayName": "Bleeding love - Leona Lewis"
+    "displayName": "Bleeding love - Leona Lewis",
+    "numberOneDate": "5 de julio de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/b0aace1f8a27b540a9fd96775d7665e3e2b73029?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "d90b3e86d2ae93a7934e4e7efc44d651",
@@ -11037,7 +13581,10 @@ export const songs: Song[] = [
     "voices": "#ERROR!",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001191346.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001077979.jpg",
-    "displayName": "Beautiful girls - Sean Kingston"
+    "displayName": "Beautiful girls - Sean Kingston",
+    "numberOneDate": "12 de julio de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/417ad6ade9ea102c1e658d387fd958e80bc44440?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "296ae356294dd3d727933a237bdb4dff",
@@ -11050,7 +13597,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000956758.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000956775.jpg",
-    "displayName": "I kissed a girl - Katy Perry"
+    "displayName": "I kissed a girl - Katy Perry",
+    "numberOneDate": "6 de diciembre de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/032a438ff0402136137299c5c7df268e9729e96c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "3071ffa0c5118dc3529aa5bd41e2aaf8",
@@ -11063,7 +13613,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001952647.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001952705.jpg",
-    "displayName": "No one - Alicia Keys"
+    "displayName": "No one - Alicia Keys",
+    "numberOneDate": "12 de enero de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/319836ba32dfc550e7818c95885382c3bf1da61a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "8cc4adcaa9c32799d53ed310793c0001",
@@ -11076,7 +13629,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000729495.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001157989.jpg",
-    "displayName": "Rehab - Amy Winehouse"
+    "displayName": "Rehab - Amy Winehouse",
+    "numberOneDate": "29 de marzo de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f23cbd3db263f4f13a9eade00e5a008bc4b2090e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "618e7bec05b0909a51bda404a17c07e8",
@@ -11089,7 +13645,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000753211.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000746723.jpg",
-    "displayName": "Como un lobo - Miguel Bosé;Bimba Bosé"
+    "displayName": "Como un lobo - Miguel Bosé;Bimba Bosé",
+    "numberOneDate": "12 de abril de 2008",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "37836fe4509855da26a2cee7d7ea3e64",
@@ -11102,7 +13661,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520003149674.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001078623.jpg",
-    "displayName": "Rise up - Yves Larock"
+    "displayName": "Rise up - Yves Larock",
+    "numberOneDate": "13 de septiembre de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2dcad22ede69fc312bb546b67ac64894efe93bee?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "d550bd550ae6429820417f06bc7f449a",
@@ -11115,7 +13677,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000877188.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000877874.jpg",
-    "displayName": "No dudaría - Rosario"
+    "displayName": "No dudaría - Rosario",
+    "numberOneDate": "27 de septiembre de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/e899eba643d028255f51e0a91711fa5be9282793?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "2356c9beba1bda0902c5e0bdf7d8759a",
@@ -11128,7 +13693,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001012078.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001012090.jpg",
-    "displayName": "Un violinista en tu tejado - Melendi"
+    "displayName": "Un violinista en tu tejado - Melendi",
+    "numberOneDate": "25 de octubre de 2008",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/b8d7d7b6e43f8a44f79f5209b878aa419e1677c8?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "36308a981f5017a87e7ec5676f1d2a60",
@@ -11141,7 +13709,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000878671.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000906776.jpg",
-    "displayName": "About you now - Sugababes"
+    "displayName": "About you now - Sugababes",
+    "numberOneDate": "30 de agosto de 2008",
+    "spotifyUrl": "",
+    "bestPosition": "2"
   },
   {
     "id": "df13bda0ba2480b3256cdf244ca12c99",
@@ -11154,7 +13725,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000855726.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001077142.jpg",
-    "displayName": "Si no te hubieras ido - Maná"
+    "displayName": "Si no te hubieras ido - Maná",
+    "numberOneDate": "31 de mayo de 2008",
+    "spotifyUrl": "",
+    "bestPosition": "2"
   },
   {
     "id": "8667bfe300248c5006a16a6958eefff2",
@@ -11167,7 +13741,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000955351.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001079772.jpg",
-    "displayName": "If I were a boy - Beyoncé"
+    "displayName": "If I were a boy - Beyoncé",
+    "numberOneDate": "10 de enero de 2009",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f12c28a584052bea2731e3589644a77165b02f7c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "b9dae8233102334984e206764fca1a1c",
@@ -11180,7 +13757,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000932479.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000932495.jpg",
-    "displayName": "Hemicraneal - Estopa"
+    "displayName": "Hemicraneal - Estopa",
+    "numberOneDate": "24 de enero de 2009",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/46eebea582982da0c59c561a5417521bc67f41a5?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "cb554d99c7ee7143eb8e5a9a541dc2d4",
@@ -11193,7 +13773,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000963922.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001079807.jpg",
-    "displayName": "Beggin - Madcon"
+    "displayName": "Beggin - Madcon",
+    "numberOneDate": "7 de febrero de 2009",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "9bf19ade967442369622f83f58cec8e3",
@@ -11206,7 +13789,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000945768.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001043553.jpg",
-    "displayName": "Infinity 2008 - Guru Josh Project;Klaas"
+    "displayName": "Infinity 2008 - Guru Josh Project;Klaas",
+    "numberOneDate": "6 de junio de 2009",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "ee2b0ba95bb373b278dc1340aca544be",
@@ -11219,7 +13805,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000956763.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000956775.jpg",
-    "displayName": "Hot n cold - Katy Perry"
+    "displayName": "Hot n cold - Katy Perry",
+    "numberOneDate": "13 de junio de 2009",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1df30fc9a11b825b0a8ca4f304dee3210e2edd87?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "f05717d8769d37346157f7aac5fb8c0a",
@@ -11232,7 +13821,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001000492.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001096096.jpg",
-    "displayName": "I'm yours - Jason Mraz"
+    "displayName": "I'm yours - Jason Mraz",
+    "numberOneDate": "18 de julio de 2009",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "9e685bdb053da5a02315c1f40a9956a3",
@@ -11245,7 +13837,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001025479.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001065182.jpg",
-    "displayName": "Moving - Macaco"
+    "displayName": "Moving - Macaco",
+    "numberOneDate": "8 de agosto de 2009",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9f2fe328609f2a94ff03ada81d449f1a61def4bd?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "5ce1877602bc0d4e070ed5e2501b01de",
@@ -11258,7 +13853,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001083982.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001079772.jpg",
-    "displayName": "Halo - Beyoncé"
+    "displayName": "Halo - Beyoncé",
+    "numberOneDate": "22 de agosto de 2009",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/3c97985f3736fab6d4abcd2067f346a9b30955fa?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "dad96cb508d3e5e0a2a6b017bb5a6c22",
@@ -11271,7 +13869,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001152223.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001127320.jpg",
-    "displayName": "Summercat - Billie The Vision &amp;the Dancers"
+    "displayName": "Summercat - Billie The Vision &amp;the Dancers",
+    "numberOneDate": "29 de agosto de 2009",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "8cdbf870935a3c68dc049da4985a8cae",
@@ -11284,7 +13885,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001112474.dmp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001131635.jpg",
-    "displayName": "I gotta feeling - The Black Eyed Peas"
+    "displayName": "I gotta feeling - The Black Eyed Peas",
+    "numberOneDate": "19 de septiembre de 2009",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1098ade611cb18567cbd73f9976c474a92f976ff?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "71528b98aefd6527f7dfc14788d1eec1",
@@ -11297,7 +13901,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001131637.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001152662.jpg",
-    "displayName": "Antes de que cuente diez - Fito &amp;Fitipaldis"
+    "displayName": "Antes de que cuente diez - Fito &amp;Fitipaldis",
+    "numberOneDate": "14 de noviembre de 2009",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a7c00d73262471cb29a5dbe5061ef3b8de9df45a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "4013204c9cb627b42caee7f17a9ea93f",
@@ -11310,7 +13917,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000940070.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001078760.jpg",
-    "displayName": "Disturbia - Rihanna"
+    "displayName": "Disturbia - Rihanna",
+    "numberOneDate": "7 de marzo de 2009",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/09488cb8538d6eeb34272f6c68026b5711cc4e33?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "0de1b6385d6c10a2884d9f8938f2cea2",
@@ -11323,7 +13933,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000967098.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001115461.jpg",
-    "displayName": "Colgando en tus manos - Carlos Baute;Marta Sánchez"
+    "displayName": "Colgando en tus manos - Carlos Baute;Marta Sánchez",
+    "numberOneDate": "14 de marzo de 2009",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a106634e5385d87b8486aebff9380762",
@@ -11336,7 +13949,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001118416.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001146377.jpg",
-    "displayName": "Manos al aire - Nelly Furtado"
+    "displayName": "Manos al aire - Nelly Furtado",
+    "numberOneDate": "31 de octubre de 2009",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/86d7d569e7db006c2b36c19c640686dba03f50c6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "82452891af0fdf955000a18fe94fa898",
@@ -11349,7 +13965,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001166935.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001079766.jpg",
-    "displayName": "The boy does nothing - Alesha Dixon"
+    "displayName": "The boy does nothing - Alesha Dixon",
+    "numberOneDate": "25 de abril de 2009",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9d57c60b969f4a4f12657bc6ce6c448bd92bdf76?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "9c0321b9d0def11c0df6d101635190ef",
@@ -11362,7 +13981,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001083927.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001111846.jpg",
-    "displayName": "Por quererte - Efecto Mariposa"
+    "displayName": "Por quererte - Efecto Mariposa",
+    "numberOneDate": "3 de octubre de 2009",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/463ff8bcf561e036b16e1c525fee002fb30c991f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "a74e6da092077fc3399eacdabc122273",
@@ -11375,7 +13997,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001154207.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001154256.jpg",
-    "displayName": "Looking for paradise - Alejandro Sanz;Alicia Keys"
+    "displayName": "Looking for paradise - Alejandro Sanz;Alicia Keys",
+    "numberOneDate": "21 de noviembre de 2009",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "2e8205f2cff7e2c7d7c9cc2d62a7ac61",
@@ -11388,7 +14013,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001117241.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001890110.jpg",
-    "displayName": "Ayo technology - Milow"
+    "displayName": "Ayo technology - Milow",
+    "numberOneDate": "5 de diciembre de 2009",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "6851463725308b6bb9529efab120186d",
@@ -11401,7 +14029,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001009221.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001079790.jpg",
-    "displayName": "Que te quería - La Quinta Estación"
+    "displayName": "Que te quería - La Quinta Estación",
+    "numberOneDate": "4 de abril de 2009",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "0286157c9f197303a7cc3e9262cce4f7",
@@ -11414,7 +14045,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000958251.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001079770.jpg",
-    "displayName": "This is the life - Amy MacDonald"
+    "displayName": "This is the life - Amy MacDonald",
+    "numberOneDate": "18 de abril de 2009",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/fd8976d263490865aadf9cb6446e738475be0751?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "2548b1e6357e46abe15a8c6a09837a7e",
@@ -11427,7 +14061,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000883619.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001079793.jpg",
-    "displayName": "Just dance - Lady GaGa;Colby O'Donis"
+    "displayName": "Just dance - Lady GaGa;Colby O'Donis",
+    "numberOneDate": "9 de mayo de 2009",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "b45a217baf24554f532165fc351bf79d",
@@ -11440,7 +14077,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001056801.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001146328.jpg",
-    "displayName": "Estoy enfermo - Pignoise;Melendi"
+    "displayName": "Estoy enfermo - Pignoise;Melendi",
+    "numberOneDate": "20 de junio de 2009",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1a64568c03268c967c0ecdef73470c38",
@@ -11453,7 +14093,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001096447.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001120491.jpg",
-    "displayName": "When love takes over - David Guetta;Kelly Rowland"
+    "displayName": "When love takes over - David Guetta;Kelly Rowland",
+    "numberOneDate": "12 de septiembre de 2009",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "8437888e73585dbb2df871b7a68f9769",
@@ -11466,7 +14109,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001141868.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001209616.jpg",
-    "displayName": "Esclavo de sus besos - David Bisbal"
+    "displayName": "Esclavo de sus besos - David Bisbal",
+    "numberOneDate": "19 de diciembre de 2009",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/049483902b899950a6b3a4c99b1f1e4de767ea62?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "a00a500397dddee53c0aa173c81ac051",
@@ -11479,7 +14125,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010000988879.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000988934.jpg",
-    "displayName": "Human - The Killers"
+    "displayName": "Human - The Killers",
+    "numberOneDate": "23 de mayo de 2009",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/bb73674dea18033afbf8692db70c595b56d82acd?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "0e30a5cc3a610632a5ae6dd30b4d7805",
@@ -11492,7 +14141,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001077351.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001079793.jpg",
-    "displayName": "Poker face - Lady GaGa"
+    "displayName": "Poker face - Lady GaGa",
+    "numberOneDate": "1 de agosto de 2009",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/612e4cec7566a88dae1a3b1abc51bffeea2aeffc?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "bf3f6cc7b49d67d9d5486fe45230d437",
@@ -11505,7 +14157,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001184632.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000459445.jpg",
-    "displayName": "El run run - Rosario;Estopa"
+    "displayName": "El run run - Rosario;Estopa",
+    "numberOneDate": "20 de marzo de 2010",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "def84703fd25ad66951859e85af3b0e3",
@@ -11518,7 +14173,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001189855.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001111857.jpg",
-    "displayName": "Meet me halfway - The Black Eyed Peas"
+    "displayName": "Meet me halfway - The Black Eyed Peas",
+    "numberOneDate": "17 de abril de 2010",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "4636914fb183f98a5b3a9dcefad92f8f",
@@ -11531,7 +14189,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001262701.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001294554.jpg",
-    "displayName": "Waka waka (Esto es África) - Shakira;Freshlyground"
+    "displayName": "Waka waka (Esto es África) - Shakira;Freshlyground",
+    "numberOneDate": "31 de julio de 2010",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "9de9dbd5a172fba0e971ecc0614d1e85",
@@ -11544,7 +14205,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001262432.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001189936.jpg",
-    "displayName": "Alejandro - Lady GaGa"
+    "displayName": "Alejandro - Lady GaGa",
+    "numberOneDate": "11 de septiembre de 2010",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9d7d220e51c20a7e16f31866249f27ef0d244a77?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "dc8e5fc922bee9c2c25c758d5841032c",
@@ -11557,7 +14221,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001329407.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001270561.jpg",
-    "displayName": "Love the way you lie - Eminem;Rihanna"
+    "displayName": "Love the way you lie - Eminem;Rihanna",
+    "numberOneDate": "6 de noviembre de 2010",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "69f25511f59bad3ab608e547b24891b0",
@@ -11570,7 +14237,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001339807.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001355287.jpg",
-    "displayName": "Only girl (In the world) - Rihanna"
+    "displayName": "Only girl (In the world) - Rihanna",
+    "numberOneDate": "20 de noviembre de 2010",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/376c8483cb98075dcfb3024fd863e54037f7186d?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "20dfd4ff084c3cf80c9f944c66d9e7b4",
@@ -11583,7 +14253,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001335996.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001336297.jpg",
-    "displayName": "Loca - Shakira;El Cata"
+    "displayName": "Loca - Shakira;El Cata",
+    "numberOneDate": "4 de diciembre de 2010",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "aa6538b813b251dbd3a289c56bb125c3",
@@ -11596,7 +14269,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001191560.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001237523.jpg",
-    "displayName": "Tik tok - Ke$ha"
+    "displayName": "Tik tok - Ke$ha",
+    "numberOneDate": "10 de abril de 2010",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "050c2f07fe50d2f82020ef892cef5eac",
@@ -11609,7 +14285,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001255208.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001262429.jpg",
-    "displayName": "Stereo love - Edward Maya;Molella"
+    "displayName": "Stereo love - Edward Maya;Molella",
+    "numberOneDate": "15 de mayo de 2010",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "aa089832e32c9bf49ccbac5ccce96570",
@@ -11622,7 +14301,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001270546.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001267130.jpg",
-    "displayName": "Sick of love - Robert Ramírez"
+    "displayName": "Sick of love - Robert Ramírez",
+    "numberOneDate": "19 de junio de 2010",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "eab6f318889639575f465afa54cfa3ee",
@@ -11635,7 +14317,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001282593.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001297544.jpg",
-    "displayName": "Wavin' flag (Versión latina) - K'naan;David Bisbal"
+    "displayName": "Wavin' flag (Versión latina) - K'naan;David Bisbal",
+    "numberOneDate": "17 de julio de 2010",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "7a8f0c8c321fbc98b090a02662c42628",
@@ -11648,7 +14333,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001359809.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001237518.jpg",
-    "displayName": "El secreto de las tortugas - Maldita Nerea"
+    "displayName": "El secreto de las tortugas - Maldita Nerea",
+    "numberOneDate": "2 de octubre de 2010",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2cc2ee0fc312c6e41d835f6d0d00f7ed84e2d511?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "7ea03d029e801d18d73770fd975ab471",
@@ -11661,7 +14349,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001153915.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001153917.jpg",
-    "displayName": "Cry cry - Oceana"
+    "displayName": "Cry cry - Oceana",
+    "numberOneDate": "18 de diciembre de 2010",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2d0546e88fdbdce12d6ba62264ada6ab094cc0e1?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "89075bce4dfc6017dc7f2421c36dcdc1",
@@ -11674,7 +14365,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001149899.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001168163.jpg",
-    "displayName": "Happy - Leona Lewis"
+    "displayName": "Happy - Leona Lewis",
+    "numberOneDate": "2 de enero de 2010",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "344c830e7fa9db2e34372aeb64ccc3af",
@@ -11687,7 +14381,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001170815.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001237522.jpg",
-    "displayName": "Russian roulette - Rihanna"
+    "displayName": "Russian roulette - Rihanna",
+    "numberOneDate": "23 de enero de 2010",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "d51695b899f781b1cc9d570d36923d3f",
@@ -11700,7 +14397,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001127993.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010000949439.jpg",
-    "displayName": "Que nadie - Manuel Carrasco;Malú"
+    "displayName": "Que nadie - Manuel Carrasco;Malú",
+    "numberOneDate": "30 de enero de 2010",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1a7a6f90baf7ed7eaaa8e62b6d75145e",
@@ -11713,7 +14413,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001189839.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001189936.jpg",
-    "displayName": "Bad romance - Lady GaGa"
+    "displayName": "Bad romance - Lady GaGa",
+    "numberOneDate": "27 de febrero de 2010",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ae4df50a71b232ac74a36f326a605f3351c3e1e9?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "5538309454143038de3eaa470eed1eac",
@@ -11726,7 +14429,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001171829.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001185976.jpg",
-    "displayName": "Quiero aprender de ti - El Canto del Loco"
+    "displayName": "Quiero aprender de ti - El Canto del Loco",
+    "numberOneDate": "13 de marzo de 2010",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/94a20b2dc3776a112096504bd53b530ea056f3df?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "0267c863f7ae805193316ef6132c191c",
@@ -11739,7 +14445,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001157105.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001120491.jpg",
-    "displayName": "Sexy bitch - David Guetta;Akon"
+    "displayName": "Sexy bitch - David Guetta;Akon",
+    "numberOneDate": "5 de junio de 2010",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "29961b8da1ab3079f0b388d472fa7f76",
@@ -11752,7 +14461,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490002170372.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001189936.jpg",
-    "displayName": "Telephone - Lady GaGa;Beyoncé"
+    "displayName": "Telephone - Lady GaGa;Beyoncé",
+    "numberOneDate": "26 de junio de 2010",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a2cb1eafaba1dacf0043e486e7a0e2b0",
@@ -11765,7 +14477,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001301139.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001319368.jpg",
-    "displayName": "Club can't handle me - Flo Rida;David Guetta"
+    "displayName": "Club can't handle me - Flo Rida;David Guetta",
+    "numberOneDate": "25 de septiembre de 2010",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "6a0188fc647a90ce6c861c44af979f79",
@@ -11778,7 +14493,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001181125.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001154256.jpg",
-    "displayName": "Desde cuando - Alejandro Sanz"
+    "displayName": "Desde cuando - Alejandro Sanz",
+    "numberOneDate": "6 de marzo de 2010",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6479942161455b0b4f35a5d6b82962d7b075db1a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "55fbf404fd8f8baa49c5e0fe0051bb9b",
@@ -11791,7 +14509,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001145650..mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001237518.jpg",
-    "displayName": "Cosas que suenan a... - Maldita Nerea"
+    "displayName": "Cosas que suenan a... - Maldita Nerea",
+    "numberOneDate": "22 de mayo de 2010",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/b732fc481bff362cd92e4126ef1de483ef85af17?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "da281371aba9bcdfd5ba0ba7938822c7",
@@ -11804,7 +14525,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001211715..mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001279150.jpg",
-    "displayName": "Break your heart - Taio Cruz"
+    "displayName": "Break your heart - Taio Cruz",
+    "numberOneDate": "4 de septiembre de 2010",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "8d26881b3a60d0322c587e3af6b19c5e",
@@ -11817,7 +14541,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001377748.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002621412.jpg",
-    "displayName": "Hold my hand - Akon;Michael Jackson"
+    "displayName": "Hold my hand - Akon;Michael Jackson",
+    "numberOneDate": "5 de febrero de 2011",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "4b6ff107fbe192f5e7bf0ca0672e271d",
@@ -11830,7 +14557,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001339794.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001339822.jpg",
-    "displayName": "Blanco y negro - Malú"
+    "displayName": "Blanco y negro - Malú",
+    "numberOneDate": "26 de marzo de 2011",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6824e6b0755da14e6aa724fe92b9ed7367889f6a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "988108656c572336d73a922bc1ed28c2",
@@ -11843,7 +14573,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001427590.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001355287.jpg",
-    "displayName": "S&M - Rihanna"
+    "displayName": "S&M - Rihanna",
+    "numberOneDate": "21 de mayo de 2011",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1ddded6adc5b2f4e77088b793bd4e53123843f6c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "f3baf4007141940e530a6967a3371cf9",
@@ -11856,7 +14589,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520002652287.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001459220.jpg",
-    "displayName": "On the floor - Jennifer López;Pitbull"
+    "displayName": "On the floor - Jennifer López;Pitbull",
+    "numberOneDate": "4 de junio de 2011",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "4bbf383945b19bed12dbb55a386bc354",
@@ -11869,7 +14605,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001451149.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001783848.jpg",
-    "displayName": "Give me everything - Pitbull;Afrojack;Nayer;Ne-Yo"
+    "displayName": "Give me everything - Pitbull;Afrojack;Nayer;Ne-Yo",
+    "numberOneDate": "25 de junio de 2011",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "f01ec331dc630330f2b11699285e51c2",
@@ -11882,7 +14621,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001444998.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001508291.jpg",
-    "displayName": "Party rock anthem - LMFAO;GoonRock;Lauren Bennett"
+    "displayName": "Party rock anthem - LMFAO;GoonRock;Lauren Bennett",
+    "numberOneDate": "16 de julio de 2011",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "d444debe1a135d656d644cd49992c2ec",
@@ -11895,7 +14637,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001432671.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001830204.jpg",
-    "displayName": "Till the world ends - Britney Spears"
+    "displayName": "Till the world ends - Britney Spears",
+    "numberOneDate": "27 de agosto de 2011",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "650b8dc3a629541c87b8e59dc22bcf79",
@@ -11908,7 +14653,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001477239.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001542611.jpg",
-    "displayName": "Gimme the base (DJ) - Carlos Jean;Mandy Santos"
+    "displayName": "Gimme the base (DJ) - Carlos Jean;Mandy Santos",
+    "numberOneDate": "10 de septiembre de 2011",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "2d4790cfda5065d8728fdc2a1d7885fa",
@@ -11921,7 +14669,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001487961.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001346764.jpg",
-    "displayName": "Moves like Jagger - Maroon 5;Christina Aguilera"
+    "displayName": "Moves like Jagger - Maroon 5;Christina Aguilera",
+    "numberOneDate": "15 de octubre de 2011",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "3f6ce1c0f5a9fea59b97bf5c99d621ee",
@@ -11934,7 +14685,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001520799.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001530944.jpg",
-    "displayName": "We found love - Rihanna;Calvin Harris"
+    "displayName": "We found love - Rihanna;Calvin Harris",
+    "numberOneDate": "26 de noviembre de 2011",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "eeec7e55950de35e8f3fc987b5cd07c8",
@@ -11947,7 +14701,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001382618.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001373474.jpg",
-    "displayName": "The time (Dirty bit) - The Black Eyed Peas"
+    "displayName": "The time (Dirty bit) - The Black Eyed Peas",
+    "numberOneDate": "22 de enero de 2011",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "97e8c6844d813da3102f833ff082713a",
@@ -11960,7 +14717,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001395511.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001382682.jpg",
-    "displayName": "Who's that chick? - David Guetta;Rihanna"
+    "displayName": "Who's that chick? - David Guetta;Rihanna",
+    "numberOneDate": "19 de febrero de 2011",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "6fd8fe239e43189ac503acc7698ccdb6",
@@ -11973,7 +14733,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001397855.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001397870.jpg",
-    "displayName": "Tonight (I'm lovin' you) - Enrique Iglesias;DJ Frank E;Ludacris"
+    "displayName": "Tonight (I'm lovin' you) - Enrique Iglesias;DJ Frank E;Ludacris",
+    "numberOneDate": "26 de febrero de 2011",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "0142e7d20af1d1101d142884818f7237",
@@ -11986,7 +14749,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001417981.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001709684.jpg",
-    "displayName": "Bailando por ahí - Juan Magán"
+    "displayName": "Bailando por ahí - Juan Magán",
+    "numberOneDate": "3 de septiembre de 2011",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a171815815103ed42afe050ebf9ed33d2af2c5dc?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "eb737373a20f631ae7830f8cfac3ff48",
@@ -11999,7 +14765,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001334795.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001413749.jpg",
-    "displayName": "Danza Kuduro - Don Omar;Lucenzo"
+    "displayName": "Danza Kuduro - Don Omar;Lucenzo",
+    "numberOneDate": "17 de septiembre de 2011",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "8e933fbb7b80fb9d1be06b5bd927b840",
@@ -12012,7 +14781,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001473221.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001473350.jpg",
-    "displayName": "¿No podíamos ser agua? - Maldita Nerea"
+    "displayName": "¿No podíamos ser agua? - Maldita Nerea",
+    "numberOneDate": "19 de noviembre de 2011",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/936164d07e77311e3b3cd45aea4caae9de264d29?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "a14551353a0a38ca3c3b97ba33be1176",
@@ -12025,7 +14797,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001359804.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001237518.jpg",
-    "displayName": "Tú mirada me hace grande - Maldita Nerea"
+    "displayName": "Tú mirada me hace grande - Maldita Nerea",
+    "numberOneDate": "12 de marzo de 2011",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f001d35420a7c33ccbef057a3202c77f6dd75229?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "3d2edd65244392a74f1a9ed08247cb83",
@@ -12038,7 +14813,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001417971.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002025228.jpg",
-    "displayName": "Born this way - Lady GaGa"
+    "displayName": "Born this way - Lady GaGa",
+    "numberOneDate": "16 de abril de 2011",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9c8f0411d1521698639f540cc28a1dacd60ace93?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "1c36ff35cbce83596b378aa40538008d",
@@ -12051,7 +14829,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001410783.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001542611.jpg",
-    "displayName": "Lead the way - Carlos Jean;Electric Nana"
+    "displayName": "Lead the way - Carlos Jean;Electric Nana",
+    "numberOneDate": "7 de mayo de 2011",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "0eed99be84d875685eff7a4d3c6177f4",
@@ -12064,7 +14845,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001458843.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001458872.jpg",
-    "displayName": "Where them girls at - David Guetta;Flo Rida;Nicki Minaj"
+    "displayName": "Where them girls at - David Guetta;Flo Rida;Nicki Minaj",
+    "numberOneDate": "6 de agosto de 2011",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "e91e579cf1a5bdb8546822cc4be907d6",
@@ -12077,7 +14861,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001506417.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001783848.jpg",
-    "displayName": "Rain over me - Pitbull;Marc Anthony"
+    "displayName": "Rain over me - Pitbull;Marc Anthony",
+    "numberOneDate": "29 de octubre de 2011",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "25c3b621fc15543ebf9173e00f89cb96",
@@ -12090,7 +14877,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001493674.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001511465.jpg",
-    "displayName": "La niña que llora en tus fiestas - La Oreja de Van Gogh"
+    "displayName": "La niña que llora en tus fiestas - La Oreja de Van Gogh",
+    "numberOneDate": "1 de octubre de 2011",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2f908256d5108dbd44b1d9d28abfb7bd29167aaa?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "9117cda96d18f6d0b05fd35c11e6b472",
@@ -12103,7 +14893,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001341176.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001341178.jpg",
-    "displayName": "Barbie de extrarradio - Melendi"
+    "displayName": "Barbie de extrarradio - Melendi",
+    "numberOneDate": "8 de enero de 2011",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ea518b1ab24c1dc694cdfc3c07197adba2684763?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "908769bda0324b8d414a701650656345",
@@ -12116,7 +14909,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001392161.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001392725.jpg",
-    "displayName": "Mr. Saxobeat - Alexandra Stan"
+    "displayName": "Mr. Saxobeat - Alexandra Stan",
+    "numberOneDate": "14 de mayo de 2011",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/838b729523ab6032f7c769d4822737bc201c6144?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "16e1a979bcd47e47ea04f3cd3f521abf",
@@ -12129,7 +14925,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490002849967.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001830204.jpg",
-    "displayName": "I wanna go - Britney Spears"
+    "displayName": "I wanna go - Britney Spears",
+    "numberOneDate": "12 de noviembre de 2011",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "36644f6103e2d8af6876ae0559e8e7a3",
@@ -12142,7 +14941,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001508253.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001508114.jpg",
-    "displayName": "Titanium - David Guetta;Sia"
+    "displayName": "Titanium - David Guetta;Sia",
+    "numberOneDate": "17 de diciembre de 2011",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1ff30af547ba03a0c720e830c7764ef1",
@@ -12155,7 +14957,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001444618.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001391281.jpg",
-    "displayName": "Someone like you - Adele"
+    "displayName": "Someone like you - Adele",
+    "numberOneDate": "24 de diciembre de 2011",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d808ccb1a59c5f21a14cf8da9974558f84366933?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "2"
   },
   {
     "id": "bc2d1626c619dd8fdecf0d36947b4cde",
@@ -12168,7 +14973,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001453792.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002025228.jpg",
-    "displayName": "Judas - Lady GaGa"
+    "displayName": "Judas - Lady GaGa",
+    "numberOneDate": "18 de junio de 2011",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/bf216441a645b248f2aa1e2a34a4ccc0f26c9baf?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "2"
   },
   {
     "id": "e9879d5496d05165ea4ed65eb7ea86ef",
@@ -12181,7 +14989,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001452983.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001449725.jpg",
-    "displayName": "Fácil - Maldita Nerea"
+    "displayName": "Fácil - Maldita Nerea",
+    "numberOneDate": "2 de julio de 2011",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ef1692a4d09405b0733402c94d3525aa5965b228?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "2"
   },
   {
     "id": "54120bbb27f84204652ed7928662bfde",
@@ -12194,7 +15005,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001630478.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001515225.jpg",
-    "displayName": "Good feeling - Flo Rida"
+    "displayName": "Good feeling - Flo Rida",
+    "numberOneDate": "25 de febrero de 2012",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9b7c873ffd4d9893608532492679e0dfca0229f9?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "18f1a1d1f01a83855289267b81bc4c1e",
@@ -12207,7 +15021,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001583302.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001691774.jpg",
-    "displayName": "Te he echado de menos - Pablo Alborán"
+    "displayName": "Te he echado de menos - Pablo Alborán",
+    "numberOneDate": "12 de mayo de 2012",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/8ff7ee82768e83e3f8afbef0b0f6cb2d2f5891cf?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "685f3046628ae3e3842f914dcb3cdca8",
@@ -12220,7 +15037,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001544254.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002641471.jpg",
-    "displayName": "Somebody that I used to know - Gotye;Kimbra"
+    "displayName": "Somebody that I used to know - Gotye;Kimbra",
+    "numberOneDate": "23 de junio de 2012",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "ff7dc9ce0dea2e47f8b1c1c160407a77",
@@ -12233,7 +15053,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490003075613.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/490003075615.jpg",
-    "displayName": "Call me maybe - Carly Rae Jepsen"
+    "displayName": "Call me maybe - Carly Rae Jepsen",
+    "numberOneDate": "14 de julio de 2012",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0e832a7f2198e5943d5554aa435b743591e062c8?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "1e39faceb35baffd59245f544cb2354d",
@@ -12246,7 +15069,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001672854.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001696131.jpg",
-    "displayName": "Tanto - Pablo Alborán"
+    "displayName": "Tanto - Pablo Alborán",
+    "numberOneDate": "3 de noviembre de 2012",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d24404e407f0217b0e5ee443f46e8c661cc5af17?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "a4d6cd2dac9e97988800d6aec4a92df1",
@@ -12259,7 +15085,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001680368.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001685157.jpg",
-    "displayName": "Diamonds - Rihanna"
+    "displayName": "Diamonds - Rihanna",
+    "numberOneDate": "8 de diciembre de 2012",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a20162103852da590771464342f77de1e6477735?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "a332eee85ff1a64bc3ba996259e8421f",
@@ -12272,7 +15101,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520002991402.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520003082728.jpg",
-    "displayName": "Ai se eu te pego - Michel Teló"
+    "displayName": "Ai se eu te pego - Michel Teló",
+    "numberOneDate": "21 de enero de 2012",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a35feafb485d189769903c3cf06d55b5d8eac506?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "1f57c8ef46ef8aa1f4ee96dde85a6e40",
@@ -12285,7 +15117,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002624483.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001783848.jpg",
-    "displayName": "International love - Pitbull;Chris Brown"
+    "displayName": "International love - Pitbull;Chris Brown",
+    "numberOneDate": "24 de marzo de 2012",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1014422ff49c14dbfb64a734945a0b74",
@@ -12298,7 +15133,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001547132.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001835468.jpg",
-    "displayName": "Stronger (What doesn't kill you) - Kelly Clarkson"
+    "displayName": "Stronger (What doesn't kill you) - Kelly Clarkson",
+    "numberOneDate": "19 de mayo de 2012",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "512d20c4a97b3091f771fc846b4ce9bb",
@@ -12311,7 +15149,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001660282.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001660283.jpg",
-    "displayName": "Te voy a esperar - Juan Magán;Belinda"
+    "displayName": "Te voy a esperar - Juan Magán;Belinda",
+    "numberOneDate": "13 de octubre de 2012",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "d428b671e53638d3531dd3f7a8d0f404",
@@ -12324,7 +15165,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490003048243.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001391281.jpg",
-    "displayName": "Set fire to the rain - Adele"
+    "displayName": "Set fire to the rain - Adele",
+    "numberOneDate": "1 de diciembre de 2012",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/70e56ff5287602e2720bec6838e51cb89fa2ce2d?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "19262be32ab958f2d3e92d327cbae0d5",
@@ -12337,7 +15181,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001532163.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001536589.jpg",
-    "displayName": "Stereo hearts - Gym Class Heroes;Adam Levine"
+    "displayName": "Stereo hearts - Gym Class Heroes;Adam Levine",
+    "numberOneDate": "10 de marzo de 2012",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "cc682d632096f25fa2182b262fa4767e",
@@ -12350,7 +15197,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001536576.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001536578.jpg",
-    "displayName": "Hangover - Taio Cruz;Flo Rida"
+    "displayName": "Hangover - Taio Cruz;Flo Rida",
+    "numberOneDate": "17 de marzo de 2012",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "59d815f139f4898d3143779ca3b85b9c",
@@ -12363,7 +15213,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520002860184.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520003078945.jpg",
-    "displayName": "Yo te esperaré - Cali y El Dandee"
+    "displayName": "Yo te esperaré - Cali y El Dandee",
+    "numberOneDate": "14 de abril de 2012",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "2631aa2924aa2cbfe4dbd53848c560fe",
@@ -12376,7 +15229,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001605026.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001608585.jpg",
-    "displayName": "We are young - Fun.;Janelle Monaé"
+    "displayName": "We are young - Fun.;Janelle Monaé",
+    "numberOneDate": "1 de septiembre de 2012",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "c9262f553310035dcfe29722a7a48374",
@@ -12389,7 +15245,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001678205.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001678206.jpg",
-    "displayName": "Gangnam style - PSY"
+    "displayName": "Gangnam style - PSY",
+    "numberOneDate": "29 de diciembre de 2012",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/bc7dafd09663cfd4c8e61bca13236460111d22a3?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "dc9edf8f5c858321245da2575470a358",
@@ -12402,7 +15261,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001530672.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001511465.jpg",
-    "displayName": "Cometas por el cielo - La Oreja de Van Gogh"
+    "displayName": "Cometas por el cielo - La Oreja de Van Gogh",
+    "numberOneDate": "18 de febrero de 2012",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/b29b022f1c6dd65b3013e1979c8a5fa17be5f9c0?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "4c752801b0cfb4bfeaf7857c67ffeddc",
@@ -12415,7 +15277,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001608391.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001617737.jpg",
-    "displayName": "Boys will be boys - Paulina Rubio"
+    "displayName": "Boys will be boys - Paulina Rubio",
+    "numberOneDate": "2 de junio de 2012",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "f6c1ff5f8df742994fe6bc4ea6fa7f34",
@@ -12428,7 +15293,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001614089.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001614091.jpg",
-    "displayName": "Euphoria - Loreen"
+    "displayName": "Euphoria - Loreen",
+    "numberOneDate": "30 de junio de 2012",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0a479cc2b321a6e197404e2e4183937714207788?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "43db21153f81dbb248242b939aee5bce",
@@ -12441,7 +15309,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001630103.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001630116.jpg",
-    "displayName": "No hay 2 sin 3 (Gol) - Cali y El Dandee;David Bisbal"
+    "displayName": "No hay 2 sin 3 (Gol) - Cali y El Dandee;David Bisbal",
+    "numberOneDate": "7 de julio de 2012",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "df6de7974f8e981c3d9507e5fb745db9",
@@ -12454,7 +15325,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002015482.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001983940.jpg",
-    "displayName": "Payphone - Maroon 5;Wiz Khalifa"
+    "displayName": "Payphone - Maroon 5;Wiz Khalifa",
+    "numberOneDate": "28 de julio de 2012",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "79a4e4edf3965addbbc0a399ffbf322a",
@@ -12467,7 +15341,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001511514.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001512313.jpg",
-    "displayName": "Rayos de sol - Jose de Rico &amp;Henry Méndez"
+    "displayName": "Rayos de sol - Jose de Rico &amp;Henry Méndez",
+    "numberOneDate": "18 de agosto de 2012",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/45df53c26814f9ff1a7e16f5b7c86988fbba1ccc?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "b53e8384f3d04c7d1162d75766260951",
@@ -12480,7 +15357,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001636929.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001636930.jpg",
-    "displayName": "Whistle - Flo Rida"
+    "displayName": "Whistle - Flo Rida",
+    "numberOneDate": "6 de octubre de 2012",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/957b3f190456c949010b102381b6e3e6c05d61b6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "d71aecc751f9fc940d42a3dbce692d89",
@@ -12493,7 +15373,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001676847.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001676848.jpg",
-    "displayName": "Se vende - Alejandro Sanz"
+    "displayName": "Se vende - Alejandro Sanz",
+    "numberOneDate": "27 de octubre de 2012",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/45636795c97d390487dfaa678de8209bc0f30308?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "45d9f967387db347dcffbd59959dc1e7",
@@ -12506,7 +15389,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001639644.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001639674.jpg",
-    "displayName": "This is love - Will.I.Am;Eva Simons"
+    "displayName": "This is love - Will.I.Am;Eva Simons",
+    "numberOneDate": "22 de diciembre de 2012",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a9b0fa525cc696c4581ee9c8bec79deb",
@@ -12519,7 +15405,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001506418.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001557630.jpg",
-    "displayName": "Got 2 luv u - Sean Paul;Alexis Jordan"
+    "displayName": "Got 2 luv u - Sean Paul;Alexis Jordan",
+    "numberOneDate": "4 de febrero de 2012",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "f0708a7b08517d64b58ed55a3f16c48c",
@@ -12532,7 +15421,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001902661.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001615182.jpg",
-    "displayName": "Dance again - Jennifer López;Pitbull"
+    "displayName": "Dance again - Jennifer López;Pitbull",
+    "numberOneDate": "4 de agosto de 2012",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "ca5d70b56f57b3a786c0038bff8ccb73",
@@ -12545,7 +15437,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001627527.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001624132.jpg",
-    "displayName": "Tacatá - Tacabro"
+    "displayName": "Tacatá - Tacabro",
+    "numberOneDate": "11 de agosto de 2012",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/199e770dab676a1cc007eee3d3054db13373a9be?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "14ef9cd02cc8245c9bd4150aad9ad35c",
@@ -12558,7 +15453,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001554917.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001643793.jpg",
-    "displayName": "Drive by - Train"
+    "displayName": "Drive by - Train",
+    "numberOneDate": "8 de septiembre de 2012",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/865f82fe864c025256b3871e0317d5d2229be147?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "648fd1262976aa690de87a40375ed07d",
@@ -12571,7 +15469,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001635798.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001761692.jpg",
-    "displayName": "Pan y mantequilla - Efecto Pasillo"
+    "displayName": "Pan y mantequilla - Efecto Pasillo",
+    "numberOneDate": "22 de septiembre de 2012",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/59feb27282801477f8e5a360e3a79d66bbede81c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "6dd14f26d1131579443c51ba934a49a4",
@@ -12584,7 +15485,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001537064.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001294563.jpg",
-    "displayName": "The one that got away - Katy Perry"
+    "displayName": "The one that got away - Katy Perry",
+    "numberOneDate": "21 de abril de 2012",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/da6975c9ffafe362745df4f0a08784bac50ece37?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "2"
   },
   {
     "id": "069a6455f9ad264aa2a8ea723bd356b0",
@@ -12597,7 +15501,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001683161.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001868325.jpg",
-    "displayName": "Locked out of heaven - Bruno Mars"
+    "displayName": "Locked out of heaven - Bruno Mars",
+    "numberOneDate": "2 de febrero de 2013",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c647489f28d840b545b90e10067012f504dc7b68?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "4df44edeb909e63d310db101c43704c9",
@@ -12610,7 +15517,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001719262.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001688009.jpg",
-    "displayName": "Feel this moment - Pitbull;Christina Aguilera"
+    "displayName": "Feel this moment - Pitbull;Christina Aguilera",
+    "numberOneDate": "13 de abril de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "6349de076e9cd1363bf51755bf596288",
@@ -12623,7 +15533,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001751650.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001711258.jpg",
-    "displayName": "I could be the one - Avicii;Nicky Romero"
+    "displayName": "I could be the one - Avicii;Nicky Romero",
+    "numberOneDate": "6 de julio de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "ff2c387c25424fdeb95093cc6e0009c2",
@@ -12636,7 +15549,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001739247.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001739248.jpg",
-    "displayName": "Let her go - Passenger"
+    "displayName": "Let her go - Passenger",
+    "numberOneDate": "13 de julio de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "5b5f6d99642e4e04a7832837728d0af0",
@@ -12649,7 +15565,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001780036.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001822368.jpg",
-    "displayName": "Cero - Dani Martín"
+    "displayName": "Cero - Dani Martín",
+    "numberOneDate": "3 de agosto de 2013",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9812548a79dd723d651afc6504b2e1afb24e7c2c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "d4714de9042d2bbbb72d872c315dee4b",
@@ -12662,7 +15581,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001762006.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001762008.jpg",
-    "displayName": "Blurred lines - Robin Thicke;Pharrell Williams;T.I."
+    "displayName": "Blurred lines - Robin Thicke;Pharrell Williams;T.I.",
+    "numberOneDate": "10 de agosto de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "c102ce005c2cae129db966b559d3e0ba",
@@ -12675,7 +15597,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001799268.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001794529.jpg",
-    "displayName": "Burn - Ellie Goulding"
+    "displayName": "Burn - Ellie Goulding",
+    "numberOneDate": "23 de noviembre de 2013",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a2a879e38507b29478cad087e8978fe58c1bb90f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "b12bcac85eda60869400cf24c70cc4d7",
@@ -12688,7 +15613,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001838243.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001838245.jpg",
-    "displayName": "Story of my life - One Direction"
+    "displayName": "Story of my life - One Direction",
+    "numberOneDate": "21 de diciembre de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "202ed1954d804e3f72c2697d7d40e491",
@@ -12701,7 +15629,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001672871.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001672872.jpg",
-    "displayName": "Girl on fire - Alicia Keys"
+    "displayName": "Girl on fire - Alicia Keys",
+    "numberOneDate": "19 de enero de 2013",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f509e28bb7cbffb4d2a337afe31c7ade6bf846b2?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "16ecceed233871f43fd7b613d922892d",
@@ -12714,7 +15645,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001676145.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001824720.jpg",
-    "displayName": "Lágrimas desordenadas - Melendi"
+    "displayName": "Lágrimas desordenadas - Melendi",
+    "numberOneDate": "23 de febrero de 2013",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/8f4e2cdbe3f1cfcd80094941db2023d957e405bb?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "e542a961fc618a44d85248a51eecd4bd",
@@ -12727,7 +15661,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001716898.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002332005.jpg",
-    "displayName": "Scream & shout - Will.I.Am;Britney Spears"
+    "displayName": "Scream & shout - Will.I.Am;Britney Spears",
+    "numberOneDate": "2 de marzo de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "b22fb51a2381b610bc064e7c750b4eff",
@@ -12740,7 +15677,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001708779..mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001761692.jpg",
-    "displayName": "No importa que llueva - Efecto Pasillo"
+    "displayName": "No importa que llueva - Efecto Pasillo",
+    "numberOneDate": "20 de abril de 2013",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c9087e56b5fa9ee2f6b9265556798af89198d9c3?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "31bae78c8cf7e80f91eb89b8ac8722bc",
@@ -12753,7 +15693,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001753792.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001716957.jpg",
-    "displayName": "Thrift shop - Macklemore &amp;Ryan Lewis;Wanz"
+    "displayName": "Thrift shop - Macklemore &amp;Ryan Lewis;Wanz",
+    "numberOneDate": "15 de junio de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a83ab59365e183c7c428b6e017d4e612",
@@ -12766,7 +15709,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001780678.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001834478.jpg",
-    "displayName": "More than friends - Inna;Daddy Yankee"
+    "displayName": "More than friends - Inna;Daddy Yankee",
+    "numberOneDate": "27 de julio de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "36c84f24bf4ec602e788e75c244ede5f",
@@ -12779,7 +15725,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001801315.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001817542.jpg",
-    "displayName": "Wake me up! - Avicii;Aloe Blacc"
+    "displayName": "Wake me up! - Avicii;Aloe Blacc",
+    "numberOneDate": "14 de septiembre de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "47beba2c3a346762f7729ce617a746a1",
@@ -12792,7 +15741,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001782032.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001782034.jpg",
-    "displayName": "We can't stop - Miley Cyrus"
+    "displayName": "We can't stop - Miley Cyrus",
+    "numberOneDate": "5 de octubre de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "5a7c722f6a568a883e6b45139cedc42c",
@@ -12805,7 +15757,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001824186.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001816911.jpg",
-    "displayName": "Wrecking ball - Miley Cyrus"
+    "displayName": "Wrecking ball - Miley Cyrus",
+    "numberOneDate": "16 de noviembre de 2013",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/73f134920237db5f77576099534ac22fd6773b96?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "72a4d1c26aa93d9ce85e5a3bbab70e40",
@@ -12818,7 +15773,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001793855.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001718166.jpg",
-    "displayName": "Counting stars - OneRepublic"
+    "displayName": "Counting stars - OneRepublic",
+    "numberOneDate": "30 de noviembre de 2013",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/4967b47edcd7d1c2dde17a52fdb94687a8e9dc58?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "f60afcb0a865e44be1600a7fe3d81981",
@@ -12831,7 +15789,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001830284.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001886851.jpg",
-    "displayName": "Timber - Pitbull;Ke$ha"
+    "displayName": "Timber - Pitbull;Ke$ha",
+    "numberOneDate": "28 de diciembre de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "d7d17323cbf4444b3619e15688e0df8c",
@@ -12844,7 +15805,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001716631.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001824720.jpg",
-    "displayName": "Tu jardín con enanitos - Melendi"
+    "displayName": "Tu jardín con enanitos - Melendi",
+    "numberOneDate": "11 de mayo de 2013",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/81ba061f3fec83fc5f6763092dfcc258d160774c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "72efa84bb63464d3b538b1604c1bfdea",
@@ -12857,7 +15821,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001682532.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001754360.jpg",
-    "displayName": "I love it - Icona Pop;Charli XCX"
+    "displayName": "I love it - Icona Pop;Charli XCX",
+    "numberOneDate": "24 de agosto de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1e624ab2e5331605d501093f26d30978",
@@ -12870,7 +15837,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001698614.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001676848.jpg",
-    "displayName": "Mi marciana - Alejandro Sanz"
+    "displayName": "Mi marciana - Alejandro Sanz",
+    "numberOneDate": "26 de enero de 2013",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/db131d8766bf38670a33e38c4967ee20e8df6df0?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "2c4ebe41518434809e31583052467a1b",
@@ -12883,7 +15853,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001670861.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001670862.jpg",
-    "displayName": "Don't you worry child - Swedish House Mafia;John Martin"
+    "displayName": "Don't you worry child - Swedish House Mafia;John Martin",
+    "numberOneDate": "16 de febrero de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "fd7289d90e5dc5c3708d26c0aac13f0e",
@@ -12896,7 +15869,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001724034.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001716944.jpg",
-    "displayName": "Ho hey - The Lumineers"
+    "displayName": "Ho hey - The Lumineers",
+    "numberOneDate": "27 de abril de 2013",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/57e57e6eb594e55de01b85cea4d470243f6121f5?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "f7fafe18809f08ab6423b59409e595b5",
@@ -12909,7 +15885,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001717165.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001830882.jpg",
-    "displayName": "Impossible - James Arthur"
+    "displayName": "Impossible - James Arthur",
+    "numberOneDate": "18 de mayo de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "ae3240d4780abe7bf8a87704dcedff3d",
@@ -12922,7 +15901,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001732769.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001777771.jpg",
-    "displayName": "Heartbreaker - Auryn"
+    "displayName": "Heartbreaker - Auryn",
+    "numberOneDate": "1 de junio de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "4405f9294dcf332161b72ba3ef97f50a",
@@ -12935,7 +15917,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001768972.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001777609.jpg",
-    "displayName": "Get lucky - Daft Punk;Pharrell Williams;Nile Rodgers"
+    "displayName": "Get lucky - Daft Punk;Pharrell Williams;Nile Rodgers",
+    "numberOneDate": "29 de junio de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "c56d6963a86fe9500eb3ed7723c607a8",
@@ -12948,7 +15933,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001779118.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001798774.jpg",
-    "displayName": "La la la - Naughty Boy;Sam Smith"
+    "displayName": "La la la - Naughty Boy;Sam Smith",
+    "numberOneDate": "28 de septiembre de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "be0ff8331b648c10482a37bfe8d9562b",
@@ -12961,7 +15949,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002841168.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001885736.jpg",
-    "displayName": "Love me again - John Newman"
+    "displayName": "Love me again - John Newman",
+    "numberOneDate": "2 de noviembre de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "75735f970d0fe5c54679276198260896",
@@ -12974,7 +15965,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001666092.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001666093.jpg",
-    "displayName": "We are never ever getting back together - Taylor Swift"
+    "displayName": "We are never ever getting back together - Taylor Swift",
+    "numberOneDate": "12 de enero de 2013",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a9bbab66160a6201a4d52aa9372fc5ce3038f87f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "ffa749e5879b5858f0e9509c85bd39dd",
@@ -12987,7 +15981,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001685743.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001685850.jpg",
-    "displayName": "Try - P!nk"
+    "displayName": "Try - P!nk",
+    "numberOneDate": "23 de marzo de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "5bedad677bb5ca223d630efe58a1962c",
@@ -13000,7 +15997,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001660235.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001680133.jpg",
-    "displayName": "Hall of fame - The Script;Will.I.Am"
+    "displayName": "Hall of fame - The Script;Will.I.Am",
+    "numberOneDate": "30 de marzo de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "69f489303a313beb5c7260777aa62735",
@@ -13013,7 +16013,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001803334.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001772747.jpg",
-    "displayName": "Can't hold us - Macklemore &amp;Ryan Lewis;Ray Dalton"
+    "displayName": "Can't hold us - Macklemore &amp;Ryan Lewis;Ray Dalton",
+    "numberOneDate": "12 de octubre de 2013",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "289cb06be97c109bc6c5d7de3c16ce1e",
@@ -13026,7 +16029,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001806740.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001843407.jpg",
-    "displayName": "Roar - Katy Perry"
+    "displayName": "Roar - Katy Perry",
+    "numberOneDate": "26 de octubre de 2013",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0b536cd4f5da6b8fece3cca2dbfc4dd34c31295e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "56e78f2ec6bf995d4c7cc430e97229b1",
@@ -13039,7 +16045,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001668197.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001629085.jpg",
-    "displayName": "One more night - Maroon 5"
+    "displayName": "One more night - Maroon 5",
+    "numberOneDate": "9 de febrero de 2013",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/70523022e8c7ee99981fabe85f86d6912fa6e31f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "2"
   },
   {
     "id": "0896c162ed4a29dde88ac5e0c081212a",
@@ -13052,7 +16061,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001840009.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001846659.jpg",
-    "displayName": "The monster - Eminem;Rihanna"
+    "displayName": "The monster - Eminem;Rihanna",
+    "numberOneDate": "18 de enero de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "68748e28fc114ea563381bad57205d2d",
@@ -13065,7 +16077,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001854346.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001817542.jpg",
-    "displayName": "Hey brother - Avicii;Dan Tyminski"
+    "displayName": "Hey brother - Avicii;Dan Tyminski",
+    "numberOneDate": "8 de febrero de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "081d41677084e971ddfe2f3520f182d2",
@@ -13078,7 +16093,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001867812.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001876209.jpg",
-    "displayName": "Can't remember to forget you - Shakira;Rihanna"
+    "displayName": "Can't remember to forget you - Shakira;Rihanna",
+    "numberOneDate": "22 de marzo de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "837c80e50d83de8e1bd14ee5cc9ed87c",
@@ -13091,7 +16109,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001809698.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001940539.jpg",
-    "displayName": "Wings - Birdy"
+    "displayName": "Wings - Birdy",
+    "numberOneDate": "26 de abril de 2014",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/418e8af6d5c10f63d4aed7dc403237976f20cbbe?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "e6bd3c7b6bc67557ba68fba1a58b12ac",
@@ -13104,7 +16125,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001898871.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001876209.jpg",
-    "displayName": "Dare (La la la) - Shakira"
+    "displayName": "Dare (La la la) - Shakira",
+    "numberOneDate": "14 de junio de 2014",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/bb8697b4dc4a9872aab8296a37d0e6b6b5fad67e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "6e4061d718ae7d949ac31504dbf3cdff",
@@ -13117,7 +16141,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001875420.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001807694.jpg",
-    "displayName": "All of me - John Legend"
+    "displayName": "All of me - John Legend",
+    "numberOneDate": "28 de junio de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "93e7c7d1ee7e708ef7bf7c0762ebfca5",
@@ -13130,7 +16157,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001905715.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001904800.jpg",
-    "displayName": "Cola song - Inna;J Balvin"
+    "displayName": "Cola song - Inna;J Balvin",
+    "numberOneDate": "19 de julio de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a9248c8c2a87b0bdf0c191bb9f4c5e03",
@@ -13143,7 +16173,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001877802.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001934244.jpg",
-    "displayName": "Rude - MAGIC!"
+    "displayName": "Rude - MAGIC!",
+    "numberOneDate": "27 de septiembre de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "7bd2b30fe5da6746bfdd429f2dd15aba",
@@ -13156,7 +16189,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570004158580.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001985925.jpg",
-    "displayName": "All about that bass - Meghan Trainor"
+    "displayName": "All about that bass - Meghan Trainor",
+    "numberOneDate": "25 de octubre de 2014",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/25128e3ab7e61b593d5f15ab601369bc83bd9c5e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "52fd49ccb95c19572ce140c177999e47",
@@ -13169,7 +16205,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001893060.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001942707.jpg",
-    "displayName": "Chandelier - Sia"
+    "displayName": "Chandelier - Sia",
+    "numberOneDate": "22 de noviembre de 2014",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f1898cf5fd5640d4f0d7faafa6c572fc29db3db6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "bb5e048c5097318edac5425c9ac2738f",
@@ -13182,7 +16221,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001957574.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001969040.jpg",
-    "displayName": "Blame - Calvin Harris;John Newman"
+    "displayName": "Blame - Calvin Harris;John Newman",
+    "numberOneDate": "29 de noviembre de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "6d95e152bd35778c1333281e23a7b205",
@@ -13195,7 +16237,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001959457.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002008858.jpg",
-    "displayName": "Tocado y hundido - Melendi"
+    "displayName": "Tocado y hundido - Melendi",
+    "numberOneDate": "27 de diciembre de 2014",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/43426e907b7e2e764be8b77cb0a3e0bccd5a990f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "423b3c1a2d4fa7c442b1b2e826c6c3ff",
@@ -13208,7 +16253,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001814186.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001849186.jpg",
-    "displayName": "A prueba de ti - Malú"
+    "displayName": "A prueba de ti - Malú",
+    "numberOneDate": "4 de enero de 2014",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d4d01edce2f215e10d2a265a154342a9ec534a95?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "b6541f0a475df90d56279bcda5ec6ca7",
@@ -13221,7 +16269,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001871233.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001914819.jpg",
-    "displayName": "Diez mil maneras - David Bisbal"
+    "displayName": "Diez mil maneras - David Bisbal",
+    "numberOneDate": "29 de marzo de 2014",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9b2d35812f3f6606b61f0a433b24efaabfbedb5e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "64088651af57742a0611291b1495b69a",
@@ -13234,7 +16285,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570003655498.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001843407.jpg",
-    "displayName": "Dark horse - Katy Perry;Juicy J"
+    "displayName": "Dark horse - Katy Perry;Juicy J",
+    "numberOneDate": "19 de abril de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "b35ed246543492b027c42fb716972ee0",
@@ -13247,7 +16301,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001902526.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001902542.jpg",
-    "displayName": "We are one (Ole ola) - Pitbull;Claudia Leitte;Jennifer López"
+    "displayName": "We are one (Ole ola) - Pitbull;Claudia Leitte;Jennifer López",
+    "numberOneDate": "21 de junio de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "ee7487396debd2072881def3532f2882",
@@ -13260,7 +16317,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001910611.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001904884.jpg",
-    "displayName": "Bailando (English version) - Enrique Iglesias;Descemer Bueno;Gente de Zona;Sean Paul"
+    "displayName": "Bailando (English version) - Enrique Iglesias;Descemer Bueno;Gente de Zona;Sean Paul",
+    "numberOneDate": "5 de julio de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "57618698fce22456bcbf496b2e5e7d30",
@@ -13273,7 +16333,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001870732.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001906449.jpg",
-    "displayName": "Human - Christina Perri"
+    "displayName": "Human - Christina Perri",
+    "numberOneDate": "12 de julio de 2014",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/424c533fa789fc3787d658abb491ed1cee3fb9ef?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "a4bc8d65d36f109a387c08d0a0d4df22",
@@ -13286,7 +16349,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001877641.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001877643.jpg",
-    "displayName": "Am I wrong - Nico &amp;Vinz"
+    "displayName": "Am I wrong - Nico &amp;Vinz",
+    "numberOneDate": "23 de agosto de 2014",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9ecf91e6cfd4a85b9f9600772bf6d224e051e052?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "2869e928168bbbd7c03ca5e9e2e6e786",
@@ -13299,7 +16365,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001933595.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001933780.jpg",
-    "displayName": "Lovers on the sun - David Guetta;Sam Martin"
+    "displayName": "Lovers on the sun - David Guetta;Sam Martin",
+    "numberOneDate": "13 de septiembre de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "608e6bc87b934ae7cef3caa2afdaf9c2",
@@ -13312,7 +16381,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001950972.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001950973.jpg",
-    "displayName": "Shake it off - Taylor Swift"
+    "displayName": "Shake it off - Taylor Swift",
+    "numberOneDate": "15 de noviembre de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "4744fedaf819c23014f74e0850bcf87e",
@@ -13325,7 +16397,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001969348.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001972226.jpg",
-    "displayName": "Dangerous - David Guetta;Sam Martin"
+    "displayName": "Dangerous - David Guetta;Sam Martin",
+    "numberOneDate": "13 de diciembre de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "6f1d9862f053fbcc3bd521b169c7c06e",
@@ -13338,7 +16413,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001848193.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001805949.jpg",
-    "displayName": "Talk dirty - Jason Derülo;2 Chainz"
+    "displayName": "Talk dirty - Jason Derülo;2 Chainz",
+    "numberOneDate": "25 de enero de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1d220eb6c20b02a9a0d9fe5ee6c61473",
@@ -13351,7 +16429,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001835153.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001847578.jpg",
-    "displayName": "Llegará - Antonio Orozco"
+    "displayName": "Llegará - Antonio Orozco",
+    "numberOneDate": "15 de febrero de 2014",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a3590c851fb2a2015938ea532b9c2b0e67e989d5?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "7cfd43787fea8a21f27021a5a554b07e",
@@ -13364,7 +16445,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001866300.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001866301.jpg",
-    "displayName": "Happy - Pharrell Williams"
+    "displayName": "Happy - Pharrell Williams",
+    "numberOneDate": "8 de marzo de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "0a9dc3ed7914bc497541d8bddf30e889",
@@ -13377,7 +16461,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001846422.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001846423.jpg",
-    "displayName": "Changes - FAUL &amp;Wad Ad;Pnau"
+    "displayName": "Changes - FAUL &amp;Wad Ad;Pnau",
+    "numberOneDate": "10 de mayo de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "ba0bcb287c53f119b8278e164341f9c9",
@@ -13390,7 +16477,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001905853.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001914819.jpg",
-    "displayName": "No amanece - David Bisbal"
+    "displayName": "No amanece - David Bisbal",
+    "numberOneDate": "2 de agosto de 2014",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d3f96f5a4e43223d633fa9ce298802f14fb9ca95?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "5d7398c2e880e5d7e99a533fb67f458b",
@@ -13403,7 +16493,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001893055.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001894009.jpg",
-    "displayName": "Summer - Calvin Harris"
+    "displayName": "Summer - Calvin Harris",
+    "numberOneDate": "9 de agosto de 2014",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/e89713a420303e7925c78b4add048b57ac386568?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "7f22191c11ba539082b3e90e89862af1",
@@ -13416,7 +16509,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001941037.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001963269.jpg",
-    "displayName": "Puppeteer - Auryn"
+    "displayName": "Puppeteer - Auryn",
+    "numberOneDate": "4 de octubre de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "d68a9a540217f82b1c142b86eafc4cb9",
@@ -13429,7 +16525,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001936071.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001990200.jpg",
-    "displayName": "Prayer in C - Robin Schulz;Lilly Wood &amp;The Prick;Robin Schulz"
+    "displayName": "Prayer in C - Robin Schulz;Lilly Wood &amp;The Prick;Robin Schulz",
+    "numberOneDate": "18 de octubre de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "df475aacd284f9e405c760db8de6c7a4",
@@ -13442,7 +16541,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520003590752.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520003590768.jpg",
-    "displayName": "Royals - Lorde"
+    "displayName": "Royals - Lorde",
+    "numberOneDate": "22 de febrero de 2014",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/27a83395a1c4b9938b31a4d45e2acc2656f25491?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "85d980911ee328a598632e60fb896a6d",
@@ -13455,7 +16557,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001898575.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001898611.jpg",
-    "displayName": "Stolen dance - Milky Chance"
+    "displayName": "Stolen dance - Milky Chance",
+    "numberOneDate": "26 de julio de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a19ad581da71287173b5bdc32b3ec4bc",
@@ -13468,7 +16573,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001875483.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001875485.jpg",
-    "displayName": "Waves - Mr. Probz;Robin Schulz"
+    "displayName": "Waves - Mr. Probz;Robin Schulz",
+    "numberOneDate": "30 de agosto de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "3f4ea0730f7197d70281196b045773ae",
@@ -13481,7 +16589,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520003997125.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520004094804.jpg",
-    "displayName": "Wiggle - Jason Derülo;Snoop Dogg"
+    "displayName": "Wiggle - Jason Derülo;Snoop Dogg",
+    "numberOneDate": "20 de septiembre de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "8d30719e32c12a6e8d9bbddb34ec2410",
@@ -13494,7 +16605,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001854208.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001858722.jpg",
-    "displayName": "Terriblemente cruel - Leiva"
+    "displayName": "Terriblemente cruel - Leiva",
+    "numberOneDate": "12 de abril de 2014",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c029f2d9a41bfab34453b94b6d27db9403eac842?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "8cef6b405acf78df10abbe81e0534012",
@@ -13507,7 +16621,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001882643.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001805949.jpg",
-    "displayName": "Trumpets - Jason Derülo"
+    "displayName": "Trumpets - Jason Derülo",
+    "numberOneDate": "24 de mayo de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "fc9cb4c424baa27f37da0daf32cad197",
@@ -13520,7 +16637,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001913872.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001913873.jpg",
-    "displayName": "Problem - Ariana Grande;Iggy Azalea"
+    "displayName": "Problem - Ariana Grande;Iggy Azalea",
+    "numberOneDate": "6 de septiembre de 2014",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "82f6f6672d9f9a3e625dc20bd6560b27",
@@ -13533,7 +16653,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001927160.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001957888.jpg",
-    "displayName": "Maps - Maroon 5"
+    "displayName": "Maps - Maroon 5",
+    "numberOneDate": "27 de septiembre de 2014",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/bba168911f90662f1a82081b1395cbc43b200983?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "2"
   },
   {
     "id": "4072f12629b5f1afd422b28702b2a69c",
@@ -13546,7 +16669,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001933192.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001915916.jpg",
-    "displayName": "Thinking out loud - Ed Sheeran"
+    "displayName": "Thinking out loud - Ed Sheeran",
+    "numberOneDate": "21 de febrero de 2015",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/7fba47d0806142cb34ad2080a5f139eba915fe05?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "ad42b21852dc7d38b053090dfd4b8dfc",
@@ -13559,7 +16685,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002006494.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002006563.jpg",
-    "displayName": "El perdón - Nicky Jam;Enrique Iglesias"
+    "displayName": "El perdón - Nicky Jam;Enrique Iglesias",
+    "numberOneDate": "30 de mayo de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "5524cbcf604f7406a1a529078a0aa1f5",
@@ -13572,7 +16701,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570004360406.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002016830.jpg",
-    "displayName": "See you again - Wiz Khalifa;Charlie Puth"
+    "displayName": "See you again - Wiz Khalifa;Charlie Puth",
+    "numberOneDate": "6 de junio de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "5e8853444d082e4f950fe923ef33ee44",
@@ -13585,7 +16717,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002016755.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002016756.jpg",
-    "displayName": "Are you with me - Lost Frequencies"
+    "displayName": "Are you with me - Lost Frequencies",
+    "numberOneDate": "11 de julio de 2015",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/30da10b638b7654a8328e1694a97cef0b7e204e2?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "bd6d515f64ee0e6767365fd8c293e6f2",
@@ -13598,7 +16733,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002050459.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002050462.jpg",
-    "displayName": "Heroes - Måns Zelmerlöw"
+    "displayName": "Heroes - Måns Zelmerlöw",
+    "numberOneDate": "25 de julio de 2015",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/54ed137d542f5d79f94ca3134ecd87215f30b00d?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "e200bb66c060c2f0022348de238553e6",
@@ -13611,7 +16749,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002019112.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002019144.jpg",
-    "displayName": "Five more hours - Chris Brown;Deorro"
+    "displayName": "Five more hours - Chris Brown;Deorro",
+    "numberOneDate": "1 de agosto de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "b33fbe9ad53efd9951e6933d63a690dd",
@@ -13624,7 +16765,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002039228.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002039319.jpg",
-    "displayName": "A que no me dejas - Alejandro Sanz"
+    "displayName": "A que no me dejas - Alejandro Sanz",
+    "numberOneDate": "17 de octubre de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "e2b7612a608ac9b0671115f2988086ef",
@@ -13637,7 +16781,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002063670.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002063679.jpg",
-    "displayName": "Vuelve - Juan Magán;DCS;Paulina Rubio"
+    "displayName": "Vuelve - Juan Magán;DCS;Paulina Rubio",
+    "numberOneDate": "24 de octubre de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "ce3ab8131bcf48339044770c9da9e3ff",
@@ -13650,7 +16797,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001980534.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002004474.jpg",
-    "displayName": "Uptown funk - Mark Ronson;Bruno Mars"
+    "displayName": "Uptown funk - Mark Ronson;Bruno Mars",
+    "numberOneDate": "31 de enero de 2015",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/88a794d97fcb4475f72a27be7baf71b94d5a9dda?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "1c86d7408010b48a5595caa10853a6e8",
@@ -13663,7 +16813,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001996782.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001999366.jpg",
-    "displayName": "Love me like you do - Ellie Goulding"
+    "displayName": "Love me like you do - Ellie Goulding",
+    "numberOneDate": "28 de marzo de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a32e9e541c6a8a23e543f9f102d66f16",
@@ -13676,7 +16829,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001942701.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001942707.jpg",
-    "displayName": "Elastic heart - Sia"
+    "displayName": "Elastic heart - Sia",
+    "numberOneDate": "11 de abril de 2015",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/210b2f8ae1a4c2ecd40673fc3a0095159d821d62?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "c7aaad974985eebc26d432f380d61f89",
@@ -13689,7 +16845,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002022832.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001979178.jpg",
-    "displayName": "The nights - Avicii"
+    "displayName": "The nights - Avicii",
+    "numberOneDate": "18 de abril de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "5b4c329d1cda6c6a63414968362f1152",
@@ -13702,7 +16861,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002001653.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002001669.jpg",
-    "displayName": "Fourfiveseconds - Rihanna;Kanye West;Paul McCartney"
+    "displayName": "Fourfiveseconds - Rihanna;Kanye West;Paul McCartney",
+    "numberOneDate": "25 de abril de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "3805a6a2fb5da7e1c185f72a7bb77e5a",
@@ -13715,7 +16877,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002045392.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002045394.jpg",
-    "displayName": "La gozadera - Gente de Zona;Marc Anthony"
+    "displayName": "La gozadera - Gente de Zona;Marc Anthony",
+    "numberOneDate": "22 de agosto de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "f90f6e64a41fec76479b9cc44c3a335e",
@@ -13728,7 +16893,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002068669.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001966881.jpg",
-    "displayName": "I don't like it, I love it - Flo Rida;Robin Thicke;Verdine White"
+    "displayName": "I don't like it, I love it - Flo Rida;Robin Thicke;Verdine White",
+    "numberOneDate": "26 de septiembre de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "2da25a7bf57a382fd3a4da899b5659ac",
@@ -13741,7 +16909,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002051612.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002051619.jpg",
-    "displayName": "Stole the show - Kygo;Parson James"
+    "displayName": "Stole the show - Kygo;Parson James",
+    "numberOneDate": "3 de octubre de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "54465f3dd9796c998e45b3c13fd475c8",
@@ -13754,7 +16925,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002104617.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002104618.jpg",
-    "displayName": "Hello - Adele"
+    "displayName": "Hello - Adele",
+    "numberOneDate": "21 de noviembre de 2015",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0b90429fd554bad6785faa2b8931d613db4a0ee4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "8f6a44e9e9d8867aa7358b83f94e5d0a",
@@ -13767,7 +16941,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520004176920.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001993271.jpg",
-    "displayName": "Take me to church - Hozier"
+    "displayName": "Take me to church - Hozier",
+    "numberOneDate": "7 de marzo de 2015",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/cdbb37ee18245800e331528fd781bac388da9254?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "6bde94677d02a366847c3686152e5121",
@@ -13780,7 +16957,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001960358.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001960380.jpg",
-    "displayName": "I'm an Albatraoz - AronChupa"
+    "displayName": "I'm an Albatraoz - AronChupa",
+    "numberOneDate": "2 de mayo de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "62dc58933e1c8d43a2e215ed64a785b2",
@@ -13793,7 +16973,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002027141.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002025338.jpg",
-    "displayName": "Lean on - Major Lazer;DJ Snake;MØ"
+    "displayName": "Lean on - Major Lazer;DJ Snake;MØ",
+    "numberOneDate": "13 de junio de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "ddd52926fc0297a6b092b44683b43579",
@@ -13806,7 +16989,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002054692.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002054253.jpg",
-    "displayName": "Don't worry - Madcon;Ray Dalton"
+    "displayName": "Don't worry - Madcon;Ray Dalton",
+    "numberOneDate": "29 de agosto de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "c01016100e8833e6eae1e9ecda3fec7f",
@@ -13819,7 +17005,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002080442.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002013888.jpg",
-    "displayName": "Ain't nobody (Loves me better) - Felix Jaehn;Jasmine Thompson"
+    "displayName": "Ain't nobody (Loves me better) - Felix Jaehn;Jasmine Thompson",
+    "numberOneDate": "10 de octubre de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "37f06e1cdfd7a77fc94f683997f7691e",
@@ -13832,7 +17021,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002084043.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002106591.jpg",
-    "displayName": "What do you mean? - Justin Bieber"
+    "displayName": "What do you mean? - Justin Bieber",
+    "numberOneDate": "7 de noviembre de 2015",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a0f20a4233baf5c947d5ed5846bde41295626026?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "4d88996775bdf8837c7cebaa6da2d525",
@@ -13845,7 +17037,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002084095.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002095640.jpg",
-    "displayName": "Locked away - R. City;Adam Levine"
+    "displayName": "Locked away - R. City;Adam Levine",
+    "numberOneDate": "5 de diciembre de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "7e05056df9e9339295d20c86dc4bc3f8",
@@ -13858,7 +17053,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002082214.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002082207.jpg",
-    "displayName": "El mismo sol (Under the same sun) (Spanglish version) - Álvaro Soler;Jennifer López"
+    "displayName": "El mismo sol (Under the same sun) (Spanglish version) - Álvaro Soler;Jennifer López",
+    "numberOneDate": "12 de diciembre de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1ac011af09db91b587044327456e5b04",
@@ -13871,7 +17069,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002074720.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520004958118.jpg",
-    "displayName": "Ginza - J Balvin"
+    "displayName": "Ginza - J Balvin",
+    "numberOneDate": "26 de diciembre de 2015",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2f15fecd786a2e674b0c878639907de948e6f427?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "e9e9e53fdc99b1decd3422871e41a44f",
@@ -13884,7 +17085,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001901438.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001867576.jpg",
-    "displayName": "Stay with me - Sam Smith"
+    "displayName": "Stay with me - Sam Smith",
+    "numberOneDate": "3 de enero de 2015",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/de1ca142058fc50b16033a891172be3c58e92f56?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "9432b749970734fcbdd80f237d4768a1",
@@ -13897,7 +17101,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001957892.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001957888.jpg",
-    "displayName": "Animals - Maroon 5"
+    "displayName": "Animals - Maroon 5",
+    "numberOneDate": "28 de febrero de 2015",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/420ab4cb866baa3a113081888bed6665547c0617?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "024bffb65a7757033726f577169816cf",
@@ -13910,7 +17117,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001978029.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001969040.jpg",
-    "displayName": "Outside - Calvin Harris;Ellie Goulding"
+    "displayName": "Outside - Calvin Harris;Ellie Goulding",
+    "numberOneDate": "4 de abril de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "fa7600e3e82652db4e9f00c0fd2536c5",
@@ -13923,7 +17133,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001996922.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002093240.jpg",
-    "displayName": "Cheerleader - OMI;Felix Jaehn"
+    "displayName": "Cheerleader - OMI;Felix Jaehn",
+    "numberOneDate": "16 de mayo de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "d2537fb4173bcc99d703ff8c66136642",
@@ -13936,7 +17149,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001994097.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001997283.jpg",
-    "displayName": "Él no te da - Dasoul"
+    "displayName": "Él no te da - Dasoul",
+    "numberOneDate": "4 de julio de 2015",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/3b9880c9ca8a5cd45ea28cdb1b66275907703076?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "c203178dcf568708bb829940553ecd38",
@@ -13949,7 +17165,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002061704.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002061705.jpg",
-    "displayName": "Hey mama (Extended mix) - David Guetta;Afrojack;Bebe Rexha;Nicki Minaj"
+    "displayName": "Hey mama (Extended mix) - David Guetta;Afrojack;Bebe Rexha;Nicki Minaj",
+    "numberOneDate": "15 de agosto de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "498a1590ea1e5fa69e6e1f3e8eef434d",
@@ -13962,7 +17181,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002054735.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002086878.jpg",
-    "displayName": "Marvin Gaye - Charlie Puth;Meghan Trainor"
+    "displayName": "Marvin Gaye - Charlie Puth;Meghan Trainor",
+    "numberOneDate": "31 de octubre de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a5bfd9604beeef1d35fb2b1dd3c5f8d3",
@@ -13975,7 +17197,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002106588.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002106591.jpg",
-    "displayName": "Sorry - Justin Bieber"
+    "displayName": "Sorry - Justin Bieber",
+    "numberOneDate": "19 de diciembre de 2015",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f52ebfda4aedb754a92e8af2442a5be85bb86a8f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "3fa0f10f1991ea1e39df1b7cc71ceca4",
@@ -13988,7 +17213,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010001699810.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010001555481.jpg",
-    "displayName": "People help the people - Birdy"
+    "displayName": "People help the people - Birdy",
+    "numberOneDate": "10 de enero de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "da7addbb7f5820c95566867c89163a6a",
@@ -14001,7 +17229,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002014281.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002012921.jpg",
-    "displayName": "Un zombie a la intemperie - Alejandro Sanz"
+    "displayName": "Un zombie a la intemperie - Alejandro Sanz",
+    "numberOneDate": "9 de mayo de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "9059241e74a16bb88c639e83dd642dd7",
@@ -14014,7 +17245,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002016642.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002033036.jpg",
-    "displayName": "Want to want me - Jason Derülo"
+    "displayName": "Want to want me - Jason Derülo",
+    "numberOneDate": "27 de junio de 2015",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d0727e5bbaef36980bc20f5c5cccf3c757af7bb0?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "b9fb22c5728734e802c409e4837dd8d0",
@@ -14027,7 +17261,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002012971.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002088158.jpg",
-    "displayName": "I really like you - Carly Rae Jepsen"
+    "displayName": "I really like you - Carly Rae Jepsen",
+    "numberOneDate": "8 de agosto de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1fda7cc522fce07a931c49d410111444",
@@ -14040,7 +17277,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002051684.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002051685.jpg",
-    "displayName": "Goodbye - Feder;Lyse"
+    "displayName": "Goodbye - Feder;Lyse",
+    "numberOneDate": "26 de septiembre de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "2"
   },
   {
     "id": "d2d7bba828bde6676be4f4590c7da339",
@@ -14053,7 +17293,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002073457.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002073461.jpg",
-    "displayName": "How deep is your love - Calvin Harris;Disciples"
+    "displayName": "How deep is your love - Calvin Harris;Disciples",
+    "numberOneDate": "21 de noviembre de 2015",
+    "spotifyUrl": "",
+    "bestPosition": "2"
   },
   {
     "id": "fbd675fc3d20387bfd8787403308f55c",
@@ -14066,7 +17309,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002161966.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002164678.jpg",
-    "displayName": "Work - Rihanna;Drake"
+    "displayName": "Work - Rihanna;Drake",
+    "numberOneDate": "5 de marzo de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1d626fd0a0e311ce2534361a1f7fa7c7",
@@ -14079,7 +17325,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002093254.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002093577.jpg",
-    "displayName": "Lush life - Zara Larsson"
+    "displayName": "Lush life - Zara Larsson",
+    "numberOneDate": "19 de marzo de 2016",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f86a10f69b63b49a28989213727dc570db022d80?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "2222102b3357a171711295f2556c4a0e",
@@ -14092,7 +17341,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002178258.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002178263.jpg",
-    "displayName": "No - Meghan Trainor"
+    "displayName": "No - Meghan Trainor",
+    "numberOneDate": "28 de mayo de 2016",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9eb94f8ce6e00eeb4ec1b530088720b4be59f3dc?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "0ec5d9a277042df22e6fa9705f2eed0a",
@@ -14105,7 +17357,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002204315.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002204316.jpg",
-    "displayName": "Can't stop the feeling! - Justin Timberlake"
+    "displayName": "Can't stop the feeling! - Justin Timberlake",
+    "numberOneDate": "9 de julio de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "d9dd1df865db7ce23554325a5d86c6a6",
@@ -14118,7 +17373,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002194045.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002194050.jpg",
-    "displayName": "This girl - Kungs;Cookin' On 3 Burners"
+    "displayName": "This girl - Kungs;Cookin' On 3 Burners",
+    "numberOneDate": "13 de agosto de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "51a04a2d01fab2567cb902beb1e35080",
@@ -14131,7 +17389,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002067387.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002158978.jpg",
-    "displayName": "Borro cassette - Maluma"
+    "displayName": "Borro cassette - Maluma",
+    "numberOneDate": "15 de octubre de 2016",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/23bbc50379565e569308c2107e30e2cc4c70e6d7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "4b611b59e72d7eef666e6efcdcf20f18",
@@ -14144,7 +17405,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002253348.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002253351.jpg",
-    "displayName": "24k magic - Bruno Mars"
+    "displayName": "24k magic - Bruno Mars",
+    "numberOneDate": "22 de octubre de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "b1f0a0fd0b08eb982d853c23f7e05b93",
@@ -14157,7 +17421,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002250992.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002251004.jpg",
-    "displayName": "Lost on you - LP"
+    "displayName": "Lost on you - LP",
+    "numberOneDate": "3 de diciembre de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "3fba7d2ca9e931597dc90535ba45df03",
@@ -14170,7 +17437,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002148545.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002171767.jpg",
-    "displayName": "Faded - Alan Walker;Iselin Solheim"
+    "displayName": "Faded - Alan Walker;Iselin Solheim",
+    "numberOneDate": "26 de marzo de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "d321bb6b4b096f072ac701030624479b",
@@ -14183,7 +17453,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002193972.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002202938.jpg",
-    "displayName": "One dance - Drake;Kyla;WizKid"
+    "displayName": "One dance - Drake;Kyla;WizKid",
+    "numberOneDate": "18 de junio de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "4b8707a8a7815b105042e6c28ce9255a",
@@ -14196,7 +17469,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570004540775.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570004540790.jpg",
-    "displayName": "Don't let me down - The Chainsmokers;Daya"
+    "displayName": "Don't let me down - The Chainsmokers;Daya",
+    "numberOneDate": "30 de julio de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "6234c2752c9d7ce3943998c4a375f44f",
@@ -14209,7 +17485,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002160493.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002241356.jpg",
-    "displayName": "Cómo te atreves - Morat"
+    "displayName": "Cómo te atreves - Morat",
+    "numberOneDate": "6 de agosto de 2016",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/023856d4f811276133a2d6824dd8bfaea050ca88?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "7f83cf3a143494092b91994cb42c6c95",
@@ -14222,7 +17501,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570004980546.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570005045211.jpg",
-    "displayName": "Closer - The Chainsmokers;Halsey"
+    "displayName": "Closer - The Chainsmokers;Halsey",
+    "numberOneDate": "24 de septiembre de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "7df4ab2ea09c81774db542677b843117",
@@ -14235,7 +17517,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520004540858.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002034081.jpg",
-    "displayName": "Ride - Twenty One Pilots"
+    "displayName": "Ride - Twenty One Pilots",
+    "numberOneDate": "1 de octubre de 2016",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/26fc2318d6ebad09ae7aed7adfce2b28413cea7e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "c8777ba7b0f0c3f7b498bf557303a551",
@@ -14248,7 +17533,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520004982443.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520004982444.jpg",
-    "displayName": "Let me love you - DJ Snake;Justin Bieber"
+    "displayName": "Let me love you - DJ Snake;Justin Bieber",
+    "numberOneDate": "8 de octubre de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "94f0a41708a29ff659645e21ddd112a9",
@@ -14261,7 +17549,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002248151.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002248160.jpg",
-    "displayName": "Starboy - The Weeknd;Daft Punk"
+    "displayName": "Starboy - The Weeknd;Daft Punk",
+    "numberOneDate": "17 de diciembre de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "0c2eb2d574d64f276076348eeca0828c",
@@ -14274,7 +17565,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002110831.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002110914.jpg",
-    "displayName": "Adventure of a lifetime - Coldplay"
+    "displayName": "Adventure of a lifetime - Coldplay",
+    "numberOneDate": "9 de enero de 2016",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/167cd00b936fed203b62831098b833c60dd23769?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "970bf2948350120e048fc0f47758f2c5",
@@ -14287,7 +17581,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002084052.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002084069.jpg",
-    "displayName": "Tu enemigo - Pablo López;Juanes"
+    "displayName": "Tu enemigo - Pablo López;Juanes",
+    "numberOneDate": "16 de enero de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a2c38927847dbe1894d69e9f4ca40f1b",
@@ -14300,7 +17597,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002096423.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002124600.jpg",
-    "displayName": "Hundred miles - YALL;Gabriela Richardson"
+    "displayName": "Hundred miles - YALL;Gabriela Richardson",
+    "numberOneDate": "30 de enero de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "63f5e464a8a8debe19b825787eafbad7",
@@ -14313,7 +17613,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520004487905.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002106591.jpg",
-    "displayName": "Love yourself - Justin Bieber"
+    "displayName": "Love yourself - Justin Bieber",
+    "numberOneDate": "13 de febrero de 2016",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/750da13f22144edd7472e1838f6acc38141be8f0?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "9836126f1f8ff0b701391886001ba831",
@@ -14326,7 +17629,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520004494038.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520004494039.jpg",
-    "displayName": "Catch & release - Matt Simons;Deepend"
+    "displayName": "Catch & release - Matt Simons;Deepend",
+    "numberOneDate": "16 de abril de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "8f37bdddcec282d28dd9d10d4c18a900",
@@ -14339,7 +17645,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002168424.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002168425.jpg",
-    "displayName": "Cheap thrills - Sia;Sean Paul"
+    "displayName": "Cheap thrills - Sia;Sean Paul",
+    "numberOneDate": "30 de abril de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a1535b7373e2278065350ae8e9a8ae68",
@@ -14352,7 +17661,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570004944220.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002086878.jpg",
-    "displayName": "We don't talk anymore - Charlie Puth;Selena Gomez"
+    "displayName": "We don't talk anymore - Charlie Puth;Selena Gomez",
+    "numberOneDate": "17 de septiembre de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a656bf4df77cb8fa69bb9a44be0b0006",
@@ -14365,7 +17677,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002157614.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002171768.jpg",
-    "displayName": "7 years - Lukas Graham"
+    "displayName": "7 years - Lukas Graham",
+    "numberOneDate": "9 de abril de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "99d091de294b176029404260a63cd36e",
@@ -14378,7 +17693,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002192511.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002192554.jpg",
-    "displayName": "Duele el corazón - Enrique Iglesias;Wisin"
+    "displayName": "Duele el corazón - Enrique Iglesias;Wisin",
+    "numberOneDate": "21 de mayo de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "bf8ed98cf3d25a98adea9e3b0651c6bb",
@@ -14391,7 +17709,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002167922.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002168416.jpg",
-    "displayName": "I took a pill in Ibiza - Mike Posner;SeeB"
+    "displayName": "I took a pill in Ibiza - Mike Posner;SeeB",
+    "numberOneDate": "4 de junio de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "15f81494c10d239f62d61c0f83d192de",
@@ -14404,7 +17725,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520004943924.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520005289695.jpg",
-    "displayName": "La bicicleta - Carlos Vives;Shakira"
+    "displayName": "La bicicleta - Carlos Vives;Shakira",
+    "numberOneDate": "27 de agosto de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "38fb2f9f19dfa3ec50dfdd750026b0ee",
@@ -14417,7 +17741,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002228857.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002228860.jpg",
-    "displayName": "Cold water - Major Lazer;Justin Bieber;MØ"
+    "displayName": "Cold water - Major Lazer;Justin Bieber;MØ",
+    "numberOneDate": "10 de septiembre de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "cb20574e402ec2ea7a39309adf865530",
@@ -14430,7 +17757,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002220552.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520004958118.jpg",
-    "displayName": "Safari - J Balvin;BIA;Pharrell Williams;Sky Rompiendo"
+    "displayName": "Safari - J Balvin;BIA;Pharrell Williams;Sky Rompiendo",
+    "numberOneDate": "5 de noviembre de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "caa11fffee73e322f546016d28ebaa1c",
@@ -14443,7 +17773,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002253430.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002242016.jpg",
-    "displayName": "The greatest - Sia;Kendrick Lamar"
+    "displayName": "The greatest - Sia;Kendrick Lamar",
+    "numberOneDate": "12 de noviembre de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "9f5816b15e92cc7e2c61a41525f5cd45",
@@ -14456,7 +17789,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520004961156.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002243697.jpg",
-    "displayName": "Heathens - Twenty One Pilots"
+    "displayName": "Heathens - Twenty One Pilots",
+    "numberOneDate": "19 de noviembre de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "b5e7019f6ebcb28070b9e1a85a065879",
@@ -14469,7 +17805,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002261141.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002379979.jpg",
-    "displayName": "Chantaje - Shakira;Maluma"
+    "displayName": "Chantaje - Shakira;Maluma",
+    "numberOneDate": "24 de diciembre de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "93b72b6058d3b670d0d0096422914e35",
@@ -14482,7 +17821,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002034004.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002009995.jpg",
-    "displayName": "Stitches - Shawn Mendes"
+    "displayName": "Stitches - Shawn Mendes",
+    "numberOneDate": "6 de febrero de 2016",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/7d8cf3790a5e0701ba52cc68b300117bbd5df225?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "1adf91b8eb4d0a923cc8d4ced4ae1820",
@@ -14495,7 +17837,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520004479035.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002159981.jpg",
-    "displayName": "Light it up - Major Lazer;Fuse ODG;NYLA"
+    "displayName": "Light it up - Major Lazer;Fuse ODG;NYLA",
+    "numberOneDate": "27 de febrero de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "17c89cab641df74c9bd6de7714b40635",
@@ -14508,7 +17853,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002156336.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002034081.jpg",
-    "displayName": "Stressed out - Twenty One Pilots"
+    "displayName": "Stressed out - Twenty One Pilots",
+    "numberOneDate": "23 de abril de 2016",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0e0951b811f06fea9162eb7e95e4bae4802d97af?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "3fe54c45721ce927561a8f12a5e57187",
@@ -14521,7 +17869,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002191001.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002191002.jpg",
-    "displayName": "Ain't your mama - Jennifer López"
+    "displayName": "Ain't your mama - Jennifer López",
+    "numberOneDate": "23 de julio de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "3a993d02071ee2d369c91219196e359e",
@@ -14534,7 +17885,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002219761.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002222411.jpg",
-    "displayName": "Sincericidio - Leiva"
+    "displayName": "Sincericidio - Leiva",
+    "numberOneDate": "29 de octubre de 2016",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0d9dd3dfa0f7533787bc96f976285ec89d2b0498?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "bda8c72f2b2466ec942f8672e2495798",
@@ -14547,7 +17901,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002113479.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002115423.jpg",
-    "displayName": "Hotline bling - Drake"
+    "displayName": "Hotline bling - Drake",
+    "numberOneDate": "6 de febrero de 2016",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/32f9806c6e8d0b1fce31ffd017cbe573fdc2bde6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "2"
   },
   {
     "id": "a5d02930e103ce6f5f7c1452a1590624",
@@ -14560,7 +17917,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002270414.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570005020007.jpg",
-    "displayName": "Rockabye - Clean Bandit;Anne-Marie;Sean Paul"
+    "displayName": "Rockabye - Clean Bandit;Anne-Marie;Sean Paul",
+    "numberOneDate": "24 de diciembre de 2016",
+    "spotifyUrl": "",
+    "bestPosition": "2"
   },
   {
     "id": "9988f6e31d251e231b93ea079f98fa8e",
@@ -14573,7 +17933,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002120770.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002104647.jpg",
-    "displayName": "When we were young - Adele"
+    "displayName": "When we were young - Adele",
+    "numberOneDate": "12 de marzo de 2016",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/659a35907dfd65e8da36b1f9129415b749eda99f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "2"
   },
   {
     "id": "c23cea07801737b10888b4fc7f4333bb",
@@ -14586,7 +17949,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002241036.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002241038.jpg",
-    "displayName": "Sexual - Neiked;Dyo"
+    "displayName": "Sexual - Neiked;Dyo",
+    "numberOneDate": "4 de marzo de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "8c4d69c70738e70512f9c6c83fe8d74a",
@@ -14599,7 +17965,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002298173.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002399223.jpg",
-    "displayName": "It ain't me - Kygo;Selena Gomez"
+    "displayName": "It ain't me - Kygo;Selena Gomez",
+    "numberOneDate": "29 de abril de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "7489ebe1b5022ffde78f6d17086841ae",
@@ -14612,7 +17981,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002333959.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002379979.jpg",
-    "displayName": "Me enamoré - Shakira"
+    "displayName": "Me enamoré - Shakira",
+    "numberOneDate": "27 de mayo de 2017",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/af29ef4d88bfec355bd1660720e046b37de32aad?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "93dcd51907603d0d83da2aa278e8b703",
@@ -14625,7 +17997,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520005139550.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520005139551.jpg",
-    "displayName": "Felices los 4 - Maluma"
+    "displayName": "Felices los 4 - Maluma",
+    "numberOneDate": "10 de junio de 2017",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/86b8785758c2f544d5553d037cb743656f505e8a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "61b07b46504c4f7d2907f016cc992af3",
@@ -14638,7 +18013,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002301092.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002301100.jpg",
-    "displayName": "Swalla - Jason Derülo;Nicki Minaj;Ty Dolla $ign"
+    "displayName": "Swalla - Jason Derülo;Nicki Minaj;Ty Dolla $ign",
+    "numberOneDate": "17 de junio de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "7d3ebbe8063bd793e01b2428df54af6a",
@@ -14651,7 +18029,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002321834.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002321936.jpg",
-    "displayName": "Solo si es contigo - Bombai;Bebe"
+    "displayName": "Solo si es contigo - Bombai;Bebe",
+    "numberOneDate": "15 de julio de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1ce49532f60bede1371bfb0071c57153",
@@ -14664,7 +18045,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002239849.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002222411.jpg",
-    "displayName": "Breaking bad - Leiva"
+    "displayName": "Breaking bad - Leiva",
+    "numberOneDate": "23 de septiembre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "b43a4ee50b14e317653fcb1fffccc3c6",
@@ -14677,7 +18061,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002351855.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002351857.jpg",
-    "displayName": "More than you know - Axwell ^ Ingrosso"
+    "displayName": "More than you know - Axwell ^ Ingrosso",
+    "numberOneDate": "23 de septiembre de 2017",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/71c46432bfc4bde851697cab06ba4e0604dc9015?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "856204541f6d9345a4c01cca70cd8c29",
@@ -14690,7 +18077,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002322839.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002287155.jpg",
-    "displayName": "Galway girl - Ed Sheeran"
+    "displayName": "Galway girl - Ed Sheeran",
+    "numberOneDate": "30 de septiembre de 2017",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/cec1fc40a0220f20d3b91dd28d8e1141ad5e7e25?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "cf9ae5c0f228e18ad6f0fda9771563c3",
@@ -14703,7 +18093,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002356189.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002642673.jpg",
-    "displayName": "2U - David Guetta;Justin Bieber"
+    "displayName": "2U - David Guetta;Justin Bieber",
+    "numberOneDate": "30 de septiembre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "f99c8e95cfe9ffc624dcabe356de7f96",
@@ -14716,7 +18109,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002382157.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002680754.jpg",
-    "displayName": "No vaya a ser - Pablo Alborán"
+    "displayName": "No vaya a ser - Pablo Alborán",
+    "numberOneDate": "7 de octubre de 2017",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/187e9bc501405426e823e5878fa026f26e34f897?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "aad430e583256a148e223da9a61b7732",
@@ -14729,7 +18125,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002359550.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002359549.jpg",
-    "displayName": "Feels - Calvin Harris;Big Sean;Katy Perry;Pharrell Williams"
+    "displayName": "Feels - Calvin Harris;Big Sean;Katy Perry;Pharrell Williams",
+    "numberOneDate": "11 de noviembre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "3000a72ea8945f3da0c4ba440e2aa47f",
@@ -14742,7 +18141,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520005222516.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520005222517.jpg",
-    "displayName": "Feel it still - Portugal. The Man"
+    "displayName": "Feel it still - Portugal. The Man",
+    "numberOneDate": "11 de noviembre de 2017",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c32d9479367a99fcf5f881e23e1381e6f87214e9?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "287f28528e8ddb1c30d31d3ffc96f977",
@@ -14755,7 +18157,10 @@ export const songs: Song[] = [
     "voices": "Instrumental",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002384589.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002384596.jpg",
-    "displayName": "Pizza - Martin Garrix"
+    "displayName": "Pizza - Martin Garrix",
+    "numberOneDate": "9 de diciembre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "29c33ea9e731f27da1db2362f99c2c12",
@@ -14768,7 +18173,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002285995.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002287164.jpg",
-    "displayName": "Despacito - Luis Fonsi;Daddy Yankee"
+    "displayName": "Despacito - Luis Fonsi;Daddy Yankee",
+    "numberOneDate": "11 de febrero de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "8d91db5e770c1651904321ba35d9a7cc",
@@ -14781,7 +18189,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520004960413.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520004960414.jpg",
-    "displayName": "Way down we go - Kaleo"
+    "displayName": "Way down we go - Kaleo",
+    "numberOneDate": "20 de mayo de 2017",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d98c7057adac754607c1a2ab8c72113c3e7a2338?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "e2949a55465ca833573e9543e1850bf0",
@@ -14794,7 +18205,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002328536.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002328537.jpg",
-    "displayName": "Issues - Julia Michaels"
+    "displayName": "Issues - Julia Michaels",
+    "numberOneDate": "1 de julio de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "ac80ec59180cb2983f35e1a884edc15f",
@@ -14807,7 +18221,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002345269.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002407235.jpg",
-    "displayName": "Malibu - Miley Cyrus"
+    "displayName": "Malibu - Miley Cyrus",
+    "numberOneDate": "8 de julio de 2017",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d300bc1fe7b5c054355ad4da8da37964c66054d9?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "49cfa9b01ad2ec04405763a9e56e7cdd",
@@ -14820,7 +18237,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002360220.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002360405.jpg",
-    "displayName": "Wild thoughts - DJ Khaled;Bryson Tiller;Rihanna"
+    "displayName": "Wild thoughts - DJ Khaled;Bryson Tiller;Rihanna",
+    "numberOneDate": "19 de agosto de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "08a2faa90a0561ba6e0a6712ab32fe53",
@@ -14833,7 +18253,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002347555.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002373351.jpg",
-    "displayName": "Ok - Robin Schulz;James Blunt"
+    "displayName": "Ok - Robin Schulz;James Blunt",
+    "numberOneDate": "2 de septiembre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "ad9c0cd31dcff1235ee5d0194a33b049",
@@ -14846,7 +18269,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002351893.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002351389.jpg",
-    "displayName": "There for you - Martin Garrix;Troye Sivan"
+    "displayName": "There for you - Martin Garrix;Troye Sivan",
+    "numberOneDate": "9 de septiembre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "2b68c46b8fa23d1e34ede4240c3d2f2c",
@@ -14859,7 +18285,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002359710.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002359711.jpg",
-    "displayName": "Instruction - Jax Jones;Demi Lovato;Stefflon Don"
+    "displayName": "Instruction - Jax Jones;Demi Lovato;Stefflon Don",
+    "numberOneDate": "14 de octubre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "29063e989db98226f8367c2fb0ef4f6d",
@@ -14872,7 +18301,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002381379.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002392518.jpg",
-    "displayName": "You're the best thing about me - U2"
+    "displayName": "You're the best thing about me - U2",
+    "numberOneDate": "4 de noviembre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "8d224fff42e73307d680a8d4d72f7a8b",
@@ -14885,7 +18317,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002364425.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002364426.jpg",
-    "displayName": "Mi gente - J Balvin;Willy William"
+    "displayName": "Mi gente - J Balvin;Willy William",
+    "numberOneDate": "4 de noviembre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "9217ddbe848657d69ff9f55d3ebb0be6",
@@ -14898,7 +18333,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002376229.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002415840.jpg",
-    "displayName": "Havana - Camila Cabello;Young Thug"
+    "displayName": "Havana - Camila Cabello;Young Thug",
+    "numberOneDate": "25 de noviembre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1c7a5a6855745752462cb17ea37c1028",
@@ -14911,7 +18349,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570005245653.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570005245655.jpg",
-    "displayName": "Without you - Avicii;Sandro Cavazza"
+    "displayName": "Without you - Avicii;Sandro Cavazza",
+    "numberOneDate": "2 de diciembre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "69d7d53762d93bec2e693ae6feb8bb36",
@@ -14924,7 +18365,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002389372.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002389373.jpg",
-    "displayName": "Power - Hardwell;KSHMR"
+    "displayName": "Power - Hardwell;KSHMR",
+    "numberOneDate": "23 de diciembre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "dbe6b2ee98e94f64e661e6ab3f8de673",
@@ -14937,7 +18381,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002245448.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002322051.jpg",
-    "displayName": "Human - Rag'n'Bone Man"
+    "displayName": "Human - Rag'n'Bone Man",
+    "numberOneDate": "21 de enero de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "9e7907b5c796094fbc033048df5c2cf7",
@@ -14950,7 +18397,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570005053970.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002287155.jpg",
-    "displayName": "Shape of you - Ed Sheeran"
+    "displayName": "Shape of you - Ed Sheeran",
+    "numberOneDate": "4 de febrero de 2017",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/84462d8e1e4d0f9e5ccd06f0da390f65843774a2?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "73f34645c249036c56244ddaf1ba6fab",
@@ -14963,7 +18413,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002239851.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002222411.jpg",
-    "displayName": "La lluvia en los zapatos - Leiva"
+    "displayName": "La lluvia en los zapatos - Leiva",
+    "numberOneDate": "25 de febrero de 2017",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a235fe9ba370658c7ce49ee239ce041d5ed5f57c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "c0c045dd7a0e87cbc6988bb665722857",
@@ -14976,7 +18429,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002335852.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002335853.jpg",
-    "displayName": "Despacito - Daddy Yankee;Luis Fonsi;Justin Bieber"
+    "displayName": "Despacito - Daddy Yankee;Luis Fonsi;Justin Bieber",
+    "numberOneDate": "6 de mayo de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "e1d4c9e63ab492318322df2e188974e2",
@@ -14989,7 +18445,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002380036.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002380039.jpg",
-    "displayName": "Save a little love - Don Diablo"
+    "displayName": "Save a little love - Don Diablo",
+    "numberOneDate": "7 de octubre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "491126f2444465f4e2f7cd0187f56aa0",
@@ -15002,7 +18461,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570005245652.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002380229.jpg",
-    "displayName": "What about us - P!nk"
+    "displayName": "What about us - P!nk",
+    "numberOneDate": "14 de octubre de 2017",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/b97d90c4adf9386281985180edf7c7940e8908cb?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "62699fc6b201eea9cbbb05d74ac45275",
@@ -15015,7 +18477,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002379017.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002379018.jpg",
-    "displayName": "Look what you made me do - Taylor Swift"
+    "displayName": "Look what you made me do - Taylor Swift",
+    "numberOneDate": "28 de octubre de 2017",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2ea7fb59e886000cb667badd251d06f204ad43f8?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "3a697785bcb8c00298d4862c3ab44d63",
@@ -15028,7 +18493,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002363957.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002363958.jpg",
-    "displayName": "All stars - Martin Solveig;Alma"
+    "displayName": "All stars - Martin Solveig;Alma",
+    "numberOneDate": "28 de octubre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "8d809a638e837d4284c022491348693e",
@@ -15041,7 +18509,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002389347.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002389370.jpg",
-    "displayName": "The spectre - Alan Walker"
+    "displayName": "The spectre - Alan Walker",
+    "numberOneDate": "16 de diciembre de 2017",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0da077aef7e2972ee5374fe65d4cb39af3b3dfb8?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "1cdda731264b4c12a26772079b3d4d67",
@@ -15054,7 +18525,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570005040652.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002248160.jpg",
-    "displayName": "I feel it coming - The Weeknd;Daft Punk"
+    "displayName": "I feel it coming - The Weeknd;Daft Punk",
+    "numberOneDate": "11 de marzo de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a1ef6a926f6dc496efdeecc02cc67906",
@@ -15067,7 +18541,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002301044.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002301052.jpg",
-    "displayName": "Súbeme la radio - Enrique Iglesias;Descemer Bueno;Zion &amp;Lennox"
+    "displayName": "Súbeme la radio - Enrique Iglesias;Descemer Bueno;Zion &amp;Lennox",
+    "numberOneDate": "8 de abril de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "69fc1b9d5420901a33fb3a51e58d694a",
@@ -15080,7 +18557,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002300703.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002300704.jpg",
-    "displayName": "Something just like this - The Chainsmokers;Coldplay"
+    "displayName": "Something just like this - The Chainsmokers;Coldplay",
+    "numberOneDate": "15 de abril de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "aa565829e483769fa7317f7d0cf5d9f3",
@@ -15093,7 +18573,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002337587.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002395942.jpg",
-    "displayName": "Attention - Charlie Puth"
+    "displayName": "Attention - Charlie Puth",
+    "numberOneDate": "22 de julio de 2017",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d7369d506a0647ccd433c7d0ec290d8be52c186f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "bbac48157b3ec25b80fb7f879ff7022c",
@@ -15106,7 +18589,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490005120901.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/490005121877.jpg",
-    "displayName": "Me rehúso - Danny Ocean"
+    "displayName": "Me rehúso - Danny Ocean",
+    "numberOneDate": "9 de septiembre de 2017",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/e44589534ea9a8956c0305e1545977ae8a1a482c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "1ce7014b0bffdf7149a2df6b78a5a13c",
@@ -15119,7 +18605,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002353273.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002353275.jpg",
-    "displayName": "Know no better - Major Lazer;Camila Cabello;Quavo;Travis Scott"
+    "displayName": "Know no better - Major Lazer;Camila Cabello;Quavo;Travis Scott",
+    "numberOneDate": "21 de octubre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "957beda73c441600b98200580631e9c6",
@@ -15132,7 +18621,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570005238928.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570005239258.jpg",
-    "displayName": "Would you ever - Skrillex;Poo Bear"
+    "displayName": "Would you ever - Skrillex;Poo Bear",
+    "numberOneDate": "25 de noviembre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "745ab6d0b6aed38e75c76a0c58e8ad2a",
@@ -15145,7 +18637,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002357837.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002242493.jpg",
-    "displayName": "New rules - Dua Lipa"
+    "displayName": "New rules - Dua Lipa",
+    "numberOneDate": "2 de diciembre de 2017",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/75a1b521de23958a2db9acf4fc8151999ee54bd7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "6e0b582a4c4ee1ec1a4c337d713e4fa7",
@@ -15158,7 +18653,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002413026.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002413028.jpg",
-    "displayName": "Perfect duet - Ed Sheeran;Beyoncé"
+    "displayName": "Perfect duet - Ed Sheeran;Beyoncé",
+    "numberOneDate": "16 de diciembre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "e953086e9ed9567700dd2dac7eb530a5",
@@ -15171,7 +18669,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002407500.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002407504.jpg",
-    "displayName": "Échame la culpa - Luis Fonsi;Demi Lovato"
+    "displayName": "Échame la culpa - Luis Fonsi;Demi Lovato",
+    "numberOneDate": "30 de diciembre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "902a68b5d8e731052446dd0ea47134f6",
@@ -15184,7 +18685,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002295901.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570005157166.jpg",
-    "displayName": "Chained to the rhythm - Katy Perry;Skip Marley"
+    "displayName": "Chained to the rhythm - Katy Perry;Skip Marley",
+    "numberOneDate": "1 de abril de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "60e53cfee40badf1e62bb09d8419253e",
@@ -15197,7 +18701,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002289382.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002289383.jpg",
-    "displayName": "You don't know me - Jax Jones;Raye"
+    "displayName": "You don't know me - Jax Jones;Raye",
+    "numberOneDate": "13 de mayo de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "8a199cc6c7630cab1518e9f60dd979e4",
@@ -15210,7 +18717,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002325757.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002442312.jpg",
-    "displayName": "Hey ma (Spanish version) - J Balvin;Pitbull;Camila Cabello"
+    "displayName": "Hey ma (Spanish version) - J Balvin;Pitbull;Camila Cabello",
+    "numberOneDate": "3 de junio de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "3dad979329db3e6368a59f9f3849bb17",
@@ -15223,7 +18733,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002334055.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002334108.jpg",
-    "displayName": "Sign of the times - Harry Styles"
+    "displayName": "Sign of the times - Harry Styles",
+    "numberOneDate": "24 de junio de 2017",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9801b9239ad1b833f1317574ee55b9d7b8426ff1?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "114572b26b1828f855b434d92d1da528",
@@ -15236,7 +18749,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002354557.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002359724.jpg",
-    "displayName": "Yo contigo, tú conmigo (The gong gong song) - Morat;Álvaro Soler"
+    "displayName": "Yo contigo, tú conmigo (The gong gong song) - Morat;Álvaro Soler",
+    "numberOneDate": "5 de agosto de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "7fe6203b41c7ddd41e31b6c459e8c772",
@@ -15249,7 +18765,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002380015.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002380016.jpg",
-    "displayName": "Silence - marshmello;Khalid"
+    "displayName": "Silence - marshmello;Khalid",
+    "numberOneDate": "18 de noviembre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a31cc3447639f52c81ee9eaf63f34097",
@@ -15262,7 +18781,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570005254994.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570005254997.jpg",
-    "displayName": "Dusk till dawn - Zayn;Sia"
+    "displayName": "Dusk till dawn - Zayn;Sia",
+    "numberOneDate": "9 de diciembre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "12916bef1f41a61f32433682d754e6bd",
@@ -15275,7 +18797,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002349144.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002349188.jpg",
-    "displayName": "Tired - Alan Walker;Gavin James"
+    "displayName": "Tired - Alan Walker;Gavin James",
+    "numberOneDate": "2 de septiembre de 2017",
+    "spotifyUrl": "",
+    "bestPosition": "2"
   },
   {
     "id": "3fe6a02a603ea1ff47d2c14216c8d682",
@@ -15288,7 +18813,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002387041.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002399223.jpg",
-    "displayName": "Stargazing - Kygo;Justin Jesso"
+    "displayName": "Stargazing - Kygo;Justin Jesso",
+    "numberOneDate": "20 de enero de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "caf70f93a8bb9104414669c450c0a6c4",
@@ -15301,7 +18829,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520005281302.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520005281303.jpg",
-    "displayName": "All falls down - Alan Walker;Digital Farm Animals;Noah Cyrus"
+    "displayName": "All falls down - Alan Walker;Digital Farm Animals;Noah Cyrus",
+    "numberOneDate": "3 de febrero de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "04e8e05b525c11f268f5b782602e4cae",
@@ -15314,7 +18845,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002391547.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002391550.jpg",
-    "displayName": "La llamada - Leiva"
+    "displayName": "La llamada - Leiva",
+    "numberOneDate": "10 de febrero de 2018",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/71f65175d9fab17018dbac6e89a92e47096f0519?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "a2e9e2dce78ce8142fee4099713c1ede",
@@ -15327,7 +18861,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002410103.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002410111.jpg",
-    "displayName": "El patio - Pablo López"
+    "displayName": "El patio - Pablo López",
+    "numberOneDate": "3 de marzo de 2018",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1ba5d9d0caba85723781c274403f693f06902330?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "107076eac1edbfd2d69ad1605fa40913",
@@ -15340,7 +18877,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002414566.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002415840.jpg",
-    "displayName": "Never be the same - Camila Cabello"
+    "displayName": "Never be the same - Camila Cabello",
+    "numberOneDate": "26 de mayo de 2018",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/51da25797c110cf14b87c3b308f4a86cb3e0afd4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "421d090d2efa929f6b13968a7256dbe8",
@@ -15353,7 +18893,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002439414.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002439442.jpg",
-    "displayName": "A partir de hoy - David Bisbal;Sebastián Yatra"
+    "displayName": "A partir de hoy - David Bisbal;Sebastián Yatra",
+    "numberOneDate": "21 de julio de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "0e06de0e1fb3cd696c9c0209861b8c9d",
@@ -15366,7 +18909,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002432692.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002432735.jpg",
-    "displayName": "1, 2, 2003 - Sofía Reyes;De la Ghetto;Jason Derülo"
+    "displayName": "1, 2, 2003 - Sofía Reyes;De la Ghetto;Jason Derülo",
+    "numberOneDate": "28 de julio de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "e259215c8cf4b223391977826d0c81a2",
@@ -15379,7 +18925,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002561309.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002561310.jpg",
-    "displayName": "One kiss - Calvin Harris;Dua Lipa"
+    "displayName": "One kiss - Calvin Harris;Dua Lipa",
+    "numberOneDate": "4 de agosto de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "426ee83c0e9b8a0a2de3ede04584955d",
@@ -15392,7 +18941,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002609367.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002609373.jpg",
-    "displayName": "Fuego - Eleni Foureira"
+    "displayName": "Fuego - Eleni Foureira",
+    "numberOneDate": "22 de septiembre de 2018",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ed35630c3935054598384b4ab81c609ba9f97982?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "d7cf64f6d89ab03c4ddd6a799692bf03",
@@ -15405,7 +18957,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002613210.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002626723.jpg",
-    "displayName": "Girls like you - Maroon 5;Cardi B"
+    "displayName": "Girls like you - Maroon 5;Cardi B",
+    "numberOneDate": "20 de octubre de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "962d0f29d0641ba93bbb544313a70b85",
@@ -15418,7 +18973,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002629663.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002757849.jpg",
-    "displayName": "Lo siento - Beret"
+    "displayName": "Lo siento - Beret",
+    "numberOneDate": "15 de diciembre de 2018",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/48d9b419bd382c4dd9d851f6b2686e641e391b6d?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "f1ee806d1ceb765f5424f7714bbdc7d2",
@@ -15431,7 +18989,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002635514.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002635515.jpg",
-    "displayName": "Promises - Calvin Harris;Sam Smith"
+    "displayName": "Promises - Calvin Harris;Sam Smith",
+    "numberOneDate": "22 de diciembre de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "3644400de4c24d029047b3522e741d82",
@@ -15444,7 +19005,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002379963.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520005276714.jpg",
-    "displayName": "What lovers do - Maroon 5;SZA"
+    "displayName": "What lovers do - Maroon 5;SZA",
+    "numberOneDate": "13 de enero de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1b42509afcd3ecece1c36d0493831d51",
@@ -15457,7 +19021,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002403506.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002403514.jpg",
-    "displayName": "Carry you home - Tiësto;Aloe Blacc;Stargate"
+    "displayName": "Carry you home - Tiësto;Aloe Blacc;Stargate",
+    "numberOneDate": "10 de febrero de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "97af3b95aaf30fbacf718f1fcd29fc13",
@@ -15470,7 +19037,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570005331482.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002428353.jpg",
-    "displayName": "These days - Rudimental;Dan Caplen;Jess Glynne;Macklemore"
+    "displayName": "These days - Rudimental;Dan Caplen;Jess Glynne;Macklemore",
+    "numberOneDate": "2 de junio de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "f040b1aacbe9d018a09697fe5063891e",
@@ -15483,7 +19053,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002392418.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002395942.jpg",
-    "displayName": "How long - Charlie Puth"
+    "displayName": "How long - Charlie Puth",
+    "numberOneDate": "10 de marzo de 2018",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0dc00d9cdee8c916782feb2e6fc89d82910aa019?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "ab893a5a20b82a22fdcf9e03a4d09b7c",
@@ -15496,7 +19069,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002402818.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002609626.jpg",
-    "displayName": "Corazón - Maluma;Nego do Borel"
+    "displayName": "Corazón - Maluma;Nego do Borel",
+    "numberOneDate": "17 de marzo de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "c2767d7ffd7b5d7a89075266ea1b99b7",
@@ -15509,7 +19085,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002401163.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002401164.jpg",
-    "displayName": "Wolves - Selena Gomez;marshmello"
+    "displayName": "Wolves - Selena Gomez;marshmello",
+    "numberOneDate": "14 de abril de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "9f0e65dfa8e15cf38dd73b15ccebca52",
@@ -15522,7 +19101,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002422050.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002427413.jpg",
-    "displayName": "For you - Liam Payne;Rita Ora"
+    "displayName": "For you - Liam Payne;Rita Ora",
+    "numberOneDate": "28 de abril de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "e356bb3398c728c5c3b67ed696e58847",
@@ -15535,7 +19117,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002430633.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002600236.jpg",
-    "displayName": "Friends - Anne-Marie;marshmello"
+    "displayName": "Friends - Anne-Marie;marshmello",
+    "numberOneDate": "16 de junio de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "b36b953a9a20b5402e2588525839d3a3",
@@ -15548,7 +19133,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002443082.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002443081.jpg",
-    "displayName": "La cintura - Álvaro Soler"
+    "displayName": "La cintura - Álvaro Soler",
+    "numberOneDate": "30 de junio de 2018",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d314a76d2153eecdaa6e14c62b741402320786f4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "d28fe5c0d1408b38ca50f419471b85f2",
@@ -15561,7 +19149,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002409237.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002409238.jpg",
-    "displayName": "Leave a light on - Tom Walker"
+    "displayName": "Leave a light on - Tom Walker",
+    "numberOneDate": "1 de septiembre de 2018",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1f0dd349b1a3898c0f7466a95fa437b1c77928d6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "0cadc673a71515d2e1f81e6dc6ac802d",
@@ -15574,7 +19165,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002400260.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002400284.jpg",
-    "displayName": "I just can't - Quintino;R3hab"
+    "displayName": "I just can't - Quintino;R3hab",
+    "numberOneDate": "13 de enero de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "495390ee5f043f6826d6f02ce162c44d",
@@ -15587,7 +19181,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002444949.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002444951.jpg",
-    "displayName": "Lo malo - Aitana;Ana Guerra"
+    "displayName": "Lo malo - Aitana;Ana Guerra",
+    "numberOneDate": "21 de abril de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "fb1931ecafb59591d7dbec4bd0bb7813",
@@ -15600,7 +19197,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002442092.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002642673.jpg",
-    "displayName": "Flames - David Guetta;Sia"
+    "displayName": "Flames - David Guetta;Sia",
+    "numberOneDate": "11 de agosto de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a83a962b3d11f130a32656a4db50b75e",
@@ -15613,7 +19213,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002438219.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002436563.jpg",
-    "displayName": "Déjala que baile - Melendi;Alejandro Sanz;Arkano"
+    "displayName": "Déjala que baile - Melendi;Alejandro Sanz;Arkano",
+    "numberOneDate": "15 de septiembre de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "c1746152845cea7763da761173a587d0",
@@ -15626,7 +19229,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002630296.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002630297.jpg",
-    "displayName": "Teléfono - Aitana"
+    "displayName": "Teléfono - Aitana",
+    "numberOneDate": "27 de octubre de 2018",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/61cb22c842d6d3ca50697877615a4e16dc82d7fb?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "b8a9ed0903e65fc05713ddb996a4ae8a",
@@ -15639,7 +19245,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002603569.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002603571.jpg",
-    "displayName": "Qué tienes tú - Dvicio;Jesús Navarro;Mau y Ricky"
+    "displayName": "Qué tienes tú - Dvicio;Jesús Navarro;Mau y Ricky",
+    "numberOneDate": "17 de noviembre de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1649003e462550ab82a77f4f55d4dc4e",
@@ -15652,7 +19261,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002615194.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002660887.jpg",
-    "displayName": "Cuando nadie ve - Morat"
+    "displayName": "Cuando nadie ve - Morat",
+    "numberOneDate": "24 de noviembre de 2018",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6747af2bd659565558c66f6fb30dfb7f2823925f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "deaaa815d6781279e06ac1a2ab020864",
@@ -15665,7 +19277,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002631824.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002732795.jpg",
-    "displayName": "Ya no quiero ná - Lola Índigo"
+    "displayName": "Ya no quiero ná - Lola Índigo",
+    "numberOneDate": "29 de diciembre de 2018",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/64c583e59b8016b537531e3e12ea41e4ba568977?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "ff3d1ae8383981cd71926e8f8ce6720a",
@@ -15678,7 +19293,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002378206.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002378210.jpg",
-    "displayName": "Friends - Justin Bieber;BloodPop"
+    "displayName": "Friends - Justin Bieber;BloodPop",
+    "numberOneDate": "6 de enero de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "4573a31349a51180f10dd7f9cf01fca8",
@@ -15691,7 +19309,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002402771.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002660887.jpg",
-    "displayName": "Besos en guerra - Juanes;Morat"
+    "displayName": "Besos en guerra - Juanes;Morat",
+    "numberOneDate": "27 de enero de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "c5b8252d7a8a518e06673d6d8ec31f32",
@@ -15704,7 +19325,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002391289.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002391290.jpg",
-    "displayName": "Don't let go - Don Diablo;Holly Winter"
+    "displayName": "Don't let go - Don Diablo;Holly Winter",
+    "numberOneDate": "17 de febrero de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "9ce86828cb9eb5bd61588d65c39ea338",
@@ -15717,7 +19341,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002411816.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002411822.jpg",
-    "displayName": "Déjate llevar - Juan Magán;B-Case;Belinda;Manuel Turizo;Snova"
+    "displayName": "Déjate llevar - Juan Magán;B-Case;Belinda;Manuel Turizo;Snova",
+    "numberOneDate": "24 de marzo de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "6bdfffee0a07c23c97d6deb34724c1fa",
@@ -15730,7 +19357,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002415851.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002415852.jpg",
-    "displayName": "Downtown - Anitta;J Balvin"
+    "displayName": "Downtown - Anitta;J Balvin",
+    "numberOneDate": "31 de marzo de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "aecdb17f2a8497ffbb2e3b9fca306a3d",
@@ -15743,7 +19373,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002436386.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002436387.jpg",
-    "displayName": "X - J Balvin;Nicky Jam"
+    "displayName": "X - J Balvin;Nicky Jam",
+    "numberOneDate": "5 de mayo de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "04cbc81020fda22936d096f957a253fc",
@@ -15756,7 +19389,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002331068.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002331069.jpg",
-    "displayName": "Spinning over you - REYKO"
+    "displayName": "Spinning over you - REYKO",
+    "numberOneDate": "19 de mayo de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "6d73c39911b003f467e64ace598d6053",
@@ -15769,7 +19405,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570005478870.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570005478891.jpg",
-    "displayName": "Solo - Clean Bandit;Demi Lovato"
+    "displayName": "Solo - Clean Bandit;Demi Lovato",
+    "numberOneDate": "8 de septiembre de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "33bdb0af73c4860e4f0dd8febbcbc146",
@@ -15782,7 +19421,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002625710.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002625712.jpg",
-    "displayName": "Ni la hora - Ana Guerra;Juan Magán"
+    "displayName": "Ni la hora - Ana Guerra;Juan Magán",
+    "numberOneDate": "13 de octubre de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1f7bdf73db14876f0637023bcf3ab490",
@@ -15795,7 +19437,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002438038.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002438039.jpg",
-    "displayName": "Él no soy yo - Blas Cantó"
+    "displayName": "Él no soy yo - Blas Cantó",
+    "numberOneDate": "10 de noviembre de 2018",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6964871301b67416356ec0f3786bf6d06c2e7d23?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "feb2281409ec34eb507fc2b41e56d8a1",
@@ -15808,7 +19453,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002382221.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002382222.jpg",
-    "displayName": "Cola - CamelPhat;Elderbrook"
+    "displayName": "Cola - CamelPhat;Elderbrook",
+    "numberOneDate": "17 de febrero de 2018",
+    "spotifyUrl": "",
+    "bestPosition": "2"
   },
   {
     "id": "3f36e49aa26e2451305acb839f04fba1",
@@ -15821,7 +19469,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002651773.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002651776.jpg",
-    "displayName": "Kiss and make up - Dua Lipa;Black Pink"
+    "displayName": "Kiss and make up - Dua Lipa;Black Pink",
+    "numberOneDate": "19 de enero de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "471d4990efcb95b7f2e9dbd8079482db",
@@ -15834,7 +19485,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002665536.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002665537.jpg",
-    "displayName": "Vas a quedarte - Aitana"
+    "displayName": "Vas a quedarte - Aitana",
+    "numberOneDate": "16 de febrero de 2019",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6a876d00f49efa4a212e12c9dbbedc2e64e107fd?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "ce69f71a464036946fbb1bf4660f897a",
@@ -15847,7 +19501,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002642672.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002642673.jpg",
-    "displayName": "Say my name - Bebe Rexha;David Guetta;J Balvin"
+    "displayName": "Say my name - Bebe Rexha;David Guetta;J Balvin",
+    "numberOneDate": "30 de marzo de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "6bf11a2a02649e6b05b91c0183e3e3ef",
@@ -15860,7 +19517,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520005565550.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520005565551.jpg",
-    "displayName": "High hopes - Panic! at the Disco"
+    "displayName": "High hopes - Panic! at the Disco",
+    "numberOneDate": "20 de abril de 2019",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f6404b1b3199442271c17d9e1461c3f2a52018f8?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "420169184c95ec949a60498479223d5c",
@@ -15873,7 +19533,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002688643.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002688645.jpg",
-    "displayName": "Sucker - Jonas Brothers"
+    "displayName": "Sucker - Jonas Brothers",
+    "numberOneDate": "22 de junio de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "62320f4ece1f6f3bc5bfb4a60c3a6b6f",
@@ -15886,7 +19549,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002713961.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002717148.jpg",
-    "displayName": "I don't care - Ed Sheeran;Justin Bieber"
+    "displayName": "I don't care - Ed Sheeran;Justin Bieber",
+    "numberOneDate": "29 de junio de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "ac900baa7982b8722b59b1b6a40996fd",
@@ -15899,7 +19565,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002739486.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002739487.jpg",
-    "displayName": "Yo x ti tú x mí - Ozuna;Rosalía"
+    "displayName": "Yo x ti tú x mí - Ozuna;Rosalía",
+    "numberOneDate": "28 de septiembre de 2019",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f8d270e551ebd663edbb22a6f2fb58a3f5d73edd?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "0dc7f7ab2827b0821041a970db2353d0",
@@ -15912,7 +19581,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490005738019.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/490005733332.jpg",
-    "displayName": "Dance monkey - Tones and I"
+    "displayName": "Dance monkey - Tones and I",
+    "numberOneDate": "23 de noviembre de 2019",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/535ffea66207a0fc07d57fbaea7b5594be797f9b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "1e65ee8510459daf8efc21b04c8bda00",
@@ -15925,7 +19597,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002640641.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002640642.jpg",
-    "displayName": "Love someone - Lukas Graham"
+    "displayName": "Love someone - Lukas Graham",
+    "numberOneDate": "9 de marzo de 2019",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/04cf58ec4116750b72117e8b2331f3b0e3ce884f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "0e3a3b4a0d8d73d9231199dcd6c14503",
@@ -15938,7 +19613,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002661696.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002661698.jpg",
-    "displayName": "Sweet but psycho - Ava Max"
+    "displayName": "Sweet but psycho - Ava Max",
+    "numberOneDate": "4 de mayo de 2019",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9772598a67666a9b7184926c59fe15b9574c7e46?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "131d78cfb12c273d8c9842eff79da048",
@@ -15951,7 +19629,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002644913.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002785002.jpg",
-    "displayName": "5 sentidos - Dvicio;Taburete"
+    "displayName": "5 sentidos - Dvicio;Taburete",
+    "numberOneDate": "11 de mayo de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "52284f201746938334296aa8591fd219",
@@ -15964,7 +19645,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002695843.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002695842.jpg",
-    "displayName": "Mi persona favorita - Alejandro Sanz;Camila Cabello"
+    "displayName": "Mi persona favorita - Alejandro Sanz;Camila Cabello",
+    "numberOneDate": "15 de junio de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "d4a222b1e95b41d504c84d41bfef8113",
@@ -15977,7 +19661,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490005621596.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/490005621635.jpg",
-    "displayName": "Don't call me up - Mabel"
+    "displayName": "Don't call me up - Mabel",
+    "numberOneDate": "3 de agosto de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "abafb76d65e4eb71b59befe5d9211b09",
@@ -15990,7 +19677,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002725403.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003124661.jpg",
-    "displayName": "Señorita - Camila Cabello;Shawn Mendes"
+    "displayName": "Señorita - Camila Cabello;Shawn Mendes",
+    "numberOneDate": "7 de septiembre de 2019",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a4e190b40d1c5a60e5e9126e4bfe19f41aff41a7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "c4ce2a273de0b5fd9c6b8b9392ae81e9",
@@ -16003,7 +19693,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002716576.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002716580.jpg",
-    "displayName": "Someone you loved - Lewis Capaldi;Madism"
+    "displayName": "Someone you loved - Lewis Capaldi;Madism",
+    "numberOneDate": "12 de octubre de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "d323cd4e91b6b2ed1aba6be2efbc46f5",
@@ -16016,7 +19709,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002737517.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002761504.jpg",
-    "displayName": "Atrévete - Nicky Jam;Sech"
+    "displayName": "Atrévete - Nicky Jam;Sech",
+    "numberOneDate": "2 de noviembre de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "77afe72777f35d65154d98c9be185a8d",
@@ -16029,7 +19725,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570005515851.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002425437.jpg",
-    "displayName": "Shotgun - George Ezra"
+    "displayName": "Shotgun - George Ezra",
+    "numberOneDate": "26 de enero de 2019",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/955da50473f33884f1c3646e6aca4139844e59dd?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "bde7c2f7d494616b038c5ba08b789540",
@@ -16042,7 +19741,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002709414.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002710609.jpg",
-    "displayName": "Calma (Alicia remix) - Alicia Keys;Farruko;Pedro Capó"
+    "displayName": "Calma (Alicia remix) - Alicia Keys;Farruko;Pedro Capó",
+    "numberOneDate": "27 de julio de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "187d5f76de96258f745732ffa1c3b31e",
@@ -16055,7 +19757,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002685497.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006028968.jpg",
-    "displayName": "Vuela (Beach pop) - Bombai"
+    "displayName": "Vuela (Beach pop) - Bombai",
+    "numberOneDate": "17 de agosto de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "e26012cb84c8e6f08c2992ec3772bec7",
@@ -16068,7 +19773,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570005639332.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570005639340.jpg",
-    "displayName": "So am I - Ava Max"
+    "displayName": "So am I - Ava Max",
+    "numberOneDate": "16 de noviembre de 2019",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/8683916dfa16b85a9dff1bf743e629790a2efe85?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "0102a59e9eb0430dc1553dfd6ec11677",
@@ -16081,7 +19789,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002748593.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002748598.jpg",
-    "displayName": "Memories - Maroon 5"
+    "displayName": "Memories - Maroon 5",
+    "numberOneDate": "28 de diciembre de 2019",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ecd7d70c95ed7dc66a1a9f6d9c29f7381ac7296e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "ec0962c051aaf4758baf7cf1b2de2520",
@@ -16094,7 +19805,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002664095.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002719125.jpg",
-    "displayName": "Nothing breaks like a heart - Mark Ronson;Miley Cyrus"
+    "displayName": "Nothing breaks like a heart - Mark Ronson;Miley Cyrus",
+    "numberOneDate": "16 de marzo de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "7470879d92d6b38fb217eeaa50056e49",
@@ -16107,7 +19821,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002666711.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002666710.jpg",
-    "displayName": "Bajito - Ana Guerra"
+    "displayName": "Bajito - Ana Guerra",
+    "numberOneDate": "13 de abril de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "908993464049605012d29a17060a56ff",
@@ -16120,7 +19837,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002681435.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002681434.jpg",
-    "displayName": "Fading - Alle Farben;ILIRA"
+    "displayName": "Fading - Alle Farben;ILIRA",
+    "numberOneDate": "20 de julio de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "5aa08035bdce61d7f0a56719471b6362",
@@ -16133,7 +19853,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002705317.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002705318.jpg",
-    "displayName": "Contando lunares - Don Patricio;Cruz Cafuné"
+    "displayName": "Contando lunares - Don Patricio;Cruz Cafuné",
+    "numberOneDate": "24 de agosto de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "e74d179324eb2ced1264af2c09ac3e65",
@@ -16146,7 +19869,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002709571.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002709713.jpg",
-    "displayName": "Qué bonito es querer - Manuel Carrasco"
+    "displayName": "Qué bonito es querer - Manuel Carrasco",
+    "numberOneDate": "5 de octubre de 2019",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/194c2ccdf6b79c0634eb7e7a88b6db5007c8ccff?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "b585dc94e74092040f6e1f04c3121df1",
@@ -16159,7 +19885,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002644521.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002644522.jpg",
-    "displayName": "Perdón - David Bisbal;Greeicy"
+    "displayName": "Perdón - David Bisbal;Greeicy",
+    "numberOneDate": "2 de febrero de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "bf473710952a03b79b6d4c76ef7da643",
@@ -16172,7 +19901,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002670631.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002732795.jpg",
-    "displayName": "Mujer bruja - Lola Índigo;Mala Rodríguez"
+    "displayName": "Mujer bruja - Lola Índigo;Mala Rodríguez",
+    "numberOneDate": "23 de marzo de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "d63191406dd89fbc3bf830a9fd0d2aa4",
@@ -16185,7 +19917,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002704874.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002711064.jpg",
-    "displayName": "Presiento - Aitana;Morat"
+    "displayName": "Presiento - Aitana;Morat",
+    "numberOneDate": "6 de julio de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "78557506b4cf085826424001d302a2b1",
@@ -16198,7 +19933,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002679951.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002679952.jpg",
-    "displayName": "Con calma - Daddy Yankee;Snow"
+    "displayName": "Con calma - Daddy Yankee;Snow",
+    "numberOneDate": "10 de agosto de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a13e2c63e52a77e940ad9af0b91d02b5",
@@ -16211,7 +19949,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002710502.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002720464.jpg",
-    "displayName": "Old town road - Lil Nas X;Billy Ray Cyrus"
+    "displayName": "Old town road - Lil Nas X;Billy Ray Cyrus",
+    "numberOneDate": "26 de octubre de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "dcdacff2914dff9cf4a8590bfb600f5f",
@@ -16224,7 +19965,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002694731.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002695002.jpg",
-    "displayName": "Superpoderes - Leiva"
+    "displayName": "Superpoderes - Leiva",
+    "numberOneDate": "9 de noviembre de 2019",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/db7cfd8d86b6ad0d86f7fac0edd117deeeb09d06?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "2557e5d01d27cf63dc15944b7287cf16",
@@ -16237,7 +19981,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490005723929.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/490005723935.jpg",
-    "displayName": "Only human - Jonas Brothers"
+    "displayName": "Only human - Jonas Brothers",
+    "numberOneDate": "30 de noviembre de 2019",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/843f18749f649a6282af3f59b00c922f73e17fea?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "f3a76efe306f43b858722f64a90df7e7",
@@ -16250,7 +19997,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002740884.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002740883.jpg",
-    "displayName": "Indeciso - J Balvin;Lalo Ebratt;Reik"
+    "displayName": "Indeciso - J Balvin;Lalo Ebratt;Reik",
+    "numberOneDate": "7 de diciembre de 2019",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0a6de82af3b27ae44bda2b7383edf028bb16ce44?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "36588c55abc03700ae3a85f78161914a",
@@ -16263,7 +20013,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002721406.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002721405.jpg",
-    "displayName": "Me quedo - Aitana;Lola Índigo"
+    "displayName": "Me quedo - Aitana;Lola Índigo",
+    "numberOneDate": "21 de diciembre de 2019",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a140cc6ae353c0a0085db20dea5b5ab0",
@@ -16276,7 +20029,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570005770517.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570005770524.jpg",
-    "displayName": "Tabú - Ava Max;Pablo Alborán"
+    "displayName": "Tabú - Ava Max;Pablo Alborán",
+    "numberOneDate": "25 de enero de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/bb2f151d296f35d6b81fae4132c6a5a0241bdaac?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "90d87d835277046db3f354552f400723",
@@ -16289,7 +20045,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570005770235.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002934507.jpg",
-    "displayName": "¿A dónde vamos? - Morat"
+    "displayName": "¿A dónde vamos? - Morat",
+    "numberOneDate": "7 de marzo de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/05338a886f6052fa76f0bc29732e330f081aa661?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "b77213f5ad86c3cfb6267e9a78781e13",
@@ -16302,7 +20061,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002743939.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002785878.jpg",
-    "displayName": "Soldadito de hierro - Nil Moliner;Dani Fernández"
+    "displayName": "Soldadito de hierro - Nil Moliner;Dani Fernández",
+    "numberOneDate": "2 de mayo de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/8a560423d7e23b7de80aa90dc1549eb9f07619e6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "c70a932c128de1e07af75e69d19a414d",
@@ -16315,7 +20077,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002742729.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002742731.jpg",
-    "displayName": "Se iluminaba - Fred de Palma;Ana Mena"
+    "displayName": "Se iluminaba - Fred de Palma;Ana Mena",
+    "numberOneDate": "27 de junio de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/22eebcac676dc74986c2e45c56ae5b64a94466cc?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "4801c8ddb102234296bc36e6d3fb5d49",
@@ -16328,7 +20093,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002775248.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002793368.jpg",
-    "displayName": "Una foto en blanco y negro - David Otero;Taburete"
+    "displayName": "Una foto en blanco y negro - David Otero;Taburete",
+    "numberOneDate": "11 de julio de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/cafec060464b0777c4aaf519820010023dbb4ca8?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "553a79d0b5d70580572cd232480677ee",
@@ -16341,7 +20109,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002791396.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002791397.jpg",
-    "displayName": "Breaking me - TOPIC;A7S"
+    "displayName": "Breaking me - TOPIC;A7S",
+    "numberOneDate": "15 de agosto de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/25ac3443cd3823ce11f6af5dc9487b54c0c8020c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "00427ba1a43d54b64e3c84937f71cfaf",
@@ -16354,7 +20125,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002800228.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002757849.jpg",
-    "displayName": "Sueño - Beret;Pablo Alborán"
+    "displayName": "Sueño - Beret;Pablo Alborán",
+    "numberOneDate": "29 de agosto de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6e5e31cb344db8dba45175045c5013aec5bb3480?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "d95febe6e604af8c71d49959a32a3a82",
@@ -16367,7 +20141,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002812082.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002812080.jpg",
-    "displayName": "Savage love (Laxed - Siren beat) - Jason Derülo;Jawsh 685"
+    "displayName": "Savage love (Laxed - Siren beat) - Jason Derülo;Jawsh 685",
+    "numberOneDate": "12 de septiembre de 2020",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "70eb3921f898cffe0faaa634abf922a6",
@@ -16380,7 +20157,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002821684.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002821685.jpg",
-    "displayName": "Hawai - Maluma"
+    "displayName": "Hawai - Maluma",
+    "numberOneDate": "10 de octubre de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/07037d916c2e4ea28cfe9f7489364d8bd18ff15e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "2a71568d5d6240a3340b64464b6de600",
@@ -16393,7 +20173,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002822064.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002822066.jpg",
-    "displayName": "Jerusalema - Master KG;Nomcebo"
+    "displayName": "Jerusalema - Master KG;Nomcebo",
+    "numberOneDate": "24 de octubre de 2020",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "19883e6987754667db4f09b7272732be",
@@ -16406,7 +20189,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002820695.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002820696.jpg",
-    "displayName": "Más de lo que aposté - Aitana;Morat"
+    "displayName": "Más de lo que aposté - Aitana;Morat",
+    "numberOneDate": "21 de noviembre de 2020",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "7a308b60955e117045e8fb6da7e09bc8",
@@ -16419,7 +20205,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002826032.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002826033.jpg",
-    "displayName": "A un paso de la luna - Ana Mena;Rocco Hunt"
+    "displayName": "A un paso de la luna - Ana Mena;Rocco Hunt",
+    "numberOneDate": "12 de diciembre de 2020",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "d53512fdefbd51dd128f38544c880412",
@@ -16432,7 +20221,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002785880.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002785878.jpg",
-    "displayName": "Mi religión - Nil Moliner"
+    "displayName": "Mi religión - Nil Moliner",
+    "numberOneDate": "26 de diciembre de 2020",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "34044100d288689812015c9b2624967f",
@@ -16445,7 +20237,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002791917.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002809834.jpg",
-    "displayName": "Some say - Nea"
+    "displayName": "Some say - Nea",
+    "numberOneDate": "4 de julio de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d3ac475db72a68005ee24a616aabb355145f3af2?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "c948330d201f6baf0cab4c10bfaf0cbb",
@@ -16458,7 +20253,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002694736.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002695002.jpg",
-    "displayName": "Como si fueras a morir mañana - Leiva"
+    "displayName": "Como si fueras a morir mañana - Leiva",
+    "numberOneDate": "8 de agosto de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/cc548652d105662235482e46d254006cf1046536?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "838242d91ccc9b59166b9a320917c0f9",
@@ -16471,7 +20269,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002798791.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002825634.jpg",
-    "displayName": "Kings & queens - Ava Max"
+    "displayName": "Kings & queens - Ava Max",
+    "numberOneDate": "26 de septiembre de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0557adac4354a421fa15aefb692bee6f280b8f4d?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "27e14b83d7a99c4f81b67cf94cea61aa",
@@ -16484,7 +20285,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570002792413.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570002792418.jpg",
-    "displayName": "In your eyes - The Weeknd"
+    "displayName": "In your eyes - The Weeknd",
+    "numberOneDate": "14 de noviembre de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f13dd2365911a6dbb940acef6c0557ca664e623e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "57a3ef9a534f7a6e980c53fe0c9af5b1",
@@ -16497,7 +20301,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002757018.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002789027.jpg",
-    "displayName": "Ritmo (Bad boys for life) - J Balvin;The Black Eyed Peas"
+    "displayName": "Ritmo (Bad boys for life) - J Balvin;The Black Eyed Peas",
+    "numberOneDate": "1 de febrero de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/60e9246623919cb164490957ba79af46ceabe237?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "1750cd7162ba40b21a5c9791dafcc0b0",
@@ -16510,7 +20317,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002764979.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570002792418.jpg",
-    "displayName": "Blinding lights - The Weeknd"
+    "displayName": "Blinding lights - The Weeknd",
+    "numberOneDate": "11 de abril de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/579494c4709a8cc91687e487566c315dee104f9e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "23c07f90af5292585474e8c56e4aaf4b",
@@ -16523,7 +20333,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570005770518.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570005770521.jpg",
-    "displayName": "Tusa - Karol G;Nicki Minaj"
+    "displayName": "Tusa - Karol G;Nicki Minaj",
+    "numberOneDate": "18 de abril de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/3c8b32dbd4e1cb3f0bcdfd29bd12a34f569193eb?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "4324011e0603244109ab82b3aed44c1a",
@@ -16536,7 +20349,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002792797.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002792799.jpg",
-    "displayName": "Si tú la quieres - Aitana;David Bisbal"
+    "displayName": "Si tú la quieres - Aitana;David Bisbal",
+    "numberOneDate": "18 de julio de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1d963d80eb8e68da6321c4d9bd4c50ef31fbe674?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "d6049748ede97b98d981b941f729ac21",
@@ -16549,7 +20365,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570002827762.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570002827771.jpg",
-    "displayName": "Dynamite - BTS"
+    "displayName": "Dynamite - BTS",
+    "numberOneDate": "19 de diciembre de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a707728846c105f4d8552b8546c30b121bf517f0?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "bc394e0084bac8928e41dafead31778a",
@@ -16562,7 +20381,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002762058.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002831249.jpg",
-    "displayName": "La mentira - Dani Martín;Joaquín Sabina"
+    "displayName": "La mentira - Dani Martín;Joaquín Sabina",
+    "numberOneDate": "29 de febrero de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ca3472ea30fc8fec1397bfd39c2760a3443107e7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "4b3c9da86187ba3faeef30c05e1cc3ca",
@@ -16575,7 +20397,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002769398.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003108892.jpg",
-    "displayName": "+ - Aitana;Cali y El Dandee"
+    "displayName": "+ - Aitana;Cali y El Dandee",
+    "numberOneDate": "28 de marzo de 2020",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "55783582be25cc3fc8524c0b9788edbf",
@@ -16588,7 +20413,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002779767.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002852966.jpg",
-    "displayName": "Physical - Dua Lipa"
+    "displayName": "Physical - Dua Lipa",
+    "numberOneDate": "13 de junio de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/2d8013cc528278684beb6a120c3655e3453d01ea?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "0ff1f99b9a0c97d757a4d6c81d681fe5",
@@ -16601,7 +20429,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002792020.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002792022.jpg",
-    "displayName": "Favorito - Camilo"
+    "displayName": "Favorito - Camilo",
+    "numberOneDate": "22 de agosto de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/eeb38d05be08584923943cddbe220e69598cc174?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "d5eaa17f932971bf6213be69219bfa68",
@@ -16614,7 +20445,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570002792415.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002852966.jpg",
-    "displayName": "Break my heart - Dua Lipa"
+    "displayName": "Break my heart - Dua Lipa",
+    "numberOneDate": "28 de noviembre de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/db7293c1d12874c0b4e604999ef04f05b185e5d9?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "2bdb9474ca9d906988e8b0f2eb452b48",
@@ -16627,7 +20461,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002757850.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002757849.jpg",
-    "displayName": "Si por mí fuera - Beret"
+    "displayName": "Si por mí fuera - Beret",
+    "numberOneDate": "11 de enero de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/3deb072b77eb0818866cd490e360676ecbf02b10?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "69b9eb8e35ca83b1e5bc0a7d72415a2d",
@@ -16640,7 +20477,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002761219.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002761227.jpg",
-    "displayName": "Don't start now - Dua Lipa"
+    "displayName": "Don't start now - Dua Lipa",
+    "numberOneDate": "8 de febrero de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ed151225213380a41e5c4af00ff558e25b5875d1?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "36784abb2cc60b4f0f2e61135b5c4d30",
@@ -16653,7 +20493,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002761014.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002785002.jpg",
-    "displayName": "Dosis - ChocQuibTown;Dvicio;Reik"
+    "displayName": "Dosis - ChocQuibTown;Dvicio;Reik",
+    "numberOneDate": "25 de abril de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/20c15546d0b8132d6b561a9ba3a9b94cf0b76b19?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "e93340a99c6c269a3f8ff6ad4aae500d",
@@ -16666,7 +20509,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002764475.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002764477.jpg",
-    "displayName": "Before you go - Lewis Capaldi"
+    "displayName": "Before you go - Lewis Capaldi",
+    "numberOneDate": "30 de mayo de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/304217fc26eb1dacd83a511238c7b0c2192052b1?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "2ae8c145508df8a12498046ac6327c3c",
@@ -16679,7 +20525,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570002787033.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002762936.jpg",
-    "displayName": "Say so - Doja Cat"
+    "displayName": "Say so - Doja Cat",
+    "numberOneDate": "25 de julio de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1ddded6adc5b2f4e77088b793bd4e53123843f6c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "a121cd466f987a7dfab2184b146d6457",
@@ -16692,7 +20541,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002787238.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002787239.jpg",
-    "displayName": "Rojo - J Balvin"
+    "displayName": "Rojo - J Balvin",
+    "numberOneDate": "1 de agosto de 2020",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f0ea5872e2c181b12cbae3e00ff9bc2971eac092?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "fd5f6f79ede6b31e14411925dcb7b134",
@@ -16705,7 +20557,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002851647.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002884756.jpg",
-    "displayName": "Tú me dejaste de querer - C. Tangana;La Húngara;Niño de Elche"
+    "displayName": "Tú me dejaste de querer - C. Tangana;La Húngara;Niño de Elche",
+    "numberOneDate": "23 de enero de 2021",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "b4961c6ef70d347fa2e3e306a7e25f92",
@@ -16718,7 +20573,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002835706.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002837927.jpg",
-    "displayName": "Diamonds - Sam Smith"
+    "displayName": "Diamonds - Sam Smith",
+    "numberOneDate": "6 de febrero de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/431e50a3360c1a68ed645b6b6873d5877791fde9?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "b2ef9329bc3b9b19edfd4a945fe5e481",
@@ -16731,7 +20589,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002832728.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002832730.jpg",
-    "displayName": "Let's love - David Guetta;Sia"
+    "displayName": "Let's love - David Guetta;Sia",
+    "numberOneDate": "13 de marzo de 2021",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "63f5c3f56b006f7525a7a98fbc52d8b9",
@@ -16744,7 +20605,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002851629.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002874960.jpg",
-    "displayName": "Juramento eterno de sal - Álvaro de Luna"
+    "displayName": "Juramento eterno de sal - Álvaro de Luna",
+    "numberOneDate": "3 de abril de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c00029190eef66ac50361e4a9193debc0475c235?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "aa3b52821726c1f4ecd60053d107d8ad",
@@ -16757,7 +20621,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002834613.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002834614.jpg",
-    "displayName": "Hypnotized - Purple Disco Machine;Sophie and The Giants"
+    "displayName": "Hypnotized - Purple Disco Machine;Sophie and The Giants",
+    "numberOneDate": "10 de abril de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/72c7f31677ea9ccc2af9b862aa0b3826c03d790b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "3812c3e5158f1a9d9d7eb9bb5ffaeadc",
@@ -16770,7 +20637,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002916175.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002930753.jpg",
-    "displayName": "Todo de ti - Rauw Alejandro"
+    "displayName": "Todo de ti - Rauw Alejandro",
+    "numberOneDate": "10 de julio de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/e46d67d4e48b6194942c28aa050576a7e2490976?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "f24cf0e782295b333efc65555d4ff217",
@@ -16783,7 +20653,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002900735.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002923400.jpg",
-    "displayName": "Kiss me more - Doja Cat;SZA"
+    "displayName": "Kiss me more - Doja Cat;SZA",
+    "numberOneDate": "21 de agosto de 2021",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "ec703f40c099ebfda17125efaff397f1",
@@ -16796,7 +20669,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570002931346.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570002931356.jpg",
-    "displayName": "Beggin - Måneskin"
+    "displayName": "Beggin - Måneskin",
+    "numberOneDate": "28 de agosto de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c956a56a9a3103ad75e95ce2cbb03a0bdd26332b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "1d4cca8ba8d541fbc4c0a55e7d99eb50",
@@ -16809,7 +20685,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002926768.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002926767.jpg",
-    "displayName": "Iko Iko (My bestie) - Justin Wellington;Small Jam"
+    "displayName": "Iko Iko (My bestie) - Justin Wellington;Small Jam",
+    "numberOneDate": "4 de septiembre de 2021",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "8829ee9bc455522a3772300d70741257",
@@ -16822,7 +20701,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002926913.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002970681.jpg",
-    "displayName": "Bad habits - Ed Sheeran"
+    "displayName": "Bad habits - Ed Sheeran",
+    "numberOneDate": "18 de septiembre de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0e537207ad0fff8c9e9011735c665d99b9b58d5e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "0b9513432e9833fd83444e5d6895d1ea",
@@ -16835,7 +20717,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002941953.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002941955.jpg",
-    "displayName": "Mon amour - Aitana;Zzoilo"
+    "displayName": "Mon amour - Aitana;Zzoilo",
+    "numberOneDate": "25 de septiembre de 2021",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "b3a56195fd071c8ade204bea007b4f47",
@@ -16848,7 +20733,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002924749.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002924751.jpg",
-    "displayName": "Un beso de improviso - Ana Mena;Rocco Hunt"
+    "displayName": "Un beso de improviso - Ana Mena;Rocco Hunt",
+    "numberOneDate": "16 de octubre de 2021",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "53f7f060ea65882acce7516ace1f7ca6",
@@ -16861,7 +20749,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002947829.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002970681.jpg",
-    "displayName": "Shivers - Ed Sheeran"
+    "displayName": "Shivers - Ed Sheeran",
+    "numberOneDate": "13 de noviembre de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/bb9f413d6876e265d09a5d2d93345c64f8ac4de8?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "afed90af51a413bc845e26d5d918d352",
@@ -16874,7 +20765,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002941535.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002955226.jpg",
-    "displayName": "Cold heart - Dua Lipa;Elton John;Pnau"
+    "displayName": "Cold heart - Dua Lipa;Elton John;Pnau",
+    "numberOneDate": "4 de diciembre de 2021",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "64666493db2d1fedfa35414621838e70",
@@ -16887,7 +20781,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002900388.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002967659.jpg",
-    "displayName": "Libertad - Nil Moliner"
+    "displayName": "Libertad - Nil Moliner",
+    "numberOneDate": "11 de diciembre de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/5c4288ae0086fff22eb439be3c9174916cea841c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "5bed7d54017953ca53361af044fc331e",
@@ -16900,7 +20797,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002959691.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002974625.jpg",
-    "displayName": "Easy on me - Adele"
+    "displayName": "Easy on me - Adele",
+    "numberOneDate": "25 de diciembre de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c5014be1aeb2ab5f129e2789eff3ea87ecd5027f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "dec7a51deadfe8889d4a384d7a09774d",
@@ -16913,7 +20813,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002828343.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002828345.jpg",
-    "displayName": "Santería - Danna Paola;Denise Rosenthal;Lola Índigo"
+    "displayName": "Santería - Danna Paola;Denise Rosenthal;Lola Índigo",
+    "numberOneDate": "9 de enero de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/50971d62eee3d7d65c322bf375c9ab239d7061d1?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "4fd1b653b8f221345fb9e85adf1cb590",
@@ -16926,7 +20829,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002837640.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002891128.jpg",
-    "displayName": "Vida de rico - Camilo"
+    "displayName": "Vida de rico - Camilo",
+    "numberOneDate": "6 de marzo de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a13be76dd5e2cbedb1f1bc9f142967aa7c684d10?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "836e1ccbf9d656474ba6d50c43265825",
@@ -16939,7 +20845,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002846017.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002993392.jpg",
-    "displayName": "Chica ideal - Guaynaa;Sebastián Yatra"
+    "displayName": "Chica ideal - Guaynaa;Sebastián Yatra",
+    "numberOneDate": "17 de abril de 2021",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "0590743eb2a4e0d8c3610c9a2dfc6a97",
@@ -16952,7 +20861,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002871402.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570002792418.jpg",
-    "displayName": "Save your tears - The Weeknd"
+    "displayName": "Save your tears - The Weeknd",
+    "numberOneDate": "5 de junio de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0bf5eacd386918ce9b60225d1e967b6ec30147db?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "47e8a071e1d30bc038f6fba05da776f3",
@@ -16965,7 +20877,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002858243.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002757849.jpg",
-    "displayName": "Desde cero - Beret;Melendi"
+    "displayName": "Desde cero - Beret;Melendi",
+    "numberOneDate": "12 de junio de 2021",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "761e9f62eb5c1ad491835f5efae084d1",
@@ -16978,7 +20893,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002902835.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002993392.jpg",
-    "displayName": "Pareja del año - Sebastián Yatra;Myke Towers"
+    "displayName": "Pareja del año - Sebastián Yatra;Myke Towers",
+    "numberOneDate": "29 de mayo de 2021",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "bc05a65e0e75c31095fa876fb6a01aa5",
@@ -16991,7 +20909,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002877122.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002877124.jpg",
-    "displayName": "Solo - Ana Mena;Maffio;Omar Montes"
+    "displayName": "Solo - Ana Mena;Maffio;Omar Montes",
+    "numberOneDate": "19 de junio de 2021",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "e321af35bcd2da39fdfa81ae8efe44df",
@@ -17004,7 +20925,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002917566.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002917567.jpg",
-    "displayName": "Loco - Chimbala;Justin Quiles;Zion &amp;Lennox"
+    "displayName": "Loco - Chimbala;Justin Quiles;Zion &amp;Lennox",
+    "numberOneDate": "6 de noviembre de 2021",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "7584ce1c7680ca29b984b59c89626397",
@@ -17017,7 +20941,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002856993.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002856995.jpg",
-    "displayName": "My head & my heart - Ava Max"
+    "displayName": "My head & my heart - Ava Max",
+    "numberOneDate": "24 de abril de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c0faf724612433e6a6c2f76047a18165151d0141?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "531602c6e56dbb4ae692df003ed88afa",
@@ -17030,7 +20957,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002838213.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002838215.jpg",
-    "displayName": "The business - Tiësto"
+    "displayName": "The business - Tiësto",
+    "numberOneDate": "22 de mayo de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/676cb431611544326bb3e81c72d8dc5b27e0c9ad?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "121876d94682cfdf08eb80f18095befd",
@@ -17043,7 +20973,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002893474.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002894729.jpg",
-    "displayName": "Follow you - Imagine Dragons"
+    "displayName": "Follow you - Imagine Dragons",
+    "numberOneDate": "3 de julio de 2021",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1dc9e9957b9378d37a67fa23593a4c68",
@@ -17056,7 +20989,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002905301.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003098787.jpg",
-    "displayName": "Clima tropical - Dani Fernández"
+    "displayName": "Clima tropical - Dani Fernández",
+    "numberOneDate": "27 de noviembre de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/950abfde6120a7d9f3e5d099f89cc0b1061a067a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "c7bda5191c3747cb278d674161efe61f",
@@ -17069,7 +21005,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002831248.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002831249.jpg",
-    "displayName": "Portales - Dani Martín"
+    "displayName": "Portales - Dani Martín",
+    "numberOneDate": "20 de febrero de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/068192c980ffbf0d329a9213095c7876e261fc9e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "83dc7ed06c81bf70e8172d817e25edf0",
@@ -17082,7 +21021,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002871243.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002913749.jpg",
-    "displayName": "Drivers license - Olivia Rodrigo"
+    "displayName": "Drivers license - Olivia Rodrigo",
+    "numberOneDate": "27 de marzo de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/3a145991602f4a7304d5227ce2268596d0f8e589?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "9d9a52079ccde06c393c0df4be89428f",
@@ -17095,7 +21037,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002861493.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003108892.jpg",
-    "displayName": "11 razones - Aitana"
+    "displayName": "11 razones - Aitana",
+    "numberOneDate": "1 de mayo de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1bae4ef8a6f67d5289b4746df0d16b137fd4c400?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "305e76ca7cce90170490ccb79c2cb7b4",
@@ -17108,7 +21053,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570002869293.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570002869320.jpg",
-    "displayName": "Without you - The Kid LAROI"
+    "displayName": "Without you - The Kid LAROI",
+    "numberOneDate": "26 de junio de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a1514ea0f0c4f729a2ed238ac255f988af195569?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "33125bfea4bf652725cb3e46b17d4a58",
@@ -17121,7 +21069,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002886193.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002887468.jpg",
-    "displayName": "Magia - Álvaro Soler"
+    "displayName": "Magia - Álvaro Soler",
+    "numberOneDate": "7 de agosto de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/987afa6d6a99e9c98a2b353af6cf37a9fc5f8d6d?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "80c75cb68427e263b661d2b30df255e2",
@@ -17134,7 +21085,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002932255.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002936781.jpg",
-    "displayName": "Stay - Justin Bieber;The Kid LAROI"
+    "displayName": "Stay - Justin Bieber;The Kid LAROI",
+    "numberOneDate": "2 de octubre de 2021",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "ce013bea7f0a7679cd6beab61970aeba",
@@ -17147,7 +21101,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002929242.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002929243.jpg",
-    "displayName": "La niña de la escuela - Belinda;Lola Índigo;Tini"
+    "displayName": "La niña de la escuela - Belinda;Lola Índigo;Tini",
+    "numberOneDate": "9 de octubre de 2021",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "3d4ff2bac57dc8aae8b8df1d99c39c40",
@@ -17160,7 +21117,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002949984.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002949986.jpg",
-    "displayName": "Berlín - Aitana"
+    "displayName": "Berlín - Aitana",
+    "numberOneDate": "18 de diciembre de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/05f039262e9361b85ce9d8e69962d9833e61e974?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "2c992b11745bafee09b21dbed8b02a89",
@@ -17173,7 +21133,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002921147.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002948385.jpg",
-    "displayName": "Qué más pues? - J Balvin;Maria Becerra"
+    "displayName": "Qué más pues? - J Balvin;Maria Becerra",
+    "numberOneDate": "28 de agosto de 2021",
+    "spotifyUrl": "",
+    "bestPosition": "2"
   },
   {
     "id": "f5fb5bf0dd0f30137c3de73eeb825217",
@@ -17186,7 +21149,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002960546.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002993392.jpg",
-    "displayName": "Tacones rojos - Sebastián Yatra"
+    "displayName": "Tacones rojos - Sebastián Yatra",
+    "numberOneDate": "18 de diciembre de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f74ac56b868db82596fb3a6b2fda8a634ca7c59b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "2"
   },
   {
     "id": "029ab4a1019faea24e1b7f2ce9e45462",
@@ -17199,7 +21165,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002915853.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002915855.jpg",
-    "displayName": "Butter - BTS"
+    "displayName": "Butter - BTS",
+    "numberOneDate": "9 de octubre de 2021",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/edf24f427483d886b640c5ed9944f9291e0976fc?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "2"
   },
   {
     "id": "da8559612c70739f4e288affe72a6a01",
@@ -17212,7 +21181,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002952355.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002952357.jpg",
-    "displayName": "My universe - Coldplay;BTS"
+    "displayName": "My universe - Coldplay;BTS",
+    "numberOneDate": "22 de enero de 2022",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "743e701a7424cd5a5efc61bcbb41f569",
@@ -17225,7 +21197,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002981534.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002981536.jpg",
-    "displayName": "Formentera - Aitana;Nicki Nicole"
+    "displayName": "Formentera - Aitana;Nicki Nicole",
+    "numberOneDate": "12 de marzo de 2022",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "b1a267ffce9cdf13cc6e7672bc8f9e4a",
@@ -17238,7 +21213,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002978515.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006025690.jpg",
-    "displayName": "Música ligera - Ana Mena"
+    "displayName": "Música ligera - Ana Mena",
+    "numberOneDate": "26 de marzo de 2022",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/5f54effddc05ad8254e87a92764fa4c006b4f979?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "c011335e21515db736b6d53d30a188aa",
@@ -17251,7 +21229,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003017556.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003017559.jpg",
-    "displayName": "Bam bam - Camila Cabello;Ed Sheeran"
+    "displayName": "Bam bam - Camila Cabello;Ed Sheeran",
+    "numberOneDate": "30 de abril de 2022",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1e83c25b28de68ec43066aba1e4c3fe9",
@@ -17264,7 +21245,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003035501.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003035503.jpg",
-    "displayName": "Te felicito - Rauw Alejandro;Shakira"
+    "displayName": "Te felicito - Rauw Alejandro;Shakira",
+    "numberOneDate": "9 de julio de 2022",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "d92dc32ef28d0f9664a51f25fee7fc65",
@@ -17277,7 +21261,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003050278.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003050280.jpg",
-    "displayName": "La bachata - Manuel Turizo"
+    "displayName": "La bachata - Manuel Turizo",
+    "numberOneDate": "3 de diciembre de 2022",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/296da587969e145427d963bbe0680d9a25f61db8?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "a75c4f2d9eb3f7543d38cdd54bdbea03",
@@ -17290,7 +21277,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003035795.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006013752.jpg",
-    "displayName": "Provenza - Karol G"
+    "displayName": "Provenza - Karol G",
+    "numberOneDate": "18 de junio de 2022",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a65eedfa8edb5ee01cf75b6c027355aeb83838fb?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "d9486df8c9bf3e70baf425e06b971a67",
@@ -17303,7 +21293,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002974939.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003034558.jpg",
-    "displayName": "Envolver - Anitta"
+    "displayName": "Envolver - Anitta",
+    "numberOneDate": "15 de octubre de 2022",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/fd361c6247a281c3805e51e3a57607b14176d11a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "bb1217afbeb8c051d355afdbdc8dc113",
@@ -17316,7 +21309,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002969263.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003014806.jpg",
-    "displayName": "La fama - Rosalía;The Weeknd"
+    "displayName": "La fama - Rosalía;The Weeknd",
+    "numberOneDate": "15 de enero de 2022",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "e6b4c72041f0ce1b213ae7da72f462ab",
@@ -17329,7 +21325,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003028054.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003045812.jpg",
-    "displayName": "As it was - Harry Styles"
+    "displayName": "As it was - Harry Styles",
+    "numberOneDate": "23 de julio de 2022",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/e9216304e6456a9015ac2054692fd4f0135d8aa9?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "2996e4e7c0a3339e771168568d58c415",
@@ -17342,7 +21341,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003068778.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003083878.jpg",
-    "displayName": "Despechá - Rosalía"
+    "displayName": "Despechá - Rosalía",
+    "numberOneDate": "10 de septiembre de 2022",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c9bada701f6ef03ef67d5ae0e8ff8bde40499313?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "1e213594762018178bda73c2fa304507",
@@ -17355,7 +21357,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002984120.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003098787.jpg",
-    "displayName": "Dile a los demás - Dani Fernández"
+    "displayName": "Dile a los demás - Dani Fernández",
+    "numberOneDate": "24 de septiembre de 2022",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ad86a98809064c32c7732cfd97506b3441771ece?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "62555850644fec9e98d0ab88d0018605",
@@ -17368,7 +21373,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003079359.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003079361.jpg",
-    "displayName": "I'm good (Blue) - Bebe Rexha;David Guetta"
+    "displayName": "I'm good (Blue) - Bebe Rexha;David Guetta",
+    "numberOneDate": "22 de octubre de 2022",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/c1de960c1a98f7ab652331e5223c50baba75c460?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "770a94646121df5d454d791d86eebf80",
@@ -17381,7 +21389,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003099122.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003099121.jpg",
-    "displayName": "Monotonía - Ozuna;Shakira"
+    "displayName": "Monotonía - Ozuna;Shakira",
+    "numberOneDate": "10 de diciembre de 2022",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "eac4d7b407ad105efe7b49ab06067ce6",
@@ -17394,7 +21405,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002935970.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003017559.jpg",
-    "displayName": "Don't go yet - Camila Cabello"
+    "displayName": "Don't go yet - Camila Cabello",
+    "numberOneDate": "5 de febrero de 2022",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "736aeb15556cc67f19dd386ea259b562",
@@ -17407,7 +21421,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002943979.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002943981.jpg",
-    "displayName": "Where are you now - Calum Scott;Lost Frequencies"
+    "displayName": "Where are you now - Calum Scott;Lost Frequencies",
+    "numberOneDate": "16 de abril de 2022",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a4ffc319df414d15ddcefdbc7e62093a",
@@ -17420,7 +21437,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003008129.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003008131.jpg",
-    "displayName": "Mamiii - Becky G;Karol G"
+    "displayName": "Mamiii - Becky G;Karol G",
+    "numberOneDate": "16 de julio de 2022",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "4c1c6c87551444ab4bafbccfa5039533",
@@ -17433,7 +21453,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003064375.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003064374.jpg",
-    "displayName": "Quevedo: Bzrp music sessions Vol. 52 - Bizarrap;Quevedo"
+    "displayName": "Quevedo: Bzrp music sessions Vol. 52 - Bizarrap;Quevedo",
+    "numberOneDate": "17 de septiembre de 2022",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "e877300a6cb73c23bb195affdd4521a6",
@@ -17446,7 +21469,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003056010.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006025690.jpg",
-    "displayName": "Las 12 - Ana Mena;Belinda"
+    "displayName": "Las 12 - Ana Mena;Belinda",
+    "numberOneDate": "8 de octubre de 2022",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "35a7bc0a523273238d54b749f9bbf2ce",
@@ -17459,7 +21485,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003050806.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003050808.jpg",
-    "displayName": "Mariposas - Aitana;Sangiovanni"
+    "displayName": "Mariposas - Aitana;Sangiovanni",
+    "numberOneDate": "1 de octubre de 2022",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "e0f7558b3e23a675a5b1cef849c54cf3",
@@ -17472,7 +21501,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003020299.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003020298.jpg",
-    "displayName": "Volverá (2021) - Dani Martín"
+    "displayName": "Volverá (2021) - Dani Martín",
+    "numberOneDate": "5 de noviembre de 2022",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/629066332e2f9a19bd8d4b477f6a1ecf2d0281c4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "444e2b2c6ed5020c5b8e6c760dfcd45d",
@@ -17485,7 +21517,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003043083.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003043085.jpg",
-    "displayName": "Quiero decirte - Abraham Mateo;Ana Mena"
+    "displayName": "Quiero decirte - Abraham Mateo;Ana Mena",
+    "numberOneDate": "17 de diciembre de 2022",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/526ed414321dfcbc30f786c995c8a32473d7a3e0?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "acef2b493eb01dc345f699a5774155d4",
@@ -17498,7 +21533,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002965987.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002965989.jpg",
-    "displayName": "Enemy - J.I.D;Imagine Dragons"
+    "displayName": "Enemy - J.I.D;Imagine Dragons",
+    "numberOneDate": "7 de mayo de 2022",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "e242862c6b7b0ddace51fde50944253b",
@@ -17511,7 +21549,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002995078.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002995080.jpg",
-    "displayName": "SloMo - Chanel"
+    "displayName": "SloMo - Chanel",
+    "numberOneDate": "21 de mayo de 2022",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0a895e642341d82351370480d144e253d0fb3f4e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "246cccea485e0fea17c7be6b22f5e77b",
@@ -17524,7 +21565,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003008233.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003008235.jpg",
-    "displayName": "Infinity - Jaymes Young"
+    "displayName": "Infinity - Jaymes Young",
+    "numberOneDate": "25 de junio de 2022",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/3b832402a7ef08d768b9a97e7d0738c0cd9a6dbb?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "a3df2f1fc1b4bc617701a196c1be01c7",
@@ -17537,7 +21581,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003089211.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003089210.jpg",
-    "displayName": "Snap - Rosa Linn"
+    "displayName": "Snap - Rosa Linn",
+    "numberOneDate": "24 de diciembre de 2022",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a020cbe5950aed4af7a5678260290b54f9bc266a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "77ad2c15a5d84883f585ae20c95fcbf5",
@@ -17550,7 +21597,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002982869.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002982871.jpg",
-    "displayName": "Abcdefu - Gayle"
+    "displayName": "Abcdefu - Gayle",
+    "numberOneDate": "12 de febrero de 2022",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/25a618c8bbf72ac750ab2024c8b987820ecc1cd1?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "daf6561f560089ce97387c0f5e01acff",
@@ -17563,7 +21613,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002824529.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002799488.jpg",
-    "displayName": "Heat waves - Glass Animals"
+    "displayName": "Heat waves - Glass Animals",
+    "numberOneDate": "19 de febrero de 2022",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1ac449e52145d1c44dc4346afdb2d8b70e93969b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "17a202cf717c9f5aaa5222148bc912bd",
@@ -17576,7 +21629,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010002941787.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010002943461.jpg",
-    "displayName": "Don't be shy - Karol G;Tiësto"
+    "displayName": "Don't be shy - Karol G;Tiësto",
+    "numberOneDate": "5 de marzo de 2022",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "81e130ead9928cff2d42f2cd53729b6e",
@@ -17589,7 +21645,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003128661.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003128663.jpg",
-    "displayName": "Flowers - Miley Cyrus"
+    "displayName": "Flowers - Miley Cyrus",
+    "numberOneDate": "11 de febrero de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/5184d19d1b7fcc3e7c067e38af45a7cc80851440?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "9edd0ac537c2d929565fd1f219610138",
@@ -17602,7 +21661,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006026714.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006026713.jpg",
-    "displayName": "Los ángeles - Aitana"
+    "displayName": "Los ángeles - Aitana",
+    "numberOneDate": "29 de abril de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/fc4c4d967f100b12756934e31ce4a46521e0bdd6?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "bd80364cde12398ed549167642ab2165",
@@ -17615,7 +21677,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006043291.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006043293.jpg",
-    "displayName": "Vagabundo - Manuel Turizo;Sebastián Yatra;Beéle"
+    "displayName": "Vagabundo - Manuel Turizo;Sebastián Yatra;Beéle",
+    "numberOneDate": "15 de julio de 2023",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "2eb901d7730e52572862328715d321b2",
@@ -17628,7 +21693,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006067133.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006067132.jpg",
-    "displayName": "Columbia - Quevedo"
+    "displayName": "Columbia - Quevedo",
+    "numberOneDate": "18 de noviembre de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/e3d6df66fe67f618166a2cab858580ac8a96486a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "77dbca767276014e62a367eebcebbff9",
@@ -17641,7 +21709,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006113119.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006113121.jpg",
-    "displayName": "Houdini - Dua Lipa"
+    "displayName": "Houdini - Dua Lipa",
+    "numberOneDate": "23 de diciembre de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/df4af86970ffb1a7042d1d228bcea7b4aabfdba4?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "31e92682154595fc9ea42aab4e220168",
@@ -17654,7 +21725,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003127872.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003127874.jpg",
-    "displayName": "Nochentera - Vicco"
+    "displayName": "Nochentera - Vicco",
+    "numberOneDate": "27 de mayo de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/5d919d03e7e175a62308640161e4ce9a9ca3d165?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "a8c49db6c5fb186c93ae298a4f70e2c1",
@@ -17667,7 +21741,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006047283.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006047285.jpg",
-    "displayName": "Dance the night - Dua Lipa"
+    "displayName": "Dance the night - Dua Lipa",
+    "numberOneDate": "16 de septiembre de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/acaea048f50a3b30ca24b348c84a6047373baabb?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "82720e772ddc19626cf6da902250437d",
@@ -17680,7 +21757,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006055516.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006024963.jpg",
-    "displayName": "Lala - Myke Towers"
+    "displayName": "Lala - Myke Towers",
+    "numberOneDate": "23 de septiembre de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/42772b16b4e575d1b15b0ec7f94e335539390d2d?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "a0a0fe519dd9cbcc69f2b487cc803616",
@@ -17693,7 +21773,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006048997.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006048687.jpg",
-    "displayName": "Eva Longoria - Ozuna;Davido"
+    "displayName": "Eva Longoria - Ozuna;Davido",
+    "numberOneDate": "7 de octubre de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/89517b64734018e83adb1a841ee2161b063cdae8?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "415addce0a771334bbd9d3034de7eabe",
@@ -17706,7 +21789,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006092409.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006092411.jpg",
-    "displayName": "Madrid city - Ana Mena"
+    "displayName": "Madrid city - Ana Mena",
+    "numberOneDate": "4 de noviembre de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/31d97925e7321d8a408f31aaf1db9dad4f387a6f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "082148e280696947d638e8a751936e5e",
@@ -17719,7 +21805,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006053326.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006068651.jpg",
-    "displayName": "Maníaca - Abraham Mateo"
+    "displayName": "Maníaca - Abraham Mateo",
+    "numberOneDate": "11 de noviembre de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/98ce6ba8a441a40694525445ac386cebd846827a?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "5e09abc346f20350b2055bdac8415cac",
@@ -17732,7 +21821,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003128272.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003128271.jpg",
-    "displayName": "Shakira: Bzrp music sessions Vol. 53 - Bizarrap;Shakira"
+    "displayName": "Shakira: Bzrp music sessions Vol. 53 - Bizarrap;Shakira",
+    "numberOneDate": "21 de enero de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/64e90f49942deb7dd92610fb8ef64b30524e6009?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "76714c02a6b0bc7c9b63c134ccac5288",
@@ -17745,7 +21837,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003089212.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006001770.jpg",
-    "displayName": "Unholy - Sam Smith;Kim Petras"
+    "displayName": "Unholy - Sam Smith;Kim Petras",
+    "numberOneDate": "18 de febrero de 2023",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "da833316cacdc98ce8c50723d8187388",
@@ -17758,7 +21853,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006015915.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006015914.jpg",
-    "displayName": "El merengue - Manuel Turizo;marshmello"
+    "displayName": "El merengue - Manuel Turizo;marshmello",
+    "numberOneDate": "13 de mayo de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a933b6e1d6a47e591c13192f2b5e58739d3d5a06?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "a9b1b0edf840773ccea84ef67b9f8a45",
@@ -17771,7 +21869,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/520006030812.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520006030811.jpg",
-    "displayName": "Classy 101 - FEID;Young Miko"
+    "displayName": "Classy 101 - FEID;Young Miko",
+    "numberOneDate": "29 de julio de 2023",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "7f3a9e33cf5a80bbd83d47f2b4ae213e",
@@ -17784,7 +21885,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006021603.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006021605.jpg",
-    "displayName": "Todo contigo - Álvaro de Luna"
+    "displayName": "Todo contigo - Álvaro de Luna",
+    "numberOneDate": "19 de agosto de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/63b7c74afed8a30e137afec59b1f382e675371ad?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "b0d0b6a76921135973cdc105793c3f27",
@@ -17797,7 +21901,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006043746.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006043745.jpg",
-    "displayName": "No se ve - Emilia;Ludmilla;Zecca"
+    "displayName": "No se ve - Emilia;Ludmilla;Zecca",
+    "numberOneDate": "26 de agosto de 2023",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "37a33fe77099ae993b06e68074174b05",
@@ -17810,7 +21917,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006054231.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006054230.jpg",
-    "displayName": "Coco loco - Maluma"
+    "displayName": "Coco loco - Maluma",
+    "numberOneDate": "2 de septiembre de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/9269a1cdf5f25462164a23b4edf5d0b9e0281285?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "200347dd88f088add65d71f0a11519a6",
@@ -17823,7 +21933,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006062016.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006062537.jpg",
-    "displayName": "Vampire - Olivia Rodrigo"
+    "displayName": "Vampire - Olivia Rodrigo",
+    "numberOneDate": "30 de septiembre de 2023",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "c6c870e4cb801cdf1f77ee4546af157a",
@@ -17836,7 +21949,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006024922.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006024924.jpg",
-    "displayName": "Beso - Rauw Alejandro;Rosalía"
+    "displayName": "Beso - Rauw Alejandro;Rosalía",
+    "numberOneDate": "22 de abril de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ec3accbe111dac19702411be5adb665d4cd44c0c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "567c338c7a0be7aa057a3f85d626c265",
@@ -17849,7 +21965,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006037244.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006037246.jpg",
-    "displayName": "Clavaíto - Abraham Mateo;Chanel"
+    "displayName": "Clavaíto - Abraham Mateo;Chanel",
+    "numberOneDate": "5 de agosto de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/b1580f98245a043e99847acc48da2e5f56024bc7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "ac7f2cdf758c23f22904d3586a1f1e10",
@@ -17862,7 +21981,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006058826/mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006058830.jpg",
-    "displayName": "Baby hello - Rauw Alejandro feat. Bizarrap"
+    "displayName": "Baby hello - Rauw Alejandro feat. Bizarrap",
+    "numberOneDate": "21 de octubre de 2023",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "bae9bf3743700c66b03df6f128701877",
@@ -17875,7 +21997,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006090494.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520006096937.jpg",
-    "displayName": "Bubalú - FEID & Rema"
+    "displayName": "Bubalú - FEID & Rema",
+    "numberOneDate": "30 de diciembre de 2023",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "92b4b17b20c0368261aa8b3daaf4e49f",
@@ -17888,7 +22013,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006034163.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006034162.jpg",
-    "displayName": "Ibiza - DePol"
+    "displayName": "Ibiza - DePol",
+    "numberOneDate": "9 de septiembre de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/99faeb5bf153b92c41a0de046b34b9c5359a72dc?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "2e2af25be58654b65f6897c0c57361c8",
@@ -17901,7 +22029,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006018495.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006018497.jpg",
-    "displayName": "Tattoo - Loreen"
+    "displayName": "Tattoo - Loreen",
+    "numberOneDate": "10 de junio de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/e86ce897ae19f7e54ace7bda497544aeafaebf7c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "0aff628f3dc1b7901bdd6fab297351ac",
@@ -17914,7 +22045,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006030699.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006030698.jpg",
-    "displayName": "Baby don't hurt me - Anne-Marie;Coi Leray;David Guetta"
+    "displayName": "Baby don't hurt me - Anne-Marie;Coi Leray;David Guetta",
+    "numberOneDate": "1 de julio de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/a8f2e176e17e0f6298b42ef8e96118318fdd2b89?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "f9969de0d34361f357de9cf464ce45ce",
@@ -17927,7 +22061,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003120633.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003120635.jpg",
-    "displayName": "Playa del inglés - Myke Towers;Quevedo"
+    "displayName": "Playa del inglés - Myke Towers;Quevedo",
+    "numberOneDate": "25 de febrero de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/446bdf7993b5edcd98963e1d87b3082ce7b9298b?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "7dadd3490ed8834b84747a20959962e0",
@@ -17940,7 +22077,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006013750.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006013752.jpg",
-    "displayName": "TQG - Karol G;Shakira"
+    "displayName": "TQG - Karol G;Shakira",
+    "numberOneDate": "8 de abril de 2023",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "43220350ab9405dcd01a3ef96d486e3e",
@@ -17953,7 +22093,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006087620.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006116189.jpg",
-    "displayName": "Greedy - Tate McRae"
+    "displayName": "Greedy - Tate McRae",
+    "numberOneDate": "9 de diciembre de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/ca7bdcb691fb64a5af8a3253b89356390664fcf1?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "1ab3ece2741f8332dcaa84e3025dacc0",
@@ -17966,7 +22109,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006032042.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006032044.jpg",
-    "displayName": "El tonto - Lola Índigo;Quevedo"
+    "displayName": "El tonto - Lola Índigo;Quevedo",
+    "numberOneDate": "3 de junio de 2023",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "f85b5e08208b5eeef38cfc969bba6d95",
@@ -17979,7 +22125,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010003084053.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010003084052.jpg",
-    "displayName": "Calm down - Rema;Selena Gomez"
+    "displayName": "Calm down - Rema;Selena Gomez",
+    "numberOneDate": "7 de enero de 2023",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "5c69f0181a3166bc6deb8f1a8a1e8f1d",
@@ -17992,7 +22141,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006023527.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006023526.jpg",
-    "displayName": "Cruel summer - Taylor Swift"
+    "displayName": "Cruel summer - Taylor Swift",
+    "numberOneDate": "14 de octubre de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1e6cd3441e64efc951f758d4f0239ed5d2d4e68e?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "763a9c4d536225537db974309b1cfd2b",
@@ -18005,7 +22157,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006003458.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006003460.jpg",
-    "displayName": "Llylm - Rosalía"
+    "displayName": "Llylm - Rosalía",
+    "numberOneDate": "18 de marzo de 2023",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d0d9a793291ba24aa88360ce686b8501b2a0c5c9?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "1c733f945e4fc194345b30bf0639260b",
@@ -18018,7 +22173,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006043746.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006043745.jpg",
-    "displayName": "No se ve - Emilia, Ludmilla & Zecca"
+    "displayName": "No se ve - Emilia, Ludmilla & Zecca",
+    "numberOneDate": "28 de octubre de 2023",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1dcc0aada0b38fec70a1673f8239db32",
@@ -18031,7 +22189,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006121807.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/520006122380.jpg",
-    "displayName": "Luna - FEID feat. ATL Jacob"
+    "displayName": "Luna - FEID feat. ATL Jacob",
+    "numberOneDate": "30 de marzo de 2024",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "be50d24892279b23c14e44900cc930a4",
@@ -18044,7 +22205,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006137708.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006137707.jpg",
-    "displayName": "Whatever - Kygo & Ava Max"
+    "displayName": "Whatever - Kygo & Ava Max",
+    "numberOneDate": "8 de junio de 2024",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "55586a0aa09de97384f494b45e387a49",
@@ -18057,7 +22221,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006159315.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006159317.jpg",
-    "displayName": "Stumblin' in - Cyril"
+    "displayName": "Stumblin' in - Cyril",
+    "numberOneDate": "6 de julio de 2024",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/337887c5edcda7996b63cd5176b103aa46cbdf3f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "d30c759ecba9c5ecc30f71a696e0f2b5",
@@ -18070,7 +22237,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006211050.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006211052.jpg",
-    "displayName": "La reina - Lola Índigo"
+    "displayName": "La reina - Lola Índigo",
+    "numberOneDate": "10 de agosto de 2024",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "01d4c04f79f4def167f6aca561b6ff79",
@@ -18083,7 +22253,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570006251915.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570006251914.jpg",
-    "displayName": "Soltera - Shakira"
+    "displayName": "Soltera - Shakira",
+    "numberOneDate": "23 de noviembre de 2024",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/767b16d5b5c8695b4440fab78722a049c19a2951?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "fde4838da9eea6f9765ac3f578d708ca",
@@ -18096,7 +22269,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570006263768.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570006236295.jpg",
-    "displayName": "Degenere - Myke Towers feat. Benny Blanco"
+    "displayName": "Degenere - Myke Towers feat. Benny Blanco",
+    "numberOneDate": "21 de diciembre de 2024",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "5f1f6da7473605a0537424618ddbfd16",
@@ -18109,7 +22285,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006108537.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006122604.jpg",
-    "displayName": "La original - Emilia & Tini"
+    "displayName": "La original - Emilia & Tini",
+    "numberOneDate": "27 de enero de 2024",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "1fae99bd9af1e6489faf4b7468a1523d",
@@ -18122,7 +22301,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006037244.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006108062.jpg",
-    "displayName": "Clavaito - Chanel & Abraham Mateo"
+    "displayName": "Clavaito - Chanel & Abraham Mateo",
+    "numberOneDate": "20 de enero de 2024",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/b1580f98245a043e99847acc48da2e5f56024bc7?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "5fb083fdeda396043da355eddfa942be",
@@ -18135,7 +22317,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006144269.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006144271.jpg",
-    "displayName": "Beautiful things - Benson Boone"
+    "displayName": "Beautiful things - Benson Boone",
+    "numberOneDate": "6 de abril de 2024",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/e213f23e6fe5938299eebbe364d06c1682a6619f?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "a5e8b94026c597eb508f8b4f64dd3451",
@@ -18148,7 +22333,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006120046.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006120068.jpg",
-    "displayName": "La falda - Myke Towers"
+    "displayName": "La falda - Myke Towers",
+    "numberOneDate": "25 de mayo de 2024",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/e198a3f9d177f1981f2952cfbda81560560e6a68?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "3a11a6c4e92a0fdb57c77d30df181823",
@@ -18161,7 +22349,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006215811.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006215810.jpg",
-    "displayName": "Si antes te hubiera conocido - Karol G"
+    "displayName": "Si antes te hubiera conocido - Karol G",
+    "numberOneDate": "3 de agosto de 2024",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "55d90574d1ee08ad1282f31942b73457",
@@ -18174,7 +22365,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006240526.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006240527.jpg",
-    "displayName": "Carita triste - Ana Mena & Emilia"
+    "displayName": "Carita triste - Ana Mena & Emilia",
+    "numberOneDate": "12 de octubre de 2024",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "5271223694234d599cfae9e89d061742",
@@ -18187,7 +22381,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006217298.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006217300.jpg",
-    "displayName": "Sinceramente (Cuando cuando cuando) - Annalisa"
+    "displayName": "Sinceramente (Cuando cuando cuando) - Annalisa",
+    "numberOneDate": "9 de noviembre de 2024",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/962a61d97631cee7de0098e9f29ade8c3942cbf1?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "1a34cfbc1c4c0714aabf613d7861e742",
@@ -18200,7 +22397,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006092075.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006092077.jpg",
-    "displayName": "Asi es la vida - Enrique Iglesias & Maria Becerra"
+    "displayName": "Asi es la vida - Enrique Iglesias & Maria Becerra",
+    "numberOneDate": "17 de febrero de 2024",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a50a2cd65661a2cd571e2c824cd27a7b",
@@ -18213,7 +22413,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/570006186974.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/570006186973.jpg",
-    "displayName": "I like the way you kiss me - Artemas"
+    "displayName": "I like the way you kiss me - Artemas",
+    "numberOneDate": "15 de junio de 2024",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6ce9233edb212fe7cf02273f4369d2c60c28e887?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "5c4e4141dac55049c2beaf43b2560a10",
@@ -18226,7 +22429,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490006183136.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006208732.jpg",
-    "displayName": "Espresso - Sabrina Carpenter"
+    "displayName": "Espresso - Sabrina Carpenter",
+    "numberOneDate": "13 de julio de 2024",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "2eccb289da1a43fd502750200b94a59e",
@@ -18239,7 +22445,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006219389.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006219391.jpg",
-    "displayName": "Ohnana - Kapo"
+    "displayName": "Ohnana - Kapo",
+    "numberOneDate": "21 de septiembre de 2024",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/f71b962af9adf9597e0a6446ce4291389d56be4c?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "6c8ecd413c405543c40f4eaafa155602",
@@ -18252,7 +22461,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006214199.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006214201.png",
-    "displayName": "Feelslikeimfallinginlove - Coldplay"
+    "displayName": "Feelslikeimfallinginlove - Coldplay",
+    "numberOneDate": "28 de septiembre de 2024",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/6f9ec31c6f196cc5ea7608275abad6a341199e72?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "59078989abbf3aecb2873998e64fae84",
@@ -18265,7 +22477,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006226240.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006226241.jpg",
-    "displayName": "A bar song (Tipsy) - Shaboozey"
+    "displayName": "A bar song (Tipsy) - Shaboozey",
+    "numberOneDate": "19 de octubre de 2024",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/0c6b7caa5c2962837d1122d45d8b9fe70bec29c0?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "0fe0a1fbfd1def0afc45d7c140e72ad1",
@@ -18278,7 +22493,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006238804.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006238806.jpg",
-    "displayName": "Me has invitado a bailar - Dani Fernández"
+    "displayName": "Me has invitado a bailar - Dani Fernández",
+    "numberOneDate": "16 de noviembre de 2024",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/d810fee69456f846a0ab30255533f02110b9f1cc?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "ff7aeb83fa0f5de531e5300c23ce6dda",
@@ -18291,7 +22509,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006186638.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006248021.jpg",
-    "displayName": "Belong together - Mark Ambor"
+    "displayName": "Belong together - Mark Ambor",
+    "numberOneDate": "14 de diciembre de 2024",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/94cf6a4e7df256464aa0a91ee048c901185a8964?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "e1c7fa0e70db71bd2d6cbfb167ba0fb6",
@@ -18304,7 +22525,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006134771.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006134770.jpg",
-    "displayName": "Todo cambia - Dani Fernández"
+    "displayName": "Todo cambia - Dani Fernández",
+    "numberOneDate": "9 de marzo de 2024",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/66102b146976faae7ae88c136e252ff3a760fdfb?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "6be0bbb6fe01524af673068854386855",
@@ -18317,7 +22541,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490006160493.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/490006160492.jpg",
-    "displayName": "1000 cosas - Lola Índigo & Manuel Turizo"
+    "displayName": "1000 cosas - Lola Índigo & Manuel Turizo",
+    "numberOneDate": "20 de abril de 2024",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "61006bb97721481de35ebd8e02cbf880",
@@ -18330,7 +22557,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006053447.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006053449.jpg",
-    "displayName": "Olvidé olvidarte - Marlon & Álvaro de Luna"
+    "displayName": "Olvidé olvidarte - Marlon & Álvaro de Luna",
+    "numberOneDate": "27 de abril de 2024",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "e0662c1a56a73ef8555249a61cbe66c2",
@@ -18343,7 +22573,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006173804.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006220460.jpg",
-    "displayName": "I don't wanna wait - David Guetta & OneRepublic"
+    "displayName": "I don't wanna wait - David Guetta & OneRepublic",
+    "numberOneDate": "7 de septiembre de 2024",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "10ebfa35d6a4c42513f3474a1fcc3654",
@@ -18356,7 +22589,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006235625.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006235624.jpg",
-    "displayName": "Die with a smile - Lady GaGa & Bruno Mars"
+    "displayName": "Die with a smile - Lady GaGa & Bruno Mars",
+    "numberOneDate": "30 de noviembre de 2024",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "0f9b8abf851cffee951ff9992e5171b4",
@@ -18369,7 +22605,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006141935.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006133500.jpg",
-    "displayName": "Lose control - Teddy Swims"
+    "displayName": "Lose control - Teddy Swims",
+    "numberOneDate": "4 de mayo de 2024",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "3547723cdab307d29f57056ebeab70f1",
@@ -18382,7 +22621,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006284890.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006284889.jpg",
-    "displayName": "Mi refe - Beéle & Ovy On The Drums"
+    "displayName": "Mi refe - Beéle & Ovy On The Drums",
+    "numberOneDate": "15 de marzo de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "e520054516eaab6e2121ec906d802340",
@@ -18395,7 +22637,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006222321.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006222320.jpg",
-    "displayName": "Messy - Lola Young"
+    "displayName": "Messy - Lola Young",
+    "numberOneDate": "19 de abril de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "50b1b47995bd7229b1301665b06b7ee9",
@@ -18408,7 +22653,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006325452.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006343193.jpg",
-    "displayName": "Azizam - Ed Sheeran"
+    "displayName": "Azizam - Ed Sheeran",
+    "numberOneDate": "28 de junio de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "b9868f324b6a385ee52a3f8dd20628ea",
@@ -18421,7 +22669,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006339788.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006339469.jpg",
-    "displayName": "No tiene sentido - Beéle"
+    "displayName": "No tiene sentido - Beéle",
+    "numberOneDate": "12 de julio de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "99f039540aa50329f72e6e2bcea7306a",
@@ -18434,7 +22685,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006334802.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006345184.jpg",
-    "displayName": "6 de febrero - Aitana"
+    "displayName": "6 de febrero - Aitana",
+    "numberOneDate": "26 de julio de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "ee296daefd355032b1b8409b082b0b9d",
@@ -18447,7 +22701,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490006334174.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/490006334173.jpg",
-    "displayName": "Hiekka - Nicky Jam feat. Beéle"
+    "displayName": "Hiekka - Nicky Jam feat. Beéle",
+    "numberOneDate": "20 de septiembre de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "522e43675942ad33296eace1957ff43d",
@@ -18460,7 +22717,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006354066.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006354071.jpg",
-    "displayName": "Tu vas sin (fav) - Rels B"
+    "displayName": "Tu vas sin (fav) - Rels B",
+    "numberOneDate": "27 de septiembre de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "66cb058e02031bcb9654e40c491d40a7",
@@ -18473,7 +22733,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006359510.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006359506.jpg",
-    "displayName": "Golden - Huntr/x & KPop Demon Hunters Cast"
+    "displayName": "Golden - Huntr/x & KPop Demon Hunters Cast",
+    "numberOneDate": "4 de octubre de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "51e97bd9729b14be4db1f5ae86d26f2d",
@@ -18486,7 +22749,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006259552.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006259551.jpg",
-    "displayName": "APT. - Rosé feat. Bruno Mars"
+    "displayName": "APT. - Rosé feat. Bruno Mars",
+    "numberOneDate": "4 de enero de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "9d89ae62e5dfc7168021d2371a258a71",
@@ -18499,7 +22765,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006271348.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006271346.jpg",
-    "displayName": "That's so true - Gracie Abrams"
+    "displayName": "That's so true - Gracie Abrams",
+    "numberOneDate": "22 de marzo de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "a59f363737af3fd58db5d27be25ecd54",
@@ -18512,7 +22781,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006277188.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006277187.jpg",
-    "displayName": "Cosas pendientes - Maluma"
+    "displayName": "Cosas pendientes - Maluma",
+    "numberOneDate": "5 de abril de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "128d709f9b0415b8a7ae4f1010543a86",
@@ -18525,7 +22797,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006323353.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006323352.jpg",
-    "displayName": "Blackout - Emilia, Tini & Nicki Nicole"
+    "displayName": "Blackout - Emilia, Tini & Nicki Nicole",
+    "numberOneDate": "5 de julio de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "95c297bd33ab9a3099b3a2a009852351",
@@ -18538,7 +22813,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/490006345900.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/490006345899.jpg",
-    "displayName": "Soleao - Myke Towers feat. Quevedo"
+    "displayName": "Soleao - Myke Towers feat. Quevedo",
+    "numberOneDate": "2 de agosto de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "ad181cad2aec7276235a247d2fe6716b",
@@ -18551,7 +22829,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006289813.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006289812.jpg",
-    "displayName": "Nice to meet you - Myles Smith"
+    "displayName": "Nice to meet you - Myles Smith",
+    "numberOneDate": "23 de agosto de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "4bdf3dff3cf7e38122df2b118ffa69c0",
@@ -18564,7 +22845,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006254884.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006277074.jpg",
-    "displayName": "Qué pecao - Manuel Turizo feat. Kapo"
+    "displayName": "Qué pecao - Manuel Turizo feat. Kapo",
+    "numberOneDate": "1 de marzo de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "6cb9d75e37c1c71aca871181b70568e3",
@@ -18577,7 +22861,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006285693.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006294288.jpg",
-    "displayName": "Capaz (Merenguetón) - Yorghaki & Alleh"
+    "displayName": "Capaz (Merenguetón) - Yorghaki & Alleh",
+    "numberOneDate": "26 de abril de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "f61b96ebc5c99a917d5754114156ea84",
@@ -18590,7 +22877,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006310510.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006310512.jpg",
-    "displayName": "Ordinary - Alex Warren"
+    "displayName": "Ordinary - Alex Warren",
+    "numberOneDate": "14 de junio de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "cf10437ca34c88902898657802f34fc1",
@@ -18603,7 +22893,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006248731.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006248733.jpg",
-    "displayName": "We pray (Tini version) - Coldplay, Little Simz, Elyanna, Tini & Burna Boy"
+    "displayName": "We pray (Tini version) - Coldplay, Little Simz, Elyanna, Tini & Burna Boy",
+    "numberOneDate": "8 de marzo de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "f7045b80fb830188e24e7779d4a4d13e",
@@ -18616,7 +22909,10 @@ export const songs: Song[] = [
     "voices": "Femenino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006334335.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006317110.jpg",
-    "displayName": "Anxiety - Doechii"
+    "displayName": "Anxiety - Doechii",
+    "numberOneDate": "7 de junio de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "437a4d3af4f006ba07390998df226007",
@@ -18629,7 +22925,10 @@ export const songs: Song[] = [
     "voices": "Mixto",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006284828.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006279269.jpg",
-    "displayName": "Gran Vía - Quevedo feat. Aitana"
+    "displayName": "Gran Vía - Quevedo feat. Aitana",
+    "numberOneDate": "25 de enero de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "035474512c8376d9a13f04aec1b14c2c",
@@ -18642,7 +22941,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006254625.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006279787.jpg",
-    "displayName": "El último día de nuestras vidas - Dani Martín"
+    "displayName": "El último día de nuestras vidas - Dani Martín",
+    "numberOneDate": "1 de febrero de 2025",
+    "spotifyUrl": "https://p.scdn.co/mp3-preview/1c165914178c39cfc9bb0d253ea76718ccaaf96d?cid=f17be0f7f14f49ce951337f10b6b8c33",
+    "bestPosition": "1"
   },
   {
     "id": "1e262276fa1af8fa5106886452daf39f",
@@ -18655,7 +22957,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006274232.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006274205.jpg",
-    "displayName": "Qué pasaría - Rauw Alejandro feat. Bad Bunny"
+    "displayName": "Qué pasaría - Rauw Alejandro feat. Bad Bunny",
+    "numberOneDate": "15 de febrero de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "cf46987d317219407219aa369c524970",
@@ -18668,7 +22973,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006277794.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006277796.jpg",
-    "displayName": "Te confieso - DePol"
+    "displayName": "Te confieso - DePol",
+    "numberOneDate": "29 de marzo de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "e58f8b209ab34aca0e16f8aefc4a0db2",
@@ -18681,7 +22989,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006263989.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006340235.jpg",
-    "displayName": "Born with a broken heart - Damiano David"
+    "displayName": "Born with a broken heart - Damiano David",
+    "numberOneDate": "17 de mayo de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   },
   {
     "id": "0e12796cc3cde1aeff14b809ec34aad4",
@@ -18694,7 +23005,10 @@ export const songs: Song[] = [
     "voices": "Masculino",
     "audioUrl": "https://recursosweb.prisaradio.com/audios/dest/010006336453.mp4",
     "imageUrl": "https://recursosweb.prisaradio.com/fotos/dest/010006336455.jpg",
-    "displayName": "Nexo 04: Tu cuerpo en braille - Nil Moliner"
+    "displayName": "Nexo 04: Tu cuerpo en braille - Nil Moliner",
+    "numberOneDate": "13 de septiembre de 2025",
+    "spotifyUrl": "",
+    "bestPosition": "1"
   }
 ];
 

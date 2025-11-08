@@ -626,16 +626,67 @@ ${clueLines}
                 </p>
               </div>
               
+              {/* Carátula y Info de la Canción */}
               <div className="border-4 border-black bg-[#f5f1e8] p-6 mb-6">
-                <p className="text-xs font-bold uppercase tracking-wide text-black/60 mb-2">
-                  La canción era:
-                </p>
-                <p className="text-xl font-black text-black mb-4">
-                  {todaySong.displayName}
-                </p>
+                <div className="flex flex-col sm:flex-row gap-6">
+                  {/* Carátula */}
+                  {todaySong.imageUrl && (
+                    <div className="flex-shrink-0 mx-auto sm:mx-0">
+                      <div className="border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] w-32 h-32 bg-white overflow-hidden">
+                        <img 
+                          src={todaySong.imageUrl} 
+                          alt={todaySong.displayName}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+                  )}
+                  
+                  {/* Info */}
+                  <div className="flex-1 text-center sm:text-left">
+                    <p className="text-xs font-bold uppercase tracking-wide text-black/60 mb-2">
+                      La canción era:
+                    </p>
+                    <p className="text-xl font-black text-black mb-2">
+                      {todaySong.title}
+                    </p>
+                    <p className="text-lg font-bold text-black/70 mb-3">
+                      {todaySong.artist}
+                    </p>
+                    
+                    {todaySong.numberOneDate && (
+                      <div className="border-2 border-black bg-white p-2 inline-block mb-3">
+                        <p className="text-[10px] font-black uppercase tracking-wide text-black/60">
+                          Número 1 en Los 40
+                        </p>
+                        <p className="text-sm font-bold text-black">
+                          {todaySong.numberOneDate}
+                        </p>
+                      </div>
+                    )}
+                    
+                    {/* Botón de Spotify */}
+                    {todaySong.spotifyUrl && (
+                      <div className="mt-3">
+                        <a 
+                          href={todaySong.spotifyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-[#1DB954] border-4 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all text-sm text-white"
+                        >
+                          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                          </svg>
+                          <span className="hidden sm:inline">Escuchar en Spotify</span>
+                          <span className="sm:hidden">Spotify</span>
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                </div>
                 
                 {gameWon && (
-                  <div className="flex gap-4 mt-4">
+                  <div className="flex gap-4 mt-6">
                     <div className="flex-1 border-4 border-black bg-white p-3 text-center">
                       <div className="text-xs font-black uppercase tracking-wide text-black/60 mb-1">Tiempo</div>
                       <div className="text-2xl font-black font-mono">

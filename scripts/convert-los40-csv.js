@@ -47,6 +47,9 @@ const mediaUrlIdx = headers.indexOf('mediaUrl');
 const youtubeUrlIdx = headers.indexOf('youtubeUrl');
 const coverImageIdx = headers.indexOf('coverImageUrl');
 const idIdx = headers.indexOf('id');
+const dateIdx = headers.indexOf('date');
+const spotifyUrlIdx = headers.indexOf('spotifyUrl');
+const bestPositionIdx = headers.indexOf('bestPosition');
 
 console.log(`\nÍndices encontrados:
 - songTitle: ${songTitleIdx}
@@ -60,6 +63,9 @@ console.log(`\nÍndices encontrados:
 - youtubeUrl: ${youtubeUrlIdx}
 - coverImageUrl: ${coverImageIdx}
 - id: ${idIdx}
+- date: ${dateIdx}
+- spotifyUrl: ${spotifyUrlIdx}
+- bestPosition: ${bestPositionIdx}
 `);
 
 // Función para limpiar géneros (quitar emojis)
@@ -116,11 +122,29 @@ for (let i = 1; i < lines.length; i++) {
   const youtubeUrl = fields[youtubeUrlIdx];
   const coverImage = fields[coverImageIdx];
   const id = fields[idIdx];
+  const date = fields[dateIdx];
+  const spotifyUrl = fields[spotifyUrlIdx];
+  const bestPosition = fields[bestPositionIdx];
   
   // Verificar que tenga los campos esenciales
   if (!songTitle || !artistName) {
     skipped++;
     continue;
+  }
+  
+  // Formatear fecha si existe
+  let formattedDate = '';
+  if (date) {
+    try {
+      const dateObj = new Date(date);
+      formattedDate = dateObj.toLocaleDateString('es-ES', { 
+        day: 'numeric', 
+        month: 'long', 
+        year: 'numeric' 
+      });
+    } catch (e) {
+      formattedDate = '';
+    }
   }
   
   songs.push({
@@ -134,7 +158,10 @@ for (let i = 1; i < lines.length; i++) {
     voices,
     audioUrl: mediaUrl || youtubeUrl || '',
     imageUrl: coverImage || '',
-    displayName: `${songTitle} - ${artistName}`
+    displayName: `${songTitle} - ${artistName}`,
+    numberOneDate: formattedDate,
+    spotifyUrl: spotifyUrl || '',
+    bestPosition: bestPosition || ''
   });
 }
 
@@ -154,6 +181,9 @@ const tsContent = `export interface Song {
   country: string;      // País de origen
   language: string;     // Idioma de la canción
   voices: string;       // "Masculino", "Femenino", "Mixto"
+  numberOneDate?: string; // Fecha en que fue número 1 (formato legible)
+  spotifyUrl?: string;    // URL de Spotify
+  bestPosition?: string;  // Mejor posición alcanzada
 }
 
 // Base de datos de canciones de Los 40 (1990-2025)

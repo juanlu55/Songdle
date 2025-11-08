@@ -24,3 +24,28 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Scrollbar personalizado estilo neo-brutalista */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f5f1e8;
+  border-left: 2px solid black;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: black;
+  border: 2px solid #f5f1e8;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* Para Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: black #f5f1e8;
+}

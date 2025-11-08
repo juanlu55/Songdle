@@ -68,7 +68,7 @@ export default function Home() {
   const statsUpdatedRef = useRef(false);
   const attemptsContainerRef = useRef<HTMLDivElement>(null);
   const MAX_ATTEMPTS = 6;
-  const MAX_LISTEN_TIME = 10; // Máximo 10 segundos de escucha
+  const MAX_LISTEN_TIME = 30; // Máximo 30 segundos de escucha
 
   // Cargar datos del localStorage al iniciar
   useEffect(() => {

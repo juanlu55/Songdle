@@ -61,6 +61,7 @@ export default function Home() {
   });
   const [showStats, setShowStats] = useState(false);
   const [showHowToPlay, setShowHowToPlay] = useState(false);
+  const [expandedClue, setExpandedClue] = useState<{attemptIndex: number, clueType: string} | null>(null);
   
   const audioRef = useRef<HTMLAudioElement>(null);
   const startTimeRef = useRef<number | null>(null);
@@ -310,10 +311,16 @@ export default function Home() {
   };
 
   // Compartir resultados
-  const shareResults = () => {
+  const shareResults = async () => {
     const emoji = gameWon ? "🎯" : "❌";
     const attemptsText = gameWon ? `${attempts.length}/${MAX_ATTEMPTS}` : `X/${MAX_ATTEMPTS}`;
     const time = attempts[attempts.length - 1]?.time.toFixed(2) || "0.00";
+    
+    // Calcular número del día desde el 8 de noviembre de 2025
+    const startDate = new Date('2025-11-08T00:00:00');
+    const today = new Date();
+    const daysSinceStart = Math.floor((today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) + 1;
+    const gameNumber = daysSinceStart > 0 ? daysSinceStart : 1;
     
     // Generar cuadrados de pistas
     const clueLines = attempts.map((attempt) => {
@@ -322,18 +329,41 @@ export default function Home() {
       return `${genre ? "🟩" : "🟥"}${decade ? "🟩" : "🟥"}${country ? "🟩" : "🟥"}${language ? "🟩" : "🟥"}${voices ? "🟩" : "🟥"}`;
     }).join("\n");
     
-    const shareText = `🎵 Songdle #1
+    const shareText = `🎵 Songdle #${gameNumber}
 ${emoji} ${attemptsText} intentos
 ⏱️ ${time} segundos
 
 ${clueLines}
 
-¿Puedes superarme?`;
+🎮 songdle.es`;
 
-    navigator.clipboard.writeText(shareText).then(() => {
-      setShowCopiedMessage(true);
-      setTimeout(() => setShowCopiedMessage(false), 2500);
-    });
+    // Detectar si es móvil
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    // En móvil: usar Web Share API nativa si está disponible
+    if (isMobile && navigator.share) {
+      try {
+        await navigator.share({
+          title: 'Songdle - Resultado',
+          text: shareText,
+          url: 'https://songdle.es'
+        });
+      } catch (err) {
+        // Si el usuario cancela o hay error, copiar al portapapeles
+        if (err instanceof Error && err.name !== 'AbortError') {
+          navigator.clipboard.writeText(shareText).then(() => {
+            setShowCopiedMessage(true);
+            setTimeout(() => setShowCopiedMessage(false), 2500);
+          });
+        }
+      }
+    } else {
+      // En desktop o si no hay Web Share API: siempre copiar al portapapeles
+      navigator.clipboard.writeText(shareText).then(() => {
+        setShowCopiedMessage(true);
+        setTimeout(() => setShowCopiedMessage(false), 2500);
+      });
+    }
   };
 
 
@@ -460,16 +490,28 @@ ${clueLines}
                             {filteredSongs.length} canciones
                           </div>
                         )}
-                        {filteredSongs.map((song) => (
-                          <button
-                            key={song.id}
-                            type="button"
-                            onClick={() => selectSong(song)}
-                            className="w-full px-4 py-2 text-left hover:bg-[#a8e6cf] transition-colors border-b-2 border-black last:border-b-0 font-medium"
-                          >
-                            {song.displayName}
-                          </button>
-                        ))}
+                        {filteredSongs.map((song) => {
+                          const alreadyGuessed = attempts.some(a => 
+                            a.guess.toLowerCase() === song.displayName.toLowerCase()
+                          );
+                          
+                          return (
+                            <button
+                              key={song.id}
+                              type="button"
+                              onClick={() => selectSong(song)}
+                              disabled={alreadyGuessed}
+                              className={`w-full px-4 py-2 text-left transition-colors border-b-2 border-black last:border-b-0 font-medium ${
+                                alreadyGuessed 
+                                  ? 'bg-gray-200 text-black/40 cursor-not-allowed line-through'
+                                  : 'hover:bg-[#a8e6cf]'
+                              }`}
+                            >
+                              {song.displayName}
+                              {alreadyGuessed && <span className="ml-2 text-xs">✓ Ya usada</span>}
+                            </button>
+                          );
+                        })}
                       </div>
                     )}
                   </div>
@@ -523,67 +565,179 @@ ${clueLines}
                         
                         {/* Clues */}
                         {attempt.clues && attemptedSong && (
-                          <div className="grid grid-cols-5 gap-2">
-                            {/* Género */}
-                            <div className={`border-2 border-black p-2 text-center ${
-                              attempt.clues.genre 
-                                ? "bg-[#a8e6cf]" 
-                                : "bg-[#ff6b6b]"
-                            }`}>
-                              <div className="text-xs font-black mb-1">GEN</div>
-                              <div className="text-[10px] font-bold truncate">
-                                {attemptedSong.genre}
+                          <>
+                            {/* Advertencia si todos coinciden pero la canción es incorrecta */}
+                            {!attempt.isCorrect && 
+                             attempt.clues.genre && 
+                             attempt.clues.decade && 
+                             attempt.clues.country && 
+                             attempt.clues.language && 
+                             attempt.clues.voices && (
+                              <div className="mb-2 border-2 border-black bg-[#ffd700] p-2 text-center">
+                                <p className="text-xs font-black uppercase">
+                                  ⚠️ Todos los atributos coinciden, pero NO es la canción correcta
+                                </p>
                               </div>
+                            )}
+                            
+                            <div className="grid grid-cols-5 gap-1 sm:gap-2">
+                              {/* Género */}
+                              <button
+                                type="button"
+                                onClick={() => setExpandedClue(
+                                  expandedClue?.attemptIndex === index && expandedClue?.clueType === 'genre' 
+                                    ? null 
+                                    : {attemptIndex: index, clueType: 'genre'}
+                                )}
+                                className={`border-2 border-black p-1 sm:p-2 text-center cursor-pointer hover:scale-105 transition-transform ${
+                                  attempt.clues.genre 
+                                    ? "bg-[#a8e6cf]" 
+                                    : "bg-[#ff6b6b]"
+                                }`}
+                              >
+                                <div className="text-[10px] sm:text-xs font-black mb-1">GEN</div>
+                                <div className="text-[8px] sm:text-[10px] font-bold truncate">
+                                  {attemptedSong.genre}
+                                </div>
+                              </button>
+                              
+                              {/* Década */}
+                              <button
+                                type="button"
+                                onClick={() => setExpandedClue(
+                                  expandedClue?.attemptIndex === index && expandedClue?.clueType === 'decade' 
+                                    ? null 
+                                    : {attemptIndex: index, clueType: 'decade'}
+                                )}
+                                className={`border-2 border-black p-1 sm:p-2 text-center cursor-pointer hover:scale-105 transition-transform ${
+                                  attempt.clues.decade 
+                                    ? "bg-[#a8e6cf]" 
+                                    : "bg-[#ff6b6b]"
+                                }`}
+                              >
+                                <div className="text-[10px] sm:text-xs font-black mb-1">DEC</div>
+                                <div className="text-[8px] sm:text-[10px] font-bold">
+                                  {attemptedSong.decade}
+                                </div>
+                              </button>
+                              
+                              {/* País */}
+                              <button
+                                type="button"
+                                onClick={() => setExpandedClue(
+                                  expandedClue?.attemptIndex === index && expandedClue?.clueType === 'country' 
+                                    ? null 
+                                    : {attemptIndex: index, clueType: 'country'}
+                                )}
+                                className={`border-2 border-black p-1 sm:p-2 text-center cursor-pointer hover:scale-105 transition-transform ${
+                                  attempt.clues.country 
+                                    ? "bg-[#a8e6cf]" 
+                                    : "bg-[#ff6b6b]"
+                                }`}
+                              >
+                                <div className="text-[10px] sm:text-xs font-black mb-1">PAÍ</div>
+                                <div className="text-[8px] sm:text-[10px] font-bold truncate">
+                                  {attemptedSong.country}
+                                </div>
+                              </button>
+                              
+                              {/* Idioma */}
+                              <button
+                                type="button"
+                                onClick={() => setExpandedClue(
+                                  expandedClue?.attemptIndex === index && expandedClue?.clueType === 'language' 
+                                    ? null 
+                                    : {attemptIndex: index, clueType: 'language'}
+                                )}
+                                className={`border-2 border-black p-1 sm:p-2 text-center cursor-pointer hover:scale-105 transition-transform ${
+                                  attempt.clues.language 
+                                    ? "bg-[#a8e6cf]" 
+                                    : "bg-[#ff6b6b]"
+                                }`}
+                              >
+                                <div className="text-[10px] sm:text-xs font-black mb-1">IDI</div>
+                                <div className="text-[8px] sm:text-[10px] font-bold truncate">
+                                  {attemptedSong.language}
+                                </div>
+                              </button>
+                              
+                              {/* Voces */}
+                              <button
+                                type="button"
+                                onClick={() => setExpandedClue(
+                                  expandedClue?.attemptIndex === index && expandedClue?.clueType === 'voices' 
+                                    ? null 
+                                    : {attemptIndex: index, clueType: 'voices'}
+                                )}
+                                className={`border-2 border-black p-1 sm:p-2 text-center cursor-pointer hover:scale-105 transition-transform ${
+                                  attempt.clues.voices 
+                                    ? "bg-[#a8e6cf]" 
+                                    : "bg-[#ff6b6b]"
+                                }`}
+                              >
+                                <div className="text-[10px] sm:text-xs font-black mb-1">VOZ</div>
+                                <div className="text-[8px] sm:text-[10px] font-bold truncate">
+                                  {attemptedSong.voices}
+                                </div>
+                              </button>
                             </div>
                             
-                            {/* Década */}
-                            <div className={`border-2 border-black p-2 text-center ${
-                              attempt.clues.decade 
-                                ? "bg-[#a8e6cf]" 
-                                : "bg-[#ff6b6b]"
-                            }`}>
-                              <div className="text-xs font-black mb-1">DEC</div>
-                              <div className="text-[10px] font-bold">
-                                {attemptedSong.decade}
+                            {/* Tooltip expandido */}
+                            {expandedClue?.attemptIndex === index && (
+                              <div className="mt-2 border-2 border-black bg-white p-3">
+                                {expandedClue.clueType === 'genre' && (
+                                  <>
+                                    <p className="text-xs font-black uppercase mb-1">Género</p>
+                                    <p className="text-sm font-bold mb-1">Tu intento: {attemptedSong.genre}</p>
+                                    <p className="text-sm font-bold mb-1">Canción del día: {todaySong.genre}</p>
+                                    <p className="text-xs font-medium text-black/60">
+                                      {attempt.clues.genre ? "✓ Coincide" : "✗ No coincide"}
+                                    </p>
+                                  </>
+                                )}
+                                {expandedClue.clueType === 'decade' && (
+                                  <>
+                                    <p className="text-xs font-black uppercase mb-1">Década</p>
+                                    <p className="text-sm font-bold mb-1">Tu intento: {attemptedSong.decade}</p>
+                                    <p className="text-sm font-bold mb-1">Canción del día: {todaySong.decade}</p>
+                                    <p className="text-xs font-medium text-black/60">
+                                      {attempt.clues.decade ? "✓ Coincide" : "✗ No coincide"}
+                                    </p>
+                                  </>
+                                )}
+                                {expandedClue.clueType === 'country' && (
+                                  <>
+                                    <p className="text-xs font-black uppercase mb-1">País</p>
+                                    <p className="text-sm font-bold mb-1">Tu intento: {attemptedSong.country}</p>
+                                    <p className="text-sm font-bold mb-1">Canción del día: {todaySong.country}</p>
+                                    <p className="text-xs font-medium text-black/60">
+                                      {attempt.clues.country ? "✓ Coincide" : "✗ No coincide"}
+                                    </p>
+                                  </>
+                                )}
+                                {expandedClue.clueType === 'language' && (
+                                  <>
+                                    <p className="text-xs font-black uppercase mb-1">Idioma</p>
+                                    <p className="text-sm font-bold mb-1">Tu intento: {attemptedSong.language}</p>
+                                    <p className="text-sm font-bold mb-1">Canción del día: {todaySong.language}</p>
+                                    <p className="text-xs font-medium text-black/60">
+                                      {attempt.clues.language ? "✓ Coincide" : "✗ No coincide"}
+                                    </p>
+                                  </>
+                                )}
+                                {expandedClue.clueType === 'voices' && (
+                                  <>
+                                    <p className="text-xs font-black uppercase mb-1">Voces</p>
+                                    <p className="text-sm font-bold mb-1">Tu intento: {attemptedSong.voices}</p>
+                                    <p className="text-sm font-bold mb-1">Canción del día: {todaySong.voices}</p>
+                                    <p className="text-xs font-medium text-black/60">
+                                      {attempt.clues.voices ? "✓ Coincide" : "✗ No coincide"}
+                                    </p>
+                                  </>
+                                )}
                               </div>
-                            </div>
-                            
-                            {/* País */}
-                            <div className={`border-2 border-black p-2 text-center ${
-                              attempt.clues.country 
-                                ? "bg-[#a8e6cf]" 
-                                : "bg-[#ff6b6b]"
-                            }`}>
-                              <div className="text-xs font-black mb-1">PAÍ</div>
-                              <div className="text-[10px] font-bold truncate">
-                                {attemptedSong.country}
-                              </div>
-                            </div>
-                            
-                            {/* Idioma */}
-                            <div className={`border-2 border-black p-2 text-center ${
-                              attempt.clues.language 
-                                ? "bg-[#a8e6cf]" 
-                                : "bg-[#ff6b6b]"
-                            }`}>
-                              <div className="text-xs font-black mb-1">IDI</div>
-                              <div className="text-[10px] font-bold truncate">
-                                {attemptedSong.language}
-                              </div>
-                            </div>
-                            
-                            {/* Voces */}
-                            <div className={`border-2 border-black p-2 text-center ${
-                              attempt.clues.voices 
-                                ? "bg-[#a8e6cf]" 
-                                : "bg-[#ff6b6b]"
-                            }`}>
-                              <div className="text-xs font-black mb-1">VOZ</div>
-                              <div className="text-[10px] font-bold truncate">
-                                {attemptedSong.voices}
-                              </div>
-                            </div>
-                          </div>
+                            )}
+                          </>
                         )}
                       </div>
                     );

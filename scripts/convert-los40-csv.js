@@ -168,6 +168,13 @@ for (let i = 1; i < lines.length; i++) {
 console.log(`\nCanciones procesadas: ${songs.length}`);
 console.log(`Canciones omitidas: ${skipped}`);
 
+// Separar canciones por calidad de datos
+const premiumSongs = songs.filter(s => s.spotifyUrl && s.numberOneDate);
+const regularSongs = songs.filter(s => !s.spotifyUrl || !s.numberOneDate);
+
+console.log(`\n🎵 Canciones premium (con Spotify + fecha): ${premiumSongs.length}`);
+console.log(`📀 Canciones regulares: ${regularSongs.length}`);
+
 // Generar el archivo TypeScript
 const tsContent = `export interface Song {
   id: string;
@@ -186,18 +193,42 @@ const tsContent = `export interface Song {
   bestPosition?: string;  // Mejor posición alcanzada
 }
 
-// Base de datos de canciones de Los 40 (1990-2025)
+// Base de datos completa de canciones de Los 40 (1990-2025)
 // Total: ${songs.length} canciones
 export const songs: Song[] = ${JSON.stringify(songs, null, 2)};
 
-// La canción del día (cambia cada día)
-// Puedes usar Date para seleccionar una canción diferente cada día
+// Canciones premium: con Spotify y fecha de número 1
+// Total: ${premiumSongs.length} canciones
+const premiumSongs: Song[] = ${JSON.stringify(premiumSongs, null, 2)};
+
+// Canciones regulares: sin Spotify o sin fecha
+// Total: ${regularSongs.length} canciones
+const regularSongs: Song[] = ${JSON.stringify(regularSongs, null, 2)};
+
+// ========================================
+// SISTEMA DE SELECCIÓN DE CANCIÓN DEL DÍA
+// ========================================
+// Algoritmo determinista con priorización:
+// 1. Primeros ${premiumSongs.length} días del año: usa canciones premium (con Spotify + fecha)
+// 2. Días restantes: usa canciones regulares
+// 3. Si el año tiene más de ${songs.length} días, cicla desde el inicio
+
 const today = new Date();
 const startOfYear = new Date(today.getFullYear(), 0, 0);
 const dayOfYear = Math.floor((today.getTime() - startOfYear.getTime()) / (1000 * 60 * 60 * 24));
-const songIndex = dayOfYear % songs.length;
 
-export const todaySong: Song = songs[songIndex];
+let todaySong: Song;
+
+if (dayOfYear < premiumSongs.length) {
+  // Días 1-${premiumSongs.length}: Canciones premium
+  todaySong = premiumSongs[dayOfYear];
+} else {
+  // Días ${premiumSongs.length + 1}+: Canciones regulares
+  const regularIndex = (dayOfYear - premiumSongs.length) % regularSongs.length;
+  todaySong = regularSongs[regularIndex];
+}
+
+export { todaySong };
 `;
 
 // Guardar el archivo

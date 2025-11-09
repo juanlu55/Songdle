@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import { songs, todaySong, Song, getSpainDate } from "./data/songs";
 import { initAmplitude, amplitudeEvents } from "@/lib/amplitude";
 
@@ -837,11 +838,14 @@ ${clueLines}
                   {/* Carátula */}
                   {todaySong.imageUrl && (
                     <div className="flex-shrink-0 mx-auto sm:mx-0">
-                      <div className="border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] w-32 h-32 bg-white overflow-hidden">
-                        <img 
+                      <div className="border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] w-32 h-32 bg-white overflow-hidden relative">
+                        <Image 
                           src={todaySong.imageUrl} 
                           alt={todaySong.displayName}
-                          className="w-full h-full object-cover"
+                          fill
+                          sizes="128px"
+                          className="object-cover"
+                          unoptimized
                         />
                       </div>
                     </div>

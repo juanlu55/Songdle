@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { songs, todaySong, Song, getSpainDate } from "./data/songs";
+import { initAmplitude, amplitudeEvents } from "@/lib/amplitude";
 
 interface ClueMatch {
   genre: boolean;
@@ -80,6 +81,9 @@ export default function Home() {
 
   // Cargar datos del localStorage al iniciar
   useEffect(() => {
+    // Inicializar Amplitude
+    initAmplitude();
+    
     const todayDate = getTodayDateString();
     const savedState = localStorage.getItem(STORAGE_KEY);
     
@@ -201,6 +205,7 @@ export default function Home() {
     if (isPlaying) {
       audioRef.current.pause();
       setIsPlaying(false);
+      amplitudeEvents.pauseClicked(elapsedTime);
     } else {
       // No permitir reproducir si ya se llegó al máximo
       if (elapsedTime >= MAX_LISTEN_TIME) {
@@ -208,6 +213,7 @@ export default function Home() {
       }
       audioRef.current.play();
       setIsPlaying(true);
+      amplitudeEvents.playClicked(elapsedTime);
     }
   };
 
@@ -238,12 +244,16 @@ export default function Home() {
   const selectSong = (song: Song) => {
     setGuess(song.displayName);
     setShowSuggestions(false);
+    amplitudeEvents.songSelected(song.displayName, true);
   };
 
   // Enviar respuesta
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!guess.trim() || elapsedTime === 0) return;
+
+    // Trackear el envío
+    amplitudeEvents.submitClicked(attempts.length + 1, elapsedTime, guess);
 
     // Buscar la canción seleccionada
     const guessedSong = songs.find((song) => 
@@ -280,6 +290,7 @@ export default function Home() {
 
     if (isCorrect) {
       setGameWon(true);
+      amplitudeEvents.gameWon(newAttempts.length, elapsedTime, guess);
       updateStatistics(true, newAttempts.length, elapsedTime);
       if (audioRef.current) {
         audioRef.current.pause();
@@ -287,6 +298,7 @@ export default function Home() {
       setIsPlaying(false);
     } else if (newAttempts.length >= MAX_ATTEMPTS) {
       setGameLost(true);
+      amplitudeEvents.gameLost(newAttempts.length, elapsedTime, todaySong.displayName);
       updateStatistics(false, newAttempts.length, elapsedTime);
       if (audioRef.current) {
         audioRef.current.pause();
@@ -374,12 +386,14 @@ ${clueLines}
           text: shareText,
           url: 'https://songdle.es'
         });
+        amplitudeEvents.shareClicked(attempts.length, gameWon, 'native');
       } catch (err) {
         // Si el usuario cancela o hay error, copiar al portapapeles
         if (err instanceof Error && err.name !== 'AbortError') {
           navigator.clipboard.writeText(shareText).then(() => {
             setShowCopiedMessage(true);
             setTimeout(() => setShowCopiedMessage(false), 2500);
+            amplitudeEvents.shareClicked(attempts.length, gameWon, 'clipboard');
           });
         }
       }
@@ -388,6 +402,7 @@ ${clueLines}
       navigator.clipboard.writeText(shareText).then(() => {
         setShowCopiedMessage(true);
         setTimeout(() => setShowCopiedMessage(false), 2500);
+        amplitudeEvents.shareClicked(attempts.length, gameWon, 'clipboard');
       });
     }
   };
@@ -408,7 +423,10 @@ ${clueLines}
             {/* Botones */}
             <div className="flex gap-2">
               <button
-                onClick={() => setShowHowToPlay(true)}
+                onClick={() => {
+                  setShowHowToPlay(true);
+                  amplitudeEvents.tutorialOpened();
+                }}
                 className="border-4 border-black bg-white p-2 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
                 title="Cómo jugar"
               >
@@ -418,7 +436,10 @@ ${clueLines}
               </button>
               
               <button
-                onClick={() => setShowStats(!showStats)}
+                onClick={() => {
+                  setShowStats(!showStats);
+                  if (!showStats) amplitudeEvents.statsOpened();
+                }}
                 className="border-4 border-black bg-white p-2 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
                 title="Ver estadísticas"
               >
@@ -610,11 +631,15 @@ ${clueLines}
                               {/* Género */}
                               <button
                                 type="button"
-                                onClick={() => setExpandedClue(
-                                  expandedClue?.attemptIndex === index && expandedClue?.clueType === 'genre' 
-                                    ? null 
-                                    : {attemptIndex: index, clueType: 'genre'}
-                                )}
+                                onClick={() => {
+                                  const isExpanding = !(expandedClue?.attemptIndex === index && expandedClue?.clueType === 'genre');
+                                  setExpandedClue(
+                                    expandedClue?.attemptIndex === index && expandedClue?.clueType === 'genre' 
+                                      ? null 
+                                      : {attemptIndex: index, clueType: 'genre'}
+                                  );
+                                  if (isExpanding) amplitudeEvents.clueExpanded('genre', index + 1);
+                                }}
                                 className={`border-2 border-black p-1 sm:p-2 text-center cursor-pointer hover:scale-105 transition-transform ${
                                   attempt.clues.genre 
                                     ? "bg-[#a8e6cf]" 

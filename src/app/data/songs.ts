@@ -38925,7 +38925,12 @@ const workingRegularSongs: Song[] = [
 //
 // Esto garantiza que la mayoría del tiempo los usuarios escuchen audio real
 
-const today = new Date();
+// Función para obtener la fecha en hora española (Europe/Madrid)
+const getSpainDate = () => {
+  return new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Madrid" }));
+};
+
+const today = getSpainDate();
 const startOfYear = new Date(today.getFullYear(), 0, 0);
 const dayOfYear = Math.floor((today.getTime() - startOfYear.getTime()) / (1000 * 60 * 60 * 24));
 
@@ -48925,7 +48930,7 @@ if (dayOfYear < workingPremiumSongs.length) {
   todaySong = fallbackSongs[fallbackIndex];
 }
 
-export { todaySong };
+export { todaySong, getSpainDate };
 
 // Estadísticas del sistema:
 // - Días 1-401: Premium con audio ✓ (109.9% del año)

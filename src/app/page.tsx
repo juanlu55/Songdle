@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { songs, todaySong, Song } from "./data/songs";
+import { songs, todaySong, Song, getSpainDate } from "./data/songs";
 
 interface ClueMatch {
   genre: boolean;
@@ -23,6 +23,7 @@ interface GameState {
   elapsedTime: number;
   gameWon: boolean;
   gameLost: boolean;
+  gameDate: string; // Fecha del juego para verificar si es un nuevo día
 }
 
 interface Statistics {
@@ -71,20 +72,38 @@ export default function Home() {
   const MAX_ATTEMPTS = 6;
   const MAX_LISTEN_TIME = 30; // Máximo 30 segundos de escucha
 
+  // Función helper para obtener la fecha en formato string (hora española)
+  const getTodayDateString = () => {
+    const spainDate = getSpainDate();
+    return spainDate.toDateString();
+  };
+
   // Cargar datos del localStorage al iniciar
   useEffect(() => {
+    const todayDate = getTodayDateString();
     const savedState = localStorage.getItem(STORAGE_KEY);
+    
     if (savedState) {
       try {
         const state: GameState = JSON.parse(savedState);
-        setAttempts(state.attempts);
-        setElapsedTime(state.elapsedTime);
-        setGameWon(state.gameWon);
-        setGameLost(state.gameLost);
         
-        // Si el juego ya terminó, marcar que las estadísticas ya están actualizadas
-        if (state.gameWon || state.gameLost) {
-          statsUpdatedRef.current = true;
+        // Verificar si es un nuevo día o si es un estado antiguo sin fecha
+        if (!state.gameDate || state.gameDate !== todayDate) {
+          // Es un nuevo día o estado antiguo, resetear el estado del juego
+          console.log("Nuevo día detectado (o estado antiguo), reseteando estado del juego");
+          localStorage.removeItem(STORAGE_KEY);
+          // No cargar el estado anterior, mantener los valores por defecto
+        } else {
+          // Mismo día, cargar el estado guardado
+          setAttempts(state.attempts);
+          setElapsedTime(state.elapsedTime);
+          setGameWon(state.gameWon);
+          setGameLost(state.gameLost);
+          
+          // Si el juego ya terminó, marcar que las estadísticas ya están actualizadas
+          if (state.gameWon || state.gameLost) {
+            statsUpdatedRef.current = true;
+          }
         }
       } catch (error) {
         console.error("Error loading game state:", error);
@@ -120,6 +139,7 @@ export default function Home() {
         elapsedTime,
         gameWon,
         gameLost,
+        gameDate: getTodayDateString(),
       };
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     }
@@ -316,15 +336,21 @@ export default function Home() {
     const attemptsText = gameWon ? `${attempts.length}/${MAX_ATTEMPTS}` : `X/${MAX_ATTEMPTS}`;
     const time = attempts[attempts.length - 1]?.time.toFixed(2) || "0.00";
     
-    // Calcular número del día desde el 8 de noviembre de 2025
-    const startDate = new Date('2025-11-08T00:00:00');
-    const today = new Date();
+    // Calcular número del día desde el 8 de noviembre de 2025 (usando hora española)
+    const startDate = new Date('2025-11-08T00:00:00+01:00'); // Hora española
+    const today = getSpainDate();
     const daysSinceStart = Math.floor((today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) + 1;
     const gameNumber = daysSinceStart > 0 ? daysSinceStart : 1;
     
     // Generar cuadrados de pistas
     const clueLines = attempts.map((attempt) => {
+      // Si es correcto, mostrar todos verdes
+      if (attempt.isCorrect) {
+        return "🟩🟩🟩🟩🟩";
+      }
+      // Si no hay clues, mostrar todos grises
       if (!attempt.clues) return "⬜⬜⬜⬜⬜";
+      // Si es incorrecto, mostrar las pistas reales
       const { genre, decade, country, language, voices } = attempt.clues;
       return `${genre ? "🟩" : "🟥"}${decade ? "🟩" : "🟥"}${country ? "🟩" : "🟥"}${language ? "🟩" : "🟥"}${voices ? "🟩" : "🟥"}`;
     }).join("\n");

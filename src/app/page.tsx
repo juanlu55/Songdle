@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { songs, todaySong, Song, getSpainDate } from "./data/songs";
+import { songs, getTodaySong, Song, getSpainDate } from "./data/songs";
 import { initAmplitude, amplitudeEvents } from "@/lib/amplitude";
 
 interface ClueMatch {
@@ -65,6 +65,7 @@ export default function Home() {
   const [showStats, setShowStats] = useState(false);
   const [showHowToPlay, setShowHowToPlay] = useState(false);
   const [expandedClue, setExpandedClue] = useState<{attemptIndex: number, clueType: string} | null>(null);
+  const [todaySong, setTodaySong] = useState<Song>(() => getTodaySong()); // Calcular en cliente
   
   const audioRef = useRef<HTMLAudioElement>(null);
   const startTimeRef = useRef<number | null>(null);
@@ -84,6 +85,9 @@ export default function Home() {
   useEffect(() => {
     // Inicializar Amplitude
     initAmplitude();
+    
+    // Recalcular canción del día en el cliente (importante para zona horaria correcta)
+    setTodaySong(getTodaySong());
     
     const todayDate = getTodayDateString();
     const savedState = localStorage.getItem(STORAGE_KEY);

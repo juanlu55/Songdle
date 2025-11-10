@@ -38930,22 +38930,22 @@ const getSpainDate = () => {
   return new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Madrid" }));
 };
 
-const today = getSpainDate();
-const startOfYear = new Date(today.getFullYear(), 0, 0);
-const dayOfYear = Math.floor((today.getTime() - startOfYear.getTime()) / (1000 * 60 * 60 * 24));
+// Función para calcular la canción del día dinámicamente
+const getTodaySong = (): Song => {
+  const today = getSpainDate();
+  const startOfYear = new Date(today.getFullYear(), 0, 0);
+  const dayOfYear = Math.floor((today.getTime() - startOfYear.getTime()) / (1000 * 60 * 60 * 24));
 
-let todaySong: Song;
-
-if (dayOfYear < workingPremiumSongs.length) {
-  // Fase 1: Canciones premium con audio
-  todaySong = workingPremiumSongs[dayOfYear];
-} else if (dayOfYear < (workingPremiumSongs.length + workingRegularSongs.length)) {
-  // Fase 2: Canciones regulares con audio
-  const regularIndex = dayOfYear - workingPremiumSongs.length;
-  todaySong = workingRegularSongs[regularIndex];
-} else {
-  // Fase 3: Fallback para días restantes del año
-  const fallbackIndex = (dayOfYear - workingPremiumSongs.length - workingRegularSongs.length) % 587;
+  if (dayOfYear < workingPremiumSongs.length) {
+    // Fase 1: Canciones premium con audio
+    return workingPremiumSongs[dayOfYear];
+  } else if (dayOfYear < (workingPremiumSongs.length + workingRegularSongs.length)) {
+    // Fase 2: Canciones regulares con audio
+    const regularIndex = dayOfYear - workingPremiumSongs.length;
+    return workingRegularSongs[regularIndex];
+  } else {
+    // Fase 3: Fallback para días restantes del año
+    const fallbackIndex = (dayOfYear - workingPremiumSongs.length - workingRegularSongs.length) % 587;
   const fallbackSongs = [
   {
     "id": "df62ca18ab222e5b6cf0e1078b24a219",
@@ -48927,10 +48927,15 @@ if (dayOfYear < workingPremiumSongs.length) {
     "audioWorking": false
   }
 ];
-  todaySong = fallbackSongs[fallbackIndex];
-}
+    return fallbackSongs[fallbackIndex];
+  }
+};
 
-export { todaySong, getSpainDate };
+// Exportar función para uso dinámico en el cliente
+export { getTodaySong, getSpainDate };
+
+// Para compatibilidad con imports existentes
+export const todaySong = getTodaySong();
 
 // Estadísticas del sistema:
 // - Días 1-401: Premium con audio ✓ (109.9% del año)

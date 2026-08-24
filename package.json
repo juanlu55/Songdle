@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:daily-song": "npx --yes tsx scripts/assert-playable-daily-songs.ts"
   },
   "dependencies": {
     "@amplitude/analytics-browser": "^2.30.1",

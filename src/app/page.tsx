@@ -1,9 +1,21 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import Image from "next/image";
-import { songs, getTodaySong, Song, getSpainDate, getMadridDateString } from "./data/songs";
+import { songs, type Song } from "./data/songs";
+import { getTodaySong } from "@/lib/daily-song";
+import { getSpainDate, getMadridDateString } from "@/lib/madrid-date";
+import { getAudioSources } from "@/lib/audio";
+import {
+  buildClueLines,
+  buildShareText,
+  getShareUrl,
+  getSpotifySearchUrl,
+  getWhatsAppShareHref,
+  renderShareImageBlob,
+} from "@/lib/share";
 import { initAmplitude, amplitudeEvents } from "@/lib/amplitude";
+import NextSongCountdown from "./components/NextSongCountdown";
 
 interface ClueMatch {
   genre: boolean;
@@ -73,16 +85,16 @@ export default function Home() {
   const inputRef = useRef<HTMLDivElement>(null);
   const statsUpdatedRef = useRef(false);
   const attemptsContainerRef = useRef<HTMLDivElement>(null);
+  const audioSourceIndexRef = useRef(0);
+  const isPlayingRef = useRef(false);
+  const [audioError, setAudioError] = useState(false);
+  const [audioSourceIndex, setAudioSourceIndex] = useState(0);
   const MAX_ATTEMPTS = 6;
   const MAX_LISTEN_TIME = 30; // Máximo 30 segundos de escucha
 
   const getTodayDateString = () => getMadridDateString();
-
-  const getSpotifySearchUrl = (song: Song) => {
-    const artist = song.artist.replace(/;/g, " ");
-    const query = `${song.title} ${artist}`.replace(/\s+/g, " ").trim();
-    return `https://open.spotify.com/search/${encodeURIComponent(query)}`;
-  };
+  const audioSources = useMemo(() => getAudioSources(todaySong), [todaySong]);
+  const currentAudioUrl = audioSources[audioSourceIndex] ?? audioSources[0] ?? "";
 
   // Cargar datos del localStorage al iniciar
   useEffect(() => {
@@ -92,6 +104,9 @@ export default function Home() {
     // Recalcular canción del día en el cliente (importante para zona horaria correcta)
     setTodaySong(getTodaySong());
     setSongReady(true);
+    audioSourceIndexRef.current = 0;
+    setAudioSourceIndex(0);
+    setAudioError(false);
     
     const todayDate = getTodayDateString();
     const savedState = localStorage.getItem(STORAGE_KEY);
@@ -208,27 +223,77 @@ export default function Home() {
   }, [isPlaying, gameWon, gameLost, elapsedTime]);
 
   // Manejar reproducción de audio
+  useEffect(() => {
+    isPlayingRef.current = isPlaying;
+  }, [isPlaying]);
+
+  const setAudioSource = (index: number) => {
+    audioSourceIndexRef.current = index;
+    setAudioSourceIndex(index);
+  };
+
+  const playFromSource = async (sourceIndex: number) => {
+    const audio = audioRef.current;
+    if (!audio) return false;
+    const source = audioSources[sourceIndex];
+    if (!source) return false;
+
+    setAudioSource(sourceIndex);
+    if (audio.getAttribute("src") !== source) {
+      audio.src = source;
+      audio.load();
+    }
+
+    try {
+      await audio.play();
+      if (sourceIndex > 0) {
+        amplitudeEvents.audioFallbackUsed(todaySong.displayName, sourceIndex);
+      }
+      setAudioError(false);
+      setIsPlaying(true);
+      isPlayingRef.current = true;
+      amplitudeEvents.playClicked(elapsedTime);
+      return true;
+    } catch {
+      return false;
+    }
+  };
+
+  const handleAudioFailure = async (fromIndex: number) => {
+    for (let index = fromIndex + 1; index < audioSources.length; index++) {
+      setAudioSource(index);
+      const played = await playFromSource(index);
+      if (played) return;
+    }
+
+    setIsPlaying(false);
+    isPlayingRef.current = false;
+    setAudioError(true);
+    amplitudeEvents.audioPlaybackFailed(todaySong.displayName, fromIndex);
+  };
+
   const togglePlay = () => {
     if (!audioRef.current || !songReady) return;
-    
+
     if (isPlaying) {
       audioRef.current.pause();
       setIsPlaying(false);
+      isPlayingRef.current = false;
       amplitudeEvents.pauseClicked(elapsedTime);
-    } else {
-      // No permitir reproducir si ya se llegó al máximo
-      if (elapsedTime >= MAX_LISTEN_TIME) {
-        return;
-      }
-      const audio = audioRef.current;
-      if (audio.getAttribute("src") !== todaySong.audioUrl) {
-        audio.src = todaySong.audioUrl;
-        audio.load();
-      }
-      audio.play();
-      setIsPlaying(true);
-      amplitudeEvents.playClicked(elapsedTime);
+      return;
     }
+
+    if (elapsedTime >= MAX_LISTEN_TIME) {
+      return;
+    }
+
+    void (async () => {
+      const startIndex = audioSourceIndexRef.current;
+      const played = await playFromSource(startIndex);
+      if (!played) {
+        await handleAudioFailure(startIndex);
+      }
+    })();
   };
 
   // Filtrar canciones para autocompletado
@@ -357,68 +422,69 @@ export default function Home() {
   };
 
   // Compartir resultados
-  const shareResults = async () => {
-    const emoji = gameWon ? "🎯" : "❌";
-    const attemptsText = gameWon ? `${attempts.length}/${MAX_ATTEMPTS}` : `X/${MAX_ATTEMPTS}`;
+  const shareResults = async (medium: "native" | "clipboard" | "whatsapp" = "native") => {
     const time = attempts[attempts.length - 1]?.time.toFixed(2) || "0.00";
-    
-    // Calcular número del día desde el 8 de noviembre de 2025 (usando hora española)
-    const startDate = new Date('2025-11-08T00:00:00+01:00'); // Hora española
+    const startDate = new Date("2025-11-08T00:00:00+01:00");
     const today = getSpainDate();
     const daysSinceStart = Math.floor((today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) + 1;
     const gameNumber = daysSinceStart > 0 ? daysSinceStart : 1;
-    
-    // Generar cuadrados de pistas
-    const clueLines = attempts.map((attempt) => {
-      // Si es correcto, mostrar todos verdes
-      if (attempt.isCorrect) {
-        return "🟩🟩🟩🟩🟩";
-      }
-      // Si no hay clues, mostrar todos grises
-      if (!attempt.clues) return "⬜⬜⬜⬜⬜";
-      // Si es incorrecto, mostrar las pistas reales
-      const { genre, decade, country, language, voices } = attempt.clues;
-      return `${genre ? "🟩" : "🟥"}${decade ? "🟩" : "🟥"}${country ? "🟩" : "🟥"}${language ? "🟩" : "🟥"}${voices ? "🟩" : "🟥"}`;
-    }).join("\n");
-    
-    const shareText = `🎵 Songdle #${gameNumber}
-${emoji} ${attemptsText} intentos
-⏱️ ${time} segundos
+    const shareUrl = getShareUrl(medium);
+    const shareText = buildShareText({
+      gameNumber,
+      won: gameWon,
+      attemptCount: attempts.length,
+      maxAttempts: MAX_ATTEMPTS,
+      time,
+      clueLines: buildClueLines(attempts),
+      shareUrl,
+    });
 
-${clueLines}
+    if (medium === "whatsapp") {
+      window.open(getWhatsAppShareHref(shareText), "_blank", "noopener,noreferrer");
+      amplitudeEvents.shareClicked(attempts.length, gameWon, "whatsapp");
+      return;
+    }
 
-🎮 songdle.es`;
+    const imageBlob = await renderShareImageBlob({
+      gameNumber,
+      won: gameWon,
+      attemptCount: attempts.length,
+      maxAttempts: MAX_ATTEMPTS,
+      time,
+      attempts,
+    });
+    const imageFile = imageBlob
+      ? new File([imageBlob], `songdle-${gameNumber}.png`, { type: "image/png" })
+      : null;
 
-    // Detectar si es móvil
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
 
-    // En móvil: usar Web Share API nativa si está disponible
-    if (isMobile && navigator.share) {
+    if (medium !== "clipboard" && isMobile && navigator.share) {
       try {
-        await navigator.share({
-          title: 'Songdle - Resultado',
+        const payload: ShareData = {
+          title: "Songdle - Resultado",
           text: shareText,
-          url: 'https://songdle.es'
-        });
-        amplitudeEvents.shareClicked(attempts.length, gameWon, 'native');
+        };
+        if (imageFile && navigator.canShare?.({ files: [imageFile] })) {
+          payload.files = [imageFile];
+        }
+        await navigator.share(payload);
+        amplitudeEvents.shareClicked(attempts.length, gameWon, "native");
+        return;
       } catch (err) {
-        // Si el usuario cancela o hay error, copiar al portapapeles
-        if (err instanceof Error && err.name !== 'AbortError') {
-          navigator.clipboard.writeText(shareText).then(() => {
-            setShowCopiedMessage(true);
-            setTimeout(() => setShowCopiedMessage(false), 2500);
-            amplitudeEvents.shareClicked(attempts.length, gameWon, 'clipboard');
-          });
+        if (err instanceof Error && err.name === "AbortError") {
+          return;
         }
       }
-    } else {
-      // En desktop o si no hay Web Share API: siempre copiar al portapapeles
-      navigator.clipboard.writeText(shareText).then(() => {
-        setShowCopiedMessage(true);
-        setTimeout(() => setShowCopiedMessage(false), 2500);
-        amplitudeEvents.shareClicked(attempts.length, gameWon, 'clipboard');
-      });
     }
+
+    navigator.clipboard.writeText(shareText).then(() => {
+      setShowCopiedMessage(true);
+      setTimeout(() => setShowCopiedMessage(false), 2500);
+      amplitudeEvents.shareClicked(attempts.length, gameWon, "clipboard");
+    });
   };
 
 
@@ -469,9 +535,13 @@ ${clueLines}
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-black" aria-hidden="true"></div>
             <p className="text-black/60 text-sm font-bold uppercase tracking-wider">
-              Adivina la canción — {MAX_ATTEMPTS} intentos máximo
+              El Wordle de canciones — {MAX_ATTEMPTS} intentos
             </p>
           </div>
+          <p className="mt-3 text-sm font-medium text-black/70 max-w-xl leading-relaxed">
+            Escucha un fragmento y adivina la canción del día. Canciones que fueron número 1
+            en Los 40 Principales. Gratis, en español, una nueva cada medianoche.
+          </p>
         </header>
 
         {/* Main Game Card */}
@@ -481,14 +551,45 @@ ${clueLines}
               {/* Audio Player */}
               <div className="mb-6">
                 {songReady && (
-                  <audio key={todaySong.id} ref={audioRef} src={todaySong.audioUrl} loop />
+                  <audio
+                    key={todaySong.id}
+                    ref={audioRef}
+                    src={currentAudioUrl || undefined}
+                    loop
+                    preload="auto"
+                    onError={() => {
+                      void (async () => {
+                        const next = audioSourceIndexRef.current + 1;
+                        if (next < audioSources.length) {
+                          setAudioSource(next);
+                          if (isPlayingRef.current) {
+                            const played = await playFromSource(next);
+                            if (!played) {
+                              await handleAudioFailure(next);
+                            }
+                          } else {
+                            amplitudeEvents.audioFallbackUsed(todaySong.displayName, next);
+                          }
+                          return;
+                        }
+
+                        setIsPlaying(false);
+                        isPlayingRef.current = false;
+                        setAudioError(true);
+                        amplitudeEvents.audioPlaybackFailed(
+                          todaySong.displayName,
+                          audioSourceIndexRef.current
+                        );
+                      })();
+                    }}
+                  />
                 )}
                 <div className="flex items-center justify-center gap-4">
                 <button
                   onClick={togglePlay}
-                  disabled={!songReady || elapsedTime >= MAX_LISTEN_TIME}
+                  disabled={!songReady || elapsedTime >= MAX_LISTEN_TIME || audioError || audioSources.length === 0}
                     className={`w-16 h-16 flex items-center justify-center text-2xl border-4 border-black font-black transition-all ${
-                    !songReady || elapsedTime >= MAX_LISTEN_TIME
+                    !songReady || elapsedTime >= MAX_LISTEN_TIME || audioError || audioSources.length === 0
                         ? "bg-gray-300 cursor-not-allowed"
                         : isPlaying
                         ? "bg-[#ff6b6b] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] animate-pulse"
@@ -499,7 +600,9 @@ ${clueLines}
                 </button>
                   <div className="text-left">
                     <p className="text-xs font-bold text-black/60 uppercase tracking-wide">
-                  {elapsedTime >= MAX_LISTEN_TIME
+                  {audioError || audioSources.length === 0
+                        ? "Audio no disponible"
+                        : elapsedTime >= MAX_LISTEN_TIME
                         ? "Tiempo máximo"
                     : isPlaying
                         ? "● Reproduciendo"
@@ -515,6 +618,33 @@ ${clueLines}
                   </div>
                 </div>
               </div>
+
+              {audioError && (
+                <div className="mb-6 border-4 border-black bg-[#ffd700] p-4 text-center">
+                  <p className="text-sm font-black uppercase mb-2">
+                    No hemos podido cargar el audio de hoy
+                  </p>
+                  <p className="text-xs font-medium text-black/70 mb-3">
+                    Prueba de nuevo. Si sigue fallando, recarga la página.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setAudioError(false);
+                      setAudioSource(0);
+                      void (async () => {
+                        const played = await playFromSource(0);
+                        if (!played) {
+                          await handleAudioFailure(0);
+                        }
+                      })();
+                    }}
+                    className="px-4 py-2 bg-white border-4 border-black font-black uppercase text-xs hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+                  >
+                    Reintentar audio
+                  </button>
+                </div>
+              )}
 
               {/* Timer */}
               {elapsedTime > 0 && (
@@ -927,12 +1057,18 @@ ${clueLines}
                 )}
               </div>
 
-              <div className="relative mb-4">
+              <div className="relative mb-4 space-y-3">
                 <button
-                  onClick={shareResults}
+                  onClick={() => shareResults("whatsapp")}
+                  className="w-full py-4 bg-[#25D366] text-white border-4 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+                >
+                  Compartir en WhatsApp
+                </button>
+                <button
+                  onClick={() => shareResults()}
                   className="w-full py-4 bg-[#a8e6cf] border-4 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
                 >
-                  Compartir Resultados
+                  Copiar resultado
                 </button>
                 
                 {/* Mensaje de copiado */}
@@ -945,9 +1081,7 @@ ${clueLines}
                 )}
               </div>
               
-              <p className="text-xs text-center text-black/60 font-bold uppercase tracking-wide mb-6">
-                Vuelve mañana para una nueva canción
-              </p>
+              <NextSongCountdown />
 
               {/* Estadísticas */}
               <div className="border-4 border-black bg-white p-6">
@@ -1035,12 +1169,19 @@ ${clueLines}
         
         {/* Footer con enlaces internos para SEO */}
         <footer className="mt-6 text-center" role="contentinfo">
-          <nav className="flex justify-center gap-4 text-xs font-bold uppercase tracking-wide" aria-label="Enlaces de navegación">
+          <nav className="flex justify-center gap-4 text-xs font-bold uppercase tracking-wide flex-wrap" aria-label="Enlaces de navegación">
             <a 
               href="/como-jugar" 
               className="text-black/50 hover:text-black transition-colors underline-offset-2 hover:underline"
             >
               Cómo jugar
+            </a>
+            <span className="text-black/30">•</span>
+            <a 
+              href="/heardle-espanol" 
+              className="text-black/50 hover:text-black transition-colors underline-offset-2 hover:underline"
+            >
+              Alternativa a Heardle
             </a>
             <span className="text-black/30">•</span>
             <a 

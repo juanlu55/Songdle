@@ -27,7 +27,8 @@ export const metadata: Metadata = {
     "Songdle", "Wordle canciones", "Wordle musical", "adivinar canciones",
     "juego musical", "Los 40 Principales", "juego adivinar música",
     "Wordle español", "juego diario canciones", "quiz musical",
-    "escuchar y adivinar", "juego de música online", "trivia musical"
+    "escuchar y adivinar", "juego de música online", "trivia musical",
+    "heardle español", "heardle en español", "alternativa a heardle"
   ],
   authors: [{ name: "Songdle" }],
   creator: "Songdle",
@@ -101,11 +102,9 @@ export const metadata: Metadata = {
   category: "games",
   classification: "Music Game, Puzzle Game, Daily Game",
   
-  // Verificación (añade tus códigos cuando los tengas)
-  // verification: {
-  //   google: "tu-codigo-google",
-  //   yandex: "tu-codigo-yandex",
-  // },
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
 
 export const viewport: Viewport = {
@@ -129,11 +128,6 @@ const jsonLd = {
       name: siteName,
       description: siteDescription,
       inLanguage: "es-ES",
-      potentialAction: {
-        "@type": "SearchAction",
-        target: `${siteUrl}/?search={search_term_string}`,
-        "query-input": "required name=search_term_string"
-      }
     },
     {
       "@type": "WebApplication",

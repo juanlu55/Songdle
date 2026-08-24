@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { songs, getTodaySong, Song, getSpainDate } from "./data/songs";
+import { songs, getTodaySong, Song, getSpainDate, getMadridDateString } from "./data/songs";
 import { initAmplitude, amplitudeEvents } from "@/lib/amplitude";
 
 interface ClueMatch {
@@ -66,6 +66,7 @@ export default function Home() {
   const [showHowToPlay, setShowHowToPlay] = useState(false);
   const [expandedClue, setExpandedClue] = useState<{attemptIndex: number, clueType: string} | null>(null);
   const [todaySong, setTodaySong] = useState<Song>(() => getTodaySong()); // Calcular en cliente
+  const [songReady, setSongReady] = useState(false);
   
   const audioRef = useRef<HTMLAudioElement>(null);
   const startTimeRef = useRef<number | null>(null);
@@ -75,10 +76,12 @@ export default function Home() {
   const MAX_ATTEMPTS = 6;
   const MAX_LISTEN_TIME = 30; // Máximo 30 segundos de escucha
 
-  // Función helper para obtener la fecha en formato string (hora española)
-  const getTodayDateString = () => {
-    const spainDate = getSpainDate();
-    return spainDate.toDateString();
+  const getTodayDateString = () => getMadridDateString();
+
+  const getSpotifySearchUrl = (song: Song) => {
+    const artist = song.artist.replace(/;/g, " ");
+    const query = `${song.title} ${artist}`.replace(/\s+/g, " ").trim();
+    return `https://open.spotify.com/search/${encodeURIComponent(query)}`;
   };
 
   // Cargar datos del localStorage al iniciar
@@ -88,6 +91,7 @@ export default function Home() {
     
     // Recalcular canción del día en el cliente (importante para zona horaria correcta)
     setTodaySong(getTodaySong());
+    setSongReady(true);
     
     const todayDate = getTodayDateString();
     const savedState = localStorage.getItem(STORAGE_KEY);
@@ -205,7 +209,7 @@ export default function Home() {
 
   // Manejar reproducción de audio
   const togglePlay = () => {
-    if (!audioRef.current) return;
+    if (!audioRef.current || !songReady) return;
     
     if (isPlaying) {
       audioRef.current.pause();
@@ -216,7 +220,12 @@ export default function Home() {
       if (elapsedTime >= MAX_LISTEN_TIME) {
         return;
       }
-      audioRef.current.play();
+      const audio = audioRef.current;
+      if (audio.getAttribute("src") !== todaySong.audioUrl) {
+        audio.src = todaySong.audioUrl;
+        audio.load();
+      }
+      audio.play();
       setIsPlaying(true);
       amplitudeEvents.playClicked(elapsedTime);
     }
@@ -471,13 +480,15 @@ ${clueLines}
             <>
               {/* Audio Player */}
               <div className="mb-6">
-                <audio ref={audioRef} src={todaySong.audioUrl} loop />
+                {songReady && (
+                  <audio key={todaySong.id} ref={audioRef} src={todaySong.audioUrl} loop />
+                )}
                 <div className="flex items-center justify-center gap-4">
                 <button
                   onClick={togglePlay}
-                  disabled={elapsedTime >= MAX_LISTEN_TIME}
+                  disabled={!songReady || elapsedTime >= MAX_LISTEN_TIME}
                     className={`w-16 h-16 flex items-center justify-center text-2xl border-4 border-black font-black transition-all ${
-                    elapsedTime >= MAX_LISTEN_TIME
+                    !songReady || elapsedTime >= MAX_LISTEN_TIME
                         ? "bg-gray-300 cursor-not-allowed"
                         : isPlaying
                         ? "bg-[#ff6b6b] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] animate-pulse"
@@ -881,10 +892,9 @@ ${clueLines}
                     )}
                     
                     {/* Botón de Spotify */}
-                    {todaySong.spotifyUrl && (
-                      <div className="mt-3">
+                    <div className="mt-3">
                         <a 
-                          href={todaySong.spotifyUrl}
+                          href={getSpotifySearchUrl(todaySong)}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 px-4 py-2 bg-[#1DB954] border-4 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all text-sm text-white"
@@ -896,7 +906,6 @@ ${clueLines}
                           <span className="sm:hidden">Spotify</span>
                         </a>
                       </div>
-                    )}
                   </div>
                 </div>
                 

@@ -38925,16 +38925,44 @@ const workingRegularSongs: Song[] = [
 //
 // Esto garantiza que la mayoría del tiempo los usuarios escuchen audio real
 
-// Función para obtener la fecha en hora española (Europe/Madrid)
+// Calendario Europe/Madrid sin DST ni parseo frágil de toLocaleString
+const getMadridDateParts = (date: Date = new Date()) => {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/Madrid",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(date);
+
+  return {
+    year: Number(parts.find((part) => part.type === "year")?.value),
+    month: Number(parts.find((part) => part.type === "month")?.value),
+    day: Number(parts.find((part) => part.type === "day")?.value),
+  };
+};
+
+// Mediodía UTC del día civil en Madrid: las restas de días no saltan con el DST
 const getSpainDate = () => {
-  return new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Madrid" }));
+  const { year, month, day } = getMadridDateParts();
+  return new Date(Date.UTC(year, month - 1, day, 12, 0, 0));
+};
+
+const getMadridDateString = () => {
+  const { year, month, day } = getMadridDateParts();
+  return `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+};
+
+// 1-indexado para no mover el histórico: 1 ene = 1, 24 ago = 236
+const getMadridDayOfYear = () => {
+  const { year, month, day } = getMadridDateParts();
+  const utcNoon = Date.UTC(year, month - 1, day, 12);
+  const utcJan1 = Date.UTC(year, 0, 1, 12);
+  return Math.floor((utcNoon - utcJan1) / (1000 * 60 * 60 * 24)) + 1;
 };
 
 // Función para calcular la canción del día dinámicamente
 const getTodaySong = (): Song => {
-  const today = getSpainDate();
-  const startOfYear = new Date(today.getFullYear(), 0, 0);
-  const dayOfYear = Math.floor((today.getTime() - startOfYear.getTime()) / (1000 * 60 * 60 * 24));
+  const dayOfYear = getMadridDayOfYear();
 
   if (dayOfYear < workingPremiumSongs.length) {
     // Fase 1: Canciones premium con audio
@@ -48932,7 +48960,7 @@ const getTodaySong = (): Song => {
 };
 
 // Exportar función para uso dinámico en el cliente
-export { getTodaySong, getSpainDate };
+export { getTodaySong, getSpainDate, getMadridDateString };
 
 // Para compatibilidad con imports existentes
 export const todaySong = getTodaySong();

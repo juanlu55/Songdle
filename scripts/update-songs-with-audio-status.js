@@ -64,48 +64,14 @@ export const songs: Song[] = ${JSON.stringify(results.songs, null, 2)};
 
 // Canciones premium CON audio funcional: ${workingPremium.length}
 // (Spotify + fecha de #1 + audio disponible)
-const workingPremiumSongs: Song[] = ${JSON.stringify(workingPremium, null, 2)};
+export const workingPremiumSongs: Song[] = ${JSON.stringify(workingPremium, null, 2)};
 
 // Canciones regulares CON audio funcional: ${workingRegular.length}
 // (Audio disponible, pero sin Spotify o sin fecha)
-const workingRegularSongs: Song[] = ${JSON.stringify(workingRegular, null, 2)};
+export const workingRegularSongs: Song[] = ${JSON.stringify(workingRegular, null, 2)};
 
-// ========================================
-// SISTEMA DE SELECCIÓN DE CANCIÓN DEL DÍA
-// ========================================
-// Algoritmo determinista con triple priorización:
-// 1. Primeros ${workingPremium.length} días: Canciones PREMIUM con audio ✓
-// 2. Siguientes ${workingRegular.length} días: Canciones REGULARES con audio ✓
-// 3. Resto: Canciones sin audio funcional (fallback)
-//
-// Esto garantiza que la mayoría del tiempo los usuarios escuchen audio real
-
-const today = new Date();
-const startOfYear = new Date(today.getFullYear(), 0, 0);
-const dayOfYear = Math.floor((today.getTime() - startOfYear.getTime()) / (1000 * 60 * 60 * 24));
-
-let todaySong: Song;
-
-if (dayOfYear < workingPremiumSongs.length) {
-  // Fase 1: Canciones premium con audio
-  todaySong = workingPremiumSongs[dayOfYear];
-} else if (dayOfYear < (workingPremiumSongs.length + workingRegularSongs.length)) {
-  // Fase 2: Canciones regulares con audio
-  const regularIndex = dayOfYear - workingPremiumSongs.length;
-  todaySong = workingRegularSongs[regularIndex];
-} else {
-  // Fase 3: Fallback para días restantes del año
-  const fallbackIndex = (dayOfYear - workingPremiumSongs.length - workingRegularSongs.length) % ${notWorkingSongs.length};
-  const fallbackSongs = ${JSON.stringify(notWorkingSongs, null, 2)};
-  todaySong = fallbackSongs[fallbackIndex];
-}
-
-export { todaySong };
-
-// Estadísticas del sistema:
-// - Días 1-${workingPremium.length}: Premium con audio ✓ (${((workingPremium.length/365)*100).toFixed(1)}% del año)
-// - Días ${workingPremium.length + 1}-${workingPremium.length + workingRegular.length}: Regular con audio ✓ (${((workingRegular.length/365)*100).toFixed(1)}% del año)
-// - Resto: Fallback sin audio (${(((365-workingPremium.length-workingRegular.length)/365)*100).toFixed(1)}% del año)
+// La canción del día se elige en src/lib/daily-song.ts
+// Nunca se sirve una canción sin audio reproducible.
 `;
 
 // Guardar archivo
@@ -117,7 +83,6 @@ console.log('📅 CALENDARIO ANUAL:\n');
 
 const phase1Days = workingPremium.length;
 const phase2Days = workingRegular.length;
-const phase3Days = Math.max(0, 365 - phase1Days - phase2Days);
 
 console.log(`  Días 1-${phase1Days}:`);
 console.log(`    🎵 Premium con audio funcional`);
@@ -127,12 +92,6 @@ console.log(`  Días ${phase1Days + 1}-${phase1Days + phase2Days}:`);
 console.log(`    📀 Regular con audio funcional`);
 console.log(`    ${((phase2Days/365)*100).toFixed(1)}% del año\n`);
 
-if (phase3Days > 0) {
-  console.log(`  Días ${phase1Days + phase2Days + 1}-365:`);
-  console.log(`    ⚠️  Fallback (sin audio)`);
-  console.log(`    ${((phase3Days/365)*100).toFixed(1)}% del año\n`);
-}
-
 console.log('✨ ¡Listo! El servidor detectará los cambios automáticamente.');
-console.log('🎵 Ahora la mayoría de días tendrán audio funcional.');
+console.log('🎵 La canción del día solo usa pools con audio (src/lib/daily-song.ts).');
 

@@ -17,6 +17,19 @@ export const initAmplitude = () => {
         },
       });
       isInitialized = true;
+
+      const params = new URLSearchParams(window.location.search);
+      const utmSource = params.get("utm_source");
+      const utmMedium = params.get("utm_medium");
+      const utmCampaign = params.get("utm_campaign");
+      if (utmSource || utmMedium || utmCampaign) {
+        trackEvent("landing_with_utm", {
+          utm_source: utmSource || "",
+          utm_medium: utmMedium || "",
+          utm_campaign: utmCampaign || "",
+        });
+      }
+
       console.log('📊 Amplitude inicializado');
     } else {
       console.warn('⚠️ NEXT_PUBLIC_AMPLITUDE_API_KEY no está configurado');
@@ -89,7 +102,7 @@ export const amplitudeEvents = {
   },
 
   // Usuario clica en compartir
-  shareClicked: (attempts: number, won: boolean, shareMethod: 'native' | 'clipboard') => {
+  shareClicked: (attempts: number, won: boolean, shareMethod: 'native' | 'clipboard' | 'whatsapp') => {
     trackEvent('share_clicked', {
       attempts,
       won,
@@ -125,6 +138,22 @@ export const amplitudeEvents = {
       clue_type: clueType,
       attempt_number: attemptNumber,
       action: 'expand_clue',
+    });
+  },
+
+  audioPlaybackFailed: (songName: string, sourceIndex: number) => {
+    trackEvent('audio_playback_failed', {
+      song_name: songName,
+      source_index: sourceIndex,
+      action: 'audio_error',
+    });
+  },
+
+  audioFallbackUsed: (songName: string, sourceIndex: number) => {
+    trackEvent('audio_fallback_used', {
+      song_name: songName,
+      source_index: sourceIndex,
+      action: 'audio_fallback',
     });
   },
 };

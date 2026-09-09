@@ -252,6 +252,38 @@ export default function ComoJugar() {
             </ul>
           </section>
 
+          {/* Modos Tres y Cinco */}
+          <section className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 mb-6">
+            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
+              Otros modos
+            </h2>
+            <p className="text-black/80 font-medium leading-relaxed mb-4">
+              Cada día puedes jugar los tres modos. Cada uno tiene su propia canción, racha y share.
+            </p>
+
+            <article className="border-2 border-black bg-[#f5f1e8] p-4 mb-4">
+              <h3 className="font-black uppercase text-sm mb-2">Tres pistas</h3>
+              <p className="text-sm font-medium text-black/70 leading-relaxed mb-3">
+                Tienes 3 pistas, cada vez más claras. La primera es solo melodía. Si no, un verso.
+                Si no, un trozo de la canción. Puedes pasar. Cuanto antes aciertes, mejor queda el share.
+              </p>
+              <Link href="/tres-pistas" className="text-sm font-black uppercase underline">
+                Jugar Tres pistas →
+              </Link>
+            </article>
+
+            <article className="border-2 border-black bg-[#f5f1e8] p-4">
+              <h3 className="font-black uppercase text-sm mb-2">Cinco pistas</h3>
+              <p className="text-sm font-medium text-black/70 leading-relaxed mb-3">
+                Cinco pistas que se van aclarando: un trozo de canción, un verso, más canción,
+                el título dicho de otra forma, y el estribillo. Pasa si no la tienes. El flex es sacarla pronto.
+              </p>
+              <Link href="/cinco-pistas" className="text-sm font-black uppercase underline">
+                Jugar Cinco pistas →
+              </Link>
+            </article>
+          </section>
+
           {/* CTA */}
           <div className="text-center">
             <Link

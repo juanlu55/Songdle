@@ -1,7 +1,13 @@
 import * as amplitude from '@amplitude/analytics-browser';
+import type { GameMode } from '@/lib/game-modes';
 
 // Inicializar Amplitude
 let isInitialized = false;
+let currentMode: GameMode = 'classic';
+
+export const setAnalyticsMode = (mode: GameMode) => {
+  currentMode = mode;
+};
 
 export const initAmplitude = () => {
   if (typeof window !== 'undefined' && !isInitialized) {
@@ -40,7 +46,7 @@ export const initAmplitude = () => {
 // Eventos personalizados
 export const trackEvent = (eventName: string, properties?: Record<string, string | number | boolean>) => {
   if (isInitialized) {
-    amplitude.track(eventName, properties);
+    amplitude.track(eventName, { mode: currentMode, ...properties });
   }
 };
 
@@ -154,6 +160,43 @@ export const amplitudeEvents = {
       song_name: songName,
       source_index: sourceIndex,
       action: 'audio_fallback',
+    });
+  },
+
+  modeSelected: (mode: GameMode, fromMode?: GameMode) => {
+    trackEvent('mode_selected', {
+      mode,
+      from_mode: fromMode || '',
+      action: 'select_mode',
+    });
+  },
+
+  stageViewed: (stage: number) => {
+    trackEvent('stage_viewed', {
+      stage,
+      action: 'view_stage',
+    });
+  },
+
+  stageSkipped: (stage: number) => {
+    trackEvent('stage_skipped', {
+      stage,
+      action: 'skip_stage',
+    });
+  },
+
+  guessSubmitted: (stage: number, songName: string) => {
+    trackEvent('guess_submitted', {
+      stage,
+      song_name: songName,
+      action: 'submit_guess',
+    });
+  },
+
+  tripleWin: (gameDate: string) => {
+    trackEvent('triple_win', {
+      game_date: gameDate,
+      action: 'triple_win',
     });
   },
 };

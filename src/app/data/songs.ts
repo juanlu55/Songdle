@@ -14,6 +14,9 @@ export interface Song {
   spotifyUrl?: string;    // URL de Spotify
   bestPosition?: string;  // Mejor posición alcanzada
   audioWorking?: boolean; // Si el audio está disponible
+  lyricLine?: string;     // Verso reconocible (Tres/Cinco pistas)
+  titleRiddle?: string;   // Título dicho con otras palabras (Cinco pistas)
+  hookStartSec?: number;  // Segundo donde empieza el gancho, si se conoce
 }
 
 // Base de datos completa de canciones de Los 40 (1990-2025)

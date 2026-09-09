@@ -3,7 +3,11 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-const STORAGE_KEY = "songdle-game-state";
+const STORAGE_KEYS = [
+  "songdle-game-state",
+  "songdle-game-state-tres",
+  "songdle-game-state-cinco",
+];
 
 export default function ResetPage() {
   const router = useRouter();
@@ -11,7 +15,7 @@ export default function ResetPage() {
 
   useEffect(() => {
     // Eliminar los datos del localStorage
-    localStorage.removeItem(STORAGE_KEY);
+    STORAGE_KEYS.forEach((key) => localStorage.removeItem(key));
     
     // Esperar un momento y redirigir
     setTimeout(() => {

@@ -14,8 +14,11 @@ import {
   getWhatsAppShareHref,
   renderShareImageBlob,
 } from "@/lib/share";
-import { initAmplitude, amplitudeEvents } from "@/lib/amplitude";
+import { initAmplitude, setAnalyticsMode, amplitudeEvents } from "@/lib/amplitude";
 import NextSongCountdown from "./components/NextSongCountdown";
+import GameHeader from "./components/GameHeader";
+import GameFooter from "./components/GameFooter";
+import { hasTripleWinToday, markTripleWinIfNeeded } from "@/lib/game-storage";
 
 interface ClueMatch {
   genre: boolean;
@@ -89,6 +92,7 @@ export default function Home() {
   const isPlayingRef = useRef(false);
   const [audioError, setAudioError] = useState(false);
   const [audioSourceIndex, setAudioSourceIndex] = useState(0);
+  const [tripleWin, setTripleWin] = useState(false);
   const MAX_ATTEMPTS = 6;
   const MAX_LISTEN_TIME = 30; // Máximo 30 segundos de escucha
 
@@ -99,6 +103,7 @@ export default function Home() {
   // Cargar datos del localStorage al iniciar
   useEffect(() => {
     // Inicializar Amplitude
+    setAnalyticsMode("classic");
     initAmplitude();
     
     // Recalcular canción del día en el cliente (importante para zona horaria correcta)
@@ -156,6 +161,7 @@ export default function Home() {
       localStorage.setItem(TUTORIAL_KEY, "true");
     }
     
+    setTripleWin(hasTripleWinToday(getMadridDateString()));
     setIsLoaded(true);
   }, []);
 
@@ -419,6 +425,11 @@ export default function Home() {
 
     setStatistics(newStats);
     localStorage.setItem(STATS_KEY, JSON.stringify(newStats));
+    const todayMadrid = getMadridDateString();
+    if (markTripleWinIfNeeded(todayMadrid)) {
+      amplitudeEvents.tripleWin(todayMadrid);
+    }
+    setTripleWin(hasTripleWinToday(todayMadrid));
   };
 
   // Compartir resultados
@@ -491,58 +502,19 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#f5f1e8] flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
-        {/* Header */}
-        <header className="mb-6 relative" role="banner">
-          <div className="flex items-start justify-between mb-2">
-            <div className="inline-block border-4 border-black bg-white px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-              <h1 className="text-5xl font-black text-black tracking-tight">
-                SONGDLE
-              </h1>
-            </div>
-            
-            {/* Botones */}
-            <nav className="flex gap-2" aria-label="Navegación principal">
-              <button
-                onClick={() => {
-                  setShowHowToPlay(true);
-                  amplitudeEvents.tutorialOpened();
-                }}
-                className="border-4 border-black bg-white p-2 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
-                title="Cómo jugar"
-                aria-label="Abrir instrucciones de cómo jugar"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </button>
-              
-              <button
-                onClick={() => {
-                  setShowStats(!showStats);
-                  if (!showStats) amplitudeEvents.statsOpened();
-                }}
-                className="border-4 border-black bg-white p-2 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
-                title="Ver estadísticas"
-                aria-label="Ver estadísticas del juego"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </button>
-            </nav>
-          </div>
-          
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-black" aria-hidden="true"></div>
-            <p className="text-black/60 text-sm font-bold uppercase tracking-wider">
-              El Wordle de canciones — {MAX_ATTEMPTS} intentos
-            </p>
-          </div>
-          <p className="mt-3 text-sm font-medium text-black/70 max-w-xl leading-relaxed">
-            Escucha un fragmento y adivina la canción del día. Canciones que fueron número 1
-            en Los 40 Principales. Gratis, en español, una nueva cada medianoche.
-          </p>
-        </header>
+        <GameHeader
+          mode="classic"
+          onOpenHowToPlay={() => {
+            setShowHowToPlay(true);
+            amplitudeEvents.tutorialOpened();
+          }}
+          onOpenStats={() => {
+            setShowStats((open) => {
+              if (!open) amplitudeEvents.statsOpened();
+              return !open;
+            });
+          }}
+        />
 
         {/* Main Game Card */}
         <main className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6" role="main" aria-label="Área de juego">
@@ -1088,6 +1060,14 @@ export default function Home() {
                 <h3 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
                   Estadísticas
                 </h3>
+                {tripleWin && (
+                  <div className="mb-4 border-4 border-black bg-[#ffd700] p-3 text-center">
+                    <p className="text-sm font-black uppercase tracking-wide">3/3 del día</p>
+                    <p className="text-[10px] font-bold text-black/60 uppercase">
+                      Has ganado Clásico, Tres pistas y Cinco pistas
+                    </p>
+                  </div>
+                )}
                 
                 {/* Stats Grid */}
                 <div className="grid grid-cols-4 gap-3 mb-6">
@@ -1167,34 +1147,7 @@ export default function Home() {
           </aside>
         )}
         
-        {/* Footer con enlaces internos para SEO */}
-        <footer className="mt-6 text-center" role="contentinfo">
-          <nav className="flex justify-center gap-4 text-xs font-bold uppercase tracking-wide flex-wrap" aria-label="Enlaces de navegación">
-            <a 
-              href="/como-jugar" 
-              className="text-black/50 hover:text-black transition-colors underline-offset-2 hover:underline"
-            >
-              Cómo jugar
-            </a>
-            <span className="text-black/30">•</span>
-            <a 
-              href="/heardle-espanol" 
-              className="text-black/50 hover:text-black transition-colors underline-offset-2 hover:underline"
-            >
-              Alternativa a Heardle
-            </a>
-            <span className="text-black/30">•</span>
-            <a 
-              href="/sobre-songdle" 
-              className="text-black/50 hover:text-black transition-colors underline-offset-2 hover:underline"
-            >
-              Sobre Songdle
-            </a>
-          </nav>
-          <p className="mt-2 text-[10px] text-black/40 font-medium">
-            © {new Date().getFullYear()} Songdle — El Wordle de canciones
-          </p>
-        </footer>
+        <GameFooter />
         
         {/* Modal de Estadísticas */}
         {showStats && (
@@ -1212,6 +1165,15 @@ export default function Home() {
                 </button>
               </div>
               
+              {tripleWin && (
+                <div className="mb-4 border-4 border-black bg-[#ffd700] p-3 text-center">
+                  <p className="text-sm font-black uppercase tracking-wide">3/3 del día</p>
+                  <p className="text-[10px] font-bold text-black/60 uppercase">
+                    Has ganado Clásico, Tres pistas y Cinco pistas
+                  </p>
+                </div>
+              )}
+
               {/* Stats Grid */}
               <div className="grid grid-cols-4 gap-3 mb-6">
                 <div className="text-center border-2 border-black p-3 bg-[#f5f1e8]">

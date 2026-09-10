@@ -132,7 +132,6 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
     const tutorialSeen = localStorage.getItem(config.tutorialKey);
     if (!tutorialSeen) {
       setShowHowToPlay(true);
-      localStorage.setItem(config.tutorialKey, "true");
     }
 
     setIsLoaded(true);
@@ -579,7 +578,12 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
         )}
 
         {showHowToPlay && (
-          <HowToPlayModal onClose={() => setShowHowToPlay(false)}>
+          <HowToPlayModal
+            onClose={() => {
+              setShowHowToPlay(false);
+              localStorage.setItem(config.tutorialKey, "true");
+            }}
+          >
             {mode === "tres" ? (
               <>
                 <div className="border-2 border-black bg-[#a8e6cf] p-4">

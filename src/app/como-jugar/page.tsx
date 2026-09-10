@@ -259,13 +259,17 @@ export default function ComoJugar() {
             </h2>
             <p className="text-black/80 font-medium leading-relaxed mb-4">
               Cada día puedes jugar los tres modos. Cada uno tiene su propia canción, racha y share.
+              Clásico es el Wordle de canciones. Los otros dos nacen de concursos que ya te suenan
+              de la radio y la tele.
             </p>
 
             <article className="border-2 border-black bg-[#f5f1e8] p-4 mb-4">
-              <h3 className="font-black uppercase text-sm mb-2">Tres pistas</h3>
+              <h3 className="font-black uppercase text-sm mb-2">Tres pistas — como Pistaza</h3>
               <p className="text-sm font-medium text-black/70 leading-relaxed mb-3">
-                Tienes 3 pistas, cada vez más claras. La primera es solo melodía. Si no, un verso.
-                Si no, un trozo de la canción. Puedes pasar. Cuanto antes aciertes, mejor queda el share.
+                Inspirado en <strong>Pistaza</strong>, el concurso de la radio: tres pistas de difícil
+                a fácil, pero aquí no hay rival. Tú contra la canción del día. Primero una melodía,
+                luego un verso, y si aún no sale, un trozo de la canción. Puedes pasar. Cuanto antes
+                aciertes, más flex queda el share.
               </p>
               <Link href="/tres-pistas" className="text-sm font-black uppercase underline">
                 Jugar Tres pistas →
@@ -273,10 +277,12 @@ export default function ComoJugar() {
             </article>
 
             <article className="border-2 border-black bg-[#f5f1e8] p-4">
-              <h3 className="font-black uppercase text-sm mb-2">Cinco pistas</h3>
+              <h3 className="font-black uppercase text-sm mb-2">Cinco pistas — como Pasapalabra</h3>
               <p className="text-sm font-medium text-black/70 leading-relaxed mb-3">
-                Cinco pistas que se van aclarando: un trozo de canción, un verso, más canción,
-                el título dicho de otra forma, y el estribillo. Pasa si no la tienes. El flex es sacarla pronto.
+                Inspirado en <strong>La Pista Musical de Pasapalabra</strong>: cinco pistas que se van
+                aclarando, de 5 puntos a 1. Un trozo del principio, un verso, <strong>otro momento
+                de la canción</strong> (no el mismo clip más largo), el título dicho de otra forma,
+                y el estribillo. Sin pulsador ni rival: el duelo es compartir el grid con tus amigos.
               </p>
               <Link href="/cinco-pistas" className="text-sm font-black uppercase underline">
                 Jugar Cinco pistas →

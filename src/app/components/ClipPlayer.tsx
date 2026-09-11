@@ -4,28 +4,56 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { Song } from "@/app/data/songs";
 import { getAudioSources } from "@/lib/audio";
 import { amplitudeEvents } from "@/lib/amplitude";
+import { clipHint, resolveClipWindow, type ClipSlot } from "@/lib/clues-game";
 
 export default function ClipPlayer({
   song,
-  startSec,
+  startSec = 0,
   durationSec,
+  slot,
   disabled,
 }: {
   song: Song;
-  startSec: number;
+  startSec?: number;
   durationSec: number;
+  slot?: ClipSlot;
   disabled?: boolean;
 }) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const isPlayingRef = useRef(false);
   const sourceIndexRef = useRef(0);
+  const windowRef = useRef({ startSec, durationSec });
   const [isPlaying, setIsPlaying] = useState(false);
   const [audioError, setAudioError] = useState(false);
   const [sourceIndex, setSourceIndex] = useState(0);
+  const [clipWindow, setClipWindow] = useState({ startSec, durationSec });
 
   const audioSources = useMemo(() => getAudioSources(song), [song]);
   const currentAudioUrl = audioSources[sourceIndex] ?? audioSources[0] ?? "";
-  const endSec = startSec + durationSec;
+
+  const applyWindow = (next: { startSec: number; durationSec: number }) => {
+    windowRef.current = next;
+    setClipWindow(next);
+    const audio = audioRef.current;
+    if (audio && Number.isFinite(audio.duration) && audio.duration > 0) {
+      audio.currentTime = next.startSec;
+    }
+  };
+
+  const syncWindowFromAudio = (audio: HTMLAudioElement) => {
+    if (!slot) {
+      applyWindow({ startSec, durationSec });
+      return;
+    }
+    applyWindow(
+      resolveClipWindow({
+        duration: audio.duration,
+        length: durationSec,
+        slot,
+        preferredStart: song.hookStartSec,
+      })
+    );
+  };
 
   useEffect(() => {
     isPlayingRef.current = isPlaying;
@@ -37,19 +65,34 @@ export default function ClipPlayer({
     setAudioError(false);
     setIsPlaying(false);
     isPlayingRef.current = false;
+    const fallback = slot
+      ? resolveClipWindow({
+          duration: 30,
+          length: durationSec,
+          slot,
+          preferredStart: song.hookStartSec,
+        })
+      : { startSec, durationSec };
+    applyWindow(fallback);
     const audio = audioRef.current;
     if (audio) {
       audio.pause();
-      audio.currentTime = startSec;
+      if (Number.isFinite(audio.duration) && audio.duration > 0) {
+        syncWindowFromAudio(audio);
+      }
     }
-  }, [song.id, startSec, durationSec]);
+    // song.hookStartSec is covered by song.id for daily songs
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [song.id, startSec, durationSec, slot]);
 
   const clampToClip = (audio: HTMLAudioElement) => {
-    if (audio.currentTime < startSec) {
-      audio.currentTime = startSec;
+    const { startSec: start, durationSec: length } = windowRef.current;
+    const endSec = start + length;
+    if (audio.currentTime < start) {
+      audio.currentTime = start;
     }
     if (audio.currentTime >= endSec - 0.04) {
-      audio.currentTime = startSec;
+      audio.currentTime = start;
     }
   };
 
@@ -66,7 +109,10 @@ export default function ClipPlayer({
     }
 
     try {
-      audio.currentTime = startSec;
+      if (Number.isFinite(audio.duration) && audio.duration > 0) {
+        syncWindowFromAudio(audio);
+      }
+      audio.currentTime = windowRef.current.startSec;
       await audio.play();
       if (index > 0) {
         amplitudeEvents.audioFallbackUsed(song.displayName, index);
@@ -112,12 +158,14 @@ export default function ClipPlayer({
   return (
     <div className="mb-6">
       <audio
-        key={`${song.id}-${startSec}-${durationSec}`}
+        key={`${song.id}-${slot ?? startSec}-${durationSec}`}
         ref={audioRef}
         src={currentAudioUrl || undefined}
         preload="auto"
         onLoadedMetadata={() => {
-          if (audioRef.current) audioRef.current.currentTime = startSec;
+          const audio = audioRef.current;
+          if (!audio) return;
+          syncWindowFromAudio(audio);
         }}
         onTimeUpdate={() => {
           const audio = audioRef.current;
@@ -167,7 +215,7 @@ export default function ClipPlayer({
                 : "Presiona play"}
           </p>
           <p className="text-[10px] font-bold text-black/40 uppercase tracking-wide mt-1">
-            Clip de {durationSec}s
+            {clipHint(slot, clipWindow.durationSec, clipWindow.startSec)}
           </p>
         </div>
       </div>

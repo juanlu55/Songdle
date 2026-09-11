@@ -5,11 +5,11 @@ import CluesGame from "../components/CluesGame";
 export const metadata: Metadata = {
   title: "Tres pistas",
   description:
-    "Tres pistas para adivinar la canción del día: melodía, letra y fragmento. El Wordle de canciones, modo Tres pistas.",
+    "Como Pistaza, de la radio: tres pistas de difícil a fácil para adivinar la canción del día. Melodía, letra y fragmento. El Wordle de canciones, modo Tres pistas.",
   alternates: { canonical: "/tres-pistas" },
   openGraph: {
     title: "Songdle · Tres pistas",
-    description: "Melodía, letra y fragmento. Adivina la canción del día.",
+    description: "Como Pistaza: melodía, letra y fragmento. Adivina la canción del día.",
     url: "https://songdle.es/tres-pistas",
   },
 };

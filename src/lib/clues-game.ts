@@ -99,8 +99,62 @@ export function stageCopy(mode: "tres" | "cinco", stageIndex: number): string {
   return [
     "Escucha un trozo corto",
     "Lee la letra",
-    "Escucha un poco más",
+    "Escucha otro momento",
     "El título, con otras palabras",
     "Escucha el estribillo",
   ][stageIndex] ?? "";
+}
+
+export type ClipSlot = "intro" | "bridge" | "hook";
+
+export function resolveClipWindow({
+  duration,
+  length,
+  slot,
+  preferredStart,
+}: {
+  duration: number;
+  length: number;
+  slot: ClipSlot;
+  preferredStart?: number;
+}): { startSec: number; durationSec: number } {
+  const trackDuration =
+    Number.isFinite(duration) && duration > 0.5 ? duration : 30;
+  const durationSec = Math.min(length, Math.max(0.8, trackDuration - 0.05));
+  const maxStart = Math.max(0, trackDuration - durationSec);
+
+  const ratio: Record<ClipSlot, number> = {
+    intro: 0,
+    bridge: 0.34,
+    hook: 0.62,
+  };
+
+  let startSec = ratio[slot] * trackDuration;
+  if (
+    slot === "hook" &&
+    preferredStart != null &&
+    Number.isFinite(preferredStart) &&
+    preferredStart >= 0
+  ) {
+    startSec = preferredStart;
+  }
+
+  startSec = Math.min(Math.max(0, startSec), maxStart);
+  return { startSec, durationSec };
+}
+
+export function formatClipClock(sec: number) {
+  const total = Math.max(0, Math.floor(sec));
+  const minutes = Math.floor(total / 60);
+  const seconds = total % 60;
+  return `${minutes}:${String(seconds).padStart(2, "0")}`;
+}
+
+export function clipHint(slot: ClipSlot | undefined, durationSec: number, startSec = 0) {
+  const from = formatClipClock(startSec);
+  const len = `${durationSec}s`;
+  if (slot === "intro") return `Intro · ${from} · ${len}`;
+  if (slot === "bridge") return `Otro tramo · ${from} · ${len}`;
+  if (slot === "hook") return `Estribillo · ${from} · ${len}`;
+  return `Clip de ${len}`;
 }

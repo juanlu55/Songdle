@@ -13,6 +13,7 @@ import {
   createCluesRoundState,
   STAGE_CELL_EMOJI,
   stageCopy,
+  type ClipSlot,
   type CluesAttempt,
   type CluesRoundState,
 } from "@/lib/clues-game";
@@ -49,6 +50,7 @@ interface StageSpec {
   kind: "audio" | "lyric" | "riddle";
   startSec?: number;
   durationSec?: number;
+  slot?: ClipSlot;
 }
 
 function stagesFor(mode: CluesMode, song: Song): StageSpec[] {
@@ -61,11 +63,11 @@ function stagesFor(mode: CluesMode, song: Song): StageSpec[] {
     ];
   }
   return [
-    { kind: "audio", startSec: 0, durationSec: 2.5 },
+    { kind: "audio", slot: "intro", durationSec: 2.5 },
     { kind: "lyric" },
-    { kind: "audio", startSec: 0, durationSec: 4.5 },
+    { kind: "audio", slot: "bridge", durationSec: 4.5 },
     { kind: "riddle" },
-    { kind: "audio", startSec: hook, durationSec: 7 },
+    { kind: "audio", slot: "hook", durationSec: 7 },
   ];
 }
 
@@ -130,7 +132,6 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
     const tutorialSeen = localStorage.getItem(config.tutorialKey);
     if (!tutorialSeen) {
       setShowHowToPlay(true);
-      localStorage.setItem(config.tutorialKey, "true");
     }
 
     setIsLoaded(true);
@@ -320,6 +321,7 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
                   song={todaySong}
                   startSec={currentStage.startSec ?? 0}
                   durationSec={currentStage.durationSec ?? 3}
+                  slot={currentStage.slot}
                 />
               )}
 
@@ -576,46 +578,57 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
         )}
 
         {showHowToPlay && (
-          <HowToPlayModal onClose={() => setShowHowToPlay(false)}>
+          <HowToPlayModal
+            onClose={() => {
+              setShowHowToPlay(false);
+              localStorage.setItem(config.tutorialKey, "true");
+            }}
+          >
             {mode === "tres" ? (
               <>
-                <div className="border-2 border-black bg-[#f5f1e8] p-4">
-                  <h4 className="font-black uppercase text-sm mb-2">3 pistas, cada vez más claras</h4>
+                <div className="border-2 border-black bg-[#a8e6cf] p-4">
+                  <h4 className="font-black uppercase text-sm mb-2">Como Pistaza, en solitario</h4>
                   <p className="text-xs font-medium text-black/70">
-                    Melodía, un verso, y un trozo de la canción. Solo oyes o lees la pista actual.
+                    Es el juego de la radio, pero sin rival: tres pistas de difícil a fácil, tú contra
+                    la canción del día.
+                  </p>
+                </div>
+                <div className="border-2 border-black bg-[#f5f1e8] p-4">
+                  <h4 className="font-black uppercase text-sm mb-2">Melodía, verso, fragmento</h4>
+                  <p className="text-xs font-medium text-black/70">
+                    Primero oyes solo la melodía. Si no, un verso. Si no, un trozo de la canción.
+                    Solo ves la pista actual.
                   </p>
                 </div>
                 <div className="border-2 border-black bg-[#f5f1e8] p-4">
                   <h4 className="font-black uppercase text-sm mb-2">Adivina o pasa</h4>
                   <p className="text-xs font-medium text-black/70">
                     Elige una canción del catálogo o pulsa Pasar. Pasar en la última pista es perder.
-                  </p>
-                </div>
-                <div className="border-2 border-black bg-[#a8e6cf] p-4">
-                  <h4 className="font-black uppercase text-sm mb-2">El share es el flex</h4>
-                  <p className="text-xs font-medium text-black/70">
-                    🟩 acierto · 🟥 fallo · ⬜ pasaste · ⬛ no la usaste. Cuanto antes, mejor.
+                    🟩 acierto · 🟥 fallo · ⬜ pasaste · ⬛ no la usaste.
                   </p>
                 </div>
               </>
             ) : (
               <>
-                <div className="border-2 border-black bg-[#f5f1e8] p-4">
-                  <h4 className="font-black uppercase text-sm mb-2">5 pistas que se aclaran</h4>
+                <div className="border-2 border-black bg-[#a8e6cf] p-4">
+                  <h4 className="font-black uppercase text-sm mb-2">Como La Pista de Pasapalabra</h4>
                   <p className="text-xs font-medium text-black/70">
-                    Audio corto, verso, más audio, el título dicho de otra forma, y el estribillo.
+                    Cinco pistas que se aclaran, de 5 puntos a 1. No hay pulsador ni rival: el duelo
+                    es el share con tus amigos.
+                  </p>
+                </div>
+                <div className="border-2 border-black bg-[#f5f1e8] p-4">
+                  <h4 className="font-black uppercase text-sm mb-2">Cada audio, un momento distinto</h4>
+                  <p className="text-xs font-medium text-black/70">
+                    Un trozo del principio, un verso, otro tramo de la canción, el título dicho de
+                    otra forma, y el estribillo. No es el mismo clip cada vez más largo.
                   </p>
                 </div>
                 <div className="border-2 border-black bg-[#f5f1e8] p-4">
                   <h4 className="font-black uppercase text-sm mb-2">Adivina o pasa</h4>
                   <p className="text-xs font-medium text-black/70">
-                    Ganas al primer acierto. Si agotas las 5, se revela la canción.
-                  </p>
-                </div>
-                <div className="border-2 border-black bg-[#a8e6cf] p-4">
-                  <h4 className="font-black uppercase text-sm mb-2">Puntos de pista</h4>
-                  <p className="text-xs font-medium text-black/70">
-                    Acertar en la 1 vale 5 puntos, en la 5 vale 1. El grid se comparte sin spoiler.
+                    Ganas al primer acierto. Si agotas las 5, se revela la canción. Acertar en la 1
+                    vale 5 puntos; en la 5, vale 1.
                   </p>
                 </div>
               </>

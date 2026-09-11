@@ -39,12 +39,12 @@ export const GAME_MODES: Record<GameMode, GameModeConfig> = {
     dayOffset: 97,
     storageKey: "songdle-game-state-tres",
     statsKey: "songdle-statistics-tres",
-    tutorialKey: "songdle-tutorial-tres",
+    tutorialKey: "songdle-tutorial-tres-v2",
     shareLabel: "Tres pistas",
     shareIcons: "🎤📝🎧",
-    tagline: "Tres pistas — de difícil a fácil",
+    tagline: "Como Pistaza, tú contra la canción",
     description:
-      "Tienes 3 pistas, cada vez más claras. La primera es solo melodía. Si no, un verso. Si no, un trozo de la canción. Puedes pasar. Cuanto antes aciertes, mejor queda el share.",
+      "Inspirado en Pistaza, el concurso de la radio: tres pistas de difícil a fácil y sin rival. Primero una melodía, luego un verso, y si no sale, un trozo de la canción. Pasa cuando no la tengas. Cuanto antes aciertes, más flex en el share.",
   },
   cinco: {
     id: "cinco",
@@ -54,12 +54,12 @@ export const GAME_MODES: Record<GameMode, GameModeConfig> = {
     dayOffset: 193,
     storageKey: "songdle-game-state-cinco",
     statsKey: "songdle-statistics-cinco",
-    tutorialKey: "songdle-tutorial-cinco",
+    tutorialKey: "songdle-tutorial-cinco-v2",
     shareLabel: "Cinco pistas",
     shareIcons: "🔊📜🔊🧩🔊",
-    tagline: "Cinco pistas — el flex es sacarla pronto",
+    tagline: "Como La Pista de Pasapalabra",
     description:
-      "Cinco pistas que se van aclarando: un trozo de canción, un verso, más canción, el título dicho de otra forma, y el estribillo. Pasa si no la tienes.",
+      "Inspirado en La Pista Musical de Pasapalabra: cinco pistas que se van aclarando, de 5 puntos a 1, y sin pulsador. Un trozo del principio, un verso, otro momento de la canción, el título dicho de otra forma, y el estribillo. El duelo es el share con tus amigos.",
   },
 };
 

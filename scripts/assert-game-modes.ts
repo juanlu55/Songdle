@@ -6,6 +6,9 @@ import {
   applyCluesAction,
   buildStageCells,
   createCluesRoundState,
+  clipHint,
+  resolveClipWindow,
+  stageCopy,
 } from "../src/lib/clues-game";
 import { buildCluesShareText, buildShareText, getShareUrl } from "../src/lib/share";
 import { workingPremiumSongs, workingRegularSongs, songs } from "../src/app/data/songs";
@@ -163,6 +166,42 @@ for (let i = 0; i < 40; i++) {
   );
   assert(isPlayableSong(tresSong) && isPlayableSong(cincoSong), "clues songs must stay playable");
 }
+
+const intro = resolveClipWindow({ duration: 30, length: 2.5, slot: "intro" });
+const bridge = resolveClipWindow({ duration: 30, length: 4.5, slot: "bridge" });
+const hook = resolveClipWindow({ duration: 30, length: 7, slot: "hook" });
+assert(intro.startSec === 0, `intro should start at 0, got ${intro.startSec}`);
+assert(bridge.startSec > 6, `bridge should leave the intro, got ${bridge.startSec}`);
+assert(hook.startSec > bridge.startSec + 3, `hook should be later than bridge (${bridge.startSec} vs ${hook.startSec})`);
+assert(bridge.startSec + bridge.durationSec <= 30, "bridge must fit in the track");
+assert(hook.startSec + hook.durationSec <= 30, "hook must fit in the track");
+assert(
+  hook.startSec >= bridge.startSec + bridge.durationSec - 0.5,
+  "cinco clips should not be the same opening stretched"
+);
+
+const shortHook = resolveClipWindow({ duration: 12, length: 7, slot: "hook" });
+assert(shortHook.startSec > 0, "even a short track should not play the hook from 0");
+assert(shortHook.startSec + shortHook.durationSec <= 12.01, "short hook must stay in bounds");
+
+const annotated = resolveClipWindow({
+  duration: 30,
+  length: 7,
+  slot: "hook",
+  preferredStart: 19,
+});
+assert(annotated.startSec === 19, `preferred hook start should win, got ${annotated.startSec}`);
+
+assert(stageCopy("cinco", 2) === "Escucha otro momento", "cinco stage 3 copy should say another moment");
+assert(!clipHint("intro", 2.5, intro.startSec).includes("Otro tramo"), "intro hint");
+assert(clipHint("bridge", 4.5, bridge.startSec).includes("Otro tramo"), "bridge hint names another stretch");
+assert(clipHint("bridge", 4.5, bridge.startSec).includes("0:10"), "bridge of a 30s track starts near 0:10");
+assert(clipHint("hook", 7, hook.startSec).includes("Estribillo"), "hook hint");
+assert(GAME_MODES.tres.description.toLowerCase().includes("pistaza"), "tres copy should name Pistaza");
+assert(
+  GAME_MODES.cinco.description.toLowerCase().includes("pasapalabra"),
+  "cinco copy should name Pasapalabra"
+);
 
 console.log("✅ game modes, share grids, and 30-day content hold");
 console.log(`🎵 classic: ${classic.displayName}`);

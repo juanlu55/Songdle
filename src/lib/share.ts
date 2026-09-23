@@ -59,13 +59,29 @@ export function buildShareText({
 }) {
   const emoji = won ? "🎯" : "❌";
   const attemptsText = won ? `${attemptCount}/${maxAttempts}` : `X/${maxAttempts}`;
+  
+  // Copy más viral dependiendo del resultado
+  let callToAction = "";
+  if (won) {
+    if (attemptCount === 1) {
+      callToAction = "¿Quién puede superarme? 🏆";
+    } else if (attemptCount <= 2) {
+      callToAction = "¿Puedes hacerlo mejor? 👇";
+    } else if (parseFloat(time) < 10) {
+      callToAction = `${time}s ⚡ ¿Puedes ser más rápido?`;
+    } else {
+      callToAction = "¿Cuántos intentos necesitas tú?";
+    }
+  } else {
+    callToAction = "Esta estuvo difícil 😅 ¿Alguien la tiene?";
+  }
 
   return `🎵 Songdle #${gameNumber}
-${emoji} ${attemptsText} intentos
-⏱️ ${time} segundos
+${emoji} ${attemptsText} · ${time}s ${won && parseFloat(time) < 10 ? "⚡" : ""}
 
 ${clueLines}
 
+${callToAction}
 ${shareUrl}`;
 }
 

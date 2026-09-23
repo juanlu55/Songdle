@@ -3,6 +3,13 @@ export default function GameFooter() {
     <footer className="mt-6 text-center" role="contentinfo">
       <nav className="flex justify-center gap-4 text-xs font-bold uppercase tracking-wide flex-wrap" aria-label="Enlaces de navegación">
         <a
+          href="/stats"
+          className="text-black/70 hover:text-black transition-colors underline-offset-2 hover:underline"
+        >
+          📊 Stats Globales
+        </a>
+        <span className="text-black/30">•</span>
+        <a
           href="/como-jugar"
           className="text-black/50 hover:text-black transition-colors underline-offset-2 hover:underline"
         >

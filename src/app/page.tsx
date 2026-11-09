@@ -19,6 +19,8 @@ import NextSongCountdown from "./components/NextSongCountdown";
 import GameHeader from "./components/GameHeader";
 import GameFooter from "./components/GameFooter";
 import { hasTripleWinToday, markTripleWinIfNeeded } from "@/lib/game-storage";
+import { publishClassicResult, type ClassicDailyStats } from "@/lib/classic-daily-stats";
+import ClassicTodayStats from "./components/ClassicTodayStats";
 
 interface ClueMatch {
   genre: boolean;
@@ -93,6 +95,7 @@ export default function Home() {
   const [audioError, setAudioError] = useState(false);
   const [audioSourceIndex, setAudioSourceIndex] = useState(0);
   const [tripleWin, setTripleWin] = useState(false);
+  const [dailyStats, setDailyStats] = useState<ClassicDailyStats | null>(null);
   const MAX_ATTEMPTS = 6;
   const MAX_LISTEN_TIME = 30; // Máximo 30 segundos de escucha
 
@@ -136,6 +139,16 @@ export default function Home() {
           // Si el juego ya terminó, marcar que las estadísticas ya están actualizadas
           if (state.gameWon || state.gameLost) {
             statsUpdatedRef.current = true;
+            const lastAttempt = state.attempts[state.attempts.length - 1];
+            void publishClassicResult({
+              gameDate: todayDate,
+              songId: getTodaySong().id,
+              won: state.gameWon,
+              attempts: state.attempts.length,
+              elapsedSeconds: lastAttempt?.time ?? state.elapsedTime,
+            }).then((stats) => {
+              if (stats && stats.played > 0) setDailyStats(stats);
+            });
           }
         }
       } catch (error) {
@@ -430,6 +443,15 @@ export default function Home() {
       amplitudeEvents.tripleWin(todayMadrid);
     }
     setTripleWin(hasTripleWinToday(todayMadrid));
+    void publishClassicResult({
+      gameDate: todayMadrid,
+      songId: todaySong.id,
+      won,
+      attempts: attemptCount,
+      elapsedSeconds: time,
+    }).then((stats) => {
+      if (stats && stats.played > 0) setDailyStats(stats);
+    });
   };
 
   // Compartir resultados
@@ -1026,6 +1048,13 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
+                )}
+                {dailyStats && (
+                  <ClassicTodayStats
+                    stats={dailyStats}
+                    won={gameWon}
+                    userSeconds={gameWon ? (attempts[attempts.length - 1]?.time ?? null) : null}
+                  />
                 )}
               </div>
 

@@ -2,9 +2,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Heardle en español: alternativa gratis al Wordle de canciones",
+  // Absoluto (sin la plantilla "| Songdle" duplicada) y < 60 caracteres para que no se corte
+  title: { absolute: "Heardle Español: adivina la canción del día gratis | Songdle" },
   description:
-    "Heardle cerró. Songdle es la alternativa en español: escucha un fragmento y adivina la canción del día, con números 1 de Los 40 Principales. Gratis, sin registro.",
+    "¿Echas de menos Heardle? Juega gratis en español: escucha unos segundos y adivina el número 1 de Los 40 en 6 intentos. Canción nueva cada día, sin registro.",
   keywords: [
     "heardle español",
     "heardle en español",
@@ -19,9 +20,9 @@ export const metadata: Metadata = {
     canonical: "/heardle-espanol",
   },
   openGraph: {
-    title: "Heardle en español | Songdle, el Wordle de canciones",
+    title: "Heardle Español: adivina la canción del día | Songdle",
     description:
-      "La alternativa a Heardle en español: una canción al día, 6 intentos y pistas de género, década y país.",
+      "Escucha unos segundos y adivina el número 1 de Los 40 en 6 intentos. Una canción nueva cada día, gratis.",
     url: "https://songdle.es/heardle-espanol",
     type: "article",
   },

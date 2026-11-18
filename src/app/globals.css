@@ -1,28 +1,76 @@
 @import "tailwindcss";
 
+/*
+ * Marca Songdle
+ * Papel (fondo), Tinta (texto, bordes, sombras), Rec (marca y play, nunca error),
+ * Acierto (correcto), Oro (cerca / racha / nº1), Polvo (fallo, saltado, desactivado).
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --papel: #f5f1e8;
+  --tinta: #141210;
+  --rec: #ff5a4e;
+  --acierto: #a8e6cf;
+  --oro: #ffd23f;
+  --polvo: #d9d3c7;
+  --blanco: #fffdf8;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-papel: var(--papel);
+  --color-tinta: var(--tinta);
+  --color-rec: var(--rec);
+  --color-acierto: var(--acierto);
+  --color-oro: var(--oro);
+  --color-polvo: var(--polvo);
+  /* El negro de Tailwind pasa a ser la tinta de la marca y el blanco, papel claro */
+  --color-black: var(--tinta);
+  --color-white: var(--blanco);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-geist-sans), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
+  --font-display: var(--font-archivo), "Arial Black", system-ui, sans-serif;
+
+  --shadow-hard: 4px 4px 0 0 var(--tinta);
+  --shadow-hard-lg: 8px 8px 0 0 var(--tinta);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: var(--font-sans);
+}
+
+/* Archivo ensanchada para titulares: el tono de cartel de concierto */
+h1,
+h2,
+.font-display {
+  font-family: var(--font-display);
+  font-variation-settings: "wdth" 118;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-variation-settings: "wdth" 125;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 0.8;
+}
+
+@keyframes disc-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.disc-spin {
+  animation: disc-spin 2.4s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .disc-spin {
+    animation: none;
+  }
 }
 
 /* Scrollbar personalizado estilo neo-brutalista */
@@ -31,13 +79,13 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #f5f1e8;
-  border-left: 2px solid black;
+  background: var(--papel);
+  border-left: 2px solid var(--tinta);
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: black;
-  border: 2px solid #f5f1e8;
+  background: var(--tinta);
+  border: 2px solid var(--papel);
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
@@ -47,5 +95,5 @@ body {
 /* Para Firefox */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: black #f5f1e8;
+  scrollbar-color: var(--tinta) var(--papel);
 }

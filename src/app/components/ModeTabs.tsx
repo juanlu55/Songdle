@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import { MODE_ORDER, GAME_MODES, type GameMode } from "@/lib/game-modes";
 import { amplitudeEvents } from "@/lib/amplitude";
+import { ModeDisc } from "./Brand";
 
 export default function ModeTabs({ current }: { current: GameMode }) {
   const searchParams = useSearchParams();
@@ -13,13 +14,13 @@ export default function ModeTabs({ current }: { current: GameMode }) {
   if (partner) {
     return (
       <div className="mb-3 flex items-center gap-2">
-        <div className="inline-block border-4 border-black bg-black px-3 py-1 text-white">
+        <div className="inline-block border-3 border-black bg-black px-3 py-1 text-white">
           <p className="text-xs font-black uppercase tracking-wider">
             {GAME_MODES[current].title}
           </p>
         </div>
         {partner === "demo" && (
-          <span className="border-2 border-black bg-[#ffd700] px-2 py-0.5 text-[10px] font-black uppercase">
+          <span className="border-2 border-black bg-oro px-2 py-0.5 text-[10px] font-black uppercase">
             Demo
           </span>
         )}
@@ -42,12 +43,16 @@ export default function ModeTabs({ current }: { current: GameMode }) {
               }
             }}
             aria-current={active ? "page" : undefined}
-            className={`border-4 border-black px-3 py-1 text-xs font-black uppercase tracking-wide transition-all ${
+            className={`font-display inline-flex items-center gap-1.5 border-3 border-black py-1 pl-1.5 pr-3 text-xs font-extrabold uppercase tracking-wide transition-all ${
               active
                 ? "bg-black text-white shadow-none"
-                : "bg-white hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                : "bg-white hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard"
             }`}
           >
+            <ModeDisc
+              attempts={config.maxAttempts}
+              className={`h-4 w-4 flex-none ${active ? "rounded-full ring-2 ring-white" : ""}`}
+            />
             {config.title}
           </Link>
         );

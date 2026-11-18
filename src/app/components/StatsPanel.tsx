@@ -22,7 +22,7 @@ export default function StatsPanel({
   return (
     <div>
       {tripleWin && (
-        <div className="mb-4 border-4 border-black bg-[#ffd700] p-3 text-center">
+        <div className="mb-4 border-3 border-black bg-oro p-3 text-center">
           <p className="text-sm font-black uppercase tracking-wide">3/3 del día</p>
           <p className="text-[10px] font-bold text-black/60 uppercase">
             Has ganado Clásico, Tres pistas y Cinco pistas
@@ -31,11 +31,11 @@ export default function StatsPanel({
       )}
 
       <div className="grid grid-cols-4 gap-3 mb-6">
-        <div className="text-center border-2 border-black p-3 bg-[#f5f1e8]">
+        <div className="text-center border-2 border-black p-3 bg-papel">
           <div className="text-2xl font-black">{statistics.gamesPlayed}</div>
           <div className="text-[10px] font-bold uppercase tracking-wide text-black/60">Jugadas</div>
         </div>
-        <div className="text-center border-2 border-black p-3 bg-[#f5f1e8]">
+        <div className="text-center border-2 border-black p-3 bg-papel">
           <div className="text-2xl font-black">
             {statistics.gamesPlayed > 0
               ? Math.round((statistics.gamesWon / statistics.gamesPlayed) * 100)
@@ -43,11 +43,11 @@ export default function StatsPanel({
           </div>
           <div className="text-[10px] font-bold uppercase tracking-wide text-black/60">Victorias</div>
         </div>
-        <div className="text-center border-2 border-black p-3 bg-[#f5f1e8]">
+        <div className="text-center border-2 border-black p-3 bg-papel">
           <div className="text-2xl font-black">{statistics.currentStreak}</div>
           <div className="text-[10px] font-bold uppercase tracking-wide text-black/60">Racha</div>
         </div>
-        <div className="text-center border-2 border-black p-3 bg-[#f5f1e8]">
+        <div className="text-center border-2 border-black p-3 bg-papel">
           <div className="text-2xl font-black">{statistics.maxStreak}</div>
           <div className="text-[10px] font-bold uppercase tracking-wide text-black/60">Mejor</div>
         </div>
@@ -69,7 +69,7 @@ export default function StatsPanel({
               <div className="flex-1 flex items-center">
                 <div
                   className={`h-6 border-2 border-black flex items-center justify-end pr-2 transition-all ${
-                    isCurrentGame ? "bg-[#a8e6cf]" : "bg-[#f5f1e8]"
+                    isCurrentGame ? "bg-acierto" : "bg-papel"
                   }`}
                   style={{ width: `${Math.max(percentage, 8)}%` }}
                 >
@@ -87,7 +87,7 @@ export default function StatsPanel({
       </div>
 
       {mode === "classic" && statistics.gamesWon > 0 && (
-        <div className="border-2 border-black bg-[#f5f1e8] p-3 text-center">
+        <div className="border-2 border-black bg-papel p-3 text-center">
           <div className="text-xs font-black uppercase tracking-wide text-black/60 mb-1">
             Tiempo medio
           </div>

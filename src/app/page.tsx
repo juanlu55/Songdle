@@ -25,6 +25,7 @@ import {
   type ClassicDailyStats,
 } from "@/lib/classic-daily-stats";
 import ClassicTodayStats from "./components/ClassicTodayStats";
+import { NowPlaying, PlayGlyph, SegmentDisc, type SegmentFill } from "./components/Brand";
 
 interface ClueMatch {
   genre: boolean;
@@ -545,7 +546,7 @@ export default function Home() {
 
 
   return (
-    <div className="min-h-screen bg-[#f5f1e8] flex items-center justify-center p-4">
+    <div className="min-h-screen bg-papel flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
         <GameHeader
           mode="classic"
@@ -562,7 +563,7 @@ export default function Home() {
         />
 
         {/* Main Game Card */}
-        <main className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6" role="main" aria-label="Área de juego">
+        <main className="bg-white border-3 border-black shadow-hard-lg p-6" role="main" aria-label="Área de juego">
           {!gameWon && !gameLost ? (
             <>
               {/* Audio Player */}
@@ -604,16 +605,17 @@ export default function Home() {
                 <div className="flex items-center justify-center gap-4">
                 <button
                   onClick={togglePlay}
+                  aria-label={isPlaying ? "Pausar" : "Reproducir"}
                   disabled={!songReady || elapsedTime >= MAX_LISTEN_TIME || audioError || audioSources.length === 0}
-                    className={`w-16 h-16 flex items-center justify-center text-2xl border-4 border-black font-black transition-all ${
+                    className={`w-16 h-16 flex items-center justify-center border-4 border-black transition-all ${
                     !songReady || elapsedTime >= MAX_LISTEN_TIME || audioError || audioSources.length === 0
-                        ? "bg-gray-300 cursor-not-allowed"
+                        ? "bg-polvo cursor-not-allowed"
                         : isPlaying
-                        ? "bg-[#ff6b6b] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] animate-pulse"
-                        : "bg-[#ff6b6b] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                        ? "bg-rec shadow-hard"
+                        : "bg-rec hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard"
                     }`}
                   >
-                    {isPlaying ? "❚❚" : "▶"}
+                    <PlayGlyph playing={isPlaying} />
                 </button>
                   <div className="text-left">
                     <p className="text-xs font-bold text-black/60 uppercase tracking-wide">
@@ -622,7 +624,7 @@ export default function Home() {
                         : elapsedTime >= MAX_LISTEN_TIME
                         ? "Tiempo máximo"
                     : isPlaying
-                        ? "● Reproduciendo"
+                        ? <NowPlaying />
                         : elapsedTime > 0
                         ? "En pausa"
                         : "Presiona play"}
@@ -637,7 +639,7 @@ export default function Home() {
               </div>
 
               {audioError && (
-                <div className="mb-6 border-4 border-black bg-[#ffd700] p-4 text-center">
+                <div className="mb-6 border-3 border-black bg-oro p-4 text-center">
                   <p className="text-sm font-black uppercase mb-2">
                     No hemos podido cargar el audio de hoy
                   </p>
@@ -656,7 +658,7 @@ export default function Home() {
                         }
                       })();
                     }}
-                    className="px-4 py-2 bg-white border-4 border-black font-black uppercase text-xs hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+                    className="px-4 py-2 bg-white border-3 border-black font-black uppercase text-xs hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard transition-all"
                   >
                     Reintentar audio
                   </button>
@@ -665,7 +667,7 @@ export default function Home() {
 
               {/* Timer */}
               {elapsedTime > 0 && (
-                <div className="mb-6 border-4 border-black bg-black text-white p-4">
+                <div className="mb-6 border-3 border-black bg-black text-white p-4">
                   <div className="flex items-baseline justify-between">
                     <span className="text-xs font-bold uppercase tracking-wider">Tiempo</span>
                     <div className="font-mono text-3xl font-black tracking-tighter">
@@ -673,7 +675,7 @@ export default function Home() {
                     </div>
                   </div>
                   {elapsedTime >= MAX_LISTEN_TIME && (
-                    <p className="text-xs mt-2 text-[#ff6b6b] font-bold">
+                    <p className="text-xs mt-2 text-oro font-bold">
                       ¡Límite alcanzado!
                     </p>
                   )}
@@ -690,15 +692,15 @@ export default function Home() {
                       onChange={(e) => handleInputChange(e.target.value)}
                       onFocus={handleInputFocus}
                       placeholder="Escribe el nombre de la canción..."
-                      className="w-full px-4 py-3 border-4 border-black focus:outline-none focus:ring-0 font-medium bg-white"
+                      className="w-full px-4 py-3 border-3 border-black focus:outline-none focus:ring-0 font-medium bg-white"
                       disabled={elapsedTime === 0}
                     />
                     
                     {/* Autocomplete Suggestions */}
                     {showSuggestions && filteredSongs.length > 0 && (
-                      <div className="absolute z-10 w-full mt-2 bg-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] max-h-60 overflow-y-auto">
+                      <div className="absolute z-10 w-full mt-2 bg-white border-3 border-black shadow-hard max-h-60 overflow-y-auto">
                         {filteredSongs.length === songs.length && (
-                          <div className="px-4 py-2 text-xs font-bold text-black/40 bg-[#f5f1e8] border-b-2 border-black uppercase tracking-wide">
+                          <div className="px-4 py-2 text-xs font-bold text-black/40 bg-papel border-b-2 border-black uppercase tracking-wide">
                             {filteredSongs.length} canciones
                           </div>
                         )}
@@ -715,8 +717,8 @@ export default function Home() {
                               disabled={alreadyGuessed}
                               className={`w-full px-4 py-2 text-left transition-colors border-b-2 border-black last:border-b-0 font-medium ${
                                 alreadyGuessed 
-                                  ? 'bg-gray-200 text-black/40 cursor-not-allowed line-through'
-                                  : 'hover:bg-[#a8e6cf]'
+                                  ? 'bg-polvo text-black/40 cursor-not-allowed line-through'
+                                  : 'hover:bg-acierto'
                               }`}
                             >
                               {song.displayName}
@@ -731,7 +733,7 @@ export default function Home() {
                   <button
                     type="submit"
                     disabled={!guess.trim() || elapsedTime === 0}
-                    className="px-6 py-3 bg-[#a8e6cf] border-4 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] disabled:bg-gray-300 disabled:cursor-not-allowed transition-all text-sm"
+                    className="px-6 py-3 bg-acierto border-3 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard disabled:bg-polvo disabled:cursor-not-allowed transition-all text-sm"
                   >
                     Enviar
                   </button>
@@ -739,14 +741,14 @@ export default function Home() {
               </form>
 
               {/* Attempts Counter */}
-              <div className="mb-4 border-4 border-black bg-[#f5f1e8] p-3">
+              <div className="mb-4 border-3 border-black bg-papel p-3">
                 <p className="text-black font-bold text-center">
                   Intentos: <span className="text-2xl font-black">{attempts.length}</span>/{MAX_ATTEMPTS}
                 </p>
               </div>
 
               {/* Attempts History - Contenedor con altura fija */}
-              <div className="h-[400px] border-4 border-black bg-[#f5f1e8] p-4">
+              <div className="h-[400px] border-3 border-black bg-papel p-4">
                 {attempts.length > 0 ? (
                   <div className="h-full flex flex-col">
                     <h3 className="font-black text-black mb-3 uppercase tracking-wide text-sm flex-shrink-0">Tus intentos:</h3>
@@ -761,7 +763,7 @@ export default function Home() {
                     return (
                       <div
                         key={index}
-                        className="border-4 border-black bg-white p-3"
+                        className="border-3 border-black bg-white p-3"
                       >
                         <div className="flex justify-between items-center mb-3">
                           <div className="flex items-center gap-2">
@@ -785,7 +787,7 @@ export default function Home() {
                              attempt.clues.country && 
                              attempt.clues.language && 
                              attempt.clues.voices && (
-                              <div className="mb-2 border-2 border-black bg-[#ffd700] p-2 text-center">
+                              <div className="mb-2 border-2 border-black bg-oro p-2 text-center">
                                 <p className="text-xs font-black uppercase">
                                   ⚠️ Todos los atributos coinciden, pero NO es la canción correcta
                                 </p>
@@ -807,8 +809,8 @@ export default function Home() {
                                 }}
                                 className={`border-2 border-black p-1 sm:p-2 text-center cursor-pointer hover:scale-105 transition-transform ${
                                   attempt.clues.genre 
-                                    ? "bg-[#a8e6cf]" 
-                                    : "bg-[#ff6b6b]"
+                                    ? "bg-acierto" 
+                                    : "bg-polvo"
                                 }`}
                               >
                                 <div className="text-[10px] sm:text-xs font-black mb-1">GEN</div>
@@ -827,8 +829,8 @@ export default function Home() {
                                 )}
                                 className={`border-2 border-black p-1 sm:p-2 text-center cursor-pointer hover:scale-105 transition-transform ${
                                   attempt.clues.decade 
-                                    ? "bg-[#a8e6cf]" 
-                                    : "bg-[#ff6b6b]"
+                                    ? "bg-acierto" 
+                                    : "bg-polvo"
                                 }`}
                               >
                                 <div className="text-[10px] sm:text-xs font-black mb-1">DEC</div>
@@ -847,8 +849,8 @@ export default function Home() {
                                 )}
                                 className={`border-2 border-black p-1 sm:p-2 text-center cursor-pointer hover:scale-105 transition-transform ${
                                   attempt.clues.country 
-                                    ? "bg-[#a8e6cf]" 
-                                    : "bg-[#ff6b6b]"
+                                    ? "bg-acierto" 
+                                    : "bg-polvo"
                                 }`}
                               >
                                 <div className="text-[10px] sm:text-xs font-black mb-1">PAÍ</div>
@@ -867,8 +869,8 @@ export default function Home() {
                                 )}
                                 className={`border-2 border-black p-1 sm:p-2 text-center cursor-pointer hover:scale-105 transition-transform ${
                                   attempt.clues.language 
-                                    ? "bg-[#a8e6cf]" 
-                                    : "bg-[#ff6b6b]"
+                                    ? "bg-acierto" 
+                                    : "bg-polvo"
                                 }`}
                               >
                                 <div className="text-[10px] sm:text-xs font-black mb-1">IDI</div>
@@ -887,8 +889,8 @@ export default function Home() {
                                 )}
                                 className={`border-2 border-black p-1 sm:p-2 text-center cursor-pointer hover:scale-105 transition-transform ${
                                   attempt.clues.voices 
-                                    ? "bg-[#a8e6cf]" 
-                                    : "bg-[#ff6b6b]"
+                                    ? "bg-acierto" 
+                                    : "bg-polvo"
                                 }`}
                               >
                                 <div className="text-[10px] sm:text-xs font-black mb-1">VOZ</div>
@@ -987,22 +989,33 @@ export default function Home() {
           ) : (
             /* Victory/Defeat Screen */
             <div>
-              <div className="border-4 border-black bg-black text-white p-6 mb-6">
-                <h2 className="text-4xl font-black mb-2 uppercase tracking-tight">
-                  {gameWon ? "¡Ganaste!" : "Perdiste"}
-                </h2>
-                <p className="text-sm font-bold text-white/60 uppercase tracking-wide">
-                  {gameWon ? "Lo conseguiste" : "Suerte la próxima"}
-                </p>
+              <div className="border-3 border-black bg-black text-white p-6 mb-6 flex items-center justify-between gap-4">
+                <div>
+                  <h2 className="text-4xl font-black mb-2 uppercase tracking-tight">
+                    {gameWon ? "¡Ganaste!" : "Perdiste"}
+                  </h2>
+                  <p className="text-sm font-bold text-white/60 uppercase tracking-wide">
+                    {gameWon ? "Lo conseguiste" : "Suerte la próxima"}
+                  </p>
+                </div>
+                <SegmentDisc
+                  segments={Array.from({ length: MAX_ATTEMPTS }, (_, i): SegmentFill => {
+                    const attempt = attempts[i];
+                    if (!attempt) return null;
+                    return attempt.isCorrect ? "acierto" : "polvo";
+                  })}
+                  className="h-20 w-20 flex-none rounded-full ring-3 ring-white"
+                  title={gameWon ? `Acierto en el intento ${attempts.length} de ${MAX_ATTEMPTS}` : `Sin acierto en ${MAX_ATTEMPTS} intentos`}
+                />
               </div>
               
               {/* Carátula y Info de la Canción */}
-              <div className="border-4 border-black bg-[#f5f1e8] p-6 mb-6">
+              <div className="border-3 border-black bg-papel p-6 mb-6">
                 <div className="flex flex-col sm:flex-row gap-6">
                   {/* Carátula */}
                   {todaySong.imageUrl && (
                     <div className="flex-shrink-0 mx-auto sm:mx-0">
-                      <div className="border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] w-32 h-32 bg-white overflow-hidden relative">
+                      <div className="border-3 border-black shadow-hard w-32 h-32 bg-white overflow-hidden relative">
                         <Image 
                           src={todaySong.imageUrl} 
                           alt={todaySong.displayName}
@@ -1044,7 +1057,7 @@ export default function Home() {
                           href={getSpotifySearchUrl(todaySong)}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-4 py-2 bg-[#1DB954] border-4 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all text-sm text-white"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-[#1DB954] border-3 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard transition-all text-sm text-white"
                         >
                           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
@@ -1058,13 +1071,13 @@ export default function Home() {
                 
                 {gameWon && (
                   <div className="flex gap-4 mt-6">
-                    <div className="flex-1 border-4 border-black bg-white p-3 text-center">
+                    <div className="flex-1 border-3 border-black bg-white p-3 text-center">
                       <div className="text-xs font-black uppercase tracking-wide text-black/60 mb-1">Tiempo</div>
                       <div className="text-2xl font-black font-mono">
                         {attempts[attempts.length - 1]?.time.toFixed(2)}s
                       </div>
                     </div>
-                    <div className="flex-1 border-4 border-black bg-white p-3 text-center">
+                    <div className="flex-1 border-3 border-black bg-white p-3 text-center">
                       <div className="text-xs font-black uppercase tracking-wide text-black/60 mb-1">Intentos</div>
                       <div className="text-2xl font-black">
                         {attempts.length}/{MAX_ATTEMPTS}
@@ -1084,20 +1097,20 @@ export default function Home() {
               <div className="relative mb-4 space-y-3">
                 <button
                   onClick={() => shareResults("whatsapp")}
-                  className="w-full py-4 bg-[#25D366] text-white border-4 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+                  className="w-full py-4 bg-[#25D366] text-white border-3 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard transition-all"
                 >
                   Compartir en WhatsApp
                 </button>
                 <button
                   onClick={() => shareResults()}
-                  className="w-full py-4 bg-[#a8e6cf] border-4 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+                  className="w-full py-4 bg-acierto border-3 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard transition-all"
                 >
                   Copiar resultado
                 </button>
                 
                 {/* Mensaje de copiado */}
                 {showCopiedMessage && (
-                  <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 border-4 border-black bg-[#a8e6cf] px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] animate-bounce z-50">
+                  <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 border-3 border-black bg-acierto px-4 py-2 shadow-hard animate-bounce z-50">
                     <p className="text-sm font-black uppercase whitespace-nowrap">
                       ✓ Copiado al portapapeles
                     </p>
@@ -1108,12 +1121,12 @@ export default function Home() {
               <NextSongCountdown />
 
               {/* Estadísticas */}
-              <div className="border-4 border-black bg-white p-6">
-                <h3 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
+              <div className="border-3 border-black bg-white p-6">
+                <h3 className="text-xl font-black uppercase tracking-tight mb-4 border-b-3 border-black pb-2">
                   Estadísticas
                 </h3>
                 {tripleWin && (
-                  <div className="mb-4 border-4 border-black bg-[#ffd700] p-3 text-center">
+                  <div className="mb-4 border-3 border-black bg-oro p-3 text-center">
                     <p className="text-sm font-black uppercase tracking-wide">3/3 del día</p>
                     <p className="text-[10px] font-bold text-black/60 uppercase">
                       Has ganado Clásico, Tres pistas y Cinco pistas
@@ -1123,11 +1136,11 @@ export default function Home() {
                 
                 {/* Stats Grid */}
                 <div className="grid grid-cols-4 gap-3 mb-6">
-                  <div className="text-center border-2 border-black p-3 bg-[#f5f1e8]">
+                  <div className="text-center border-2 border-black p-3 bg-papel">
                     <div className="text-2xl font-black">{statistics.gamesPlayed}</div>
                     <div className="text-[10px] font-bold uppercase tracking-wide text-black/60">Jugadas</div>
                   </div>
-                  <div className="text-center border-2 border-black p-3 bg-[#f5f1e8]">
+                  <div className="text-center border-2 border-black p-3 bg-papel">
                     <div className="text-2xl font-black">
                       {statistics.gamesPlayed > 0 
                         ? Math.round((statistics.gamesWon / statistics.gamesPlayed) * 100)
@@ -1135,11 +1148,11 @@ export default function Home() {
                     </div>
                     <div className="text-[10px] font-bold uppercase tracking-wide text-black/60">Victorias</div>
                   </div>
-                  <div className="text-center border-2 border-black p-3 bg-[#f5f1e8]">
+                  <div className="text-center border-2 border-black p-3 bg-papel">
                     <div className="text-2xl font-black">{statistics.currentStreak}</div>
                     <div className="text-[10px] font-bold uppercase tracking-wide text-black/60">Racha</div>
                   </div>
-                  <div className="text-center border-2 border-black p-3 bg-[#f5f1e8]">
+                  <div className="text-center border-2 border-black p-3 bg-papel">
                     <div className="text-2xl font-black">{statistics.maxStreak}</div>
                     <div className="text-[10px] font-bold uppercase tracking-wide text-black/60">Mejor</div>
                   </div>
@@ -1162,7 +1175,7 @@ export default function Home() {
                         <div className="flex-1 flex items-center">
                           <div 
                             className={`h-6 border-2 border-black flex items-center justify-end pr-2 transition-all ${
-                              isCurrentGame ? 'bg-[#a8e6cf]' : 'bg-[#f5f1e8]'
+                              isCurrentGame ? 'bg-acierto' : 'bg-papel'
                             }`}
                             style={{ width: `${Math.max(percentage, 8)}%` }}
                           >
@@ -1176,7 +1189,7 @@ export default function Home() {
 
                 {/* Tiempo medio */}
                 {statistics.gamesWon > 0 && (
-                  <div className="border-2 border-black bg-[#f5f1e8] p-3 text-center">
+                  <div className="border-2 border-black bg-papel p-3 text-center">
                     <div className="text-xs font-black uppercase tracking-wide text-black/60 mb-1">
                       Tiempo medio
                     </div>
@@ -1192,7 +1205,7 @@ export default function Home() {
 
         {/* Instructions */}
         {!gameWon && !gameLost && attempts.length === 0 && (
-          <aside className="mt-4 border-4 border-black bg-black p-3" aria-label="Instrucciones rápidas">
+          <aside className="mt-4 border-3 border-black bg-black p-3" aria-label="Instrucciones rápidas">
             <p className="text-white text-xs font-bold uppercase tracking-wide text-center">
               Presiona ▶ para escuchar — Pausa cuando sepas la canción
             </p>
@@ -1204,8 +1217,8 @@ export default function Home() {
         {/* Modal de Estadísticas */}
         {showStats && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50" onClick={() => setShowStats(false)}>
-            <div className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 max-w-md w-full" onClick={(e) => e.stopPropagation()}>
-              <div className="flex justify-between items-center mb-4 border-b-4 border-black pb-2">
+            <div className="bg-white border-3 border-black shadow-hard-lg p-6 max-w-md w-full" onClick={(e) => e.stopPropagation()}>
+              <div className="flex justify-between items-center mb-4 border-b-3 border-black pb-2">
                 <h3 className="text-2xl font-black uppercase tracking-tight">
                   Estadísticas
                 </h3>
@@ -1218,7 +1231,7 @@ export default function Home() {
               </div>
               
               {tripleWin && (
-                <div className="mb-4 border-4 border-black bg-[#ffd700] p-3 text-center">
+                <div className="mb-4 border-3 border-black bg-oro p-3 text-center">
                   <p className="text-sm font-black uppercase tracking-wide">3/3 del día</p>
                   <p className="text-[10px] font-bold text-black/60 uppercase">
                     Has ganado Clásico, Tres pistas y Cinco pistas
@@ -1228,11 +1241,11 @@ export default function Home() {
 
               {/* Stats Grid */}
               <div className="grid grid-cols-4 gap-3 mb-6">
-                <div className="text-center border-2 border-black p-3 bg-[#f5f1e8]">
+                <div className="text-center border-2 border-black p-3 bg-papel">
                   <div className="text-2xl font-black">{statistics.gamesPlayed}</div>
                   <div className="text-[10px] font-bold uppercase tracking-wide text-black/60">Jugadas</div>
                 </div>
-                <div className="text-center border-2 border-black p-3 bg-[#f5f1e8]">
+                <div className="text-center border-2 border-black p-3 bg-papel">
                   <div className="text-2xl font-black">
                     {statistics.gamesPlayed > 0 
                       ? Math.round((statistics.gamesWon / statistics.gamesPlayed) * 100)
@@ -1240,11 +1253,11 @@ export default function Home() {
                   </div>
                   <div className="text-[10px] font-bold uppercase tracking-wide text-black/60">Victorias</div>
                 </div>
-                <div className="text-center border-2 border-black p-3 bg-[#f5f1e8]">
+                <div className="text-center border-2 border-black p-3 bg-papel">
                   <div className="text-2xl font-black">{statistics.currentStreak}</div>
                   <div className="text-[10px] font-bold uppercase tracking-wide text-black/60">Racha</div>
                 </div>
-                <div className="text-center border-2 border-black p-3 bg-[#f5f1e8]">
+                <div className="text-center border-2 border-black p-3 bg-papel">
                   <div className="text-2xl font-black">{statistics.maxStreak}</div>
                   <div className="text-[10px] font-bold uppercase tracking-wide text-black/60">Mejor</div>
                 </div>
@@ -1267,7 +1280,7 @@ export default function Home() {
                       <div className="flex-1 flex items-center">
                         <div 
                           className={`h-6 border-2 border-black flex items-center justify-end pr-2 transition-all ${
-                            isCurrentGame ? 'bg-[#a8e6cf]' : 'bg-[#f5f1e8]'
+                            isCurrentGame ? 'bg-acierto' : 'bg-papel'
                           }`}
                           style={{ width: `${Math.max(percentage, 8)}%` }}
                         >
@@ -1281,7 +1294,7 @@ export default function Home() {
 
               {/* Tiempo medio */}
               {statistics.gamesWon > 0 && (
-                <div className="border-2 border-black bg-[#f5f1e8] p-3 text-center">
+                <div className="border-2 border-black bg-papel p-3 text-center">
                   <div className="text-xs font-black uppercase tracking-wide text-black/60 mb-1">
                     Tiempo medio
                   </div>
@@ -1297,8 +1310,8 @@ export default function Home() {
         {/* Modal de Cómo Jugar */}
         {showHowToPlay && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50" onClick={() => setShowHowToPlay(false)}>
-            <div className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 max-w-md w-full" onClick={(e) => e.stopPropagation()}>
-              <div className="flex justify-between items-center mb-4 border-b-4 border-black pb-2">
+            <div className="bg-white border-3 border-black shadow-hard-lg p-6 max-w-md w-full" onClick={(e) => e.stopPropagation()}>
+              <div className="flex justify-between items-center mb-4 border-b-3 border-black pb-2">
                 <h3 className="text-2xl font-black uppercase tracking-tight">
                   Cómo Jugar
                 </h3>
@@ -1312,7 +1325,7 @@ export default function Home() {
               
               <div className="space-y-4">
                 {/* Regla 1 */}
-                <div className="border-2 border-black bg-[#f5f1e8] p-4">
+                <div className="border-2 border-black bg-papel p-4">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="text-2xl">▶</div>
                     <h4 className="font-black uppercase text-sm">Escucha y pausa</h4>
@@ -1325,7 +1338,7 @@ export default function Home() {
                 </div>
 
                 {/* Regla 2 */}
-                <div className="border-2 border-black bg-[#f5f1e8] p-4">
+                <div className="border-2 border-black bg-papel p-4">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="text-2xl">⏱️</div>
                     <h4 className="font-black uppercase text-sm">Límite de tiempo</h4>
@@ -1337,7 +1350,7 @@ export default function Home() {
                 </div>
 
                 {/* Regla 3 */}
-                <div className="border-2 border-black bg-[#f5f1e8] p-4">
+                <div className="border-2 border-black bg-papel p-4">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="text-2xl">🎯</div>
                     <h4 className="font-black uppercase text-sm">Adivina la canción</h4>
@@ -1349,19 +1362,19 @@ export default function Home() {
                 </div>
 
                 {/* Regla 4 */}
-                <div className="border-2 border-black bg-[#a8e6cf] p-4">
+                <div className="border-2 border-black bg-acierto p-4">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="text-2xl">💡</div>
                     <h4 className="font-black uppercase text-sm">Pistas de colores</h4>
                   </div>
                   <div className="space-y-2 text-xs font-medium text-black/70">
                     <div className="flex items-center gap-2">
-                      <div className="w-4 h-4 border-2 border-black bg-[#a8e6cf]"></div>
+                      <div className="w-4 h-4 border-2 border-black bg-acierto"></div>
                       <span><span className="font-black">Verde</span> = Coincide con la canción correcta</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-4 h-4 border-2 border-black bg-[#ff6b6b]"></div>
-                      <span><span className="font-black">Rojo</span> = No coincide</span>
+                      <div className="w-4 h-4 border-2 border-black bg-polvo"></div>
+                      <span><span className="font-black">Gris</span> = No coincide</span>
                     </div>
                   </div>
                 </div>
@@ -1369,7 +1382,7 @@ export default function Home() {
 
               <button
                 onClick={() => setShowHowToPlay(false)}
-                className="w-full mt-6 py-3 bg-black text-white border-4 border-black font-black uppercase tracking-wide hover:bg-black/90 transition-all"
+                className="w-full mt-6 py-3 bg-black text-white border-3 border-black font-black uppercase tracking-wide hover:bg-black/90 transition-all"
               >
                 ¡Entendido!
               </button>

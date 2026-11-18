@@ -1,6 +1,7 @@
 import type { Song } from "@/app/data/songs";
 import { GAME_MODES } from "@/lib/game-modes";
 import { STAGE_CELL_EMOJI, type StageCell } from "@/lib/clues-game";
+import { BRAND } from "@/lib/brand-svg";
 
 export const SITE_URL = "https://songdle.es";
 
@@ -85,6 +86,130 @@ ${callToAction}
 ${shareUrl}`;
 }
 
+// ---------- Dibujo de marca en canvas ----------
+
+type DiscSegment = "acierto" | "polvo" | "papel" | null;
+
+function displayFont(weight: number, px: number) {
+  const family =
+    (typeof document !== "undefined" &&
+      getComputedStyle(document.body).getPropertyValue("--font-archivo").trim()) ||
+    "'Arial Black', sans-serif";
+  return `${weight} ${px}px ${family}`;
+}
+
+function setExpanded(ctx: CanvasRenderingContext2D, on: boolean) {
+  if ("fontStretch" in ctx) {
+    (ctx as CanvasRenderingContext2D & { fontStretch: string }).fontStretch = on ? "expanded" : "normal";
+  }
+}
+
+async function ensureFonts(ctx: CanvasRenderingContext2D) {
+  try {
+    await document.fonts.load(displayFont(900, 40));
+  } catch {
+    // Si la fuente no carga, el canvas usa la alternativa
+  }
+  setExpanded(ctx, true);
+}
+
+function wedge(ctx: CanvasRenderingContext2D, cx: number, cy: number, r: number, i: number, n: number) {
+  const a0 = -Math.PI / 2 + (i * 2 * Math.PI) / n;
+  const a1 = -Math.PI / 2 + ((i + 1) * 2 * Math.PI) / n;
+  ctx.beginPath();
+  ctx.moveTo(cx, cy);
+  ctx.arc(cx, cy, r, a0, a1);
+  ctx.closePath();
+}
+
+/** El símbolo de la marca */
+function drawBrandDisc(ctx: CanvasRenderingContext2D, cx: number, cy: number, r: number) {
+  ctx.fillStyle = BRAND.tinta;
+  ctx.beginPath();
+  ctx.arc(cx, cy, r, 0, Math.PI * 2);
+  ctx.fill();
+  wedge(ctx, cx, cy, r, 0, 6);
+  ctx.fillStyle = BRAND.rec;
+  ctx.fill();
+  ctx.fillStyle = BRAND.papel;
+  ctx.beginPath();
+  ctx.arc(cx, cy, r * 0.29, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+/** El disco con la partida: un gajo por intento */
+function drawResultDisc(
+  ctx: CanvasRenderingContext2D,
+  cx: number,
+  cy: number,
+  r: number,
+  segments: DiscSegment[]
+) {
+  const color = { acierto: BRAND.acierto, polvo: BRAND.polvo, papel: BRAND.papel };
+  ctx.fillStyle = BRAND.tinta;
+  ctx.beginPath();
+  ctx.arc(cx, cy, r, 0, Math.PI * 2);
+  ctx.fill();
+  segments.forEach((seg, i) => {
+    if (!seg) return;
+    wedge(ctx, cx, cy, r, i, segments.length);
+    ctx.fillStyle = color[seg];
+    ctx.fill();
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = BRAND.tinta;
+    ctx.stroke();
+  });
+  ctx.lineWidth = 5;
+  ctx.strokeStyle = BRAND.tinta;
+  ctx.beginPath();
+  ctx.arc(cx, cy, r, 0, Math.PI * 2);
+  ctx.stroke();
+  ctx.fillStyle = BRAND.papel;
+  ctx.beginPath();
+  ctx.arc(cx, cy, r * 0.27, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.stroke();
+  ctx.fillStyle = BRAND.tinta;
+  ctx.beginPath();
+  ctx.arc(cx, cy, r * 0.07, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+/** Logotipo S◉NGDLE con la línea base en `y` */
+function drawWordmark(ctx: CanvasRenderingContext2D, x: number, y: number, px: number) {
+  ctx.font = displayFont(900, px);
+  ctx.fillStyle = BRAND.tinta;
+  ctx.textBaseline = "alphabetic";
+  ctx.fillText("S", x, y);
+  let cursor = x + ctx.measureText("S").width;
+  const d = px * 0.74;
+  const gap = px * 0.03;
+  drawBrandDisc(ctx, cursor + gap + d / 2, y - px * 0.36, d / 2);
+  cursor += d + gap * 2;
+  ctx.fillText("NGDLE", cursor, y);
+}
+
+function drawCard(ctx: CanvasRenderingContext2D, width: number, height: number) {
+  ctx.fillStyle = BRAND.papel;
+  ctx.fillRect(0, 0, width, height);
+  // Sombra dura
+  ctx.fillStyle = BRAND.tinta;
+  ctx.fillRect(52, 52, width - 80, height - 80);
+  ctx.fillStyle = BRAND.blanco;
+  ctx.fillRect(40, 40, width - 80, height - 80);
+  ctx.lineWidth = 6;
+  ctx.strokeStyle = BRAND.tinta;
+  ctx.strokeRect(40, 40, width - 80, height - 80);
+}
+
+function monoFont(weight: number, px: number) {
+  const family =
+    (typeof document !== "undefined" &&
+      getComputedStyle(document.body).getPropertyValue("--font-geist-mono").trim()) ||
+    "monospace";
+  return `${weight} ${px}px ${family}`;
+}
+
 export async function renderShareImageBlob({
   gameNumber,
   won,
@@ -104,7 +229,7 @@ export async function renderShareImageBlob({
 
   const width = 720;
   const rowH = 56;
-  const headerH = 280;
+  const headerH = 300;
   const height = headerH + attempts.length * (rowH + 12) + 120;
   const canvas = document.createElement("canvas");
   canvas.width = width;
@@ -112,64 +237,58 @@ export async function renderShareImageBlob({
   const ctx = canvas.getContext("2d");
   if (!ctx) return null;
 
-  ctx.fillStyle = "#f5f1e8";
-  ctx.fillRect(0, 0, width, height);
+  await ensureFonts(ctx);
+  drawCard(ctx, width, height);
+  drawWordmark(ctx, 72, 126, 46);
 
-  ctx.fillStyle = "#ffffff";
-  ctx.strokeStyle = "#000000";
-  ctx.lineWidth = 8;
-  ctx.fillRect(40, 40, width - 80, height - 80);
-  ctx.strokeRect(40, 40, width - 80, height - 80);
+  ctx.font = monoFont(700, 20);
+  ctx.fillStyle = "rgba(20,18,16,0.6)";
+  ctx.fillText(`#${gameNumber}  ·  ${won ? "GANADO" : "PERDIDO"}`, 72, 182);
 
-  ctx.fillStyle = "#ffffff";
-  ctx.fillRect(70, 70, 280, 70);
-  ctx.lineWidth = 6;
-  ctx.strokeRect(70, 70, 280, 70);
-  ctx.fillStyle = "#000000";
-  ctx.font = "900 40px sans-serif";
-  ctx.fillText("SONGDLE", 88, 118);
-
-  ctx.font = "700 22px sans-serif";
-  ctx.fillStyle = "rgba(0,0,0,0.55)";
-  ctx.fillText(`#${gameNumber}  ·  ${won ? "GANADO" : "PERDIDO"}`, 70, 175);
-
-  ctx.fillStyle = "#000000";
-  ctx.font = "900 36px sans-serif";
+  ctx.fillStyle = BRAND.tinta;
+  ctx.font = displayFont(900, 34);
   ctx.fillText(
     won ? `${attemptCount}/${maxAttempts} intentos` : `X/${maxAttempts} intentos`,
-    70,
-    225
+    72,
+    230
   );
-  ctx.font = "700 24px monospace";
-  ctx.fillText(`${time}s`, 70, 265);
+  ctx.font = monoFont(700, 24);
+  ctx.fillText(`${time}s`, 72, 266);
+
+  const segments: DiscSegment[] = Array.from({ length: maxAttempts }, (_, i) => {
+    const attempt = attempts[i];
+    if (!attempt) return null;
+    return attempt.isCorrect ? "acierto" : "polvo";
+  });
+  drawResultDisc(ctx, width - 150, 180, 82, segments);
 
   attempts.forEach((attempt, index) => {
     const y = headerH + index * (rowH + 12);
     const colors = attempt.isCorrect
-      ? ["#a8e6cf", "#a8e6cf", "#a8e6cf", "#a8e6cf", "#a8e6cf"]
+      ? Array(5).fill(BRAND.acierto)
       : attempt.clues
         ? [
-            attempt.clues.genre ? "#a8e6cf" : "#ff6b6b",
-            attempt.clues.decade ? "#a8e6cf" : "#ff6b6b",
-            attempt.clues.country ? "#a8e6cf" : "#ff6b6b",
-            attempt.clues.language ? "#a8e6cf" : "#ff6b6b",
-            attempt.clues.voices ? "#a8e6cf" : "#ff6b6b",
-          ]
-        : ["#d9d3c7", "#d9d3c7", "#d9d3c7", "#d9d3c7", "#d9d3c7"];
+            attempt.clues.genre,
+            attempt.clues.decade,
+            attempt.clues.country,
+            attempt.clues.language,
+            attempt.clues.voices,
+          ].map((match) => (match ? BRAND.acierto : BRAND.polvo))
+        : Array(5).fill(BRAND.blanco);
 
     colors.forEach((color, i) => {
-      const x = 70 + i * 92;
+      const x = 72 + i * 92;
       ctx.fillStyle = color;
       ctx.fillRect(x, y, 80, rowH);
       ctx.lineWidth = 4;
-      ctx.strokeStyle = "#000000";
+      ctx.strokeStyle = BRAND.tinta;
       ctx.strokeRect(x, y, 80, rowH);
     });
   });
 
-  ctx.fillStyle = "#000000";
-  ctx.font = "700 22px sans-serif";
-  ctx.fillText("songdle.es", 70, height - 70);
+  ctx.fillStyle = BRAND.tinta;
+  ctx.font = monoFont(700, 22);
+  ctx.fillText("songdle.es", 72, height - 72);
 
   return new Promise((resolve) => {
     canvas.toBlob((blob) => resolve(blob), "image/png");
@@ -207,10 +326,17 @@ ${shareUrl}`;
 }
 
 const CELL_COLORS: Record<StageCell, string> = {
-  unused: "#111111",
-  skip: "#f5f1e8",
-  wrong: "#ff6b6b",
-  correct: "#a8e6cf",
+  unused: BRAND.papel,
+  skip: BRAND.blanco,
+  wrong: BRAND.polvo,
+  correct: BRAND.acierto,
+};
+
+const CELL_MARKS: Record<StageCell, string> = {
+  unused: "",
+  skip: "–",
+  wrong: "✗",
+  correct: "✓",
 };
 
 export async function renderCluesShareImageBlob({
@@ -231,67 +357,74 @@ export async function renderCluesShareImageBlob({
   if (typeof document === "undefined") return null;
 
   const width = 720;
-  const height = 520;
+  const height = 540;
   const canvas = document.createElement("canvas");
   canvas.width = width;
   canvas.height = height;
   const ctx = canvas.getContext("2d");
   if (!ctx) return null;
 
-  ctx.fillStyle = "#f5f1e8";
-  ctx.fillRect(0, 0, width, height);
+  await ensureFonts(ctx);
+  drawCard(ctx, width, height);
+  drawWordmark(ctx, 72, 126, 46);
 
-  ctx.fillStyle = "#ffffff";
-  ctx.strokeStyle = "#000000";
-  ctx.lineWidth = 8;
-  ctx.fillRect(40, 40, width - 80, height - 80);
-  ctx.strokeRect(40, 40, width - 80, height - 80);
+  // Modo
+  ctx.font = displayFont(800, 18);
+  const label = GAME_MODES[mode].shareLabel.toUpperCase();
+  const labelW = ctx.measureText(label).width + 28;
+  ctx.fillStyle = BRAND.tinta;
+  ctx.fillRect(72, 150, labelW, 38);
+  ctx.fillStyle = BRAND.papel;
+  ctx.fillText(label, 86, 176);
 
-  ctx.fillStyle = "#ffffff";
-  ctx.fillRect(70, 70, 280, 70);
-  ctx.lineWidth = 6;
-  ctx.strokeRect(70, 70, 280, 70);
-  ctx.fillStyle = "#000000";
-  ctx.font = "900 40px sans-serif";
-  ctx.fillText("SONGDLE", 88, 118);
+  ctx.font = monoFont(700, 20);
+  ctx.fillStyle = "rgba(20,18,16,0.6)";
+  ctx.fillText(`#${gameNumber}  ·  ${won ? "GANADO" : "PERDIDO"}`, 72, 222);
 
-  ctx.fillStyle = "#000000";
-  ctx.fillRect(370, 78, 270, 54);
-  ctx.fillStyle = "#ffffff";
-  ctx.font = "800 22px sans-serif";
-  ctx.fillText(GAME_MODES[mode].shareLabel.toUpperCase(), 388, 113);
+  ctx.fillStyle = BRAND.tinta;
+  ctx.font = displayFont(900, 34);
+  ctx.fillText(won ? `${stageCount}/${maxAttempts}` : `X/${maxAttempts}`, 72, 266);
 
-  ctx.font = "700 22px sans-serif";
-  ctx.fillStyle = "rgba(0,0,0,0.55)";
-  ctx.fillText(`#${gameNumber}  ·  ${won ? "GANADO" : "PERDIDO"}`, 70, 175);
-
-  ctx.fillStyle = "#000000";
-  ctx.font = "900 36px sans-serif";
-  ctx.fillText(
-    won ? `${stageCount}/${maxAttempts}` : `X/${maxAttempts}`,
-    70,
-    225
+  drawResultDisc(
+    ctx,
+    width - 150,
+    186,
+    82,
+    cells.map((cell) =>
+      cell === "correct" ? "acierto" : cell === "wrong" ? "polvo" : cell === "skip" ? "papel" : null
+    )
   );
 
   const cellCount = cells.length;
   const gap = 16;
-  const cellSize = Math.min(96, (width - 140 - gap * (cellCount - 1)) / cellCount);
+  const cellSize = Math.min(96, (width - 144 - gap * (cellCount - 1)) / cellCount);
   const rowWidth = cellCount * cellSize + (cellCount - 1) * gap;
   const startX = (width - rowWidth) / 2;
-  const y = 280;
+  const y = 316;
 
   cells.forEach((cell, i) => {
     const x = startX + i * (cellSize + gap);
     ctx.fillStyle = CELL_COLORS[cell];
     ctx.fillRect(x, y, cellSize, cellSize);
     ctx.lineWidth = 5;
-    ctx.strokeStyle = "#000000";
+    ctx.strokeStyle = BRAND.tinta;
+    if (cell === "unused") ctx.setLineDash([10, 8]);
     ctx.strokeRect(x, y, cellSize, cellSize);
+    ctx.setLineDash([]);
+    if (CELL_MARKS[cell]) {
+      ctx.fillStyle = BRAND.tinta;
+      ctx.font = displayFont(900, cellSize * 0.45);
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(CELL_MARKS[cell], x + cellSize / 2, y + cellSize / 2);
+      ctx.textAlign = "left";
+      ctx.textBaseline = "alphabetic";
+    }
   });
 
-  ctx.fillStyle = "#000000";
-  ctx.font = "700 22px sans-serif";
-  ctx.fillText("songdle.es", 70, height - 70);
+  ctx.fillStyle = BRAND.tinta;
+  ctx.font = monoFont(700, 22);
+  ctx.fillText("songdle.es", 72, height - 72);
 
   return new Promise((resolve) => {
     canvas.toBlob((blob) => resolve(blob), "image/png");

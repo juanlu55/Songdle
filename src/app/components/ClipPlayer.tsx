@@ -5,6 +5,7 @@ import type { Song } from "@/app/data/songs";
 import { getAudioSources } from "@/lib/audio";
 import { amplitudeEvents } from "@/lib/amplitude";
 import { clipHint, resolveClipWindow, type ClipSlot } from "@/lib/clues-game";
+import { NowPlaying, PlayGlyph } from "./Brand";
 
 export default function ClipPlayer({
   song,
@@ -199,23 +200,24 @@ export default function ClipPlayer({
         <button
           type="button"
           onClick={togglePlay}
+          aria-label={isPlaying ? "Pausar" : "Reproducir"}
           disabled={disabled || audioError || audioSources.length === 0}
-          className={`w-16 h-16 flex items-center justify-center text-2xl border-4 border-black font-black transition-all ${
+          className={`w-16 h-16 flex items-center justify-center border-4 border-black transition-all ${
             disabled || audioError || audioSources.length === 0
-              ? "bg-gray-300 cursor-not-allowed"
+              ? "bg-polvo cursor-not-allowed"
               : isPlaying
-                ? "bg-[#ff6b6b] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] animate-pulse"
-                : "bg-[#ff6b6b] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                ? "bg-rec shadow-hard"
+                : "bg-rec hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard"
           }`}
         >
-          {isPlaying ? "❚❚" : "▶"}
+          <PlayGlyph playing={isPlaying} />
         </button>
         <div className="text-left">
           <p className="text-xs font-bold text-black/60 uppercase tracking-wide">
             {audioError || audioSources.length === 0
               ? "Audio no disponible"
               : isPlaying
-                ? "● Reproduciendo"
+                ? <NowPlaying />
                 : "Presiona play"}
           </p>
           <p className="text-[10px] font-bold text-black/40 uppercase tracking-wide mt-1">
@@ -224,7 +226,7 @@ export default function ClipPlayer({
         </div>
       </div>
       {audioError && (
-        <div className="mt-4 border-4 border-black bg-[#ffd700] p-4 text-center">
+        <div className="mt-4 border-3 border-black bg-oro p-4 text-center">
           <p className="text-sm font-black uppercase mb-2">No hemos podido cargar el audio</p>
           <button
             type="button"
@@ -237,7 +239,7 @@ export default function ClipPlayer({
                 if (!played) await handleFailure(0);
               })();
             }}
-            className="px-4 py-2 bg-white border-4 border-black font-black uppercase text-xs hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+            className="px-4 py-2 bg-white border-3 border-black font-black uppercase text-xs hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard transition-all"
           >
             Reintentar audio
           </button>

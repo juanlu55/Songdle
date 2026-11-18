@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 function Loading() {
   return (
-    <div className="min-h-screen bg-[#f5f1e8] flex items-center justify-center">
+    <div className="min-h-screen bg-papel flex items-center justify-center">
       <p className="font-black uppercase tracking-wide">Cargando…</p>
     </div>
   );

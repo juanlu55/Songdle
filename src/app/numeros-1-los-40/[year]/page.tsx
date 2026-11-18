@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrandBar from "@/app/components/BrandBar";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
@@ -35,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-const card = "bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]";
+const card = "bg-white border-3 border-black";
 
 export default async function NumberOnesYearPage({ params }: Props) {
   const year = Number((await params).year);
@@ -102,11 +103,12 @@ export default async function NumberOnesYearPage({ params }: Props) {
           : <>{topNames.length} artistas empataron con {topCount} números 1: <strong>{topArtistsText}</strong>.</>;
 
   return (
-    <div className="min-h-screen bg-[#f5f1e8] py-8 px-4">
+    <div className="min-h-screen bg-papel py-8 px-4">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="max-w-2xl mx-auto">
         <header className="mb-8">
+          <BrandBar cta="Jugar" />
           <nav aria-label="Migas de pan" className="mb-4 text-sm font-bold uppercase tracking-wide text-black/60">
             <Link href="/" className="hover:text-black transition-colors">Songdle</Link>
             <span className="mx-2">/</span>
@@ -115,8 +117,8 @@ export default async function NumberOnesYearPage({ params }: Props) {
             <span className="text-black">{year}</span>
           </nav>
 
-          <div className="inline-block border-4 border-black bg-white px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-            <h1 className="text-3xl font-black text-black tracking-tight">
+          <div>
+            <h1 className="text-3xl sm:text-4xl font-black text-black tracking-tight leading-tight text-balance">
               Números 1 de Los 40 en {year}
             </h1>
           </div>
@@ -134,7 +136,7 @@ export default async function NumberOnesYearPage({ params }: Props) {
 
         <main>
           <section className={`${card} p-4 sm:p-6 mb-6`}>
-            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
+            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-3 border-black pb-2">
               Todas las canciones número 1 de {year}
             </h2>
             <ol className="divide-y-2 divide-black/10">
@@ -150,10 +152,10 @@ export default async function NumberOnesYearPage({ params }: Props) {
                       height={48}
                       loading="lazy"
                       decoding="async"
-                      className="h-12 w-12 shrink-0 border-2 border-black object-cover bg-[#f5f1e8]"
+                      className="h-12 w-12 shrink-0 border-2 border-black object-cover bg-papel"
                     />
                   ) : (
-                    <span className="h-12 w-12 shrink-0 border-2 border-black bg-[#a8e6cf]" aria-hidden />
+                    <span className="h-12 w-12 shrink-0 border-2 border-black bg-acierto" aria-hidden />
                   )}
                   <div className="min-w-0 flex-1">
                     <p className="font-black text-black leading-tight">{song.title}</p>
@@ -166,7 +168,7 @@ export default async function NumberOnesYearPage({ params }: Props) {
                     href={spotifySearchUrl(song)}
                     target="_blank"
                     rel="nofollow noopener noreferrer"
-                    className="shrink-0 border-2 border-black px-2 py-1 text-[10px] font-black uppercase tracking-wide hover:bg-[#a8e6cf] transition-colors"
+                    className="shrink-0 border-2 border-black px-2 py-1 text-[10px] font-black uppercase tracking-wide hover:bg-acierto transition-colors"
                     aria-label={`Escuchar ${song.title} en Spotify`}
                   >
                     Spotify
@@ -176,14 +178,14 @@ export default async function NumberOnesYearPage({ params }: Props) {
             </ol>
           </section>
 
-          <section className={`${card} bg-[#a8e6cf] p-6 mb-6 text-center`}>
+          <section className={`${card} bg-acierto p-6 mb-6 text-center`}>
             <h2 className="text-xl font-black uppercase tracking-tight mb-2">¿Las reconocerías en 3 segundos?</h2>
             <p className="text-black/80 font-medium mb-4">
               Cada día, Songdle te pone un número 1 de Los 40. Escucha un fragmento y adivínalo en 6 intentos.
             </p>
             <Link
               href="/"
-              className="inline-block px-8 py-4 bg-white border-4 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+              className="inline-block px-8 py-4 bg-white border-3 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard transition-all"
             >
               Jugar al Songdle de hoy
             </Link>
@@ -207,7 +209,7 @@ export default async function NumberOnesYearPage({ params }: Props) {
                   key={y}
                   href={`/numeros-1-los-40/${y}`}
                   aria-current={y === year ? "page" : undefined}
-                  className={`border-2 border-black px-3 py-1 text-sm font-black ${y === year ? "bg-black text-white" : "bg-white hover:bg-[#a8e6cf]"}`}
+                  className={`border-2 border-black px-3 py-1 text-sm font-black ${y === year ? "bg-black text-white" : "bg-white hover:bg-acierto"}`}
                 >
                   {y}
                 </Link>

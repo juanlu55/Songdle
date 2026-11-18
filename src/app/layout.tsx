@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Archivo, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +10,14 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+// Display de la marca: Archivo con eje de anchura para el logotipo y los titulares
+const archivo = Archivo({
+  variable: "--font-archivo",
+  subsets: ["latin"],
+  axes: ["wdth"],
+  display: "swap",
 });
 
 const siteUrl = "https://songdle.es";
@@ -64,15 +72,6 @@ export const metadata: Metadata = {
     siteName: siteName,
     title: "Songdle - Adivina la canción del día",
     description: siteDescription,
-    images: [
-      {
-        url: `${siteUrl}/og-image.png`,
-        width: 1200,
-        height: 630,
-        alt: "Songdle - El Wordle de canciones",
-        type: "image/png",
-      },
-    ],
   },
   
   // Twitter Cards
@@ -80,22 +79,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Songdle - Adivina la canción del día",
     description: siteDescription,
-    images: [`${siteUrl}/og-image.png`],
     creator: "@songdle_es",
   },
   
   // Iconos y manifest
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
-    ],
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-    shortcut: "/favicon.ico",
-  },
   manifest: "/manifest.json",
   
   // Otros
@@ -110,7 +97,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#f5f1e8" },
-    { media: "(prefers-color-scheme: dark)", color: "#1a1a1a" },
+    { media: "(prefers-color-scheme: dark)", color: "#141210" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -216,7 +203,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${archivo.variable} antialiased`}
       >
         {children}
       </body>

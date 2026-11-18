@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import type { GameMode } from "@/lib/game-modes";
 import { GAME_MODES } from "@/lib/game-modes";
 import ModeTabs from "./ModeTabs";
+import { Logo } from "./Brand";
 
 function HeaderCopy({
   mode,
@@ -28,8 +29,8 @@ function HeaderCopy({
   return (
     <>
       <div className="flex items-center gap-2">
-        <div className="w-2 h-2 bg-black" aria-hidden="true"></div>
-        <p className="text-black/60 text-sm font-bold uppercase tracking-wider">
+        <div className="w-2 h-2 bg-rec" aria-hidden="true"></div>
+        <p className="text-black/60 text-xs font-mono font-bold uppercase tracking-widest">
           {shownTagline}
         </p>
       </div>
@@ -55,17 +56,15 @@ export default function GameHeader({
 }) {
   return (
     <header className="mb-6 relative" role="banner">
-      <div className="flex items-start justify-between mb-2">
-        <div className="inline-block border-4 border-black bg-white px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-          <h1 className="text-5xl font-black text-black tracking-tight">
-            SONGDLE
-          </h1>
-        </div>
+      <div className="flex items-center justify-between gap-3 mb-4">
+        <h1 className="text-[1.6rem] min-[400px]:text-[2rem] sm:text-5xl text-black leading-none pt-1">
+          <Logo />
+        </h1>
 
         <nav className="flex gap-2" aria-label="Navegación principal">
           <button
             onClick={onOpenHowToPlay}
-            className="border-4 border-black bg-white p-2 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+            className="border-3 border-black bg-white p-2 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard transition-all"
             title="Cómo jugar"
             aria-label="Abrir instrucciones de cómo jugar"
           >
@@ -76,7 +75,7 @@ export default function GameHeader({
 
           <button
             onClick={onOpenStats}
-            className="border-4 border-black bg-white p-2 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+            className="border-3 border-black bg-white p-2 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard transition-all"
             title="Ver estadísticas"
             aria-label="Ver estadísticas del juego"
           >

@@ -29,7 +29,7 @@ export default function ClassicTodayStats({
     <div className="mt-6">
       <p className="text-xs font-black uppercase tracking-wide text-black/60 mb-3">Stats de hoy</p>
       <div className="flex gap-4">
-        <div className="flex-1 border-4 border-black bg-white p-3 text-center">
+        <div className="flex-1 border-3 border-black bg-white p-3 text-center">
           <div className="text-xs font-black uppercase tracking-wide text-black/60 mb-1">
             Tiempo medio
           </div>
@@ -37,7 +37,7 @@ export default function ClassicTodayStats({
             {stats.avgWinSeconds == null ? "—" : `${stats.avgWinSeconds.toFixed(2)}s`}
           </div>
         </div>
-        <div className="flex-1 border-4 border-black bg-white p-3 text-center">
+        <div className="flex-1 border-3 border-black bg-white p-3 text-center">
           <div className="text-xs font-black uppercase tracking-wide text-black/60 mb-1">Acierto</div>
           <div className="text-2xl font-black">{Math.round(winRate)}%</div>
           <div className="text-[10px] font-bold uppercase tracking-wide text-black/60">

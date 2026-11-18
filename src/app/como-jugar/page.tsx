@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrandBar from "@/app/components/BrandBar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -49,7 +50,7 @@ const jsonLd = {
       "@type": "HowToStep",
       position: 4,
       name: "Analiza las pistas",
-      text: "Cada intento te muestra pistas de colores: verde significa que coincide con la canción correcta, rojo que no coincide. Las pistas son: Género, Década, País, Idioma y Voces.",
+      text: "Cada intento te muestra pistas de colores: verde significa que coincide con la canción correcta, gris que no coincide. Las pistas son: Género, Década, País, Idioma y Voces.",
     },
     {
       "@type": "HowToStep",
@@ -62,7 +63,7 @@ const jsonLd = {
 
 export default function ComoJugar() {
   return (
-    <div className="min-h-screen bg-[#f5f1e8] py-8 px-4">
+    <div className="min-h-screen bg-papel py-8 px-4">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -71,15 +72,10 @@ export default function ComoJugar() {
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <header className="mb-8">
-          <Link 
-            href="/"
-            className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-black/60 hover:text-black transition-colors mb-4"
-          >
-            ← Volver al juego
-          </Link>
+          <BrandBar cta="Jugar" />
           
-          <div className="inline-block border-4 border-black bg-white px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-            <h1 className="text-3xl font-black text-black tracking-tight">
+          <div>
+            <h1 className="text-3xl sm:text-4xl font-black text-black tracking-tight leading-tight text-balance">
               Cómo Jugar
             </h1>
           </div>
@@ -88,8 +84,8 @@ export default function ComoJugar() {
         {/* Contenido principal */}
         <main>
           {/* Introducción */}
-          <section className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 mb-6">
-            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
+          <section className="bg-white border-3 border-black p-6 mb-6">
+            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-3 border-black pb-2">
               ¿Qué es Songdle?
             </h2>
             <p className="text-black/80 font-medium leading-relaxed mb-4">
@@ -104,16 +100,16 @@ export default function ComoJugar() {
           </section>
 
           {/* Reglas del juego */}
-          <section className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 mb-6">
-            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
+          <section className="bg-white border-3 border-black p-6 mb-6">
+            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-3 border-black pb-2">
               Reglas del Juego
             </h2>
             
             <div className="space-y-4">
               {/* Regla 1 */}
-              <article className="border-2 border-black bg-[#f5f1e8] p-4">
+              <article className="border-2 border-black bg-papel p-4">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 bg-[#ff6b6b] border-2 border-black flex items-center justify-center font-black text-white">
+                  <div className="w-8 h-8 bg-black border-2 border-black flex items-center justify-center font-mono font-bold text-white">
                     1
                   </div>
                   <h3 className="font-black uppercase text-sm">Escucha y pausa</h3>
@@ -125,9 +121,9 @@ export default function ComoJugar() {
               </article>
 
               {/* Regla 2 */}
-              <article className="border-2 border-black bg-[#f5f1e8] p-4">
+              <article className="border-2 border-black bg-papel p-4">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 bg-[#ff6b6b] border-2 border-black flex items-center justify-center font-black text-white">
+                  <div className="w-8 h-8 bg-black border-2 border-black flex items-center justify-center font-mono font-bold text-white">
                     2
                   </div>
                   <h3 className="font-black uppercase text-sm">Límite de tiempo</h3>
@@ -139,9 +135,9 @@ export default function ComoJugar() {
               </article>
 
               {/* Regla 3 */}
-              <article className="border-2 border-black bg-[#f5f1e8] p-4">
+              <article className="border-2 border-black bg-papel p-4">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 bg-[#ff6b6b] border-2 border-black flex items-center justify-center font-black text-white">
+                  <div className="w-8 h-8 bg-black border-2 border-black flex items-center justify-center font-mono font-bold text-white">
                     3
                   </div>
                   <h3 className="font-black uppercase text-sm">6 intentos máximo</h3>
@@ -153,7 +149,7 @@ export default function ComoJugar() {
               </article>
 
               {/* Regla 4 */}
-              <article className="border-2 border-black bg-[#a8e6cf] p-4">
+              <article className="border-2 border-black bg-acierto p-4">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-8 h-8 bg-black border-2 border-black flex items-center justify-center font-black text-white">
                     4
@@ -190,24 +186,24 @@ export default function ComoJugar() {
           </section>
 
           {/* Colores de las pistas */}
-          <section className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 mb-6">
-            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
+          <section className="bg-white border-3 border-black p-6 mb-6">
+            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-3 border-black pb-2">
               Significado de los colores
             </h2>
             
             <div className="space-y-3">
-              <div className="flex items-center gap-4 p-3 border-2 border-black bg-[#a8e6cf]">
-                <div className="w-8 h-8 bg-[#a8e6cf] border-2 border-black"></div>
+              <div className="flex items-center gap-4 p-3 border-2 border-black bg-acierto">
+                <div className="w-8 h-8 bg-acierto border-2 border-black"></div>
                 <div>
                   <div className="font-black uppercase text-sm">Verde = Coincide</div>
                   <div className="text-xs text-black/70">Este atributo es igual al de la canción correcta</div>
                 </div>
               </div>
               
-              <div className="flex items-center gap-4 p-3 border-2 border-black bg-[#ff6b6b]">
-                <div className="w-8 h-8 bg-[#ff6b6b] border-2 border-black"></div>
+              <div className="flex items-center gap-4 p-3 border-2 border-black bg-polvo">
+                <div className="w-8 h-8 bg-polvo border-2 border-black"></div>
                 <div>
-                  <div className="font-black uppercase text-sm">Rojo = No coincide</div>
+                  <div className="font-black uppercase text-sm">Gris = No coincide</div>
                   <div className="text-xs text-black/70">Este atributo es diferente al de la canción correcta</div>
                 </div>
               </div>
@@ -215,8 +211,8 @@ export default function ComoJugar() {
           </section>
 
           {/* Consejos */}
-          <section className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 mb-6">
-            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
+          <section className="bg-white border-3 border-black p-6 mb-6">
+            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-3 border-black pb-2">
               💡 Consejos y estrategias
             </h2>
             
@@ -253,8 +249,8 @@ export default function ComoJugar() {
           </section>
 
           {/* Modos Tres y Cinco */}
-          <section className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 mb-6">
-            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
+          <section className="bg-white border-3 border-black p-6 mb-6">
+            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-3 border-black pb-2">
               Otros modos
             </h2>
             <p className="text-black/80 font-medium leading-relaxed mb-4">
@@ -263,7 +259,7 @@ export default function ComoJugar() {
               de la radio y la tele.
             </p>
 
-            <article className="border-2 border-black bg-[#f5f1e8] p-4 mb-4">
+            <article className="border-2 border-black bg-papel p-4 mb-4">
               <h3 className="font-black uppercase text-sm mb-2">Tres pistas — como Pistaza</h3>
               <p className="text-sm font-medium text-black/70 leading-relaxed mb-3">
                 Inspirado en <strong>Pistaza</strong>, el concurso de la radio: tres pistas de difícil
@@ -276,7 +272,7 @@ export default function ComoJugar() {
               </Link>
             </article>
 
-            <article className="border-2 border-black bg-[#f5f1e8] p-4">
+            <article className="border-2 border-black bg-papel p-4">
               <h3 className="font-black uppercase text-sm mb-2">Cinco pistas — como Pasapalabra</h3>
               <p className="text-sm font-medium text-black/70 leading-relaxed mb-3">
                 Inspirado en <strong>La Pista Musical de Pasapalabra</strong>: cinco pistas que se van
@@ -294,7 +290,7 @@ export default function ComoJugar() {
           <div className="text-center">
             <Link
               href="/"
-              className="inline-block px-8 py-4 bg-[#a8e6cf] border-4 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+              className="inline-block px-8 py-4 bg-acierto border-3 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard transition-all"
             >
               🎵 ¡Jugar ahora!
             </Link>
@@ -302,7 +298,7 @@ export default function ComoJugar() {
         </main>
 
         {/* Footer */}
-        <footer className="mt-8 border-4 border-black bg-black p-4 text-center">
+        <footer className="mt-8 border-3 border-black bg-black p-4 text-center">
           <p className="text-white text-sm font-bold uppercase tracking-wide">
             Songdle — El Wordle de canciones
           </p>

@@ -14,7 +14,7 @@ export default function NextSongCountdown() {
   }, []);
 
   return (
-    <div className="border-4 border-black bg-[#f5f1e8] p-4 text-center mb-6">
+    <div className="border-3 border-black bg-papel p-4 text-center mb-6">
       <p className="text-[10px] font-black uppercase tracking-wide text-black/60 mb-1">
         Próxima canción en
       </p>

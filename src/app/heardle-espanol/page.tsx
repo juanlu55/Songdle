@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrandBar from "@/app/components/BrandBar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -45,7 +46,7 @@ const jsonLd = {
 
 export default function HeardleEspanol() {
   return (
-    <div className="min-h-screen bg-[#f5f1e8] py-8 px-4">
+    <div className="min-h-screen bg-papel py-8 px-4">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -53,15 +54,10 @@ export default function HeardleEspanol() {
 
       <div className="max-w-2xl mx-auto">
         <header className="mb-8">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-black/60 hover:text-black transition-colors mb-4"
-          >
-            ← Jugar ahora
-          </Link>
+          <BrandBar cta="Jugar" />
 
-          <div className="inline-block border-4 border-black bg-white px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-            <h1 className="text-3xl font-black text-black tracking-tight">
+          <div>
+            <h1 className="text-3xl sm:text-4xl font-black text-black tracking-tight leading-tight text-balance">
               Heardle en español
             </h1>
           </div>
@@ -72,8 +68,8 @@ export default function HeardleEspanol() {
         </header>
 
         <main>
-          <section className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 mb-6">
-            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
+          <section className="bg-white border-3 border-black p-6 mb-6">
+            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-3 border-black pb-2">
               ¿Qué era Heardle?
             </h2>
             <p className="text-black/80 font-medium leading-relaxed mb-4">
@@ -89,35 +85,35 @@ export default function HeardleEspanol() {
             </p>
           </section>
 
-          <section className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 mb-6">
-            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
+          <section className="bg-white border-3 border-black p-6 mb-6">
+            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-3 border-black pb-2">
               Songdle vs Heardle
             </h2>
             <div className="space-y-3 text-sm font-medium text-black/80">
-              <div className="border-2 border-black bg-[#a8e6cf] p-4">
+              <div className="border-2 border-black bg-acierto p-4">
                 <p className="font-black uppercase text-xs mb-1">Catálogo</p>
                 <p>Números 1 de Los 40, no un mix genérico internacional.</p>
               </div>
-              <div className="border-2 border-black bg-[#f5f1e8] p-4">
+              <div className="border-2 border-black bg-papel p-4">
                 <p className="font-black uppercase text-xs mb-1">Pistas</p>
                 <p>
                   Cada fallo te dice si coinciden género, década, país, idioma y voces.
                   No solo “escucha un segundo más”.
                 </p>
               </div>
-              <div className="border-2 border-black bg-[#f5f1e8] p-4">
+              <div className="border-2 border-black bg-papel p-4">
                 <p className="font-black uppercase text-xs mb-1">Idioma</p>
                 <p>Interfaz en español y canciones que suenan en la radio española.</p>
               </div>
-              <div className="border-2 border-black bg-[#f5f1e8] p-4">
+              <div className="border-2 border-black bg-papel p-4">
                 <p className="font-black uppercase text-xs mb-1">Precio</p>
                 <p>Gratis, sin registro y sin anuncios invasivos.</p>
               </div>
             </div>
           </section>
 
-          <section className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 mb-6">
-            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
+          <section className="bg-white border-3 border-black p-6 mb-6">
+            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-3 border-black pb-2">
               Cómo se juega
             </h2>
             <ol className="space-y-3 text-sm font-medium text-black/80 list-decimal list-inside">
@@ -138,14 +134,14 @@ export default function HeardleEspanol() {
           <div className="text-center space-y-4">
             <Link
               href="/"
-              className="inline-block px-8 py-4 bg-[#a8e6cf] border-4 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+              className="inline-block px-8 py-4 bg-acierto border-3 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard transition-all"
             >
               Jugar al Songdle de hoy
             </Link>
           </div>
         </main>
 
-        <footer className="mt-8 border-4 border-black bg-black p-4 text-center">
+        <footer className="mt-8 border-3 border-black bg-black p-4 text-center">
           <p className="text-white text-sm font-bold uppercase tracking-wide">
             Songdle — Alternativa a Heardle en español
           </p>

@@ -55,14 +55,14 @@ export default function SongAutocomplete({
           setShowSuggestions(true);
         }}
         placeholder="Escribe el nombre de la canción..."
-        className="w-full px-4 py-3 border-4 border-black focus:outline-none focus:ring-0 font-medium bg-white"
+        className="w-full px-4 py-3 border-3 border-black focus:outline-none focus:ring-0 font-medium bg-white"
         disabled={disabled}
       />
 
       {showSuggestions && filteredSongs.length > 0 && (
-        <div className="absolute z-10 w-full mt-2 bg-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] max-h-60 overflow-y-auto">
+        <div className="absolute z-10 w-full mt-2 bg-white border-3 border-black shadow-hard max-h-60 overflow-y-auto">
           {filteredSongs.length === songs.length && (
-            <div className="px-4 py-2 text-xs font-bold text-black/40 bg-[#f5f1e8] border-b-2 border-black uppercase tracking-wide">
+            <div className="px-4 py-2 text-xs font-bold text-black/40 bg-papel border-b-2 border-black uppercase tracking-wide">
               {filteredSongs.length} canciones
             </div>
           )}
@@ -81,8 +81,8 @@ export default function SongAutocomplete({
                 disabled={used}
                 className={`w-full px-4 py-2 text-left transition-colors border-b-2 border-black last:border-b-0 font-medium ${
                   used
-                    ? "bg-gray-200 text-black/40 cursor-not-allowed line-through"
-                    : "hover:bg-[#a8e6cf]"
+                    ? "bg-polvo text-black/40 cursor-not-allowed line-through"
+                    : "hover:bg-acierto"
                 }`}
               >
                 {song.displayName}

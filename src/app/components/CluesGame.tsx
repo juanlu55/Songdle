@@ -11,9 +11,9 @@ import {
   applyCluesAction,
   buildStageCells,
   createCluesRoundState,
-  STAGE_CELL_EMOJI,
   stageCopy,
   type ClipSlot,
+  type StageCell,
   type CluesAttempt,
   type CluesRoundState,
 } from "@/lib/clues-game";
@@ -43,7 +43,21 @@ import StatsPanel from "./StatsPanel";
 import HowToPlayModal from "./HowToPlayModal";
 import SongAutocomplete from "./SongAutocomplete";
 import ClipPlayer from "./ClipPlayer";
+import { SegmentDisc, type SegmentFill } from "./Brand";
 import { publishModeResult, saveModeProgress } from "@/lib/classic-daily-stats";
+
+const CELL_MARK: Record<StageCell, string> = {
+  unused: "",
+  skip: "–",
+  wrong: "✗",
+  correct: "✓",
+};
+
+function cellsToSegments(cells: StageCell[]): SegmentFill[] {
+  return cells.map((cell) =>
+    cell === "correct" ? "acierto" : cell === "wrong" ? "polvo" : cell === "skip" ? "papel" : null
+  );
+}
 
 type CluesMode = "tres" | "cinco";
 
@@ -328,7 +342,7 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
   const canSubmit = Boolean(findCatalogSong(guess)) && !gameOver;
 
   return (
-    <div className="min-h-screen bg-[#f5f1e8] flex items-center justify-center p-4">
+    <div className="min-h-screen bg-papel flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
         <GameHeader
           mode={mode}
@@ -342,10 +356,10 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
           }}
         />
 
-        <main className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6" role="main">
+        <main className="bg-white border-3 border-black shadow-hard-lg p-6" role="main">
           {!gameOver ? (
             <>
-              <div className="mb-4 border-4 border-black bg-black text-white p-4">
+              <div className="mb-4 border-3 border-black bg-black text-white p-4">
                 <p className="text-[10px] font-black uppercase tracking-widest text-white/60 mb-1">
                   Pista {round.stageIndex + 1} / {config.maxAttempts}
                 </p>
@@ -365,7 +379,7 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
               )}
 
               {currentStage.kind === "lyric" && (
-                <div className="mb-6 border-4 border-black bg-[#f5f1e8] p-6 text-center">
+                <div className="mb-6 border-3 border-black bg-papel p-6 text-center">
                   <p className="text-[10px] font-black uppercase tracking-wide text-black/50 mb-2">
                     Letra
                   </p>
@@ -374,7 +388,7 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
               )}
 
               {currentStage.kind === "riddle" && (
-                <div className="mb-6 border-4 border-black bg-[#f5f1e8] p-6 text-center">
+                <div className="mb-6 border-3 border-black bg-papel p-6 text-center">
                   <p className="text-[10px] font-black uppercase tracking-wide text-black/50 mb-2">
                     El título, con otras palabras
                   </p>
@@ -396,7 +410,7 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
                   <button
                     type="submit"
                     disabled={!canSubmit}
-                    className="px-6 py-3 bg-[#a8e6cf] border-4 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] disabled:bg-gray-300 disabled:cursor-not-allowed transition-all text-sm"
+                    className="px-6 py-3 bg-acierto border-3 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard disabled:bg-polvo disabled:cursor-not-allowed transition-all text-sm"
                   >
                     Enviar
                   </button>
@@ -406,29 +420,29 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
               <button
                 type="button"
                 onClick={handleSkip}
-                className="w-full mb-6 py-3 bg-white border-4 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all text-sm"
+                className="w-full mb-6 py-3 bg-white border-3 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard transition-all text-sm"
               >
                 Pasar
               </button>
 
-              <div className="mb-4 border-4 border-black bg-[#f5f1e8] p-3">
+              <div className="mb-4 border-3 border-black bg-papel p-3">
                 <div className="flex justify-center gap-2 mb-2">
                   {cells.map((cell, i) => (
                     <div
                       key={i}
-                      className={`w-8 h-8 border-2 border-black flex items-center justify-center text-sm ${
+                      className={`w-8 h-8 border-2 border-black flex items-center justify-center text-sm font-black ${
                         cell === "correct"
-                          ? "bg-[#a8e6cf]"
+                          ? "bg-acierto"
                           : cell === "wrong"
-                            ? "bg-[#ff6b6b]"
+                            ? "bg-polvo"
                             : cell === "skip"
                               ? "bg-white"
                               : i === round.stageIndex
-                                ? "bg-[#ffd700]"
-                                : "bg-[#d9d3c7]"
+                                ? "bg-oro"
+                                : "bg-papel border-dashed"
                       }`}
                     >
-                      {cell === "unused" ? "" : STAGE_CELL_EMOJI[cell]}
+                      {CELL_MARK[cell]}
                     </div>
                   ))}
                 </div>
@@ -437,7 +451,7 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
                 </p>
               </div>
 
-              <div className="h-[240px] border-4 border-black bg-[#f5f1e8] p-4">
+              <div className="h-[240px] border-3 border-black bg-papel p-4">
                 {round.attempts.length > 0 ? (
                   <div ref={historyRef} className="h-full overflow-y-auto space-y-2 custom-scrollbar pr-1">
                     {round.attempts.map((attempt, index) => (
@@ -466,20 +480,27 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
             </>
           ) : (
             <div>
-              <div className="border-4 border-black bg-black text-white p-6 mb-6">
-                <h2 className="text-4xl font-black mb-2 uppercase tracking-tight">
-                  {round.gameWon ? "¡Ganaste!" : "Perdiste"}
-                </h2>
-                <p className="text-sm font-bold text-white/60 uppercase tracking-wide">
-                  {round.gameWon ? "Lo conseguiste" : "Suerte la próxima"}
-                </p>
+              <div className="border-3 border-black bg-black text-white p-6 mb-6 flex items-center justify-between gap-4">
+                <div>
+                  <h2 className="text-4xl font-black mb-2 uppercase tracking-tight">
+                    {round.gameWon ? "¡Ganaste!" : "Perdiste"}
+                  </h2>
+                  <p className="text-sm font-bold text-white/60 uppercase tracking-wide">
+                    {round.gameWon ? "Lo conseguiste" : "Suerte la próxima"}
+                  </p>
+                </div>
+                <SegmentDisc
+                  segments={cellsToSegments(cells)}
+                  className="h-20 w-20 flex-none rounded-full ring-3 ring-white"
+                  title={`Tu partida: ${round.gameWon ? `acierto en la pista ${round.stageIndex + 1}` : "sin acierto"} de ${config.maxAttempts}`}
+                />
               </div>
 
-              <div className="border-4 border-black bg-[#f5f1e8] p-6 mb-6">
+              <div className="border-3 border-black bg-papel p-6 mb-6">
                 <div className="flex flex-col sm:flex-row gap-6">
                   {todaySong.imageUrl && (
                     <div className="flex-shrink-0 mx-auto sm:mx-0">
-                      <div className="border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] w-32 h-32 bg-white overflow-hidden relative">
+                      <div className="border-3 border-black shadow-hard w-32 h-32 bg-white overflow-hidden relative">
                         <Image
                           src={todaySong.imageUrl}
                           alt={todaySong.displayName}
@@ -510,7 +531,7 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
                         href={getSpotifySearchUrl(todaySong)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-[#1DB954] border-4 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all text-sm text-white"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-[#1DB954] border-3 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard transition-all text-sm text-white"
                       >
                         Escuchar en Spotify
                       </a>
@@ -520,7 +541,7 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
 
                 {round.gameWon && (
                   <div className="flex gap-4 mt-6">
-                    <div className="flex-1 border-4 border-black bg-white p-3 text-center">
+                    <div className="flex-1 border-3 border-black bg-white p-3 text-center">
                       <div className="text-xs font-black uppercase tracking-wide text-black/60 mb-1">
                         Pista
                       </div>
@@ -528,7 +549,7 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
                         {round.stageIndex + 1}/{config.maxAttempts}
                       </div>
                     </div>
-                    <div className="flex-1 border-4 border-black bg-white p-3 text-center">
+                    <div className="flex-1 border-3 border-black bg-white p-3 text-center">
                       <div className="text-xs font-black uppercase tracking-wide text-black/60 mb-1">
                         Puntos
                       </div>
@@ -543,18 +564,18 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
               <div className="relative mb-4 space-y-3">
                 <button
                   onClick={() => shareResults("whatsapp")}
-                  className="w-full py-4 bg-[#25D366] text-white border-4 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+                  className="w-full py-4 bg-[#25D366] text-white border-3 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard transition-all"
                 >
                   Compartir en WhatsApp
                 </button>
                 <button
                   onClick={() => shareResults()}
-                  className="w-full py-4 bg-[#a8e6cf] border-4 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+                  className="w-full py-4 bg-acierto border-3 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard transition-all"
                 >
                   Copiar resultado
                 </button>
                 {showCopiedMessage && (
-                  <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 border-4 border-black bg-[#a8e6cf] px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] animate-bounce z-50">
+                  <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 border-3 border-black bg-acierto px-4 py-2 shadow-hard animate-bounce z-50">
                     <p className="text-sm font-black uppercase whitespace-nowrap">
                       ✓ Copiado al portapapeles
                     </p>
@@ -564,8 +585,8 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
 
               <NextSongCountdown />
 
-              <div className="border-4 border-black bg-white p-6">
-                <h3 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
+              <div className="border-3 border-black bg-white p-6">
+                <h3 className="text-xl font-black uppercase tracking-tight mb-4 border-b-3 border-black pb-2">
                   Estadísticas
                 </h3>
                 <StatsPanel
@@ -581,7 +602,7 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
         </main>
 
         {!gameOver && round.attempts.length === 0 && (
-          <aside className="mt-4 border-4 border-black bg-black p-3">
+          <aside className="mt-4 border-3 border-black bg-black p-3">
             <p className="text-white text-xs font-bold uppercase tracking-wide text-center">
               Adivina o pulsa Pasar — cuanto antes aciertes, mejor
             </p>
@@ -596,10 +617,10 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
             onClick={() => setShowStats(false)}
           >
             <div
-              className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 max-w-md w-full"
+              className="bg-white border-3 border-black shadow-hard-lg p-6 max-w-md w-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex justify-between items-center mb-4 border-b-4 border-black pb-2">
+              <div className="flex justify-between items-center mb-4 border-b-3 border-black pb-2">
                 <h3 className="text-2xl font-black uppercase tracking-tight">Estadísticas</h3>
                 <button onClick={() => setShowStats(false)} className="text-2xl font-black">
                   ✕
@@ -625,21 +646,21 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
           >
             {mode === "tres" ? (
               <>
-                <div className="border-2 border-black bg-[#a8e6cf] p-4">
+                <div className="border-2 border-black bg-acierto p-4">
                   <h4 className="font-black uppercase text-sm mb-2">Como Pistaza, en solitario</h4>
                   <p className="text-xs font-medium text-black/70">
                     Es el juego de la radio, pero sin rival: tres pistas de difícil a fácil, tú contra
                     la canción del día.
                   </p>
                 </div>
-                <div className="border-2 border-black bg-[#f5f1e8] p-4">
+                <div className="border-2 border-black bg-papel p-4">
                   <h4 className="font-black uppercase text-sm mb-2">Melodía, verso, fragmento</h4>
                   <p className="text-xs font-medium text-black/70">
                     Primero oyes solo la melodía. Si no, un verso. Si no, un trozo de la canción.
                     Solo ves la pista actual.
                   </p>
                 </div>
-                <div className="border-2 border-black bg-[#f5f1e8] p-4">
+                <div className="border-2 border-black bg-papel p-4">
                   <h4 className="font-black uppercase text-sm mb-2">Adivina o pasa</h4>
                   <p className="text-xs font-medium text-black/70">
                     Elige una canción del catálogo o pulsa Pasar. Pasar en la última pista es perder.
@@ -649,21 +670,21 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
               </>
             ) : (
               <>
-                <div className="border-2 border-black bg-[#a8e6cf] p-4">
+                <div className="border-2 border-black bg-acierto p-4">
                   <h4 className="font-black uppercase text-sm mb-2">Como La Pista de Pasapalabra</h4>
                   <p className="text-xs font-medium text-black/70">
                     Cinco pistas que se aclaran, de 5 puntos a 1. No hay pulsador ni rival: el duelo
                     es el share con tus amigos.
                   </p>
                 </div>
-                <div className="border-2 border-black bg-[#f5f1e8] p-4">
+                <div className="border-2 border-black bg-papel p-4">
                   <h4 className="font-black uppercase text-sm mb-2">Cada audio, un momento distinto</h4>
                   <p className="text-xs font-medium text-black/70">
                     Un trozo del principio, un verso, otro tramo de la canción, el título dicho de
                     otra forma, y el estribillo. No es el mismo clip cada vez más largo.
                   </p>
                 </div>
-                <div className="border-2 border-black bg-[#f5f1e8] p-4">
+                <div className="border-2 border-black bg-papel p-4">
                   <h4 className="font-black uppercase text-sm mb-2">Adivina o pasa</h4>
                   <p className="text-xs font-medium text-black/70">
                     Ganas al primer acierto. Si agotas las 5, se revela la canción. Acertar en la 1

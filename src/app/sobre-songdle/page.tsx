@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrandBar from "@/app/components/BrandBar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -21,19 +22,14 @@ export const metadata: Metadata = {
 
 export default function SobreSongdle() {
   return (
-    <div className="min-h-screen bg-[#f5f1e8] py-8 px-4">
+    <div className="min-h-screen bg-papel py-8 px-4">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <header className="mb-8">
-          <Link 
-            href="/"
-            className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-black/60 hover:text-black transition-colors mb-4"
-          >
-            ← Volver al juego
-          </Link>
+          <BrandBar cta="Jugar" />
           
-          <div className="inline-block border-4 border-black bg-white px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-            <h1 className="text-3xl font-black text-black tracking-tight">
+          <div>
+            <h1 className="text-3xl sm:text-4xl font-black text-black tracking-tight leading-tight text-balance">
               Sobre Songdle
             </h1>
           </div>
@@ -42,8 +38,8 @@ export default function SobreSongdle() {
         {/* Contenido principal */}
         <main>
           {/* Qué es Songdle */}
-          <section className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 mb-6">
-            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
+          <section className="bg-white border-3 border-black p-6 mb-6">
+            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-3 border-black pb-2">
               🎵 ¿Qué es Songdle?
             </h2>
             <p className="text-black/80 font-medium leading-relaxed mb-4">
@@ -59,8 +55,8 @@ export default function SobreSongdle() {
           </section>
 
           {/* Cómo surgió */}
-          <section className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 mb-6">
-            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
+          <section className="bg-white border-3 border-black p-6 mb-6">
+            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-3 border-black pb-2">
               💡 La idea detrás del juego
             </h2>
             <p className="text-black/80 font-medium leading-relaxed mb-4">
@@ -76,41 +72,41 @@ export default function SobreSongdle() {
           </section>
 
           {/* Características */}
-          <section className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 mb-6">
-            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
+          <section className="bg-white border-3 border-black p-6 mb-6">
+            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-3 border-black pb-2">
               ✨ Características
             </h2>
             
             <div className="grid gap-4">
-              <div className="border-2 border-black bg-[#f5f1e8] p-4">
+              <div className="border-2 border-black bg-papel p-4">
                 <h3 className="font-black uppercase text-sm mb-2">🆓 100% Gratuito</h3>
                 <p className="text-sm text-black/70">
                   Sin suscripciones, sin anuncios invasivos, sin límites. Juega todos los días gratis.
                 </p>
               </div>
               
-              <div className="border-2 border-black bg-[#f5f1e8] p-4">
+              <div className="border-2 border-black bg-papel p-4">
                 <h3 className="font-black uppercase text-sm mb-2">📅 Una canción por día</h3>
                 <p className="text-sm text-black/70">
                   Todos los jugadores adivinan la misma canción cada día. Compara resultados con amigos.
                 </p>
               </div>
               
-              <div className="border-2 border-black bg-[#f5f1e8] p-4">
+              <div className="border-2 border-black bg-papel p-4">
                 <h3 className="font-black uppercase text-sm mb-2">📊 Estadísticas personales</h3>
                 <p className="text-sm text-black/70">
                   Sigue tu progreso, mantén tu racha y mejora tu tiempo medio de acierto.
                 </p>
               </div>
               
-              <div className="border-2 border-black bg-[#f5f1e8] p-4">
+              <div className="border-2 border-black bg-papel p-4">
                 <h3 className="font-black uppercase text-sm mb-2">📱 Diseño responsive</h3>
                 <p className="text-sm text-black/70">
                   Juega desde cualquier dispositivo: móvil, tablet o ordenador.
                 </p>
               </div>
               
-              <div className="border-2 border-black bg-[#a8e6cf] p-4">
+              <div className="border-2 border-black bg-acierto p-4">
                 <h3 className="font-black uppercase text-sm mb-2">🎤 Música de Los 40</h3>
                 <p className="text-sm text-black/70">
                   Canciones que han sido número 1 en Los 40 Principales desde 1990. ¡Puro éxito!
@@ -120,8 +116,8 @@ export default function SobreSongdle() {
           </section>
 
           {/* FAQ */}
-          <section className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 mb-6">
-            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
+          <section className="bg-white border-3 border-black p-6 mb-6">
+            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-3 border-black pb-2">
               ❓ Preguntas frecuentes
             </h2>
             
@@ -160,8 +156,8 @@ export default function SobreSongdle() {
           </section>
 
           {/* Contacto */}
-          <section className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 mb-6">
-            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
+          <section className="bg-white border-3 border-black p-6 mb-6">
+            <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-3 border-black pb-2">
               📬 Contacto
             </h2>
             <p className="text-black/80 font-medium leading-relaxed mb-4">
@@ -184,7 +180,7 @@ export default function SobreSongdle() {
           <div className="text-center space-y-4">
             <Link
               href="/"
-              className="inline-block px-8 py-4 bg-[#a8e6cf] border-4 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+              className="inline-block px-8 py-4 bg-acierto border-3 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard transition-all"
             >
               🎵 ¡Jugar ahora!
             </Link>
@@ -192,7 +188,7 @@ export default function SobreSongdle() {
             <div>
               <Link
                 href="/como-jugar"
-                className="inline-block px-6 py-3 bg-white border-4 border-black font-bold uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all text-sm"
+                className="inline-block px-6 py-3 bg-white border-3 border-black font-bold uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard transition-all text-sm"
               >
                 Cómo jugar →
               </Link>
@@ -201,7 +197,7 @@ export default function SobreSongdle() {
         </main>
 
         {/* Footer */}
-        <footer className="mt-8 border-4 border-black bg-black p-4 text-center">
+        <footer className="mt-8 border-3 border-black bg-black p-4 text-center">
           <p className="text-white text-sm font-bold uppercase tracking-wide">
             Songdle — El Wordle de canciones
           </p>

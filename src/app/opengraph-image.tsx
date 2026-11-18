@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { BRAND, discSvg, svgDataUri } from "@/lib/brand-svg";
 
 export const runtime = "edge";
 
@@ -10,6 +11,13 @@ export const size = {
 export const contentType = "image/png";
 
 export default async function Image() {
+  const archivo = await fetch(
+    new URL("../assets/fonts/Archivo-ExpandedBlack.ttf", import.meta.url)
+  ).then((res) => res.arrayBuffer());
+
+  const disc = svgDataUri(discSvg({ size: 600 }));
+  const smallDisc = svgDataUri(discSvg({ size: 120 }));
+
   return new ImageResponse(
     (
       <div
@@ -17,191 +25,64 @@ export default async function Image() {
           width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#f5f1e8",
-          padding: "60px",
+          position: "relative",
+          backgroundColor: BRAND.papel,
+          fontFamily: "Archivo",
+          color: BRAND.tinta,
+          overflow: "hidden",
         }}
       >
-        {/* Main Card */}
+        {/* El disco grande, saliendo por la derecha */}
+        <img
+          src={disc}
+          width={540}
+          height={540}
+          alt=""
+          style={{ position: "absolute", right: -120, top: 45 }}
+        />
+
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            alignItems: "flex-start",
-            justifyContent: "center",
-            backgroundColor: "#ffffff",
-            border: "8px solid #000000",
-            boxShadow: "12px 12px 0px 0px rgba(0,0,0,1)",
-            padding: "60px",
+            justifyContent: "space-between",
+            padding: "72px 72px 64px",
             width: "100%",
-            maxWidth: "1000px",
+            height: "100%",
           }}
         >
-          {/* Logo */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              marginBottom: "30px",
-            }}
-          >
-            <div
-              style={{
-                backgroundColor: "#ffffff",
-                border: "6px solid #000000",
-                boxShadow: "6px 6px 0px 0px rgba(0,0,0,1)",
-                padding: "15px 30px",
-                display: "flex",
-              }}
-            >
-              <span
-                style={{
-                  fontSize: "80px",
-                  fontWeight: 900,
-                  color: "#000000",
-                  letterSpacing: "-2px",
-                }}
-              >
-                SONGDLE
-              </span>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            {/* Logotipo: S◉NGDLE */}
+            <div style={{ display: "flex", alignItems: "center", fontSize: 104, lineHeight: 1, letterSpacing: -1 }}>
+              <span>S</span>
+              <img src={smallDisc} width={78} height={78} alt="" style={{ margin: "0 4px" }} />
+              <span>NGDLE</span>
+            </div>
+            <div style={{ display: "flex", marginTop: 36, fontSize: 50, lineHeight: 1.08, maxWidth: 620 }}>
+              Adivina la canción del día
             </div>
           </div>
 
-          {/* Subtitle */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "10px",
-              marginBottom: "40px",
-            }}
-          >
+          <div style={{ display: "flex", gap: 16, fontSize: 22, alignItems: "center" }}>
             <div
               style={{
-                width: "10px",
-                height: "10px",
-                backgroundColor: "#000000",
-              }}
-            />
-            <span
-              style={{
-                fontSize: "24px",
-                fontWeight: 700,
-                color: "rgba(0,0,0,0.6)",
-                textTransform: "uppercase",
-                letterSpacing: "2px",
-              }}
-            >
-              El Wordle de canciones en español
-            </span>
-          </div>
-
-          {/* Description */}
-          <p
-            style={{
-              fontSize: "36px",
-              fontWeight: 600,
-              color: "#000000",
-              margin: "0 0 20px 0",
-              lineHeight: 1.4,
-            }}
-          >
-            Escucha un fragmento y adivina la canción en 6 intentos.
-          </p>
-          <p
-            style={{
-              fontSize: "28px",
-              fontWeight: 500,
-              color: "rgba(0,0,0,0.7)",
-              margin: 0,
-            }}
-          >
-            🎵 Juego diario gratuito con éxitos de Los 40 Principales
-          </p>
-
-          {/* Bottom bar */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              width: "100%",
-              marginTop: "50px",
-              paddingTop: "30px",
-              borderTop: "4px solid #000000",
-            }}
-          >
-            {/* Audio bars */}
-            <div style={{ display: "flex", alignItems: "flex-end", gap: "12px" }}>
-              <div
-                style={{
-                  width: "24px",
-                  height: "50px",
-                  backgroundColor: "#a8e6cf",
-                  border: "3px solid #000000",
-                }}
-              />
-              <div
-                style={{
-                  width: "24px",
-                  height: "70px",
-                  backgroundColor: "#a8e6cf",
-                  border: "3px solid #000000",
-                }}
-              />
-              <div
-                style={{
-                  width: "24px",
-                  height: "55px",
-                  backgroundColor: "#ff6b6b",
-                  border: "3px solid #000000",
-                }}
-              />
-              <div
-                style={{
-                  width: "24px",
-                  height: "80px",
-                  backgroundColor: "#a8e6cf",
-                  border: "3px solid #000000",
-                }}
-              />
-              <div
-                style={{
-                  width: "24px",
-                  height: "45px",
-                  backgroundColor: "#a8e6cf",
-                  border: "3px solid #000000",
-                }}
-              />
-              <div
-                style={{
-                  width: "24px",
-                  height: "65px",
-                  backgroundColor: "#ff6b6b",
-                  border: "3px solid #000000",
-                }}
-              />
-            </div>
-
-            {/* URL */}
-            <div
-              style={{
-                backgroundColor: "#000000",
-                padding: "15px 30px",
                 display: "flex",
+                backgroundColor: BRAND.tinta,
+                color: BRAND.papel,
+                padding: "10px 18px",
               }}
             >
-              <span
-                style={{
-                  fontSize: "28px",
-                  fontWeight: 700,
-                  color: "#ffffff",
-                }}
-              >
-                songdle.es
-              </span>
+              songdle.es
+            </div>
+            <div
+              style={{
+                display: "flex",
+                backgroundColor: BRAND.blanco,
+                border: `4px solid ${BRAND.tinta}`,
+                padding: "6px 14px",
+              }}
+            >
+              Números 1 de Los 40 · 6 intentos
             </div>
           </div>
         </div>
@@ -209,7 +90,7 @@ export default async function Image() {
     ),
     {
       ...size,
+      fonts: [{ name: "Archivo", data: archivo, weight: 900, style: "normal" }],
     }
   );
 }
-

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrandBar from "@/app/components/BrandBar";
 import type { Metadata } from "next";
 import { NUMBER_ONE_YEARS, getYearSummary } from "@/lib/number-ones";
 
@@ -36,19 +37,14 @@ export default function NumberOnesIndexPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f5f1e8] py-8 px-4">
+    <div className="min-h-screen bg-papel py-8 px-4">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="max-w-2xl mx-auto">
         <header className="mb-8">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-black/60 hover:text-black transition-colors mb-4"
-          >
-            ← Jugar ahora
-          </Link>
-          <div className="inline-block border-4 border-black bg-white px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-            <h1 className="text-3xl font-black text-black tracking-tight">Números 1 de Los 40 por año</h1>
+          <BrandBar cta="Jugar" />
+          <div>
+            <h1 className="text-3xl sm:text-4xl font-black text-black tracking-tight leading-tight text-balance">Números 1 de Los 40 por año</h1>
           </div>
           <p className="mt-4 text-black/80 font-medium leading-relaxed">
             Desde {firstYear}, <strong>{total.toLocaleString("es-ES")} canciones</strong> han llegado al número 1
@@ -61,9 +57,9 @@ export default function NumberOnesIndexPage() {
           {decades.map((decade) => (
             <section
               key={decade}
-              className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6"
+              className="bg-white border-3 border-black p-6"
             >
-              <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-4 border-black pb-2">
+              <h2 className="text-xl font-black uppercase tracking-tight mb-4 border-b-3 border-black pb-2">
                 Números 1 de los {String(decade).slice(2)}
               </h2>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -73,7 +69,7 @@ export default function NumberOnesIndexPage() {
                     <li key={s.year}>
                       <Link
                         href={`/numeros-1-los-40/${s.year}`}
-                        className="block border-2 border-black p-3 bg-[#f5f1e8] hover:bg-[#a8e6cf] transition-colors h-full"
+                        className="block border-2 border-black p-3 bg-papel hover:bg-acierto transition-colors h-full"
                       >
                         <span className="flex items-baseline justify-between">
                           <span className="text-lg font-black">{s.year}</span>
@@ -92,7 +88,7 @@ export default function NumberOnesIndexPage() {
           <div className="text-center">
             <Link
               href="/"
-              className="inline-block px-8 py-4 bg-[#a8e6cf] border-4 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+              className="inline-block px-8 py-4 bg-acierto border-3 border-black font-black uppercase tracking-wide hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-hard transition-all"
             >
               Jugar al Songdle de hoy
             </Link>

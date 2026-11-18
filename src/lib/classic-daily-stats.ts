@@ -1,7 +1,13 @@
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+import { GAME_MODES, type GameMode } from "@/lib/game-modes";
 
 const PLAYER_KEY = "songdle-player-id";
 const REPORTED_KEY = "songdle-classic-reported-date";
+
+/** Clave de "partida de hoy ya enviada". La del clásico se mantiene por compatibilidad. */
+function reportedKey(mode: GameMode) {
+  return mode === "classic" ? REPORTED_KEY : `songdle-${mode}-reported-date`;
+}
 
 export interface ClassicDailyStats {
   played: number;
@@ -56,21 +62,23 @@ function toNullableNumber(value: unknown) {
   return Number.isFinite(number) ? number : null;
 }
 
-async function saveProgress(params: {
+interface Progress {
   gameDate: string;
   songId: string;
   attempts: number;
   elapsedSeconds: number;
-  finished: boolean;
-  won: boolean;
-}) {
+}
+
+async function saveProgress(mode: GameMode, params: Progress & { finished: boolean; won: boolean }) {
   const supabase = getClient();
   if (!supabase) return { ok: false };
-  const { error } = await supabase.rpc("save_classic_progress", {
+  const max = GAME_MODES[mode].maxAttempts;
+  const { error } = await supabase.rpc("save_game_progress", {
+    p_mode: mode,
     p_player_id: getPlayerId(),
     p_game_date: params.gameDate,
     p_song_id: params.songId,
-    p_attempts: Math.min(6, Math.max(0, Math.round(params.attempts))),
+    p_attempts: Math.min(max, Math.max(0, Math.round(params.attempts))),
     p_elapsed_seconds: clampElapsed(params.elapsedSeconds),
     p_finished: params.finished,
     p_won: params.won,
@@ -78,11 +86,12 @@ async function saveProgress(params: {
   return { ok: !error };
 }
 
-async function submitClassicResult(result: ClassicResult) {
-  if (localStorage.getItem(REPORTED_KEY) === result.gameDate) return;
-  const { ok } = await saveProgress({ ...result, finished: true });
+async function submitResult(mode: GameMode, result: ClassicResult) {
+  const key = reportedKey(mode);
+  if (localStorage.getItem(key) === result.gameDate) return;
+  const { ok } = await saveProgress(mode, { ...result, finished: true });
   if (ok) {
-    localStorage.setItem(REPORTED_KEY, result.gameDate);
+    localStorage.setItem(key, result.gameDate);
     return;
   }
   console.error("No se pudo guardar la partida de hoy");
@@ -92,16 +101,25 @@ async function submitClassicResult(result: ClassicResult) {
  * Guarda una partida en curso: al primer play (0 intentos) y tras cada intento fallido.
  * Si el jugador abandona, queda la fila en estado 'playing' con los intentos que llevaba.
  */
-export async function saveClassicProgress(progress: {
-  gameDate: string;
-  songId: string;
-  attempts: number;
-  elapsedSeconds: number;
-}): Promise<void> {
+export async function saveModeProgress(mode: GameMode, progress: Progress): Promise<void> {
   if (typeof window === "undefined") return;
   try {
-    if (localStorage.getItem(REPORTED_KEY) === progress.gameDate) return;
-    await saveProgress({ ...progress, finished: false, won: false });
+    if (localStorage.getItem(reportedKey(mode)) === progress.gameDate) return;
+    await saveProgress(mode, { ...progress, finished: false, won: false });
+  } catch {
+    // Sin localStorage o sin red: no bloquear el juego
+  }
+}
+
+export function saveClassicProgress(progress: Progress): Promise<void> {
+  return saveModeProgress("classic", progress);
+}
+
+/** Guarda el resultado final de un modo de pistas (Tres/Cinco). */
+export async function publishModeResult(mode: GameMode, result: ClassicResult): Promise<void> {
+  if (typeof window === "undefined" || result.attempts < 1) return;
+  try {
+    await submitResult(mode, result);
   } catch {
     // Sin localStorage o sin red: no bloquear el juego
   }
@@ -137,6 +155,6 @@ export async function fetchClassicDailyStats(gameDate: string): Promise<ClassicD
 
 export async function publishClassicResult(result: ClassicResult): Promise<ClassicDailyStats | null> {
   if (typeof window === "undefined" || result.attempts < 1) return null;
-  await submitClassicResult(result);
+  await submitResult("classic", result);
   return fetchClassicDailyStats(result.gameDate);
 }

@@ -12,12 +12,15 @@ export default function ClipPlayer({
   durationSec,
   slot,
   disabled,
+  onPlay,
 }: {
   song: Song;
   startSec?: number;
   durationSec: number;
   slot?: ClipSlot;
   disabled?: boolean;
+  /** Se llama cada vez que el audio empieza a sonar */
+  onPlay?: () => void;
 }) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const isPlayingRef = useRef(false);
@@ -121,6 +124,7 @@ export default function ClipPlayer({
       setIsPlaying(true);
       isPlayingRef.current = true;
       amplitudeEvents.playClicked(0);
+      onPlay?.();
       return true;
     } catch {
       return false;

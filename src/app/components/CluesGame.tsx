@@ -43,6 +43,7 @@ import StatsPanel from "./StatsPanel";
 import HowToPlayModal from "./HowToPlayModal";
 import SongAutocomplete from "./SongAutocomplete";
 import ClipPlayer from "./ClipPlayer";
+import { publishModeResult, saveModeProgress } from "@/lib/classic-daily-stats";
 
 type CluesMode = "tres" | "cinco";
 
@@ -93,6 +94,7 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
   const [songReady, setSongReady] = useState(false);
   const [tripleWin, setTripleWin] = useState(false);
   const statsUpdatedRef = useRef(false);
+  const progressSavedRef = useRef(false);
   const historyRef = useRef<HTMLDivElement>(null);
 
   const stages = useMemo(() => stagesFor(mode, todaySong), [mode, todaySong]);
@@ -121,6 +123,14 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
       });
       if (saved.gameWon || saved.gameLost) {
         statsUpdatedRef.current = true;
+        // Por si el envío falló al terminar (se deduplica por día en publishModeResult)
+        void publishModeResult(mode, {
+          gameDate: todayDate,
+          songId: getTodaySong(new Date(), mode).id,
+          won: saved.gameWon ?? false,
+          attempts: saved.gameWon ? (saved.stageIndex ?? 0) + 1 : (saved.attempts ?? []).length,
+          elapsedSeconds: 0,
+        });
       }
     } else if (saved) {
       localStorage.removeItem(config.storageKey);
@@ -171,6 +181,13 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
     });
     setStatistics(newStats);
     saveStatistics(mode, newStats);
+    void publishModeResult(mode, {
+      gameDate: getMadridDateString(),
+      songId: todaySong.id,
+      won: next.gameWon,
+      attempts: winStage,
+      elapsedSeconds: 0,
+    });
     setTimeout(() => {
       const today = getMadridDateString();
       if (markTripleWinIfNeeded(today)) {
@@ -190,7 +207,28 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
     } else if (next.gameLost) {
       amplitudeEvents.gameLost(next.attempts.length, 0, todaySong.displayName);
       recordFinish(next);
+    } else {
+      // Acción sin terminar (fallo o pasar): actualizar la partida en curso
+      progressSavedRef.current = true;
+      void saveModeProgress(mode, {
+        gameDate: getMadridDateString(),
+        songId: todaySong.id,
+        attempts: next.attempts.length,
+        elapsedSeconds: 0,
+      });
     }
+  };
+
+  // Primera escucha de la sesión: registrar la partida como empezada
+  const handleClipPlay = () => {
+    if (statsUpdatedRef.current || progressSavedRef.current) return;
+    progressSavedRef.current = true;
+    void saveModeProgress(mode, {
+      gameDate: getMadridDateString(),
+      songId: todaySong.id,
+      attempts: round.attempts.length,
+      elapsedSeconds: 0,
+    });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -322,6 +360,7 @@ export default function CluesGame({ mode }: { mode: CluesMode }) {
                   startSec={currentStage.startSec ?? 0}
                   durationSec={currentStage.durationSec ?? 3}
                   slot={currentStage.slot}
+                  onPlay={handleClipPlay}
                 />
               )}
 

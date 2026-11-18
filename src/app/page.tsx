@@ -19,7 +19,11 @@ import NextSongCountdown from "./components/NextSongCountdown";
 import GameHeader from "./components/GameHeader";
 import GameFooter from "./components/GameFooter";
 import { hasTripleWinToday, markTripleWinIfNeeded } from "@/lib/game-storage";
-import { publishClassicResult, type ClassicDailyStats } from "@/lib/classic-daily-stats";
+import {
+  publishClassicResult,
+  saveClassicProgress,
+  type ClassicDailyStats,
+} from "@/lib/classic-daily-stats";
 import ClassicTodayStats from "./components/ClassicTodayStats";
 
 interface ClueMatch {
@@ -89,6 +93,7 @@ export default function Home() {
   const startTimeRef = useRef<number | null>(null);
   const inputRef = useRef<HTMLDivElement>(null);
   const statsUpdatedRef = useRef(false);
+  const progressSavedRef = useRef(false);
   const attemptsContainerRef = useRef<HTMLDivElement>(null);
   const audioSourceIndexRef = useRef(0);
   const isPlayingRef = useRef(false);
@@ -272,6 +277,16 @@ export default function Home() {
       setIsPlaying(true);
       isPlayingRef.current = true;
       amplitudeEvents.playClicked(elapsedTime);
+      // Registrar la partida en curso la primera vez que suena en esta sesión
+      if (!statsUpdatedRef.current && !progressSavedRef.current) {
+        progressSavedRef.current = true;
+        void saveClassicProgress({
+          gameDate: getMadridDateString(),
+          songId: todaySong.id,
+          attempts: attempts.length,
+          elapsedSeconds: elapsedTime,
+        });
+      }
       return true;
     } catch {
       return false;
@@ -402,6 +417,14 @@ export default function Home() {
         audioRef.current.pause();
       }
       setIsPlaying(false);
+    } else {
+      // Intento fallido: actualizar la partida en curso por si se abandona aquí
+      void saveClassicProgress({
+        gameDate: getMadridDateString(),
+        songId: todaySong.id,
+        attempts: newAttempts.length,
+        elapsedSeconds: elapsedTime,
+      });
     }
   };
 

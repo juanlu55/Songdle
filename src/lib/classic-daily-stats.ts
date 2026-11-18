@@ -56,27 +56,55 @@ function toNullableNumber(value: unknown) {
   return Number.isFinite(number) ? number : null;
 }
 
-async function submitClassicResult(result: ClassicResult) {
+async function saveProgress(params: {
+  gameDate: string;
+  songId: string;
+  attempts: number;
+  elapsedSeconds: number;
+  finished: boolean;
+  won: boolean;
+}) {
   const supabase = getClient();
-  if (!supabase) return;
-  if (localStorage.getItem(REPORTED_KEY) === result.gameDate) return;
-
-  const { error } = await supabase.from("game_results").insert({
-    player_id: getPlayerId(),
-    mode: "classic",
-    game_date: result.gameDate,
-    song_id: result.songId,
-    won: result.won,
-    attempts: Math.min(6, Math.max(1, Math.round(result.attempts))),
-    elapsed_seconds: clampElapsed(result.elapsedSeconds),
+  if (!supabase) return { ok: false };
+  const { error } = await supabase.rpc("save_classic_progress", {
+    p_player_id: getPlayerId(),
+    p_game_date: params.gameDate,
+    p_song_id: params.songId,
+    p_attempts: Math.min(6, Math.max(0, Math.round(params.attempts))),
+    p_elapsed_seconds: clampElapsed(params.elapsedSeconds),
+    p_finished: params.finished,
+    p_won: params.won,
   });
+  return { ok: !error };
+}
 
-  if (!error || error.code === "23505") {
+async function submitClassicResult(result: ClassicResult) {
+  if (localStorage.getItem(REPORTED_KEY) === result.gameDate) return;
+  const { ok } = await saveProgress({ ...result, finished: true });
+  if (ok) {
     localStorage.setItem(REPORTED_KEY, result.gameDate);
     return;
   }
-
   console.error("No se pudo guardar la partida de hoy");
+}
+
+/**
+ * Guarda una partida en curso: al primer play (0 intentos) y tras cada intento fallido.
+ * Si el jugador abandona, queda la fila en estado 'playing' con los intentos que llevaba.
+ */
+export async function saveClassicProgress(progress: {
+  gameDate: string;
+  songId: string;
+  attempts: number;
+  elapsedSeconds: number;
+}): Promise<void> {
+  if (typeof window === "undefined") return;
+  try {
+    if (localStorage.getItem(REPORTED_KEY) === progress.gameDate) return;
+    await saveProgress({ ...progress, finished: false, won: false });
+  } catch {
+    // Sin localStorage o sin red: no bloquear el juego
+  }
 }
 
 export async function fetchClassicDailyStats(gameDate: string): Promise<ClassicDailyStats | null> {

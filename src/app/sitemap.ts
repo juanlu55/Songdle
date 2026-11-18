@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { NUMBER_ONE_YEARS } from "@/lib/number-ones";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://songdle.es";
@@ -41,6 +42,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/numeros-1-los-40`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    ...NUMBER_ONE_YEARS.map((year) => ({
+      url: `${baseUrl}/numeros-1-los-40/${year}`,
+      lastModified: currentDate,
+      changeFrequency: "yearly" as const,
+      priority: 0.7,
+    })),
   ];
 }
 
